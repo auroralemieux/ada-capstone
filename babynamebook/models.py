@@ -7,7 +7,7 @@ class Book(models.Model):
     # belongs to a User
 
     # how does this work?
-    # tree_upload = models.FileField(upload_to='trees')
+    tree_upload = models.FileField(upload_to='trees')
     title = models.CharField(max_length=200)
     user = models.ForeignKey('User', on_delete=models.CASCADE)
     created_date = models.DateTimeField(default=timezone.now)

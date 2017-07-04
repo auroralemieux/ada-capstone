@@ -6,18 +6,21 @@
   <p id="upload-info-text">If you haven't already done so, you will need to get a .ged file to upload. Here's how to do that:</p>
   <ol id="upload-steps">
     <li>Log in to your favorite genealogy site where you already have a family tree built.</li>
-    <li>For example, on ancestry.com, while viewing your tree click the drop-down and choose tree settings. On the right, near the bottom, click on DOWNLOAD YOUR GEDCOM FILE.</li>
+    <li>For example, on ancestry.com, while viewing your tree click the drop-down and choose tree settings. On the right, near the bottom, click on DOWNLOAD YOUR GEDCOM FILE. Save the file to your computer.</li>
     <li>Click Choose File and select the .ged file you have downloaded.</li>
-    <li>Click Upload!</li>
+    <li>Click Next!</li>
   </ol>
 </article>
 
 <article class="align-self-center right-main-content col-md-6 col-lg-6 col-sm-12" id="upload">
   <p class="incomplete">
-    make this a form. this should trigger the creation of a new tree, with uploaded .ged and a tree title.
+    this should trigger the creation of a new tree with automatically assigned user.
   </p>
-  <button type="submit" class="btn btn-info btn-block" id="upload-submit-button">choose file</button>
+  <form method="POST" id="new-book-form">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn save btn-success" id="upload-submit-button">Next</button>
+  </form>
 
-  <a type="button" class="btn btn-primary btn-block" id="start-button" href="#">Upload</a>
+  <!-- <a type="button" class="btn btn-primary btn-block" id="start-button" href="#">Upload</a> -->
 </article>
 {% endblock %}
