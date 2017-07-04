@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>babynamebook</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/babynamebook.css' %}">
+</head>
+<body>
+  <header>
+
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <h1 class="navbar-brand mb-0">babynamebook</h1>
+      <section class="collapse navbar-collapse" id="navbarSupportedContent">
+        <section class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="#">log in</a>
+          <a class="nav-item nav-link" href="#">log out</a>
+          <a class="nav-item nav-link" href="#">account</a>
+        </section>
+      </section>
+    </nav>
+  </header>
+
+  <section id="content" class="content container">
+    <section class="row justify-content-around">
+      {% block content %}
+      {% endblock %}
+    </section>
+  </section>
+  <footer class="container">
+    <p>&copy; 2017 by <a href="www.github.com/auroralemieux">aurora anderson</a></p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -9,8 +9,9 @@ footer {
 
 #content {
   height: 500px;
+  padding-top: 60px;
 }
 
-.right-main-content button {
-  /*display: inline-block;*/
+#home-info-text {
+  text-align: justify;
 }
