@@ -1,18 +1,18 @@
 {% extends 'babynamebook/base.html' %}
 
 {% block content %}
-<article class="align-self-center left-main-content col-md-6 col-lg-6 col-sm-12" id="instructions">
+<article class="align-self-center left-main-content col-md-6 col-lg-6 col-sm-12" id="home-instructions">
   <h2>What names are hidden in your tree?</h2>
   <p id="home-info-text">babynamebook takes your family tree and combs through it for all the first names. Then it correlates all names with their meanings and origins. The result is a beautifully formatted custom book to use in your own baby name hunt!</p>
-  <ol>
-    <li>click Start</li>
-    <li>upload your family tree (instructions given, don't worry!)</li>
-    <li>watch the magic happen!</li>
+  <ol id="home-steps">
+    <li>Click Start.</li>
+    <li>Upload your family tree (instructions given, don't worry!)</li>
+    <li>Watch the magic happen!</li>
   </ol>
 </article>
 
 <article class="align-self-center right-main-content col-md-6 col-lg-6 col-sm-12" id="start">
 
-  <button type="button" class="btn btn-info btn-block" id="start-button ">Start</button>
+  <a type="button" class="btn btn-primary btn-block" id="start-button" href="{% url 'upload_tree' %}">Start</a>
 </article>
 {% endblock %}

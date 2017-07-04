@@ -15,3 +15,7 @@ footer {
 #home-info-text {
   text-align: justify;
 }
+
+.incomplete {
+  color: red;
+}
