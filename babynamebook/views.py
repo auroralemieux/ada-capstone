@@ -17,8 +17,8 @@ def upload_tree(request):
             # add stuff about user
             print("--------book is: ", book)
             book.save()
-            print("-----book tree upload is :", book.tree_upload)
-            filename = book.tree_upload
+            print("-----book tree upload is :", book.tree_upload.name)
+            filename = book.tree_upload.name
             print("--------DATA IS: ", filename)
             tree_xml = parse_ged(filename)
             person_list = parse_xml(tree_xml)

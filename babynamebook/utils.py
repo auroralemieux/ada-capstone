@@ -6,7 +6,7 @@ import xml.etree.ElementTree as ET
 
 def parse_ged(ged_file):
     # with open(ged_file, 'r') as ged:
-    ged = codecs.open(ged_file, encoding="cp437")
+    ged = codecs.open("media/" + ged_file, encoding="cp437")
     xml = ""
     xml += "#<?xml version='1.0'?>\n"
     xml += "<gedcom>"
@@ -16,7 +16,7 @@ def parse_ged(ged_file):
         s = s.strip()
         m = re.match(r"(\d+) (@(\w+)@ )?(\w+)( (.*))?", s)
         if m is None:
-            errors.append("Error: unmatched line:", s)
+            errors.append("Error: unmatched line: " +s)
         else:
             level = int(m.group(1))
             id = m.group(3)
@@ -26,7 +26,7 @@ def parse_ged(ged_file):
             xml += "</%s>\n" % (sub[-1])
             sub.pop()
         if level != len(sub):
-            errors.append("Error: unexpected level:", s)
+            errors.append("Error: unexpected level: " + s)
         sub += [tag]
         if id is not None:
             xml += "<%s id=\"%s\">" % (tag, id)
@@ -64,8 +64,9 @@ def parse_ged(ged_file):
 
 
 def parse_xml(xml):
-
-    tree = ET.parse(xml)
+    tree = open('parsed_ged', 'r+')
+    tree.write(xml)
+    # tree = ET.parse(xml)
     root = tree.getroot()
 
     new_book = []
