@@ -1,3 +1,16 @@
 h1 {
   color: blue;
 }
+
+footer {
+  text-align: center;
+}
+
+
+#content {
+  height: 500px;
+}
+
+.right-main-content button {
+  /*display: inline-block;*/
+}
