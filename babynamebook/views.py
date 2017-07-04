@@ -3,6 +3,7 @@ from .forms import BookForm
 from .utils import parse_ged, parse_xml
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
+from .models import Book
 
 def home(request):
     return render(request, 'babynamebook/home.html', {})
@@ -11,10 +12,15 @@ def upload_tree(request):
     if request.method == "POST":
         form = BookForm(request.POST, request.FILES)
         if form.is_valid():
-            book = form.save(commit=False)
+            book = Book(tree_upload=request.FILES['tree_upload'], title=request.POST['title'])
+            # book = form.save(commit=False)
             # add stuff about user
+            print("--------book is: ", book)
             book.save()
-            tree_xml = parse_ged(request.FILES['tree_upload'])
+            print("-----book tree upload is :", book.tree_upload)
+            filename = book.tree_upload
+            print("--------DATA IS: ", filename)
+            tree_xml = parse_ged(filename)
             person_list = parse_xml(tree_xml)
             for person in person_list:
                 new_person = Person(first_name = person["first_name"], last_name = person["last_name"], birth_year = person["birth_year"])
@@ -23,7 +29,7 @@ def upload_tree(request):
                     print("saved %s" % (new_person))
                 else:
                     print("couldn't save")
-            return redirect('progress', {'pk': book.pk})
+        return redirect('progress', {'pk': book.pk})
             # return redirect('home', {})
     else:
         form = BookForm()

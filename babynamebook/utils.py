@@ -5,7 +5,7 @@ import xml.etree.ElementTree as ET
 
 
 def parse_ged(ged_file):
-
+    # with open(ged_file, 'r') as ged:
     ged = codecs.open(ged_file, encoding="cp437")
     xml = ""
     xml += "#<?xml version='1.0'?>\n"
