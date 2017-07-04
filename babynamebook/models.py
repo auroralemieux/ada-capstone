@@ -7,9 +7,9 @@ class Book(models.Model):
     # belongs to a User
 
     # how does this work?
-    tree_upload = models.FileField(upload_to='trees')
+    tree_upload = models.FileField(upload_to='uploads')
     title = models.CharField(max_length=200)
-    user = models.ForeignKey('User', on_delete=models.CASCADE)
+    # user = models.ForeignKey('User', on_delete=models.CASCADE)
     created_date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
@@ -23,9 +23,10 @@ class Person(models.Model):
     name = models.ForeignKey('Name', on_delete=models.PROTECT, related_name="+")
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
+    birth_year = models.CharField(max_length=4)
 
     def __str__(self):
-        full_name = "%s %s" % (self.first_name, self.last_name)
+        full_name = "%s %s (%s)" % (self.first_name, self.last_name, self.birth_year)
         return full_name
 
 

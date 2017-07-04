@@ -6,7 +6,7 @@
   <p id="upload-info-text">If you haven't already done so, you will need to get a .ged file to upload. Here's how to do that:</p>
   <ol id="upload-steps">
     <li>Log in to your favorite genealogy site where you already have a family tree built.</li>
-    <li>For example, on ancestry.com, while viewing your tree click the drop-down and choose tree settings. On the right, near the bottom, click on DOWNLOAD YOUR GEDCOM FILE. Save the file to your computer.</li>
+    <li><span class="incomplete">make expandable for top three genealogy site instructions</span>For example, on ancestry.com, while viewing your tree click the drop-down and choose tree settings. On the right, near the bottom, click on DOWNLOAD YOUR GEDCOM FILE. Save the file to your computer.</li>
     <li>Click Choose File and select the .ged file you have downloaded.</li>
     <li>Click Next!</li>
   </ol>
@@ -16,7 +16,7 @@
   <p class="incomplete">
     this should trigger the creation of a new tree with automatically assigned user.
   </p>
-  <form method="POST" id="new-book-form">{% csrf_token %}
+  <form enctype="multipart/form-data" method="POST" id="new-book-form">{% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="btn save btn-success" id="upload-submit-button">Next</button>
   </form>
