@@ -1,18 +1,25 @@
-<!DOCTYPE html>
+{% load staticfiles %}
 <html>
   <head>
     <meta charset="utf-8">
     <title>babynamebook</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/babynamebook.css' %}">
   </head>
   <body>
-    <header>
-      <h1>babynamebook</h1>
-      <button>log in</button>
-      <button>log out</button>
-      <button>account</button>
+    <header class="row">
+      <section class="col-md-8">
+        <h1>babynamebook</h1>
+      </section>
+      <section class="col-md-4">
+        <button>log in</button>
+        <button>log out</button>
+        <button>account</button>
+      </section>
     </header>
-    <section id="content">
-      <article class="left-main-content" id="instructions">
+    <section id="content" class="content container row">
+      <article class="left-main-content col-md-8" id="instructions">
         <h2>What names are hidden in your tree?</h2>
         <p>babynamebook takes your family tree and combs through it for all the first names. Then it correlates all names with their meanings and origins. The result is a beautifully formatted custom book to use in your own baby name hunt!</p>
         <ol>
@@ -21,7 +28,7 @@
           <li>watch the magic happen!</li>
         </ol>
       </article>
-      <article class="right-main-content" id="start">
+      <article class="right-main-content col-md-4" id="start">
         <button id="start-button">Start</button>
       </article>
     </section>
