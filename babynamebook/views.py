@@ -1,9 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .forms import BookForm
 from .utils import parse_ged, parse_xml
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
-from .models import Book
+from .models import Book, Person
 
 def home(request):
     return render(request, 'babynamebook/home.html', {})
@@ -15,16 +15,16 @@ def upload_tree(request):
             book = Book(tree_upload=request.FILES['tree_upload'], title=request.POST['title'])
             # book = form.save(commit=False)
             # add stuff about user
-            print("--------book is: ", book)
+            # print("--------book is: ", book)
             book.save()
-            print("-----book tree upload is :", book.tree_upload.name)
+            # print("-----book tree upload is :", book.tree_upload.name)
             filename = book.tree_upload.name
-            print("--------DATA IS: ", filename)
-            tree_xml = parse_ged(filename)
-            person_list = parse_xml(tree_xml)
+            # print("--------DATA IS: ", filename)
+            xml_filename = parse_ged(filename)
+            person_list = parse_xml(xml_filename)
             for person in person_list:
                 new_person = Person(first_name = person["first_name"], last_name = person["last_name"], birth_year = person["birth_year"])
-                new_person.book = book.id
+                new_person.book = book
                 if new_person.save:
                     print("saved %s" % (new_person))
                 else:
