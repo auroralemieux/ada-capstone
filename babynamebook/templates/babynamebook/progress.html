@@ -5,9 +5,7 @@
   <h2>Persons in tree</h2>
   {% for person in persons %}
     <section>
-      <p>First name: {{ person.first_name }}</p>
-      <p>Last name: {{ person.last_name }}</p>
-      <p>Birth year: {{ person.birth_year }}</p>
+      <p>{{ person.first_name }} {{ person.last_name }} ({{ person.birth_year }})</p>
     </section>
   {% endfor %}
 </article>
