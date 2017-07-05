@@ -10,12 +10,8 @@ from django.core.files.storage import Storage
 
 
 class BookTest(TestCase):
-    # don't know how to test the FileField
-    # def create_book(self, title="test_book", upload_tree=None):
-    #     file_field = SimpleUploadedFile('my_tree.ged', 'these are the file contents!')
-    #     return Book.objects.create(title=title, upload_tree=file_field)
 
-    # what is the unicode part?
+    ## this is passing!!!!!
     def test_book_creation(self):
         file_mock = mock.MagicMock(spec=File, name='FileMock')
         file_mock.name = 'test1.jpg'

@@ -11,18 +11,26 @@ from noseselenium.cases import SeleniumTestCaseMixin
 
 # ---- VIEWS TESTING WITH SELENIUM WEBDRIVER  -----
 
-class TestHome(unittest.TestCase):
+class TestHome(unittest.TestCase, SeleniumTestCaseMixin):
 
-    def setUp(self):
-        self.driver = webdriver.Chrome('babynamebook/chromedriver')
-
-    def test_home_chrome(self):
-        self.driver.get("http://127.0.0.1:8000/")
-        self.driver.find_element_by_id('start-button').click()
-        self.assertIn("http://127.0.0.1:8000/upload_tree", self.driver.current_url)
-
-    def tearDown(self):
-        self.driver.quit
+    selenium_fixtures = [‘test_data1.json’]
+    def test_ok(self):
+        """ check that the front page has correctly loaded
+        and that there’s a login link.
+        """
+        sel = self.selenium
+        sel.open("/")
+        self.failUnless(sel.is_text_present("babynamebook"))
+    # def setUp(self):
+    #     self.driver = webdriver.Chrome('babynamebook/chromedriver')
+    #
+    # def test_home_chrome(self):
+    #     self.driver.get("http://127.0.0.1:8000/")
+    #     self.driver.find_element_by_id('start-button').click()
+    #     self.assertIn("http://127.0.0.1:8000/upload_tree", self.driver.current_url)
+    #
+    # def tearDown(self):
+    #     self.driver.quit
 
 # class TestUploadTree(unittest.TestCase):
 #
