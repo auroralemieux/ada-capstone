@@ -4,7 +4,6 @@ from .utils import parse_ged, parse_xml
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from .models import Book, Person
-from django.contrib.sessions.backends.db import SessionStore
 
 def home(request):
     return render(request, 'babynamebook/home.html', {})
@@ -36,10 +35,8 @@ def upload_tree(request):
 
                 new_person.book = book
                 new_person.save()
-        # book_id = book.id
         request.session["book_id"] = book.id
         return redirect('progress')
-        # return redirect('home')
     else:
         form = BookForm()
     return render(request, 'babynamebook/upload_tree.html', {'form': form})
@@ -47,9 +44,8 @@ def upload_tree(request):
 def progress(request):
     book = get_object_or_404(Book, id=request.session["book_id"])
     persons = Person.objects.filter(book=book)
-    print(len(persons))
-    # for person in persons[0:2]:
-    #     print(person.first_name)
-    #     print(person.first_name.name)
+    total_persons = len(persons)
+    num_m = len(Person.objects.filter(book=book, gender="M"))
+    num_f = len(Person.objects.filter(book=book, gender="F"))
 
-    return render(request, 'babynamebook/progress.html', {'book': book, 'persons': persons})
+    return render(request, 'babynamebook/progress.html', {'book': book, 'persons': persons, 'total_persons': total_persons, 'num_m': num_m, 'num_f': num_f})
