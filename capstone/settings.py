@@ -127,3 +127,5 @@ MEDIA_URL = '/media/'
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 SESSION_SAVE_EVERY_REQUEST = True
+
+SELENIUM_WEBDRIVER = '../babynamebook/chromedriver'

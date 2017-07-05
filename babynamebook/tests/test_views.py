@@ -12,7 +12,7 @@ from selenium import webdriver
 class TestHome(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome(dir + '../chromedriver')
 
     def test_home_chrome(self):
         self.driver.get("http://127.0.0.1:8000/")
@@ -27,7 +27,7 @@ class TestHome(unittest.TestCase):
 class TestUploadTree(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Chrome('/chromedriver')
+        self.driver = webdriver.Chrome(dir + '../chromedriver')
 
     def test_home_chrome(self):
         self.driver.get("http://127.0.0.1:8000/upload_tree")
