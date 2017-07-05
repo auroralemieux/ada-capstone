@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'babynamebook',
     'coverage',
+    'django_nose',
 ]
 
 MIDDLEWARE = [
@@ -79,6 +80,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'TEST_NAME': os.path.join('babynamebook', 'test_sqlite.db'),
     }
 }
 
@@ -129,3 +131,5 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 SESSION_SAVE_EVERY_REQUEST = True
 
 SELENIUM_WEBDRIVER = '../babynamebook/chromedriver'
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+LIVE_SERVER_PORT = 8000
