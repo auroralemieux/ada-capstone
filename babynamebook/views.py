@@ -34,4 +34,9 @@ def upload_tree(request):
 
 def progress(request, pk):
     book = get_object_or_404(Book, pk=pk)
-    return render(request, 'babynamebook/progress.html', {'book': book})
+    persons = Person.objects.filter(book__value=pk)
+    for person in persons[0:2]:
+        print(person.first_name)
+        print(person.first_name.name)
+
+    return render(request, 'babynamebook/progress.html', {'book': book, 'persons': persons})

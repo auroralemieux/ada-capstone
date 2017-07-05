@@ -3,7 +3,7 @@
 {% block content %}
 <article class="align-self-center left-main-content col-md-8 col-lg-8 col-sm-12" id="person-list">
   <h2>Persons in tree</h2>
-  {% for person in book.persons: %}
+  {% for person in persons %}
     <section>
       <p>First name: {{ person.first_name }}</p>
       <p>Last name: {{ person.last_name }}</p>
@@ -16,7 +16,7 @@
   <p class="incomplete">
     this should list number of persons uploaded and maybe number for whom values are unknown.
   </p>
-  <p>Number of persons in tree: {% len(book.persons) %}</p>
+  <p>Number of persons in tree: unknown</p>
 
   <!-- <a type="button" class="btn btn-primary btn-block" id="start-button" href="#">Upload</a> -->
 </article>
