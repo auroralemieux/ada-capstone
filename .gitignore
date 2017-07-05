@@ -9,3 +9,4 @@ db.sqlite3
 parsed_ged
 htmlcov
 .coverage
+chromedriver
