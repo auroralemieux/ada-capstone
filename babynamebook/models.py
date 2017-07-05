@@ -20,10 +20,11 @@ class Person(models.Model):
     # belongs to a Book
     # has a Name
     book = models.ForeignKey('Book', on_delete=models.CASCADE)
-    name = models.ForeignKey('Name', on_delete=models.PROTECT, related_name="+")
+    name = models.ForeignKey('Name', on_delete=models.PROTECT, related_name="+", blank=True, null=True)
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
     birth_year = models.CharField(max_length=4)
+    gender = models.CharField(max_length=1)
 
     def __str__(self):
         full_name = "%s %s (%s)" % (self.first_name, self.last_name, self.birth_year)

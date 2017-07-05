@@ -18,25 +18,37 @@ def upload_tree(request):
             filename = book.tree_upload.name
             xml_filename = parse_ged(filename)
             person_list = parse_xml(xml_filename)
-            for person in person_list:
-                new_person = Person(first_name = person["first_name"], last_name = person["last_name"], birth_year = person["birth_year"])
+
+            for p in person_list:
+                new_person = Person(first_name=p["first_name"], last_name=p["last_name"], gender=p["sex"], birth_year=p["birth_year"], )
+                if p["last_name"] is None:
+                    new_person.last_name = "unknown"
+
+                if p["first_name"] is None:
+                    new_person.first_name = "unknown"
+
+                if p["sex"] is None:
+                    new_person.gender = "x"
+
+                if p["birth_year"] is None:
+                    new_person.birth_year = "0000"
+
                 new_person.book = book
-                if new_person.save:
-                    print("saved %s" % (new_person))
-                else:
-                    print("couldn't save")
+                new_person.save()
         book_id = book.pk
-        return render(request, 'babynamebook/progress.html', {'pk': book_id})
+        request.session["book_id"] = book_id
+        return redirect('progress')
         # return redirect('home')
     else:
         form = BookForm()
     return render(request, 'babynamebook/upload_tree.html', {'form': form})
 
 def progress(request, pk):
-    book = get_object_or_404(Book, pk=pk)
-    persons = Person.objects.filter(book__value=pk)
-    for person in persons[0:2]:
-        print(person.first_name)
-        print(person.first_name.name)
+    book = get_object_or_404(Book, pk=request.session["book_id"])
+    persons = Person.objects.filter(book__value=book)
+    print(len(persons))
+    # for person in persons[0:2]:
+    #     print(person.first_name)
+    #     print(person.first_name.name)
 
     return render(request, 'babynamebook/progress.html', {'book': book, 'persons': persons})
