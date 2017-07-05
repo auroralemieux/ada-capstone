@@ -13,13 +13,9 @@ def upload_tree(request):
         form = BookForm(request.POST, request.FILES)
         if form.is_valid():
             book = Book(tree_upload=request.FILES['tree_upload'], title=request.POST['title'])
-            # book = form.save(commit=False)
             # add stuff about user
-            # print("--------book is: ", book)
             book.save()
-            # print("-----book tree upload is :", book.tree_upload.name)
             filename = book.tree_upload.name
-            # print("--------DATA IS: ", filename)
             xml_filename = parse_ged(filename)
             person_list = parse_xml(xml_filename)
             for person in person_list:
@@ -29,8 +25,9 @@ def upload_tree(request):
                     print("saved %s" % (new_person))
                 else:
                     print("couldn't save")
-        return redirect('progress', {'pk': book.pk})
-            # return redirect('home', {})
+        book_id = book.pk
+        return render(request, 'babynamebook/progress.html', {'pk': book_id})
+        # return redirect('home')
     else:
         form = BookForm()
     return render(request, 'babynamebook/upload_tree.html', {'form': form})
