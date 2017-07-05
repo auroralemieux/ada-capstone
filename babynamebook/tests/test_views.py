@@ -2,34 +2,12 @@ from django.test import TestCase
 from babynamebook.models import Book, Person, Name, User
 from django.utils import timezone
 from django.core.urlresolvers import reverse
-from babynamebook.forms import BookForm
 import unittest
 from selenium import webdriver
 
-# models test
-class BookTest(TestCase):
-    # don't know how to test the FileField
-    def create_book(self, title="test_book", upload_tree="WHAT GOES HERE??"):
-        return Book.objects.create(title=title, upload_tree=upload_tree)
-
-    # what is the unicode part?
-    def test_book_creation(self):
-        b = self.create_book()
-        self.assertTrue(isinstance(b, Book))
-        self.assertEqual(b.__unicode__(), b.title)
 
 
-    # views (uses reverse)
-
-    def test_home_view(self):
-        w = self.create_whatever()
-        url = reverse("whatever.views.whatever")
-        resp = self.client.get(url)
-
-        self.assertEqual(resp.status_code, 200)
-        self.assertIn(w.title, resp.content)
-
-
+# ---- VIEWS TESTING WITH SELENIUM WEBDRIVER  -----
 
 class TestHome(unittest.TestCase):
 
@@ -49,7 +27,7 @@ class TestHome(unittest.TestCase):
 class TestUploadTree(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome('/chromedriver')
 
     def test_home_chrome(self):
         self.driver.get("http://127.0.0.1:8000/upload_tree")
