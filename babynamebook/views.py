@@ -40,10 +40,8 @@ def upload_tree(request):
 
 def progress(request):
     book = get_object_or_404(Book, id=request.session["book_id"])
-    print("book id is: ", book.id)
     persons = Person.objects.filter(book=book)
     total_persons = len(persons)
-    print("persons has ", total_persons)
     num_m = len(Person.objects.filter(book=book, gender="M"))
     num_f = len(Person.objects.filter(book=book, gender="F"))
 
@@ -55,12 +53,20 @@ def correlate(request):
 
     for p in persons:
         try:
-            look_up_name = p.first_name
-            name = Name.objects.get(first_name = look_up_name, gender=p.gender)
-            book.names.add(name)
+            first = Name.objects.get(first_name = p.first_name, gender=p.gender)
+            book.names.add(first)
 
         except Name.DoesNotExist:
             continue
+
+    for p in persons:
+        if p.middle_name != None:
+            try:
+                middle = Name.objects.get(first_name = p.middle_name, gender=p.gender)
+                book.names.add(middle)
+
+            except Name.DoesNotExist:
+                continue
 
     female = book.names.all().filter(gender="F")
     male = book.names.all().filter(gender="M")

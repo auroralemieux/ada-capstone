@@ -2,14 +2,12 @@ from django.db import models
 from django.utils import timezone
 
 
-
-
-
 class Person(models.Model):
     # belongs to a Book
     # has a Name
     book = models.ForeignKey('Book', on_delete=models.CASCADE)
     first_name = models.CharField(max_length=200)
+    middle_name = models.CharField(max_length=200, null=True)
     last_name = models.CharField(max_length=200)
     birth_year = models.IntegerField()
     gender = models.CharField(max_length=1)

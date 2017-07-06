@@ -6,12 +6,12 @@
     <a class="breadcrumb-item" href="/">Home</a>
     <a class="breadcrumb-item" href="/get_tree_instructions">Get Tree</a>
     <a class="breadcrumb-item" href="/upload_tree">Upload Tree</a>
-    <a class="breadcrumb-item" href="/progress">Parsing Tree</a>
+    <a class="breadcrumb-item" href="/progress">Parse Tree</a>
     <a class="breadcrumb-item active" href="/correlate">My baby name book</a>
   </nav>
 </section>
-<article class="align-self-top left-main-content col-md-5 col-lg-5 col-sm-12" id="rough-tree-details">
-  <h2>Here's your book!</h2>
+<article class="align-self-top col-md-5 col-lg-5 col-sm-12" id="book-data">
+  <h2>{{ book.title }}</h2>
   <p>Girl names starting with A:</p>
   {% for a in female_a_names %}
     <p><strong>{{a.first_name}}</strong> <em>({{a.origin}})</em> {{a.meaning}}</p>

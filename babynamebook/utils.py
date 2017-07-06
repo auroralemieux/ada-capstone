@@ -110,6 +110,7 @@ def parse_xml(xml_filename):
                 if " " in first_name:
                     name_split = str.split(first_name)
                     new_person["first_name"] = name_split[0]
+                    new_person["middle_name"] = name_split[1]
                 else:
                     new_person["first_name"] = first_name
             else:
