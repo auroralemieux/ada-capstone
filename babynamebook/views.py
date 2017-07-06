@@ -52,25 +52,22 @@ def progress(request):
 def correlate(request):
     book = get_object_or_404(Book, id=request.session["book_id"])
     persons = Person.objects.filter(book=book)
-    # first_names_persons = []
-    # for p in persons:
-    #     first_names_persons.append(p.first_name)
-    # first_names = set(first_names_persons)
-    male = []
-    female = []
+
     for p in persons:
         try:
             look_up_name = p.first_name
             name = Name.objects.get(first_name = look_up_name, gender=p.gender)
-            p.name = name
-            p.save()
-            if p.gender == "F":
-                female.append(p)
-            elif p.gender == "M":
-                male.append(p)
+            book.names.add(name)
+
         except Name.DoesNotExist:
             continue
-    female_a_names = Person.objects.filter(book=book, gender="F", first_name__startswith="A")
+
+    female = book.names.all().filter(gender="F")
+    male = book.names.all().filter(gender="M")
+    female_a_names = book.names.all().filter(gender="F", first_name__startswith="A").order_by('first_name')
+
+
+
 
     return render(request, 'babynamebook/correlate.html', {'book': book, 'persons': persons, 'male': male, 'female': female, 'female_a_names': female_a_names})
 
