@@ -29,9 +29,10 @@ def upload_tree(request):
 
             # person_list is an array of dictionary objects
             person_list = parse_xml(xml_filename)
-            parse_person(person_list)
-
             request.session["book_id"] = book.id
+            parse_person(request, person_list)
+
+            print("book id is: ", request.session["book_id"])
         return redirect('progress')
     else:
         form = BookForm()
@@ -40,8 +41,10 @@ def upload_tree(request):
 
 def progress(request):
     book = get_object_or_404(Book, id=request.session["book_id"])
+    print("book id is: ", book.id)
     persons = Person.objects.filter(book=book)
     total_persons = len(persons)
+    print("persons has ", total_persons)
     num_m = len(Person.objects.filter(book=book, gender="M"))
     num_f = len(Person.objects.filter(book=book, gender="F"))
 
@@ -50,17 +53,28 @@ def progress(request):
 def correlate(request):
     book = get_object_or_404(Book, id=request.session["book_id"])
     persons = Person.objects.filter(book=book)
+    male = []
+    female = []
+    for p in persons:
+        try:
+            print(p.first_name)
+            # name = Name.objects.filter(first_name = p.first_name))
+            # p.name = name
+            # p.save()
+            # if p.gender == "F":
+            #     female.append(p)
+            # elif p.gender == "M":
+            #     male.append(p)
+        except Name.DoesNotExist:
+            continue
 
-
-    return render(request, 'babynamebook/progress.html', {'book': book, 'persons': persons, 'total_persons': total_persons, 'num_m': num_m, 'num_f': num_f})
+    return render(request, 'babynamebook/progress.html', {'book': book, 'persons': persons, 'male': male, 'female': female})
 
 
 # this is a private method
-def parse_person(request, list):
-    for p in list:
+def parse_person(request, person_list):
+    for p in person_list:
         new_person = Person(first_name=p["first_name"], last_name=p["last_name"], gender=p["sex"], birth_year=p["birth_year"], )
-        if p["first_name"] is None:
-            continue
 
         if p["last_name"] is None:
             new_person.last_name = "unknown"

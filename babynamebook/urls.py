@@ -6,4 +6,6 @@ urlpatterns = [
     url(r'^get_tree_instructions/$', views.get_tree_instructions, name='get_tree_instructions'),
     url(r'^upload_tree/$', views.upload_tree, name='upload_tree'),
     url(r'^progress/$', views.progress, name='progress'),
+    url(r'^correlate/$', views.correlate, name='correlate'),
+
 ]

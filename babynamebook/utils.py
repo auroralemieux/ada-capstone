@@ -104,11 +104,19 @@ def parse_xml(xml_filename):
 
 
         name = indi.find('NAME')
-        if name.find('forename') is not None:
-            new_person["first_name"] = name.find('forename').text
+        if name.find('forename') != None:
+            first_name = name.find('forename').text
+            if first_name is not None:
+                if " " in first_name:
+                    name_split = str.split(first_name)
+                    new_person["first_name"] = name_split[0]
+                else:
+                    new_person["first_name"] = first_name
+            else:
+                new_person["first_name"] = "unknown"
         else:
             new_person["first_name"] = "unknown"
-
+        # print(new_person["first_name"])
         if name.find('surname') is not None:
             new_person["last_name"] = name.find('surname').text
         else:
@@ -122,6 +130,6 @@ def parse_xml(xml_filename):
         new_person["sex"] = sex
 
         new_book.append(new_person)
-
+    print("in xml parser length of new book is", len(new_book))
     # now new_book is full of person hashes
     return new_book
