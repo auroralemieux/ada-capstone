@@ -1,6 +1,13 @@
 {% extends 'babynamebook/base.html' %}
 
 {% block content %}
+<section class="container">
+  <nav class="breadcrumb">
+    <a class="breadcrumb-item" href="/">Home</a>
+    <a class="breadcrumb-item" href="/upload_tree">Upload Tree</a>
+    <a class="breadcrumb-item active" href="/progress">Parsing Tree</a>
+  </nav>
+</section>
 <article class="align-self-center left-main-content col-md-5 col-lg-5 col-sm-12" id="rough-tree-details">
   <h2>Some stats from your tree...</h2>
   <p>{{ total_persons }} people in your tree.</p>

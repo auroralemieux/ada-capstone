@@ -1,6 +1,13 @@
 {% extends 'babynamebook/base.html' %}
 
 {% block content %}
+<section class="container">
+  <nav class="breadcrumb">
+    <a class="breadcrumb-item active" href="/">Home</a>
+    <a class="breadcrumb-item" href="/upload_tree">Upload Tree</a>
+    <a class="breadcrumb-item" href="/progress">Parsing Tree</a>
+  </nav>
+</section>
 <article class="align-self-center left-main-content col-md-6 col-lg-6 col-sm-12" id="home-instructions">
   <h2>What names are hidden in your tree?</h2>
   <p id="home-info-text">babynamebook takes your family tree and combs through it for all the first names. Then it correlates all names with their meanings and origins. The result is a beautifully formatted custom book to use in your own baby name hunt!</p>
