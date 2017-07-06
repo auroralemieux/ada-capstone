@@ -19,10 +19,29 @@
           <a class="nav-item nav-link" href="#">log in</a>
           <a class="nav-item nav-link" href="#">log out</a>
           <a class="nav-item nav-link" href="#">account</a>
+          <a class="nav-item nav-link" data-toggle="modal" data-target="#contactModal">
+            contact
+          </a>
+          <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="ancestryModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="contactModalLabel">Aurora Anderson</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p><a href="http://www.github.com/auroralemieux">github</a></p>
+                  <p>I made this website for my capstone project while at Ada Developers Academy (cohort 7).</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </section>
     </nav>
-    
+
   </header>
 
   <section id="content" class="content container">
@@ -31,9 +50,6 @@
       {% endblock %}
     </section>
   </section>
-  <footer class="container">
-    <p>&copy; 2017 by <a href="www.github.com/auroralemieux">aurora anderson</a></p>
-  </footer>
   <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
