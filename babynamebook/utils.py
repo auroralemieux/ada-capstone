@@ -82,17 +82,25 @@ def parse_xml(xml_filename):
                 if len(birth.find('DATE')) == 0:
                     birthdate = birth.find('DATE').text
                     year = birthdate[6:]
+                    if len(year) is 4 and year.isdigit():
+                        year = int(year)
+                    else:
+                        year = 0
                 else:
                     birthdate = birth.find('DATE')
 
                     if birthdate.find('year') is not None:
                         year = birthdate.find('year').text
+                        if len(year) is 4 and year.isdigit():
+                            year = int(year)
+                        else:
+                            year = 0
                     else:
-                        year = "unknown"
+                        year = 0
 
             new_person["birth_year"] = "%s" % (year)
         else:
-            new_person["birth_year"] = "unknown"
+            new_person["birth_year"] = 0
 
 
         name = indi.find('NAME')

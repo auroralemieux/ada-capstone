@@ -23,7 +23,7 @@ class Person(models.Model):
     name = models.ForeignKey('Name', on_delete=models.PROTECT, related_name="+", blank=True, null=True)
     first_name = models.CharField(max_length=200)
     last_name = models.CharField(max_length=200)
-    birth_year = models.CharField(max_length=4)
+    birth_year = models.IntegerField()
     gender = models.CharField(max_length=1)
 
     def __str__(self):
