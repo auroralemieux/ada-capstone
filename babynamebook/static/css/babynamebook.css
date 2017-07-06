@@ -12,7 +12,7 @@ footer {
   padding-top: 60px;
 }
 
-#home-info-text {
+#home-info-text, #instructions-info-text, #upload-info-text {
   text-align: justify;
 }
 

@@ -4,74 +4,19 @@
 <section class="container">
   <nav class="breadcrumb">
     <a class="breadcrumb-item" href="/">Home</a>
+    <a class="breadcrumb-item" href="/get_tree_instructions">Get Tree</a>
     <a class="breadcrumb-item active" href="/upload_tree">Upload Tree</a>
     <a class="breadcrumb-item" href="/progress">Parsing Tree</a>
   </nav>
 </section>
-<article class="align-self-center left-main-content col-md-6 col-lg-6 col-sm-12" id="upload-instructions">
-  <h2>Let's get started!</h2>
-  <p id="upload-info-text">If you haven't already done so, you will need to get a .ged file to upload. Log in to your favorite genealogy site where you already have a family tree built. For instructions on how to do that, click one of the buttons below.</p>
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#ancestryModal">
-    ancestry.com
-  </button>
-  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#heritageModal">
-    myheritage.com
-  </button>
-  <button type="button" class="btn btn-info" data-toggle="modal" data-target="#famsearchModal">
-    familysearch.org
-  </button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="ancestryModal" tabindex="-1" role="dialog" aria-labelledby="ancestryModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="ancestryModalLabel">downloading tree from ancestry</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          While viewing your tree, click the drop-down and choose tree settings. On the right, near the bottom, click on DOWNLOAD YOUR GEDCOM FILE. Save the file to your computer.
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="heritageModal" tabindex="-1" role="dialog" aria-labelledby="heritageModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="heritageModalLabel">downloading tree from myheritage</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <span class="incomplete">While viewing your tree, click the drop-down and choose tree settings. On the right, near the bottom, click on DOWNLOAD YOUR GEDCOM FILE. Save the file to your computer.</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="famsearchModal" tabindex="-1" role="dialog" aria-labelledby="famsearchModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="famsearchModalLabel">downloading tree from familysearch</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <span class="incomplete">While viewing your tree, click the drop-down and choose tree settings. On the right, near the bottom, click on DOWNLOAD YOUR GEDCOM FILE. Save the file to your computer.</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-
-<article class="align-self-center right-main-content col-md-6 col-lg-6 col-sm-12" id="upload">
+<article class="align-self-top right-main-content col-md-6 col-lg-6 col-sm-12" id="upload">
   <h2>Time to create your book!</h2>
+  <p id="upload-info-text">Choose a name for your book, then upload your file. When you are ready, click Next.</p>
+
+  <!-- <a type="button" class="btn btn-primary btn-block" id="start-button" href="#">Upload</a> -->
+</article>
+<article class="align-self-top right-main-content col-md-6 col-lg-6 col-sm-12" id="upload">
+  <h2>Create Book</h2>
   <form enctype="multipart/form-data" method="POST" id="new-book-form">{% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="btn save btn-success" id="upload-submit-button">Next</button>

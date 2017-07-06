@@ -3,10 +3,19 @@ from .forms import BookForm
 from .utils import parse_ged, parse_xml
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
-from .models import Book, Person
+from .models import Book, Person, Name
 
 def home(request):
-    return render(request, 'babynamebook/home.html', {})
+    names = Name.objects.all()
+    male = len(Name.objects.filter(gender="M"))
+    female = len(Name.objects.filter(gender="F"))
+    len_names = len(names)
+    return render(request, 'babynamebook/home.html', {'names': names, 'male': male, 'female': female, 'len_names': len_names})
+
+
+def get_tree_instructions(request):
+    return render(request, 'babynamebook/get_tree_instructions.html', {})
+
 
 def upload_tree(request):
     if request.method == "POST":
@@ -42,6 +51,7 @@ def upload_tree(request):
     else:
         form = BookForm()
     return render(request, 'babynamebook/upload_tree.html', {'form': form})
+
 
 def progress(request):
     book = get_object_or_404(Book, id=request.session["book_id"])

@@ -28,7 +28,7 @@ class Person(models.Model):
 
     def __str__(self):
         full_name = "%s %s (%s)" % (self.first_name, self.last_name, self.birth_year)
-        return full_name
+        return full_name        
 
 
 class Name(models.Model):
