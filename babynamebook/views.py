@@ -17,15 +17,17 @@ def upload_tree(request):
             book.save()
             filename = book.tree_upload.name
             xml_filename = parse_ged(filename)
+
+            # person_list is an array of dictionary objects
             person_list = parse_xml(xml_filename)
 
             for p in person_list:
                 new_person = Person(first_name=p["first_name"], last_name=p["last_name"], gender=p["sex"], birth_year=p["birth_year"], )
+                if p["first_name"] is None:
+                    continue
+
                 if p["last_name"] is None:
                     new_person.last_name = "unknown"
-
-                if p["first_name"] is None:
-                    new_person.first_name = "unknown"
 
                 if p["sex"] is None:
                     new_person.gender = "x"

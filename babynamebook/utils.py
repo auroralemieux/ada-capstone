@@ -71,10 +71,8 @@ def parse_xml(xml_filename):
     root = tree.getroot()
 
     new_book = []
-    counter = 0
 
     for indi in root.findall('INDI'):
-        counter += 1
         new_person = {}
         if indi.find('BIRT') is not None:
             birth = indi.find('BIRT')
