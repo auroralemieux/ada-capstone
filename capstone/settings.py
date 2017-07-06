@@ -130,6 +130,6 @@ MEDIA_URL = '/media/'
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 SESSION_SAVE_EVERY_REQUEST = True
 
-SELENIUM_WEBDRIVER = '../babynamebook/chromedriver'
+# SELENIUM_WEBDRIVER = '../babynamebook/chromedriver'
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 LIVE_SERVER_PORT = 8000
