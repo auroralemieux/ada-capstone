@@ -32,7 +32,6 @@ def upload_tree(request):
             request.session["book_id"] = book.id
             parse_person(request, person_list)
 
-            print("book id is: ", request.session["book_id"])
         return redirect('progress')
     else:
         form = BookForm()
@@ -53,22 +52,27 @@ def progress(request):
 def correlate(request):
     book = get_object_or_404(Book, id=request.session["book_id"])
     persons = Person.objects.filter(book=book)
+    # first_names_persons = []
+    # for p in persons:
+    #     first_names_persons.append(p.first_name)
+    # first_names = set(first_names_persons)
     male = []
     female = []
     for p in persons:
         try:
-            print(p.first_name)
-            # name = Name.objects.filter(first_name = p.first_name))
-            # p.name = name
-            # p.save()
-            # if p.gender == "F":
-            #     female.append(p)
-            # elif p.gender == "M":
-            #     male.append(p)
+            look_up_name = p.first_name
+            name = Name.objects.get(first_name = look_up_name, gender=p.gender)
+            p.name = name
+            p.save()
+            if p.gender == "F":
+                female.append(p)
+            elif p.gender == "M":
+                male.append(p)
         except Name.DoesNotExist:
             continue
+    female_a_names = Person.objects.filter(book=book, gender="F", first_name__startswith="A")
 
-    return render(request, 'babynamebook/progress.html', {'book': book, 'persons': persons, 'male': male, 'female': female})
+    return render(request, 'babynamebook/correlate.html', {'book': book, 'persons': persons, 'male': male, 'female': female, 'female_a_names': female_a_names})
 
 
 # this is a private method
