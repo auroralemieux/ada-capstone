@@ -55,22 +55,8 @@ def correlate(request):
     book = get_object_or_404(Book, id=request.session["book_id"])
     persons = Person.objects.filter(book=book)
 
-    for p in persons:
-        try:
-            first = Name.objects.get(first_name = p.first_name, gender=p.gender)
-            book.names.add(first)
-
-        except Name.DoesNotExist:
-            continue
-
-    for p in persons:
-        if p.middle_name != None:
-            try:
-                middle = Name.objects.get(first_name = p.middle_name, gender=p.gender)
-                book.names.add(middle)
-
-            except Name.DoesNotExist:
-                continue
+    __assoc_first_with_book(book,persons)
+    __assoc_middle_with_book(book,persons)
 
     all_boys = {}
     all_girls = {}
@@ -89,7 +75,7 @@ def correlate(request):
     female = Person.objects.filter(book=book, gender="F")
     male = Person.objects.filter(book=book, gender="M")
     for f in female:
-        if f.first_name.isalpha():
+        if f.first_name.isalpha() and f.first_name != "unknown":
             if f.first_name in female_freq.keys():
                 female_freq[f.first_name] += 1
             else:
@@ -98,7 +84,7 @@ def correlate(request):
 
 
     for m in male:
-        if m.first_name.isalpha():
+        if m.first_name.isalpha() and m.first_name != "unknown":
             if m.first_name in male_freq.keys():
                 male_freq[m.first_name] += 1
             else:
@@ -125,3 +111,24 @@ def __parse_person(request, person_list):
 
         new_person.book = book
         new_person.save()
+
+
+def __assoc_first_with_book(book, person_list):
+    for p in person_list:
+        try:
+            first = Name.objects.get(first_name = p.first_name, gender=p.gender)
+            book.names.add(first)
+
+        except Name.DoesNotExist:
+            continue
+
+
+def __assoc_middle_with_book(book, person_list):
+    for p in person_list:
+        if p.middle_name != None:
+            try:
+                middle = Name.objects.get(first_name = p.middle_name, gender=p.gender)
+                book.names.add(middle)
+
+            except Name.DoesNotExist:
+                continue
