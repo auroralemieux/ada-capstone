@@ -10,12 +10,29 @@
     <a class="breadcrumb-item active" href="/correlate">My baby name book</a>
   </nav>
 </section>
-<article class="align-self-top col-md-5 col-lg-5 col-sm-12" id="book-data">
+<section class="container">
   <h2>{{ book.title }}</h2>
-  <p>Girl names starting with A:</p>
-  {% for a in female_a_names %}
-    <p><strong>{{a.first_name}}</strong> <em>({{a.origin}})</em> {{a.meaning}}</p>
+</section>
+<article class="align-self-top col-md-5 col-lg-5 col-sm-12" id="girl-data">
+  <h3>Girls</h3>
+  {% for letter_girls in all_girls %}
+    <section class="card">
+      {% for girl in letter_girls %}
+        <p><strong>{{ girl.first_name }}</strong> <em>({{ girl.origin }})</em> {{ girl.meaning }}</p>
+      {% endfor %}
+    </section>
   {% endfor %}
 </article>
+<article class="align-self-top col-md-5 col-lg-5 col-sm-12" id="boy-data">
+  <h3>Boys</h3>
+  {% for letter_boys in all_boys %}
+    <section class="card">
+      {% for boy in letter_boys %}
+        <p><strong>{{ boy.first_name }}</strong> <em>({{ boy.origin }})</em> {{ boy.meaning }}</p>
+      {% endfor %}
+    </section>
+  {% endfor %}
+</article>
+
 
 {% endblock %}
