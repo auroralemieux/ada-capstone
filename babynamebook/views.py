@@ -5,6 +5,8 @@ from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from .models import Book, Person, Name
 import operator
+import plotly
+from plotly.graph_objs import Scatter, Layout
 
 
 def home(request):
@@ -58,28 +60,21 @@ def correlate(request):
     __assoc_first_with_book(book,persons)
     __assoc_middle_with_book(book,persons)
 
-    all_boys = {}
-    all_girls = {}
-
-    letter = "A"
-    for m in range(26):
-
-        all_boys[letter] = book.names.all().filter(gender="M", first_name__startswith=letter).order_by('first_name')
-
-        all_girls[letter] = book.names.all().filter(gender="F", first_name__startswith=letter).order_by('first_name')
-
-        letter = chr(ord(letter) + 1)
+    all_boys = __get_all_names_for_book_by_gender(book, "M")
+    all_girls = __get_all_names_for_book_by_gender(book, "F")
 
     male = Person.objects.filter(book=book, gender="M")
     female = Person.objects.filter(book=book, gender="F")
 
-    top_female = __top_ten_names(female, book)
-    top_male = __top_ten_names(male, book)
+    top_female = __top_ten_first_names(female, book)
+    top_male = __top_ten_first_names(male, book)
+    top_last = __top_ten_last_names(persons, book)
 
-    return render(request, 'babynamebook/correlate.html', {'book': book, 'persons': persons, 'all_girls': sorted(all_girls.items()), 'all_boys': sorted(all_boys.items()), 'top_female': top_female, 'top_male': top_male})
+
+    return render(request, 'babynamebook/correlate.html', {'book': book, 'persons': persons, 'all_girls': sorted(all_girls.items()), 'all_boys': sorted(all_boys.items()), 'top_female': top_female, 'top_male': top_male, 'top_last': top_last})
 
 
-# this is a private method
+# these are private helper methods
 def __parse_person(request, person_list):
     for p in person_list:
         new_person = Person(first_name=p["first_name"], last_name=p["last_name"], gender=p["sex"], birth_year=p["birth_year"], )
@@ -119,7 +114,7 @@ def __assoc_middle_with_book(book, person_list):
                 continue
 
 
-def __top_ten_names(person_list, book):
+def __top_ten_first_names(person_list, book):
     freq = {}
     for p in person_list:
         if p.first_name.isalpha() and p.first_name != "unknown":
@@ -128,3 +123,23 @@ def __top_ten_names(person_list, book):
             else:
                 freq[p.first_name] = 1
     return sorted(freq.items(), key=operator.itemgetter(1), reverse=True)[0:10]
+
+
+def __top_ten_last_names(person_list, book):
+    freq = {}
+    for p in person_list:
+        if p.last_name.isalpha() and p.last_name != "unknown":
+            if p.last_name in freq.keys():
+                freq[p.last_name] += 1
+            else:
+                freq[p.last_name] = 1
+    return sorted(freq.items(), key=operator.itemgetter(1), reverse=True)[0:10]
+
+
+def __get_all_names_for_book_by_gender(book, gender):
+    all_names = {}
+    letter = "A"
+    for p in range(26):
+        all_names[letter] = book.names.all().filter(gender=gender, first_name__startswith=letter).order_by('first_name')
+        letter = chr(ord(letter) + 1)
+    return all_names
