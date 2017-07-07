@@ -44,33 +44,12 @@ def progress(request):
     book = get_object_or_404(Book, id=request.session["book_id"])
     persons = Person.objects.filter(book=book)
     total_persons = len(persons)
-    male_freq = {}
-    female_freq = {}
     female = Person.objects.filter(book=book, gender="F")
     male = Person.objects.filter(book=book, gender="M")
-
-    for f in female:
-        if f.first_name.isalpha():
-            if f.first_name in female_freq.keys():
-                female_freq[f.first_name] += 1
-            else:
-                female_freq[f.first_name] = 1
-    for m in male:
-        if m.first_name.isalpha():
-            if m.first_name in male_freq.keys():
-                male_freq[m.first_name] += 1
-            else:
-                male_freq[m.first_name] = 1
-
-    top_male = sorted(male_freq.items(), key=operator.itemgetter(1), reverse=True)[0:10]
-    top_female = sorted(female_freq.items(), key=operator.itemgetter(1), reverse=True)[0:10]
-
     num_m = len(male)
     num_f = len(female)
 
-
-
-    return render(request, 'babynamebook/progress.html', {'book': book, 'persons': persons, 'total_persons': total_persons, 'num_m': num_m, 'num_f': num_f, 'top_male': top_male, 'top_female': top_female})
+    return render(request, 'babynamebook/progress.html', {'book': book, 'persons': persons, 'total_persons': total_persons, 'num_m': num_m, 'num_f': num_f, })
 
 def correlate(request):
     book = get_object_or_404(Book, id=request.session["book_id"])
@@ -106,7 +85,9 @@ def correlate(request):
         letter = chr(ord(letter) + 1)
 
     female_freq = {}
+    male_freq = {}
     female = Person.objects.filter(book=book, gender="F")
+    male = Person.objects.filter(book=book, gender="M")
     for f in female:
         if f.first_name.isalpha():
             if f.first_name in female_freq.keys():
@@ -116,7 +97,15 @@ def correlate(request):
     top_female = sorted(female_freq.items(), key=operator.itemgetter(1), reverse=True)[0:10]
 
 
-    return render(request, 'babynamebook/correlate.html', {'book': book, 'persons': persons, 'all_girls': sorted(all_girls.items()), 'all_boys': sorted(all_boys.items()), 'top_female': top_female})
+    for m in male:
+        if m.first_name.isalpha():
+            if m.first_name in male_freq.keys():
+                male_freq[m.first_name] += 1
+            else:
+                male_freq[m.first_name] = 1
+    top_male = sorted(male_freq.items(), key=operator.itemgetter(1), reverse=True)[0:10]
+
+    return render(request, 'babynamebook/correlate.html', {'book': book, 'persons': persons, 'all_girls': sorted(all_girls.items()), 'all_boys': sorted(all_boys.items()), 'top_female': top_female, 'top_male': top_male})
 
 
 # this is a private method
