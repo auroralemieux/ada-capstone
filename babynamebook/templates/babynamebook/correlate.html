@@ -15,21 +15,27 @@
 </section>
 <article class="align-self-top col-md-5 col-lg-5 col-sm-12" id="girl-data">
   <h3>Girls</h3>
-  {% for letter_girls in all_girls %}
+  {% for letter, names in all_girls %}
     <section class="card">
-      {% for girl in letter_girls %}
+      <section class="card-block">
+        <h3 class="card-title">{{ letter }}</h3>
+        {% for girl in names %}
         <p><strong>{{ girl.first_name }}</strong> <em>({{ girl.origin }})</em> {{ girl.meaning }}</p>
-      {% endfor %}
+        {% endfor %}
+      </section>
     </section>
   {% endfor %}
 </article>
 <article class="align-self-top col-md-5 col-lg-5 col-sm-12" id="boy-data">
   <h3>Boys</h3>
-  {% for letter_boys in all_boys %}
+  {% for letter, names in all_boys %}
     <section class="card">
-      {% for boy in letter_boys %}
-        <p><strong>{{ boy.first_name }}</strong> <em>({{ boy.origin }})</em> {{ boy.meaning }}</p>
-      {% endfor %}
+      <section class="card-block">
+        <h3 class="card-title">{{ letter }}</h3>
+        {% for boy in names %}
+          <p><strong>{{ boy.first_name }}</strong> <em>({{ boy.origin }})</em> {{ boy.meaning }}</p>
+        {% endfor %}
+      </section>
     </section>
   {% endfor %}
 </article>

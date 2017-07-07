@@ -68,21 +68,23 @@ def correlate(request):
             except Name.DoesNotExist:
                 continue
 
-    all_boys = []
-    all_girls = []
+    # all_boys = []
+    # all_girls = []
+    all_boys = {}
+    all_girls = {}
 
     letter = "A"
     for m in range(26):
-        all_of_one_letter_boys = book.names.all().filter(gender="M", first_name__startswith=letter).order_by('first_name')
-        all_boys.append(all_of_one_letter_boys)
 
-        all_of_one_letter_girls = book.names.all().filter(gender="F", first_name__startswith=letter).order_by('first_name')
-        all_girls.append(all_of_one_letter_girls)
+        all_boys[letter] = book.names.all().filter(gender="M", first_name__startswith=letter).order_by('first_name')
+        # all_boys.append(all_of_one_letter_boys)
+
+        all_girls[letter] = book.names.all().filter(gender="F", first_name__startswith=letter).order_by('first_name')
+        # all_girls.append(all_of_one_letter_girls)
 
         letter = chr(ord(letter) + 1)
 
-
-    return render(request, 'babynamebook/correlate.html', {'book': book, 'persons': persons, 'all_girls': all_girls, 'all_boys': all_boys})
+    return render(request, 'babynamebook/correlate.html', {'book': book, 'persons': persons, 'all_girls': sorted(all_girls.items()), 'all_boys': sorted(all_boys.items())})
 
 
 # this is a private method
