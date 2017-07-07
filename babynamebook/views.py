@@ -70,26 +70,11 @@ def correlate(request):
 
         letter = chr(ord(letter) + 1)
 
-    female_freq = {}
-    male_freq = {}
-    female = Person.objects.filter(book=book, gender="F")
     male = Person.objects.filter(book=book, gender="M")
-    for f in female:
-        if f.first_name.isalpha() and f.first_name != "unknown":
-            if f.first_name in female_freq.keys():
-                female_freq[f.first_name] += 1
-            else:
-                female_freq[f.first_name] = 1
-    top_female = sorted(female_freq.items(), key=operator.itemgetter(1), reverse=True)[0:10]
+    female = Person.objects.filter(book=book, gender="F")
 
-
-    for m in male:
-        if m.first_name.isalpha() and m.first_name != "unknown":
-            if m.first_name in male_freq.keys():
-                male_freq[m.first_name] += 1
-            else:
-                male_freq[m.first_name] = 1
-    top_male = sorted(male_freq.items(), key=operator.itemgetter(1), reverse=True)[0:10]
+    top_female = __top_ten_names(female, book)
+    top_male = __top_ten_names(male, book)
 
     return render(request, 'babynamebook/correlate.html', {'book': book, 'persons': persons, 'all_girls': sorted(all_girls.items()), 'all_boys': sorted(all_boys.items()), 'top_female': top_female, 'top_male': top_male})
 
@@ -132,3 +117,14 @@ def __assoc_middle_with_book(book, person_list):
 
             except Name.DoesNotExist:
                 continue
+
+
+def __top_ten_names(person_list, book):
+    freq = {}
+    for p in person_list:
+        if p.first_name.isalpha() and p.first_name != "unknown":
+            if p.first_name in freq.keys():
+                freq[p.first_name] += 1
+            else:
+                freq[p.first_name] = 1
+    return sorted(freq.items(), key=operator.itemgetter(1), reverse=True)[0:10]
