@@ -69,9 +69,12 @@ def correlate(request):
     top_female = __top_ten_first_names(female, book)
     top_male = __top_ten_first_names(male, book)
     top_last = __top_ten_last_names(persons, book)
+    top_origin = __top_five_origins(book)
+    pop_boy_names = __get_popular_names_2016("M", book)
+    pop_girl_names = __get_popular_names_2016("F", book)
 
 
-    return render(request, 'babynamebook/correlate.html', {'book': book, 'persons': persons, 'all_girls': sorted(all_girls.items()), 'all_boys': sorted(all_boys.items()), 'top_female': top_female, 'top_male': top_male, 'top_last': top_last})
+    return render(request, 'babynamebook/correlate.html', {'book': book, 'persons': persons, 'all_girls': sorted(all_girls.items()), 'all_boys': sorted(all_boys.items()), 'top_female': top_female, 'top_male': top_male, 'top_last': top_last, 'top_origin': top_origin, 'pop_girl_names': pop_girl_names,'pop_boy_names': pop_boy_names})
 
 
 # these are private helper methods
@@ -136,6 +139,17 @@ def __top_ten_last_names(person_list, book):
     return sorted(freq.items(), key=operator.itemgetter(1), reverse=True)[0:10]
 
 
+def __top_five_origins(book):
+    freq = {}
+    for n in book.names.all():
+        if n.origin.isalpha() and n.origin != "unknown":
+            if n.origin in freq.keys():
+                freq[n.origin] += 1
+            else:
+                freq[n.origin] = 1
+    return sorted(freq.items(), key=operator.itemgetter(1), reverse=True)[0:5]
+
+
 def __get_all_names_for_book_by_gender(book, gender):
     all_names = {}
     letter = "A"
@@ -143,3 +157,22 @@ def __get_all_names_for_book_by_gender(book, gender):
         all_names[letter] = book.names.all().filter(gender=gender, first_name__startswith=letter).order_by('first_name')
         letter = chr(ord(letter) + 1)
     return all_names
+
+def __get_popular_names_2016(gender, book):
+    # from https://www.ssa.gov/oact/babynames/
+    pop_results = []
+    if gender == "M":
+        pop_names = ["Noah", "Liam", "William", "Mason", "James", "Benjamin", "Jacob", "Michael", "Elijah", "Ethan"]
+    elif gender == "F":
+        pop_names = ["Emma", "Olivia", "Ava", "Sophia", "Isabella", "Mia", "Charlotte", "Abigail", "Emily", "Harper"]
+
+    for n in pop_names:
+        try:
+            name = book.names.all().get(gender=gender, first_name=n)
+            pop_results.append(n)
+
+        except Name.DoesNotExist:
+            continue
+
+
+    return pop_results

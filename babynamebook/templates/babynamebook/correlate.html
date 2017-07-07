@@ -16,14 +16,23 @@
 <article class="align-self-top col-md-2 col-lg-2 col-sm-12" id="extra-data">
   <h3 class="text-center">Stats</h3>
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#girlModal">
+  <button type="button" class="mb-3 btn btn-secondary" data-toggle="modal" data-target="#girlModal">
     top 10 girl names
   </button>
-  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#boyModal">
+  <button type="button" class="mb-3 btn btn-secondary" data-toggle="modal" data-target="#boyModal">
     top 10 boy names
   </button>
-  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#lastModal">
+  <button type="button" class="mb-3 btn btn-secondary" data-toggle="modal" data-target="#lastModal">
     top 10 last names
+  </button>
+  <button type="button" class="mb-3 btn btn-secondary" data-toggle="modal" data-target="#originModal">
+    top 5 name origins
+  </button>
+  <button type="button" class="mb-3 btn btn-secondary" data-toggle="modal" data-target="#popGirlModal">
+    popular girl names
+  </button>
+  <button type="button" class="mb-3 btn btn-secondary" data-toggle="modal" data-target="#popBoyModal">
+    popular boy names
   </button>
 
   <!-- Modal -->
@@ -48,7 +57,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="boyModalLabel">Top 10 girl names from your tree</h5>
+          <h5 class="modal-title" id="boyModalLabel">Top 10 boy names from your tree</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -73,6 +82,59 @@
         <div class="modal-body">
           {% for key, value in top_last %}
               <p>{{ key }} ({{ value }})</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="originModal" tabindex="-1" role="dialog" aria-labelledby="originModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="originModalLabel">Top 3 origins of names in tree</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          {% for key, value in top_origin %}
+              <p>{{ key }} ({{ value }})</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="popGirlModal" tabindex="-1" role="dialog" aria-labelledby="popGirlModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="popGirlModalLabel">Popular girl names</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Names from your tree that were on the 2016 SSA list of most popular names.</p>
+          {% for name in pop_girl_names %}
+              <p>{{ name }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="popBoyModal" tabindex="-1" role="dialog" aria-labelledby="popBoyModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="popBoyModalLabel">Popular boy names</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Names from your tree that were on the 2016 SSA list of most popular names.</p>
+          {% for name in pop_boy_names %}
+              <p>{{ name }}</p>
           {% endfor %}
         </div>
       </div>
