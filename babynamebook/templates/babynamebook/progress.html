@@ -17,10 +17,22 @@
     <li>{{ num_m }} male</li>
     <li>{{ num_f }} female</li>
   </ul>
+  <section>
+    <h4>Top Boys Names</h4>
+    {% for key, value in top_male %}
+        <p>{{ key }} ({{ value }})</p>
+    {% endfor %}
+  </section>
+  <section>
+    <h4>Top Girls Names</h4>
+    {% for key, value in top_female %}
+        <p>{{ key }} ({{ value }})</p>
+    {% endfor %}
+  </section>
   <p class="">Next up is finding meanings for all those names. Get ready to see your baby name book!</p>
 </article>
 <article class="align-self-top right-main-content col-md-5 col-lg-5 col-sm-12">
-  <a role="button" class="btn btn-info" id="correlate-button" href="{% url 'correlate' %}">Make my book!</a>
+  <a role="button" class="btn btn-success" id="correlate-button" href="{% url 'correlate' %}">Make my book</a>
 </article>
 
 {% endblock %}

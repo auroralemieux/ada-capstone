@@ -13,7 +13,51 @@
 <section class="container">
   <h2 class="text-center">{{ book.title }}</h2>
 </section>
-<article class="align-self-top col-md-5 col-lg-5 col-sm-12" id="girl-data">
+<article class="align-self-top col-md-4 col-lg-4 col-sm-12" id="extra-data">
+  <h3 class="text-center">Stats</h3>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#girlModal">
+    top 10 girl names
+  </button>
+  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#boyModal">
+    top 10 boy names
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="girlModal" tabindex="-1" role="dialog" aria-labelledby="girlModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="girlModalLabel">Top 10 girl names from your tree</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          {% for key, value in top_female %}
+              <p>{{ key }} ({{ value }})</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="heritageModal" tabindex="-1" role="dialog" aria-labelledby="heritageModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="heritageModalLabel">downloading tree from myheritage</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          boy
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="align-self-top col-md-4 col-lg-4 col-sm-12" id="girl-data">
   <h3 class="text-center">Girls</h3>
   {% for letter, names in all_girls %}
     <section class="card mb-3 card-outline-warning">
@@ -26,7 +70,7 @@
     </section>
   {% endfor %}
 </article>
-<article class="align-self-top col-md-5 col-lg-5 col-sm-12" id="boy-data">
+<article class="align-self-top col-md-4 col-lg-4 col-sm-12" id="boy-data">
   <h3 class="text-center">Boys</h3>
   {% for letter, names in all_boys %}
     <section class="card mb-3 card-outline-info">

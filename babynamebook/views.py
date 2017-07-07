@@ -4,6 +4,8 @@ from .utils import parse_ged, parse_xml
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
 from .models import Book, Person, Name
+import operator
+
 
 def home(request):
     names = Name.objects.all()
@@ -30,7 +32,7 @@ def upload_tree(request):
             # person_list is an array of dictionary objects
             person_list = parse_xml(xml_filename)
             request.session["book_id"] = book.id
-            parse_person(request, person_list)
+            __parse_person(request, person_list)
 
         return redirect('progress')
     else:
@@ -42,10 +44,33 @@ def progress(request):
     book = get_object_or_404(Book, id=request.session["book_id"])
     persons = Person.objects.filter(book=book)
     total_persons = len(persons)
-    num_m = len(Person.objects.filter(book=book, gender="M"))
-    num_f = len(Person.objects.filter(book=book, gender="F"))
+    male_freq = {}
+    female_freq = {}
+    female = Person.objects.filter(book=book, gender="F")
+    male = Person.objects.filter(book=book, gender="M")
 
-    return render(request, 'babynamebook/progress.html', {'book': book, 'persons': persons, 'total_persons': total_persons, 'num_m': num_m, 'num_f': num_f})
+    for f in female:
+        if f.first_name.isalpha():
+            if f.first_name in female_freq.keys():
+                female_freq[f.first_name] += 1
+            else:
+                female_freq[f.first_name] = 1
+    for m in male:
+        if m.first_name.isalpha():
+            if m.first_name in male_freq.keys():
+                male_freq[m.first_name] += 1
+            else:
+                male_freq[m.first_name] = 1
+
+    top_male = sorted(male_freq.items(), key=operator.itemgetter(1), reverse=True)[0:10]
+    top_female = sorted(female_freq.items(), key=operator.itemgetter(1), reverse=True)[0:10]
+
+    num_m = len(male)
+    num_f = len(female)
+
+
+
+    return render(request, 'babynamebook/progress.html', {'book': book, 'persons': persons, 'total_persons': total_persons, 'num_m': num_m, 'num_f': num_f, 'top_male': top_male, 'top_female': top_female})
 
 def correlate(request):
     book = get_object_or_404(Book, id=request.session["book_id"])
@@ -68,8 +93,6 @@ def correlate(request):
             except Name.DoesNotExist:
                 continue
 
-    # all_boys = []
-    # all_girls = []
     all_boys = {}
     all_girls = {}
 
@@ -77,18 +100,27 @@ def correlate(request):
     for m in range(26):
 
         all_boys[letter] = book.names.all().filter(gender="M", first_name__startswith=letter).order_by('first_name')
-        # all_boys.append(all_of_one_letter_boys)
 
         all_girls[letter] = book.names.all().filter(gender="F", first_name__startswith=letter).order_by('first_name')
-        # all_girls.append(all_of_one_letter_girls)
 
         letter = chr(ord(letter) + 1)
 
-    return render(request, 'babynamebook/correlate.html', {'book': book, 'persons': persons, 'all_girls': sorted(all_girls.items()), 'all_boys': sorted(all_boys.items())})
+    female_freq = {}
+    female = Person.objects.filter(book=book, gender="F")
+    for f in female:
+        if f.first_name.isalpha():
+            if f.first_name in female_freq.keys():
+                female_freq[f.first_name] += 1
+            else:
+                female_freq[f.first_name] = 1
+    top_female = sorted(female_freq.items(), key=operator.itemgetter(1), reverse=True)[0:10]
+
+
+    return render(request, 'babynamebook/correlate.html', {'book': book, 'persons': persons, 'all_girls': sorted(all_girls.items()), 'all_boys': sorted(all_boys.items()), 'top_female': top_female})
 
 
 # this is a private method
-def parse_person(request, person_list):
+def __parse_person(request, person_list):
     for p in person_list:
         new_person = Person(first_name=p["first_name"], last_name=p["last_name"], gender=p["sex"], birth_year=p["birth_year"], )
 
