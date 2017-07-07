@@ -11,12 +11,12 @@
   </nav>
 </section>
 <section class="container">
-  <h2>{{ book.title }}</h2>
+  <h2 class="">{{ book.title }}</h2>
 </section>
 <article class="align-self-top col-md-5 col-lg-5 col-sm-12" id="girl-data">
   <h3>Girls</h3>
   {% for letter, names in all_girls %}
-    <section class="card">
+    <section class="card mb-3 card-outline-warning">
       <section class="card-block">
         <h3 class="card-title">{{ letter }}</h3>
         {% for girl in names %}
@@ -29,7 +29,7 @@
 <article class="align-self-top col-md-5 col-lg-5 col-sm-12" id="boy-data">
   <h3>Boys</h3>
   {% for letter, names in all_boys %}
-    <section class="card">
+    <section class="card mb-3 card-outline-info">
       <section class="card-block">
         <h3 class="card-title">{{ letter }}</h3>
         {% for boy in names %}

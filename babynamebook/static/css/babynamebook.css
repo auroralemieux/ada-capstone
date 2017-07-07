@@ -19,3 +19,8 @@ footer {
 .incomplete {
   color: red;
 }
+
+
+#book-title {
+  text-align: center;
+}
