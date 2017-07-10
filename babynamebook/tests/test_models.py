@@ -7,13 +7,19 @@ from babynamebook.forms import BookForm
 import mock
 from django.core.files import File
 from django.core.files.storage import Storage
+from django.test import Client
 
 
 class BookTest(TestCase):
 
-    ## this is passing!!!!!
+    ## this is NOT passing!!!!!
     def test_book_creation(self):
-        user = login(username="test1", password="xueimel1")
+
+        user = User.objects.create(username='testuser')
+        user.set_password('12345')
+        user.save()
+        c = Client()
+        logged_in = c.login(username='testuser', password='12345')
         file_mock = mock.MagicMock(spec=File, name='FileMock')
         file_mock.name = 'test1.ged'
 
@@ -31,12 +37,17 @@ class BookTest(TestCase):
         self.assertEqual("test-book", book.title)
 
     def test_book_string_method(self):
-
+        user = User.objects.create(username='testuser')
+        user.set_password('12345')
+        user.save()
+        c = Client()
+        logged_in = c.login(username='testuser', password='12345')
         file_mock = mock.MagicMock(spec=File, name='FileMock')
         file_mock.name = 'test1.ged'
 
         book = Book(title="test-book")
         book.upload_tree = file_mock
+        book.author = user
 
         storage_mock = mock.MagicMock(spec=Storage, name='StorageMock')
         storage_mock.url = mock.MagicMock(name='url')
@@ -51,11 +62,17 @@ class PersonTest(TestCase):
 
     ## this is passing!!!!!
     def test_person_creation(self):
+        user = User.objects.create(username='testuser')
+        user.set_password('12345')
+        user.save()
+        c = Client()
+        logged_in = c.login(username='testuser', password='12345')
         file_mock = mock.MagicMock(spec=File, name='FileMock')
         file_mock.name = 'test1.ged'
 
         book = Book(title="test-book")
         book.upload_tree = file_mock
+        book.author = user
 
         storage_mock = mock.MagicMock(spec=Storage, name='StorageMock')
         storage_mock.url = mock.MagicMock(name='url')
@@ -72,12 +89,17 @@ class PersonTest(TestCase):
         self.assertEqual("first", person.first_name)
 
     def test_person_string_method(self):
-
+        user = User.objects.create(username='testuser')
+        user.set_password('12345')
+        user.save()
+        c = Client()
+        logged_in = c.login(username='testuser', password='12345')
         file_mock = mock.MagicMock(spec=File, name='FileMock')
         file_mock.name = 'test1.ged'
 
         book = Book(title="test-book")
         book.upload_tree = file_mock
+        book.author = user
 
         storage_mock = mock.MagicMock(spec=Storage, name='StorageMock')
         storage_mock.url = mock.MagicMock(name='url')

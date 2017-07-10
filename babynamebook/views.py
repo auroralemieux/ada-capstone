@@ -103,29 +103,29 @@ def progress(request):
     return render(request, 'babynamebook/progress.html', {'book': book, 'persons': persons, 'total_persons': total_persons, 'num_m': num_m, 'num_f': num_f, })
 
 
-@login_required
-def correlate(request):
-    book = get_object_or_404(Book, id=request.session["book_id"])
-    persons = Person.objects.filter(book=book)
-
-    # __assoc_first_with_book(book,persons)
-    # __assoc_middle_with_book(book,persons)
-
-    all_boys = __get_all_names_for_book_by_gender(book, "M")
-    all_girls = __get_all_names_for_book_by_gender(book, "F")
-
-    male = Person.objects.filter(book=book, gender="M")
-    female = Person.objects.filter(book=book, gender="F")
-
-    top_female = __top_ten_first_names(female, book)
-    top_male = __top_ten_first_names(male, book)
-    top_last = __top_ten_last_names(persons, book)
-    top_origin = __top_five_origins(book)
-    pop_boy_names = __get_popular_names_2016("M", book)
-    pop_girl_names = __get_popular_names_2016("F", book)
-
-
-    return render(request, 'babynamebook/correlate.html', {'book': book, 'persons': persons, 'all_girls': sorted(all_girls.items()), 'all_boys': sorted(all_boys.items()), 'top_female': top_female, 'top_male': top_male, 'top_last': top_last, 'top_origin': top_origin, 'pop_girl_names': pop_girl_names,'pop_boy_names': pop_boy_names})
+# @login_required
+# def correlate(request):
+#     book = get_object_or_404(Book, id=request.session["book_id"])
+#     persons = Person.objects.filter(book=book)
+#
+#     # __assoc_first_with_book(book,persons)
+#     # __assoc_middle_with_book(book,persons)
+#
+#     all_boys = __get_all_names_for_book_by_gender(book, "M")
+#     all_girls = __get_all_names_for_book_by_gender(book, "F")
+#
+#     male = Person.objects.filter(book=book, gender="M")
+#     female = Person.objects.filter(book=book, gender="F")
+#
+#     top_female = __top_ten_first_names(female, book)
+#     top_male = __top_ten_first_names(male, book)
+#     top_last = __top_ten_last_names(persons, book)
+#     top_origin = __top_five_origins(book)
+#     pop_boy_names = __get_popular_names_2016("M", book)
+#     pop_girl_names = __get_popular_names_2016("F", book)
+#
+#
+#     return render(request, 'babynamebook/correlate.html', {'book': book, 'persons': persons, 'all_girls': sorted(all_girls.items()), 'all_boys': sorted(all_boys.items()), 'top_female': top_female, 'top_male': top_male, 'top_last': top_last, 'top_origin': top_origin, 'pop_girl_names': pop_girl_names,'pop_boy_names': pop_boy_names})
 
 
 # these are private helper methods
