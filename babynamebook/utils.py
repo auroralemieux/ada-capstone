@@ -126,7 +126,7 @@ def parse_xml(xml_filename):
         if indi.find("SEX") is not None:
             sex = indi.find('SEX').text
         else:
-            sex = "unknown"
+            sex = "x"
 
         new_person["sex"] = sex
 
