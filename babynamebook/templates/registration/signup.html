@@ -1,10 +1,10 @@
 {% extends 'babynamebook/base.html' %}
 
-{% block title %}Register | {{ block.super }} {% endblock %}
-
-{% block headline %}<h1>Create a babynamebook account</h1>{% endblock %}
-
 {% block content %}
+    <section class="container mb-3">
+      <h2>Create a babynamebook account</h2>
+      <p>You will have to login separately after successful account creation.</p>
+    </section>
     <form action='' method="POST">
         {% csrf_token %}
         {{ form.as_p }}
