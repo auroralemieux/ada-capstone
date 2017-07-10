@@ -93,7 +93,6 @@ class PersonTest(TestCase):
 
 class NameTest(TestCase):
 
-    ## this is passing!!!!!
     def test_name_creation(self):
 
         name = Name(first_name="first", origin="French", gender="F", meaning="test")
