@@ -7,5 +7,4 @@ urlpatterns = [
     url(r'^upload_tree/$', views.upload_tree, name='upload_tree'),
     url(r'^progress/$', views.progress, name='progress'),
     url(r'^correlate/$', views.correlate, name='correlate'),
-    
 ]

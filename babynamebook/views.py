@@ -10,20 +10,20 @@ from plotly.graph_objs import Scatter, Layout
 from django.contrib.auth.decorators import login_required
 
 
-def login(request):
-    if request.method == "POST":
-        username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(username=username, password=password)
-        if user is not None:
-            login(request, user)
-            # Redirect to a success page.
-
-        else:
-            # Return an 'invalid login' error message.
-            print("invalid login")
-    else:
-        print("should get the regular login form")
+# def login(request):
+#     if request.method == "POST":
+#         username = request.POST['username']
+#         password = request.POST['password']
+#         user = authenticate(username=username, password=password)
+#         if user is not None:
+#             login(request, user)
+#             # Redirect to a success page.
+#
+#         else:
+#             # Return an 'invalid login' error message.
+#             print("invalid login")
+#     else:
+#         print("should get the regular login form")
 
 
 def home(request):
