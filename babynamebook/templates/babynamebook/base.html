@@ -16,9 +16,12 @@
       <a href="{% url 'home' %}" class="navbar-brand mb-0">babynamebook</a>
       <section class="collapse navbar-collapse" id="navbarSupportedContent">
         <section class="navbar-nav mr-auto">
-          <a class="nav-item nav-link" href="#">log in</a>
-          <a class="nav-item nav-link" href="#">log out</a>
+          {% if user.is_authenticated %}
+          <p class="top-menu">Hello {{ user.username }} <small>(<a class="nav-item nav-link" href="{ url 'logout' }">log out</a>)</small></p>
           <a class="nav-item nav-link" href="#">account</a>
+          {% else %}
+          <a class="nav-item nav-link" href="{ url 'login' }">log in</a>
+          {% endif %}
           <a class="nav-item nav-link" role="button" data-toggle="modal" data-target="#contactModal">
             contact
           </a>

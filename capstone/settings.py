@@ -133,3 +133,5 @@ SESSION_SAVE_EVERY_REQUEST = True
 # SELENIUM_WEBDRIVER = '../babynamebook/chromedriver'
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 LIVE_SERVER_PORT = 8000
+
+LOGIN_REDIRECT_URL = '/'
