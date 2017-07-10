@@ -42,6 +42,7 @@ def upload_tree(request):
         if form.is_valid():
             book = Book(tree_upload=request.FILES['tree_upload'], title=request.POST['title'])
             # add stuff about user
+            book.author = request.user
             book.save()
             filename = book.tree_upload.name
             xml_filename = parse_ged(filename)
