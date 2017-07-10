@@ -31,6 +31,27 @@ def account(request):
     return render(request, 'babynamebook/account.html', {'books': books, 'user': user})
 
 
+@login_required
+def book(request, pk):
+    book = get_object_or_404(Book, pk=pk)
+    persons = Person.objects.filter(book=book)
+
+    all_boys = __get_all_names_for_book_by_gender(book, "M")
+    all_girls = __get_all_names_for_book_by_gender(book, "F")
+
+    male = Person.objects.filter(book=book, gender="M")
+    female = Person.objects.filter(book=book, gender="F")
+
+    top_female = __top_ten_first_names(female, book)
+    top_male = __top_ten_first_names(male, book)
+    top_last = __top_ten_last_names(persons, book)
+    top_origin = __top_five_origins(book)
+    pop_boy_names = __get_popular_names_2016("M", book)
+    pop_girl_names = __get_popular_names_2016("F", book)
+
+    return render(request, 'babynamebook/book.html', {'book': book, 'persons': persons, 'all_girls': sorted(all_girls.items()), 'all_boys': sorted(all_boys.items()), 'top_female': top_female, 'top_male': top_male, 'top_last': top_last, 'top_origin': top_origin, 'pop_girl_names': pop_girl_names,'pop_boy_names': pop_boy_names})
+
+
 def home(request):
     names = Name.objects.all()
     male = len(Name.objects.filter(gender="M"))
@@ -69,6 +90,10 @@ def upload_tree(request):
 def progress(request):
     book = get_object_or_404(Book, id=request.session["book_id"])
     persons = Person.objects.filter(book=book)
+
+    __assoc_first_with_book(book,persons)
+    __assoc_middle_with_book(book,persons)
+
     total_persons = len(persons)
     female = Person.objects.filter(book=book, gender="F")
     male = Person.objects.filter(book=book, gender="M")
@@ -83,8 +108,8 @@ def correlate(request):
     book = get_object_or_404(Book, id=request.session["book_id"])
     persons = Person.objects.filter(book=book)
 
-    __assoc_first_with_book(book,persons)
-    __assoc_middle_with_book(book,persons)
+    # __assoc_first_with_book(book,persons)
+    # __assoc_middle_with_book(book,persons)
 
     all_boys = __get_all_names_for_book_by_gender(book, "M")
     all_girls = __get_all_names_for_book_by_gender(book, "F")

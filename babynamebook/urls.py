@@ -8,5 +8,6 @@ urlpatterns = [
     url(r'^progress/$', views.progress, name='progress'),
     url(r'^correlate/$', views.correlate, name='correlate'),
     url(r'^account/$', views.account, name='account'),
+    url(r'^book/(?P<pk>\d+)/$', views.book, name='book'),
 
 ]

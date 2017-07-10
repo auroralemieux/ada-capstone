@@ -1,0 +1,167 @@
+{% extends 'babynamebook/base.html' %}
+
+{% block content %}
+
+<section class="container">
+  <section class="align-self-top col-sm-12">
+    <a role="button" class="mb-3 btn btn-info" href="#">Export book as pdf</a>
+    <h2 class="text-left mb-3">{{ book.title }}</h2>
+  </section>
+</section>
+<article class="align-self-top col-md-2 col-lg-2 col-sm-12" id="extra-data">
+  <h3 class="text-center">Stats</h3>
+  <!-- Button trigger modal -->
+  <button type="button" class="mb-3 btn btn-secondary" data-toggle="modal" data-target="#girlModal">
+    top 10 girl names
+  </button>
+  <button type="button" class="mb-3 btn btn-secondary" data-toggle="modal" data-target="#boyModal">
+    top 10 boy names
+  </button>
+  <button type="button" class="mb-3 btn btn-secondary" data-toggle="modal" data-target="#lastModal">
+    top 10 last names
+  </button>
+  <button type="button" class="mb-3 btn btn-secondary" data-toggle="modal" data-target="#originModal">
+    top 5 name origins
+  </button>
+  <button type="button" class="mb-3 btn btn-secondary" data-toggle="modal" data-target="#popGirlModal">
+    popular girl names
+  </button>
+  <button type="button" class="mb-3 btn btn-secondary" data-toggle="modal" data-target="#popBoyModal">
+    popular boy names
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="girlModal" tabindex="-1" role="dialog" aria-labelledby="girlModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="girlModalLabel">Top 10 girl names from your tree</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          {% for key, value in top_female %}
+              <p>{{ key }} ({{ value }})</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="boyModal" tabindex="-1" role="dialog" aria-labelledby="boyModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="boyModalLabel">Top 10 boy names from your tree</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          {% for key, value in top_male %}
+              <p>{{ key }} ({{ value }})</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="lastModal" tabindex="-1" role="dialog" aria-labelledby="lastModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="lastModalLabel">Top last names in tree</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          {% for key, value in top_last %}
+              <p>{{ key }} ({{ value }})</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="originModal" tabindex="-1" role="dialog" aria-labelledby="originModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="originModalLabel">Top 3 origins of names in tree</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          {% for key, value in top_origin %}
+              <p>{{ key }} ({{ value }})</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="popGirlModal" tabindex="-1" role="dialog" aria-labelledby="popGirlModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="popGirlModalLabel">Popular girl names</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Names from your tree that were on the 2016 SSA list of most popular names.</p>
+          {% for name in pop_girl_names %}
+              <p>{{ name }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="popBoyModal" tabindex="-1" role="dialog" aria-labelledby="popBoyModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="popBoyModalLabel">Popular boy names</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Names from your tree that were on the 2016 SSA list of most popular names.</p>
+          {% for name in pop_boy_names %}
+              <p>{{ name }}</p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+<article class="align-self-top col-md-5 col-lg-5 col-sm-12" id="girl-data">
+  <h3 class="text-center">Girls</h3>
+  {% for letter, names in all_girls %}
+    <section class="card mb-3 card-outline-warning">
+      <section class="card-block">
+        <h3 class="card-title text-center">{{ letter }}</h3>
+        {% for girl in names %}
+        <p><strong>{{ girl.first_name }}</strong> <em>({{ girl.origin }})</em> {{ girl.meaning }}</p>
+        {% endfor %}
+      </section>
+    </section>
+  {% endfor %}
+</article>
+<article class="align-self-top col-md-5 col-lg-5 col-sm-12" id="boy-data">
+  <h3 class="text-center">Boys</h3>
+  {% for letter, names in all_boys %}
+    <section class="card mb-3 card-outline-info">
+      <section class="card-block">
+        <h3 class="card-title text-center">{{ letter }}</h3>
+        {% for boy in names %}
+          <p><strong>{{ boy.first_name }}</strong> <em>({{ boy.origin }})</em> {{ boy.meaning }}</p>
+        {% endfor %}
+      </section>
+    </section>
+  {% endfor %}
+</article>
+
+
+{% endblock %}
