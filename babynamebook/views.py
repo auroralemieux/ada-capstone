@@ -24,6 +24,13 @@ def signup(request):
 
     return render(request, 'registration/signup.html', {'form': form,})
 
+@login_required
+def account(request):
+    books = Book.objects.filter(author=request.user)
+    user = request.user
+    return render(request, 'babynamebook/account.html', {'books': books, 'user': user})
+
+
 def home(request):
     names = Name.objects.all()
     male = len(Name.objects.filter(gender="M"))

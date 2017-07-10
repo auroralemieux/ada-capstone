@@ -19,7 +19,7 @@
           {% if user.is_authenticated %}
           <a class="nav-item nav-link" href={% url 'logout' %}>log out</a>
           <p class="top-menu"> <small>(Hello {{ user.username }})</small></p>
-          <a class="nav-item nav-link" href="#">account</a>
+          <a class="nav-item nav-link" href={% url 'account' %}>account</a>
           {% else %}
           <a class="nav-item nav-link" href={% url 'login' %}>log in</a>
           {% endif %}
