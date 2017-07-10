@@ -13,12 +13,13 @@ class BookTest(TestCase):
 
     ## this is passing!!!!!
     def test_book_creation(self):
+        user = login(username="test1", password="xueimel1")
         file_mock = mock.MagicMock(spec=File, name='FileMock')
         file_mock.name = 'test1.ged'
 
         book = Book(title="test-book")
         book.upload_tree = file_mock
-
+        book.author = user
         storage_mock = mock.MagicMock(spec=Storage, name='StorageMock')
         storage_mock.url = mock.MagicMock(name='url')
         storage_mock.url.return_value = '/tmp/test1.ged'
