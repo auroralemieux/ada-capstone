@@ -90,3 +90,19 @@ class PersonTest(TestCase):
         person = Person(book=book, first_name="first", middle_name="middle", last_name="last", birth_year=1982, gender="F")
 
         self.assertEqual(person.__str__(), "first last (1982)")
+
+class NameTest(TestCase):
+
+    ## this is passing!!!!!
+    def test_name_creation(self):
+
+        name = Name(first_name="first", origin="French", gender="F", meaning="test")
+        self.assertTrue(isinstance(name, Name))
+
+        self.assertEqual("first", name.first_name)
+
+    def test_name_string_method(self):
+
+        name = Name(first_name="first", origin="French", gender="F", meaning="test")
+
+        self.assertEqual(name.__str__(), "first")
