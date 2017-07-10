@@ -11,6 +11,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
+
+# maybe put this in a separate accounts project views file???
 def signup(request):
     if request.method =='POST':
         form = UserCreationForm(request.POST)
@@ -33,7 +35,7 @@ def home(request):
 def get_tree_instructions(request):
     return render(request, 'babynamebook/get_tree_instructions.html', {})
 
-
+@login_required
 def upload_tree(request):
     if request.method == "POST":
         form = BookForm(request.POST, request.FILES)
@@ -55,6 +57,7 @@ def upload_tree(request):
     return render(request, 'babynamebook/upload_tree.html', {'form': form})
 
 
+@login_required
 def progress(request):
     book = get_object_or_404(Book, id=request.session["book_id"])
     persons = Person.objects.filter(book=book)
@@ -66,6 +69,8 @@ def progress(request):
 
     return render(request, 'babynamebook/progress.html', {'book': book, 'persons': persons, 'total_persons': total_persons, 'num_m': num_m, 'num_f': num_f, })
 
+
+@login_required
 def correlate(request):
     book = get_object_or_404(Book, id=request.session["book_id"])
     persons = Person.objects.filter(book=book)
