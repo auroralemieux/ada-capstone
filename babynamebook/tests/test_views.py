@@ -34,7 +34,7 @@ class TestGetTreeInstructions(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome('babynamebook/chromedriver')
 
-    def test_home_chrome(self):
+    def test_get_tree_instructions_chrome(self):
         self.driver.get("http://127.0.0.1:8000/")
         self.driver.find_element_by_id("start-button").click()
         url = self.driver.current_url
@@ -48,7 +48,7 @@ class TestUploadTreeNotLoggedIn(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome('babynamebook/chromedriver')
 
-    def test_home_chrome(self):
+    def test_upload_tree_not_logged_in_chrome(self):
         self.driver.get("http://127.0.0.1:8000/get_tree_instructions/")
         self.driver.find_element_by_id("instructions-button").click()
         url = self.driver.current_url
@@ -62,9 +62,23 @@ class TestUploadTreeLoggedIn(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome('babynamebook/chromedriver')
 
-    def test_home_chrome(self):
-        c = Client()
-        c.login(username='aurora', password='secret')
+    def login(self, username="test", password="password", next_url=None):
+
+        self.driver.get("http://127.0.0.1:8000/accounts/login/")
+
+        username_el = self.driver.find_element_by_id("id_username")
+        username_el.send_keys(username)
+        password_el = self.driver.find_element_by_id("id_password")
+        password_el.send_keys(password)
+
+        if next_url:
+            el = self.driver.find_element_by_name("next")
+            self.set_element_attribute(el, "value", next_url)
+
+        self.driver.find_element_by_css_selector("form").submit()
+
+    def test_upload_tree_logged_in_chrome(self):
+
         self.driver.get("http://127.0.0.1:8000/get_tree_instructions/")
         self.driver.find_element_by_id("instructions-button").click()
         url = self.driver.current_url
@@ -77,7 +91,7 @@ class TestUploadTreeLoggedIn(unittest.TestCase):
 # class TestProgress(unittest.TestCase):
 #
 #
-# class TestCorrelate(unittest.TestCase):
+# class TestAccount(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
