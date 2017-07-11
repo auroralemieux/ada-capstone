@@ -4,7 +4,10 @@
 
 <section class="container">
   <section class="align-self-top col-sm-12">
-    <a role="button" class="mb-3 btn btn-info" href="#">Export book as pdf</a>
+    <form id="download_form" action="/book/{{book.pk}}/" method="POST">
+        {% csrf_token %}
+        <button type="submit" role="button" class="mb-3 btn btn-info" name="export_pdf">Export book as pdf</button>
+    </form>
     <h2 class="text-left mb-3">{{ book.title }}</h2>
   </section>
 </section>

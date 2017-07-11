@@ -3,11 +3,13 @@ from .forms import BookForm
 from .utils import parse_ged, parse_xml
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
+from django.http import HttpResponse, HttpResponseNotFound
 from .models import Book, Person, Name
 import operator
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from .generate_pdf import go
 
 
 # maybe put this in a separate accounts project views file???
@@ -37,6 +39,8 @@ def book(request, pk):
     # querysets
     all_boys = __get_all_names_for_book_by_gender(book, "M")
     all_girls = __get_all_names_for_book_by_gender(book, "F")
+    all_boys = sorted(all_boys.items())
+    all_girls = sorted(all_girls.items())
 
     # querysets
     male = Person.objects.filter(book=book, gender="M")
@@ -52,7 +56,75 @@ def book(request, pk):
     pop_boy_names = __get_popular_names_2016("M", book)
     pop_girl_names = __get_popular_names_2016("F", book)
 
-    return render(request, 'babynamebook/book.html', {'book': book, 'persons': persons, 'all_girls': sorted(all_girls.items()), 'all_boys': sorted(all_boys.items()), 'top_female': top_female, 'top_male': top_male, 'top_last': top_last, 'top_origin': top_origin, 'pop_girl_names': pop_girl_names,'pop_boy_names': pop_boy_names})
+    book_data = {
+        "title": book.title,
+        "stats": {
+            "top_female": [],
+            "top_male": [],
+            "top_origin": [],
+            "top_last": [],
+            "pop_female": [],
+            "pop_male": [],
+        },
+        "boys": {},
+        "girls": {},
+    }
+    book_stats = book_data["stats"]
+    if len(pop_boy_names) is not 0:
+        for name in pop_boy_names:
+            book_stats["pop_male"].append(name)
+    if len(pop_girl_names) is not 0:
+        for name in pop_girl_names:
+            book_stats["pop_female"].append(name)
+    for name, num in top_female:
+        book_stats["top_female"].append(name)
+    for name, num in top_male:
+        book_stats["top_male"].append(name)
+    for name, num in top_origin:
+        book_stats["top_origin"].append(name)
+    for name, num in top_last:
+        book_stats["top_last"].append(name)
+    # print(book_stats)
+    book_data["stats"] = book_stats
+    book_boys = book_data["boys"]
+    for letter, names in all_boys:
+        book_boys[letter] = []
+        # letter_names = book_boys[letter]
+        for name in names:
+            new_name = {
+                "first_name": name.first_name,
+                "origin": name.origin,
+                "meaning": name.meaning,
+            }
+            book_boys[letter].append(new_name)
+    book_girls = book_data["girls"]
+    for letter, names in all_girls:
+        book_girls[letter] = []
+        # letter_names = book_girls[letter]
+        for name in names:
+            new_name = {
+                "first_name": name.first_name,
+                "origin": name.origin,
+                "meaning": name.meaning,
+            }
+            book_girls[letter].append(new_name)
+    print("book data keys: ")
+    print(book_data.keys())
+
+    if request.method == "POST":
+        go(book_data)
+        fs = FileSystemStorage()
+        filename = 'babynamebook.pdf'
+        if fs.exists(filename):
+            with fs.open(filename) as pdf:
+                response = HttpResponse(pdf, content_type='application/pdf')
+                response['Content-Disposition'] = 'attachment; filename="mybabynamebook.pdf"'
+                return response
+        else:
+            return HttpResponseNotFound('The requested pdf was not found in our server.')
+
+
+    return render(request, 'babynamebook/book.html', {'book': book, 'persons': persons, 'all_girls': all_girls, 'all_boys': all_boys, 'top_female': top_female, 'top_male': top_male, 'top_last': top_last, 'top_origin': top_origin, 'pop_girl_names': pop_girl_names,'pop_boy_names': pop_boy_names, 'book_data': book_data })
 
 
 def home(request):
