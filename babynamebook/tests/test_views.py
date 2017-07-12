@@ -8,6 +8,8 @@ import os
 from noseselenium.cases import SeleniumTestCaseMixin
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.test import Client
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
 
 # HOW DO / SHOULD I TEST PRIVATE METHODS IN VIEWS?
 
@@ -58,7 +60,7 @@ class TestUploadTreeNotLoggedIn(unittest.TestCase):
         self.driver.close()
 
 
-class TestUploadTreeLoggedIn(unittest.TestCase):
+class TestGetUploadTreeLoggedIn(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome('babynamebook/chromedriver')
 
@@ -120,7 +122,6 @@ class TestAccountLoggedIn(unittest.TestCase):
 class TestUploadTreeLoggedIn(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome('babynamebook/chromedriver')
-        self.driver.implicitly_wait(500)
 
 
 
@@ -147,11 +148,13 @@ class TestUploadTreeLoggedIn(unittest.TestCase):
         file_name_el = self.driver.find_element_by_id("id_tree_upload")
 
         dir = os.path.dirname(__file__)
-        tree_upload_path = dir + "./small-tree.ged"
+        tree_upload_path = dir + "/small-tree.ged"
 
         file_name_el.send_keys(tree_upload_path)
         self.driver.find_element_by_css_selector("form").submit()
-        self.driver.implicitly_wait(500)
+        driver = self.driver
+        wait = WebDriverWait(driver, 10)
+        wait.until(lambda driver: driver.current_url != "http://127.0.0.1:8000/upload_tree/")
 
         url = self.driver.current_url
         self.assertEqual(url, 'http://127.0.0.1:8000/progress/')
