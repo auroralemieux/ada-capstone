@@ -162,6 +162,55 @@ class TestUploadTreeLoggedIn(unittest.TestCase):
 
     def tearDown(self):
         self.driver.close()
+
+class TestProgressLoggedIn(unittest.TestCase):
+    def setUp(self):
+        self.driver = webdriver.Chrome('babynamebook/chromedriver')
+
+
+    def login(self, username="test", password="xueimel1", next_url=None):
+
+        self.driver.get("http://127.0.0.1:8000/accounts/login/")
+        username_el = self.driver.find_element_by_id("id_username")
+        username_el.send_keys(username)
+        password_el = self.driver.find_element_by_id("id_password")
+        password_el.send_keys(password)
+
+        if next_url:
+            el = self.driver.find_element_by_name("next")
+            self.set_element_attribute(el, "value", next_url)
+
+        self.driver.find_element_by_css_selector("form").submit()
+
+    def upload_tree(self):
+        self.login()
+        self.driver.get("http://127.0.0.1:8000/upload_tree/")
+
+        book_title_el = self.driver.find_element_by_id("id_title")
+        book_title_el.send_keys("test_title")
+        file_name_el = self.driver.find_element_by_id("id_tree_upload")
+
+        dir = os.path.dirname(__file__)
+        tree_upload_path = dir + "/small-tree.ged"
+
+        file_name_el.send_keys(tree_upload_path)
+        self.driver.find_element_by_css_selector("form").submit()
+        driver = self.driver
+        wait = WebDriverWait(driver, 10)
+        wait.until(lambda driver: driver.current_url != "http://127.0.0.1:8000/upload_tree/")
+
+        url = self.driver.current_url
+        self.assertEqual(url, 'http://127.0.0.1:8000/progress/')
+
+    def test_progress_logged_in_chrome(self):
+        self.upload_tree()
+        self.driver.find_element_by_id("correlate-button").click()
+        download_form_el = self.driver.find_element_by_id("download_form")
+        # what else should this test? How do I dynamically test the url?
+
+
+    def tearDown(self):
+        self.driver.close()
 # class TestProgress(unittest.TestCase):
 #
 #
