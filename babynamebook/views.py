@@ -45,8 +45,6 @@ def book(request, pk):
     # querysets
     male = Person.objects.filter(book=book, gender="M")
     female = Person.objects.filter(book=book, gender="F")
-
-    # these are querysets
     top_female = __top_ten_first_names(female, book)
     top_male = __top_ten_first_names(male, book)
     top_last = __top_ten_last_names(persons, book)
@@ -55,59 +53,8 @@ def book(request, pk):
     # these are lists of strings
     pop_boy_names = __get_popular_names_2016("M", book)
     pop_girl_names = __get_popular_names_2016("F", book)
-
-    book_data = {
-        "title": book.title,
-        "stats": {
-            "top_female": [],
-            "top_male": [],
-            "top_origin": [],
-            "top_last": [],
-            "pop_female": [],
-            "pop_male": [],
-        },
-        "boys": {},
-        "girls": {},
-    }
-    book_stats = book_data["stats"]
-    if len(pop_boy_names) is not 0:
-        for name in pop_boy_names:
-            book_stats["pop_male"].append(name)
-    if len(pop_girl_names) is not 0:
-        for name in pop_girl_names:
-            book_stats["pop_female"].append(name)
-    for name, num in top_female:
-        book_stats["top_female"].append(name)
-    for name, num in top_male:
-        book_stats["top_male"].append(name)
-    for name, num in top_origin:
-        book_stats["top_origin"].append(name)
-    for name, num in top_last:
-        book_stats["top_last"].append(name)
-
-    book_data["stats"] = book_stats
-    book_boys = book_data["boys"]
-    for letter, names in all_boys:
-        book_boys[letter] = []
-        for name in names:
-            new_name = {
-                "first_name": name.first_name,
-                "origin": name.origin,
-                "meaning": name.meaning,
-            }
-            book_boys[letter].append(new_name)
-    book_girls = book_data["girls"]
-    for letter, names in all_girls:
-        book_girls[letter] = []
-        for name in names:
-            new_name = {
-                "first_name": name.first_name,
-                "origin": name.origin,
-                "meaning": name.meaning,
-            }
-            book_girls[letter].append(new_name)
-    print("book data keys: ")
-    print(book_data.keys())
+    datablob = [top_female, top_male, top_last, top_origin, pop_boy_names, pop_girl_names, book, all_boys, all_girls]
+    book_data = __create_book_data(datablob)
 
     if request.method == "POST":
         go(book_data)
@@ -277,4 +224,65 @@ def __get_popular_names_2016(gender, book):
     return pop_results
 
 def __create_book_data(datablob):
-    
+    ## datablob = [top_female, top_male, top_last, top_origin, pop_boy_names, pop_girl_names, book, all_boys, all_girls]
+    top_female = datablob[0]
+    top_male = datablob[1]
+    top_last = datablob[2]
+    top_origin = datablob[3]
+    pop_boy_names = datablob[4]
+    pop_girl_names = datablob[5]
+    book = datablob[6]
+    all_boys = datablob[7]
+    all_girls = datablob[8]
+
+    book_data = {
+        "title": book.title,
+        "stats": {
+            "top_female": [],
+            "top_male": [],
+            "top_origin": [],
+            "top_last": [],
+            "pop_female": [],
+            "pop_male": [],
+        },
+        "boys": {},
+        "girls": {},
+    }
+    book_stats = book_data["stats"]
+    if len(pop_boy_names) is not 0:
+        for name in pop_boy_names:
+            book_stats["pop_male"].append(name)
+    if len(pop_girl_names) is not 0:
+        for name in pop_girl_names:
+            book_stats["pop_female"].append(name)
+    for name, num in top_female:
+        book_stats["top_female"].append(name)
+    for name, num in top_male:
+        book_stats["top_male"].append(name)
+    for name, num in top_origin:
+        book_stats["top_origin"].append(name)
+    for name, num in top_last:
+        book_stats["top_last"].append(name)
+
+    book_data["stats"] = book_stats
+    book_boys = book_data["boys"]
+    for letter, names in all_boys:
+        book_boys[letter] = []
+        for name in names:
+            new_name = {
+                "first_name": name.first_name,
+                "origin": name.origin,
+                "meaning": name.meaning,
+            }
+            book_boys[letter].append(new_name)
+    book_girls = book_data["girls"]
+    for letter, names in all_girls:
+        book_girls[letter] = []
+        for name in names:
+            new_name = {
+                "first_name": name.first_name,
+                "origin": name.origin,
+                "meaning": name.meaning,
+            }
+            book_girls[letter].append(new_name)
+    return book_data
