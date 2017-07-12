@@ -84,12 +84,11 @@ def book(request, pk):
         book_stats["top_origin"].append(name)
     for name, num in top_last:
         book_stats["top_last"].append(name)
-    # print(book_stats)
+
     book_data["stats"] = book_stats
     book_boys = book_data["boys"]
     for letter, names in all_boys:
         book_boys[letter] = []
-        # letter_names = book_boys[letter]
         for name in names:
             new_name = {
                 "first_name": name.first_name,
@@ -100,7 +99,6 @@ def book(request, pk):
     book_girls = book_data["girls"]
     for letter, names in all_girls:
         book_girls[letter] = []
-        # letter_names = book_girls[letter]
         for name in names:
             new_name = {
                 "first_name": name.first_name,
@@ -277,3 +275,6 @@ def __get_popular_names_2016(gender, book):
 
 
     return pop_results
+
+def __create_book_data(datablob):
+    
