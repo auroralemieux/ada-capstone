@@ -28,9 +28,9 @@ class Name(models.Model):
     def __str__(self):
         return self.first_name
 
+
 class Book(models.Model):
     # has many Persons
-    # belongs to a User
 
     author = models.ForeignKey(User)
     names = models.ManyToManyField(Name)
@@ -40,16 +40,3 @@ class Book(models.Model):
 
     def __str__(self):
         return self.title
-
-
-# class User(models.Model):
-#     # has many Books
-#     username = models.CharField(max_length=200)
-#     password = models.CharField(max_length=200)
-#     uid = models.CharField(max_length=200)
-#
-#     # uid = models.UUIDField(max_length=200)
-#     provider = models.CharField(max_length=200)
-#
-#     def __str__(self):
-#         return self.username
