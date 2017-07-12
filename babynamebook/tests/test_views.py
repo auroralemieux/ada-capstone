@@ -208,13 +208,44 @@ class TestProgressLoggedIn(unittest.TestCase):
         download_form_el = self.driver.find_element_by_id("download_form")
         # what else should this test? How do I dynamically test the url?
 
+    def tearDown(self):
+        self.driver.close()
+
+class TestUserSignup(unittest.TestCase):
+    def setUp(self):
+        self.driver = webdriver.Chrome('babynamebook/chromedriver')
+
+
+    def test_signup(self, username="signup-test", password="newtest1", next_url=None):
+
+        self.driver.get("http://127.0.0.1:8000/accounts/login/")
+        self.driver.find_element_by_id("get-signup").click()
+        url = self.driver.current_url
+        self.assertEqual(url, 'http://127.0.0.1:8000/signup/')
+
+        username_el = self.driver.find_element_by_id("id_username")
+        username_el.send_keys(username)
+        password_el1 = self.driver.find_element_by_id("id_password1")
+        password_el1.send_keys(password)
+        password_el2 = self.driver.find_element_by_id("id_password2")
+        password_el2.send_keys(password)
+
+        self.driver.find_element_by_id("signup-button").click()
+
+        driver = self.driver
+        wait = WebDriverWait(driver, 10)
+        wait.until(lambda driver: driver.current_url != "http://127.0.0.1:8000/signup/")
+
+        url = self.driver.current_url
+        self.assertEqual(url, 'http://127.0.0.1:8000/')
 
     def tearDown(self):
         self.driver.close()
-# class TestProgress(unittest.TestCase):
-#
-#
-# class TestAccount(unittest.TestCase):
+
+## use this in a test to see if pdf downloaded
+# response = HttpResponse(my_data, content_type='application/vnd.ms-excel')
+# response['Content-Disposition'] = 'attachment; filename="foo.xls"'
+
 
 if __name__ == '__main__':
     unittest.main()
