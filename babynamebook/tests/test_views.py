@@ -62,7 +62,7 @@ class TestUploadTreeLoggedIn(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome('babynamebook/chromedriver')
 
-    def login(self, username="test", password="password", next_url=None):
+    def login(self, username="test", password="xueimel1", next_url=None):
 
         self.driver.get("http://127.0.0.1:8000/accounts/login/")
 
@@ -78,7 +78,7 @@ class TestUploadTreeLoggedIn(unittest.TestCase):
         self.driver.find_element_by_css_selector("form").submit()
 
     def test_upload_tree_logged_in_chrome(self):
-
+        self.login()
         self.driver.get("http://127.0.0.1:8000/get_tree_instructions/")
         self.driver.find_element_by_id("instructions-button").click()
         url = self.driver.current_url
