@@ -1,0 +1,1874 @@
+0 HEAD
+1 CHAR UTF-8
+1 SOUR Ancestry.com Family Trees
+2 VERS (2010.3)
+2 NAME Ancestry.com Family Trees
+2 CORP Ancestry.com
+1 GEDC
+2 VERS 5.5
+2 FORM LINEAGE-LINKED
+0 @P1@ INDI 
+1 NAME Chantal Cristine /Rollison/
+1 SEX F
+1 BIRT 
+2 DATE 24 August 1989
+2 PLAC Hollywood, Fl, USA
+1 FAMC @F1@
+0 @P2@ INDI 
+1 NAME Mabel /Santana/
+1 BIRT 
+2 DATE 25 March 1963
+2 PLAC Miami, Dade, Fl, USA
+1 SEX F
+1 FAMC @F2@
+1 FAMS @F1@
+0 @P3@ INDI 
+1 BIRT 
+2 DATE 14 Jul 1962
+2 PLAC Fl
+1 DEAT 
+2 DATE 19 Sep 2011
+2 PLAC Live Oak, FL
+1 SEX M
+1 NAME Jimmie Wesley /Rollison/
+1 FAMC @F4@
+1 FAMS @F1@
+0 @P4@ INDI 
+1 SEX F
+1 BIRT 
+2 DATE 9 Jan 1941
+1 NAME Patricia /Harris/
+1 FAMS @F4@
+0 @P5@ INDI 
+1 BIRT 
+2 DATE Nov 1928
+2 PLAC Florida
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634913&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1930 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634913
+1 RESI 
+2 DATE 1935
+2 PLAC Dixie, Florida
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634913&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1930 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634913
+1 NAME R.L. /Rollison/
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634913&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1930 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634913
+1 DEAT 
+2 DATE 17 July 1998
+2 PLAC Riverview, Hillsborough, FL, USA
+1 SEX M
+1 FAMC @F5@
+1 FAMS @F3@
+1 FAMS @F4@
+0 @P6@ INDI 
+1 DEAT 
+2 PLAC Miami, Dade, Fl, USA
+1 SEX M
+1 NAME Leonardo /Santana/
+1 BIRT 
+2 PLAC Cuba
+1 FAMS @F2@
+0 @P7@ INDI 
+1 SEX F
+1 DEAT 
+2 DATE 23 August 2003
+2 PLAC Bushnell, Sumter, Fl, USA
+1 NAME Noelia Augustina
+1 BIRT 
+2 DATE 8 May 1935
+2 PLAC Cuba
+1 FAMC @F17@
+1 FAMS @F2@
+0 @P8@ INDI 
+1 NAME Carmen /Ziarkowski/
+1 SEX F
+1 FAMC @F2@
+1 FAMS @F15@
+0 @P9@ INDI 
+1 BIRT 
+2 DATE 6 Mar 1906
+2 PLAC Cuba
+1 DEAT 
+2 DATE 8 Feb 1938
+1 SEX F
+1 NAME Carmen Maria
+1 FAMS @F17@
+0 @P10@ INDI 
+1 SEX M
+1 NAME Richard Lewis /Rollison/
+1 FAMC @F3@
+0 @P11@ INDI 
+1 NAME Tammy /Rollison/
+1 SEX F
+1 FAMC @F3@
+1 FAMS @F16@
+0 @P12@ INDI 
+1 BIRT 
+2 DATE 1943
+2 PLAC Illinois, USA
+1 DEAT 
+2 DATE 27 Aug 2014
+2 PLAC Brooksville, Hernando, Florida, USA
+1 NAME Linda /Murphy/
+1 SEX F
+1 FAMS @F3@
+0 @P13@ INDI 
+1 SEX M
+1 NAME Buddy /Rollison/
+1 FAMC @F4@
+1 FAMS @F25@
+0 @P14@ INDI 
+1 BIRT 
+2 DATE 1961
+1 NAME Sheila Eleanor /Rollison/
+1 SEX F
+1 FAMC @F4@
+1 FAMS @F24@
+0 @P15@ INDI 
+1 BIRT 
+2 DATE october 3 1910
+2 PLAC Florida
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634911&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1910 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634911
+2 SOUR @S-2133252569@
+3 PAGE Year: 1930; Census Place: Shelton, Dixie, Florida; Roll: 312; Page: 1A; Enumeration District: 6; Image: 65.0.
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=1930usfedcen&h=114304416&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1910 Birth place:   Residence date:  1930 Residence place:  Shelton, Dixie, Florida
+3 _APID 1,6224::114304416
+1 RESI 
+2 DATE 1930
+2 PLAC Shelton, Dixie, Florida
+2 SOUR @S-2133252569@
+3 PAGE Year: 1930; Census Place: Shelton, Dixie, Florida; Roll: 312; Page: 1A; Enumeration District: 6; Image: 65.0.
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=1930usfedcen&h=114304416&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1910 Birth place:   Residence date:  1930 Residence place:  Shelton, Dixie, Florida
+3 _APID 1,6224::114304416
+1 NAME Veta  /Rolison/
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634911&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1910 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634911
+2 SOUR @S-2133252569@
+3 PAGE Year: 1930; Census Place: Shelton, Dixie, Florida; Roll: 312; Page: 1A; Enumeration District: 6; Image: 65.0.
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=1930usfedcen&h=114304416&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1910 Birth place:   Residence date:  1930 Residence place:  Shelton, Dixie, Florida
+3 _APID 1,6224::114304416
+1 RESI 
+2 DATE 1935
+2 PLAC Dixie, Florida
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634911&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1910 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634911
+1 DEAT 
+2 DATE october 27 2001
+2 PLAC Cross City, Fl, USA
+1 SEX F
+1 FAMC @F14@
+1 FAMS @F5@
+0 @P16@ INDI 
+1 BIRT 
+2 DATE 19 Mar 1889
+2 PLAC Florida
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634910&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1889 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634910
+2 SOUR @S-2133228496@
+3 PAGE Registration Location: Lafayette County, Florida; Roll: 1556868; Draft Board: 0.
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=ww1draft&h=968711&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  19 Mar 1889 Birth place:   Residence date:   Residence place:  Lafayette, Florida
+3 _APID 1,6482::968711
+1 RESI 
+2 PLAC Lafayette, Florida
+2 SOUR @S-2133228496@
+3 PAGE Registration Location: Lafayette County, Florida; Roll: 1556868; Draft Board: 0.
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=ww1draft&h=968711&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  19 Mar 1889 Birth place:   Residence date:   Residence place:  Lafayette, Florida
+3 _APID 1,6482::968711
+1 NAME Will /Rollison/
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634910&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1889 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634910
+2 SOUR @S-2133228496@
+3 PAGE Registration Location: Lafayette County, Florida; Roll: 1556868; Draft Board: 0.
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=ww1draft&h=968711&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  19 Mar 1889 Birth place:   Residence date:   Residence place:  Lafayette, Florida
+3 _APID 1,6482::968711
+1 DEAT 
+2 DATE 11 jul 1954
+2 PLAC Dixie County, Florida, USA
+1 RESI 
+2 DATE 1935
+2 PLAC Dixie, Florida
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634910&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1889 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634910
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=16
+1 FAMC @F6@
+1 FAMS @F5@
+0 @P17@ INDI 
+1 BIRT 
+2 DATE may 1867
+2 PLAC Florida, United States
+1 NAME sarah ella /tedder/
+1 DEAT 
+2 DATE 24 mar 1940
+2 PLAC Dixie County, Florida, USA
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=17
+1 FAMC @F8@
+1 FAMS @F6@
+0 @P18@ INDI 
+1 BIRT 
+2 DATE JUN 1855
+2 PLAC Georgia, United States
+1 DEAT 
+2 DATE 19 dec 1910
+2 PLAC Dixie County, Florida, USA
+1 NAME WILLIAM JAMES "BILL" /ROLLISON/
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=18
+1 FAMC @F7@
+1 FAMS @F6@
+0 @P19@ INDI 
+1 BIRT 
+2 DATE abt 1934
+2 PLAC Florida
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634916&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1934 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634916
+1 RESI 
+2 DATE 1935
+2 PLAC Dixie, Florida
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634916&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1934 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634916
+1 NAME Juanita /Rollison/
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634916&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1934 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634916
+1 SEX F
+1 FAMC @F5@
+0 @P20@ INDI 
+1 BIRT 
+2 DATE abt 1933
+2 PLAC Florida
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634915&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1933 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634915
+1 RESI 
+2 DATE 1935
+2 PLAC Dixie, Florida
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634915&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1933 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634915
+1 NAME R.E. /Rollison/
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634915&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1933 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634915
+1 SEX M
+1 FAMC @F5@
+0 @P21@ INDI 
+1 BIRT 
+2 DATE abt 1932
+2 PLAC Florida
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634914&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1932 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634914
+1 RESI 
+2 DATE 1935
+2 PLAC Dixie, Florida
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634914&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1932 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634914
+1 NAME F.W. /Rollison/
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634914&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1932 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634914
+1 SEX M
+1 FAMC @F5@
+0 @P22@ INDI 
+1 BIRT 
+2 DATE abt 1928
+2 PLAC Florida
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634912&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1928 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634912
+2 SOUR @S-2133252569@
+3 PAGE Year: 1930; Census Place: Shelton, Dixie, Florida; Roll: 312; Page: 1A; Enumeration District: 6; Image: 65.0.
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=1930usfedcen&h=114304424&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1927 Birth place:   Residence date:  1930 Residence place:  Shelton, Dixie, Florida
+3 _APID 1,6224::114304424
+1 RESI 
+2 DATE 1930
+2 PLAC Shelton, Dixie, Florida
+2 SOUR @S-2133252569@
+3 PAGE Year: 1930; Census Place: Shelton, Dixie, Florida; Roll: 312; Page: 1A; Enumeration District: 6; Image: 65.0.
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=1930usfedcen&h=114304424&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1927 Birth place:   Residence date:  1930 Residence place:  Shelton, Dixie, Florida
+3 _APID 1,6224::114304424
+1 NAME Willie /Rolison/
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634912&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1928 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634912
+2 SOUR @S-2133252569@
+3 PAGE Year: 1930; Census Place: Shelton, Dixie, Florida; Roll: 312; Page: 1A; Enumeration District: 6; Image: 65.0.
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=1930usfedcen&h=114304424&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1927 Birth place:   Residence date:  1930 Residence place:  Shelton, Dixie, Florida
+3 _APID 1,6224::114304424
+1 RESI 
+2 DATE 1935
+2 PLAC Dixie, Florida
+2 SOUR @S-2133256845@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridastatecen1867&h=1634912&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  abt 1928 Birth place:  Florida Residence date:  1935 Residence place:  Dixie, Florida
+3 _APID 1,1506::1634912
+1 SEX M
+1 FAMC @F5@
+0 @P23@ INDI 
+1 NAME Sim Jackson /Corbin/
+1 SEX M
+1 FAMS @F14@
+0 @P24@ INDI 
+1 SEX F
+1 NAME Alice /Edmonds/
+1 FAMS @F14@
+0 @P25@ INDI 
+1 DEAT 
+2 DATE 6 MAY 1910
+2 PLAC Lafayette County, Florida, USA
+1 BIRT 
+2 DATE APR 1840
+2 PLAC Georgia, United States
+1 NAME ELIZABETH /RHODEN/
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=25
+1 FAMC @F11@
+1 FAMS @F7@
+0 @P26@ INDI 
+1 NAME joseph felton /rollison/
+1 DEAT 
+2 DATE 17 jun 1996
+2 PLAC horseshoe beach,dixie,fla,usa
+1 BIRT 
+2 DATE 24 may 1908
+2 PLAC dixie,fl,usa
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=26
+1 FAMC @F6@
+0 @P27@ INDI 
+1 BIRT 
+2 DATE abt 1905
+2 PLAC Horseshoe Beach, Dixie, Florida, USA
+1 NAME Annie /Rollison/
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=27
+1 FAMC @F6@
+0 @P28@ INDI 
+1 NAME Harriet Elizabeth "betty" /Rollison/
+1 DEAT 
+2 DATE 17 Mar 1998
+2 PLAC Horseshoe Beach, Dixie, Florida, USA
+1 BIRT 
+2 DATE 25 Jan 1900
+2 PLAC Horseshoe Beach, Dixie, Florida, USA
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=28
+1 FAMC @F6@
+0 @P29@ INDI 
+1 BIRT 
+2 DATE 23 MAR 1895
+2 PLAC Branford, Lafayette, Florida, USA
+1 DEAT 
+2 DATE 12 FEB 1954
+2 PLAC DELCO, SOUTH CAROLINA,USA
+1 NAME JAMES OTIS /ROLLISON/
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=29
+1 FAMC @F6@
+0 @P30@ INDI 
+1 NAME WILLIAM /ROLLISON/
+1 DEAT 
+2 DATE 21 MAY 1903
+2 PLAC Dixie County, Florida, USA
+1 BIRT 
+2 DATE 18 MAY 1827
+2 PLAC Florida, United States
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=30
+1 FAMC @F18@
+1 FAMS @F7@
+0 @P31@ INDI 
+1 NAME MARY /ROLLISON/
+1 BIRT 
+2 DATE 1875
+2 PLAC Florida, United States
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=31
+1 FAMC @F7@
+0 @P32@ INDI 
+1 NAME JAMES R /ROLLISON/
+1 BIRT 
+2 DATE 19 MAR 1868
+2 PLAC Florida, United States
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=32
+1 FAMC @F7@
+0 @P33@ INDI 
+1 NAME HENRY /ROLLISON/
+1 BIRT 
+2 DATE 1866
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=33
+1 FAMC @F7@
+0 @P34@ INDI 
+1 NAME JOHN W /ROLLISON/
+1 BIRT 
+2 DATE AUG 1863
+2 PLAC Florida, United States
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=34
+1 FAMC @F7@
+0 @P35@ INDI 
+1 NAME ROSETTA /ROLLISON/
+1 BIRT 
+2 DATE 1858
+2 PLAC Florida, United States
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=35
+1 FAMC @F7@
+0 @P36@ INDI 
+1 NAME JULIA /ROLLISON/
+1 BIRT 
+2 DATE 1855
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=36
+1 FAMC @F7@
+0 @P37@ INDI 
+1 BIRT 
+2 DATE 20 JUL 1799
+2 PLAC BRYAN COUNTY GEORGIA,
+1 NAME NICHABOD /RAULERSON/
+1 DEAT 
+2 DATE 1874
+2 PLAC COLUMBIA CO. FL..
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=37
+1 FAMC @F9@
+1 FAMS @F18@
+0 @P38@ INDI 
+1 BIRT 
+2 DATE 1782
+2 PLAC , Pitt, North Carolina, USA
+1 NAME Elizabeth /Moore/
+1 DEAT 
+2 DATE 6 Oct 1867
+2 PLAC Jacksonville, Duval, Florida, USA
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=38
+1 FAMC @F12@
+1 FAMS @F11@
+0 @P39@ INDI 
+1 BIRT 
+2 DATE 1780
+2 PLAC , , South Carolina, USA
+1 NAME William /Raulerson/
+1 DEAT 
+2 DATE 1858
+2 PLAC , Baker, Florida, USA
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=39
+1 FAMC @F19@
+1 FAMS @F11@
+0 @P40@ INDI 
+1 NAME Harriett S /Ellis/
+1 DEAT 
+2 PLAC Florida, United States
+1 BIRT 
+2 DATE 12 May 1838
+2 PLAC Bradford, Florida, United States
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=40
+1 FAMC @F13@
+1 FAMS @F8@
+0 @P41@ INDI 
+1 DEAT 
+2 DATE 2 Aug 1882
+2 PLAC Lafayette, Florida, United States
+2 SOUR @S-2133227992@
+3 PAGE Side served: Confederacy; State served: Florida; Enlistment date: 12 Oct 1861.
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=hdssoldiers&h=6579193&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Death date:  2 Aug 1882 Death place:  Lafayette County, Florida Residence date:   Residence place:  Columbia County, Florida
+3 _APID 1,3737::6579193
+2 SOUR @S-2132995759@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=civilwar_histdatasys&h=2840391&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Death date:  02 Aug 1882 Death place:  Lafayette County, FL Residence date:   Residence place:  Columbia County, Florida, USA
+3 _APID 1,1555::2840391
+1 RESI 
+2 PLAC Columbia County, Florida, USA
+2 SOUR @S-2132995759@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=civilwar_histdatasys&h=2840391&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Death date:  02 Aug 1882 Death place:  Lafayette County, FL Residence date:   Residence place:  Columbia County, Florida, USA
+3 _APID 1,1555::2840391
+1 NAME John Henry /Tedder/
+2 SOUR @S-2133227992@
+3 PAGE Side served: Confederacy; State served: Florida; Enlistment date: 12 Oct 1861.
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=hdssoldiers&h=6579193&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Death date:  2 Aug 1882 Death place:  Lafayette County, Florida Residence date:   Residence place:  Columbia County, Florida
+3 _APID 1,3737::6579193
+2 SOUR @S-2132995759@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=civilwar_histdatasys&h=2840391&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Death date:  02 Aug 1882 Death place:  Lafayette County, FL Residence date:   Residence place:  Columbia County, Florida, USA
+3 _APID 1,1555::2840391
+1 RESI 
+2 PLAC Columbia County, Florida
+2 SOUR @S-2133227992@
+3 PAGE Side served: Confederacy; State served: Florida; Enlistment date: 12 Oct 1861.
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=hdssoldiers&h=6579193&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Death date:  2 Aug 1882 Death place:  Lafayette County, Florida Residence date:   Residence place:  Columbia County, Florida
+3 _APID 1,3737::6579193
+1 BIRT 
+2 DATE 1829
+2 PLAC Darlington, Darlington, South Carolina, United States
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=41
+1 FAMS @F8@
+0 @P42@ INDI 
+1 NAME Lula /Tedder/
+1 BIRT 
+2 DATE 1879
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=42
+1 FAMC @F8@
+0 @P43@ INDI 
+1 BIRT 
+2 DATE Feb 1877
+1 NAME Teshie /Tedder/
+1 DEAT 
+2 DATE 22 Feb 1969
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=43
+1 FAMC @F8@
+0 @P44@ INDI 
+1 NAME Frances E /Tedder/
+1 DEAT 
+2 DATE 1934
+1 BIRT 
+2 DATE Apr 1874
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=44
+1 FAMC @F8@
+0 @P45@ INDI 
+1 BIRT 
+2 DATE 10 Jul 1871
+2 PLAC Florida, United States
+1 NAME Ollie /Tedder/
+1 DEAT 
+2 DATE 5 Oct 1951
+2 PLAC Dixie, Florida, United States
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=45
+1 FAMC @F8@
+0 @P46@ INDI 
+1 DEAT 
+2 DATE Oct 1907
+1 BIRT 
+2 DATE Jun 1867
+2 PLAC Florida, United States
+1 NAME Harriet Elizabeth /Tedder/
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=46
+1 FAMC @F8@
+0 @P47@ INDI 
+1 NAME George W /Tedder/
+1 BIRT 
+2 DATE 1860
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=47
+1 FAMC @F8@
+0 @P48@ INDI 
+1 NAME Nancy Catherine /Tedder/
+1 BIRT 
+2 DATE Dec 1858
+2 PLAC Florida, United States
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=48
+1 FAMC @F8@
+0 @P49@ INDI 
+1 BIRT 
+2 DATE Sept 1855
+2 PLAC Taylor County, Florida, USA
+1 NAME Mary Jane /Tedder/
+1 DEAT 
+2 DATE 1913
+2 PLAC Florida, United States
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=49
+1 FAMC @F8@
+0 @P50@ INDI 
+1 BIRT 
+2 DATE 1800
+2 PLAC , London, , England
+1 NAME Mary /Creswick/
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=50
+1 FAMS @F13@
+0 @P51@ INDI 
+1 BIRT 
+2 DATE 1800
+1 NAME Robert /Ellis/
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=51
+1 FAMS @F13@
+0 @P52@ INDI 
+1 DEAT 
+2 DATE 1938
+1 BIRT 
+2 DATE 1870
+2 PLAC Columbia County, Florida
+1 NAME NICHABOD RAULERSON , JR /RAULERSON/
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=52
+1 FAMC @F18@
+0 @P53@ INDI 
+1 BIRT 
+2 DATE August 05, 1864
+2 PLAC Florida, United States
+1 NAME AMANDA LOUISE /RAULERSON/
+1 DEAT 
+2 DATE April 21, 1956
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=53
+1 FAMC @F18@
+0 @P54@ INDI 
+1 NAME ALEXANDER /RAULERSON/
+1 BIRT 
+2 DATE 1847
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=54
+1 FAMC @F18@
+0 @P55@ INDI 
+1 NAME HARRIS /RAULERSON/
+1 BIRT 
+2 DATE 1846
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=55
+1 FAMC @F18@
+0 @P56@ INDI 
+1 BIRT 
+2 DATE 1844
+1 NAME PAULINE /RAULERSON/
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=56
+1 FAMC @F18@
+0 @P57@ INDI 
+1 BIRT 
+2 DATE 1842
+1 NAME AMERICA /RAULERSON/
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=57
+1 FAMC @F18@
+0 @P58@ INDI 
+1 NAME CAROLINE /RAULERSON/
+1 BIRT 
+2 DATE 1840
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=58
+1 FAMC @F18@
+0 @P59@ INDI 
+1 NAME MOSES /RAULERSON/
+1 BIRT 
+2 DATE 1838
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=59
+1 FAMC @F18@
+0 @P60@ INDI 
+1 NAME AARON /RAULERSON/
+1 BIRT 
+2 DATE 1836
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=60
+1 FAMC @F18@
+0 @P61@ INDI 
+1 BIRT 
+2 DATE 1834
+1 NAME THORPE /RAULERSON/
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=61
+1 FAMC @F18@
+0 @P62@ INDI 
+1 BIRT 
+2 DATE May 21, 1832
+2 PLAC Georgia, United States
+1 NAME HARDY B. /RAULERSON/
+1 DEAT 
+2 DATE NOV 21 1884
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=62
+1 FAMC @F18@
+0 @P63@ INDI 
+1 BIRT 
+2 DATE 1830
+2 PLAC Georgia, United States
+1 NAME ARCADIA /RAULERSON/
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=63
+1 FAMC @F18@
+0 @P64@ INDI 
+1 BIRT 
+2 DATE 1826
+2 PLAC Georgia, United States
+1 NAME JACKSON /RAULERSON/
+1 DEAT 
+2 DATE July 1863
+2 PLAC BATTLE OF GETTYSBURG
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=64
+1 FAMC @F18@
+0 @P65@ INDI 
+1 BIRT 
+2 DATE December 07, 1824
+2 PLAC Georgia, United States
+1 NAME CANDACY /RAULERSON/
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=65
+1 FAMC @F18@
+0 @P66@ INDI 
+1 NAME JACOB /RAULERSON/
+1 BIRT 
+2 DATE February 11, 1822
+2 PLAC Georgia, United States
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=66
+1 FAMC @F18@
+0 @P67@ INDI 
+1 DEAT 
+2 DATE 7 JUN 1828
+2 PLAC Wayne, Georgia, United States
+1 BIRT 
+2 DATE 18 APR 1782
+2 PLAC Effingham, Georgia, United States
+1 NAME NANCY /BAGGS/
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=67
+1 FAMS @F9@
+0 @P68@ INDI 
+1 BIRT 
+2 DATE September 26, 1778
+2 PLAC Liberty, Orangeburg, South Carolina, United States
+1 NAME LT JACOB B /RAULERSON/
+1 DEAT 
+2 DATE 22 Oct 1857
+2 PLAC Wayne, Georgia, United States
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=68
+1 FAMS @F9@
+0 @P69@ INDI 
+1 BIRT 
+2 DATE 24 Aug 1989
+2 PLAC Hollywood, Broward, FL, USA
+1 SEX F
+1 NAME Chantal Cristine /Rollison/
+1 FAMC @F20@
+0 @P70@ INDI 
+1 BIRT 
+2 DATE 25 Mar 1963
+2 PLAC Miami, Dade, FL, USA
+2 SOUR @S-2133240761@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=vermontmarriages&h=1198900&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  25 Mar 1963 Birth place:   Marriage date:  5 Jul 2001 Marriage place:  Windham, Vermont Residence date:   Residence place:  Vermont, United States
+3 _APID 1,1606::1198900
+1 MARR 
+2 DATE 5 Jul 2001
+2 PLAC Windham, Vermont
+2 SOUR @S-2133240761@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=vermontmarriages&h=1198900&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  25 Mar 1963 Birth place:   Marriage date:  5 Jul 2001 Marriage place:  Windham, Vermont Residence date:   Residence place:  Vermont, United States
+3 _APID 1,1606::1198900
+1 RESI 
+2 PLAC Vermont, United States
+2 SOUR @S-2133240761@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=vermontmarriages&h=1198900&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  25 Mar 1963 Birth place:   Marriage date:  5 Jul 2001 Marriage place:  Windham, Vermont Residence date:   Residence place:  Vermont, United States
+3 _APID 1,1606::1198900
+1 NAME Mabel /Santana/
+2 SOUR @S-2133240761@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=vermontmarriages&h=1198900&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  25 Mar 1963 Birth place:   Marriage date:  5 Jul 2001 Marriage place:  Windham, Vermont Residence date:   Residence place:  Vermont, United States
+3 _APID 1,1606::1198900
+1 SEX F
+1 FAMC @F21@
+1 FAMC @F22@
+1 FAMS @F20@
+0 @P71@ INDI 
+1 BIRT 
+2 DATE 6 Nov 1921
+2 PLAC Cuba
+2 SOUR @S-2133236806@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridadeath&h=2063898&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  6 Nov 1921 Birth place:   Death date:  20 Mar 1975 Death place:  Dade, Florida, United States
+3 _APID 1,7338::2063898
+2 SOUR @S-2133252854@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=uspublicrecords2&h=332718437&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  6 Nov 1921 Birth place:   Residence date:   Residence place:  Miami, FL
+3 _APID 1,1732::332718437
+1 RESI 
+2 PLAC Miami, FL
+2 SOUR @S-2133252854@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=uspublicrecords2&h=332718437&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  6 Nov 1921 Birth place:   Residence date:   Residence place:  Miami, FL
+3 _APID 1,1732::332718437
+1 NAME Leonardo /Santana/
+2 SOUR @S-2133236806@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridadeath&h=2063898&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  6 Nov 1921 Birth place:   Death date:  20 Mar 1975 Death place:  Dade, Florida, United States
+3 _APID 1,7338::2063898
+2 SOUR @S-2133252854@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=uspublicrecords2&h=332718437&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  6 Nov 1921 Birth place:   Residence date:   Residence place:  Miami, FL
+3 _APID 1,1732::332718437
+1 DEAT 
+2 DATE 20 Mar 1975
+2 PLAC Dade, Florida, United States
+2 SOUR @S-2133236806@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=floridadeath&h=2063898&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  6 Nov 1921 Birth place:   Death date:  20 Mar 1975 Death place:  Dade, Florida, United States
+3 _APID 1,7338::2063898
+1 SEX M
+1 FAMS @F10@
+1 FAMS @F21@
+1 FAMS @F23@
+0 @P72@ INDI 
+1 BIRT 
+2 DATE 7 May 1936
+2 PLAC Cuba
+2 SOUR @S-2133235858@
+3 PAGE Number: 265-74-3453; Issue State: Florida; Issue Date: 1962.
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=ssdi&h=73722283&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  7 May 1936 Birth place:   Death date:  23 Aug 2004 Death place:  Bushnell, Sumter, Florida, United States of America
+3 _APID 1,3693::73722283
+2 SOUR @S-2133235764@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=uspublicrecords3&h=215370142&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  7 May 1936 Birth place:   Residence date:  1993 Residence place:  Miami, FL
+3 _APID 1,1788::215370142
+1 RESI 
+2 DATE 1993
+2 PLAC Miami, FL
+2 SOUR @S-2133235764@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=uspublicrecords3&h=215370142&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  7 May 1936 Birth place:   Residence date:  1993 Residence place:  Miami, FL
+3 _APID 1,1788::215370142
+1 NAME Noelia /Santana/
+2 SOUR @S-2133235858@
+3 PAGE Number: 265-74-3453; Issue State: Florida; Issue Date: 1962.
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=ssdi&h=73722283&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  7 May 1936 Birth place:   Death date:  23 Aug 2004 Death place:  Bushnell, Sumter, Florida, United States of America
+3 _APID 1,3693::73722283
+2 SOUR @S-2133235764@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=uspublicrecords3&h=215370142&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  7 May 1936 Birth place:   Residence date:  1993 Residence place:  Miami, FL
+3 _APID 1,1788::215370142
+1 DEAT 
+2 DATE 23 Aug 2004
+2 PLAC Bushnell, Sumter, Florida, United States of America
+2 SOUR @S-2133235858@
+3 PAGE Number: 265-74-3453; Issue State: Florida; Issue Date: 1962.
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=ssdi&h=73722283&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  7 May 1936 Birth place:   Death date:  23 Aug 2004 Death place:  Bushnell, Sumter, Florida, United States of America
+3 _APID 1,3693::73722283
+1 SEX F
+1 FAMS @F10@
+1 FAMS @F22@
+0 @P73@ INDI 
+1 NAME Carmen /Zairkowski/
+1 BIRT 
+2 DATE 15 Mar 1960
+2 PLAC Cuba
+1 SEX F
+1 FAMC @F23@
+0 @P74@ INDI 
+1 NAME Clara Elisabeth /Raulerson/
+1 DEAT 
+2 DATE 1908
+1 BIRT 
+2 DATE 1835
+2 PLAC Georgia, United States
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=74
+1 FAMC @F11@
+0 @P75@ INDI 
+1 DEAT 
+2 DATE 1882 Nov 9
+2 PLAC Baker, Florida, US
+1 BIRT 
+2 DATE 1827 Jan 7
+2 PLAC Baker, Florida, US
+1 NAME Isabel /Raulerson/
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=75
+1 FAMC @F11@
+0 @P76@ INDI 
+1 NAME Jacob /Raulerson/
+1 DEAT 
+2 DATE 1855 Aug 9
+2 PLAC Baker, Florida, United States
+1 BIRT 
+2 DATE 11 Feb 1822
+2 PLAC 1822 Waycross, Ware, Georgia, United States or 1824 Florida
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=76
+1 FAMC @F11@
+0 @P77@ INDI 
+1 NAME Frances 'Frannie' /Raulerson/
+1 DEAT 
+2 DATE 1884 Nov 13
+2 PLAC Fort Green,  DeSoto,  Florida,  US
+1 BIRT 
+2 DATE 1820
+2 PLAC Columbia,  Florida,  United States
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=77
+1 FAMC @F11@
+0 @P78@ INDI 
+1 DEAT 
+2 DATE 1887 Feb 13
+2 PLAC Johnsville, Baker, Florida, USA
+1 BIRT 
+2 DATE 1818 Apr 23
+2 PLAC Ware County, Georgia, USA
+1 NAME Westberry 'West' /Raulerson/
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=78
+1 FAMC @F11@
+0 @P79@ INDI 
+1 BIRT 
+2 DATE 19 Jul 1817
+2 PLAC Ware, Georgia, United States
+1 NAME Emily /Raulerson/
+1 DEAT 
+2 DATE 5 Nov 1907
+2 PLAC Lakeland, Polk, Florida, United States
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=79
+1 FAMC @F11@
+0 @P80@ INDI 
+1 NAME William /Raulerson/
+1 DEAT 
+2 DATE 1840
+2 PLAC Wayne, Georgia, United States
+1 BIRT 
+2 DATE 1804
+2 PLAC Appling, Georgia, United States
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=80
+1 FAMC @F11@
+0 @P81@ INDI 
+1 BIRT 
+2 DATE 1800
+2 PLAC Appling, Georgia, United States
+1 NAME Fannie /Raulerson/
+1 DEAT 
+2 DATE 1914
+2 PLAC Columbia, Dade,Florida, United States
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=81
+1 FAMC @F11@
+0 @P82@ INDI 
+1 BIRT 
+2 DATE 1799
+2 PLAC Appling, Georgia, United States
+1 NAME Noel /Raulerson/
+1 DEAT 
+2 DATE 1840
+2 PLAC Wayne, Georgia, United States
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=82
+1 FAMC @F11@
+0 @P83@ INDI 
+1 NAME John /Rawlinson/
+1 DEAT 
+2 DATE 4 Apr 1816
+2 PLAC Liberty, Orangeburg, South Carolina, United States
+1 BIRT 
+2 DATE 1749
+2 PLAC Richland, South Carolina, United States
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=83
+1 FAMS @F19@
+0 @P84@ INDI 
+1 BIRT 
+2 DATE 21 Jul 1754
+2 PLAC Beaufort County, North Carolina, USA
+1 DEAT 
+2 DATE 1787
+2 PLAC , Wayne, Georgia, USA
+1 NAME Winnie /Hardeman/
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=84
+1 FAMS @F12@
+0 @P85@ INDI 
+1 BIRT 
+2 DATE 11 Dec 1755
+2 PLAC , Pitt, North Carolina, USA
+1 NAME John /Moore/
+1 DEAT 
+2 DATE 1806
+2 PLAC Saint George Parish now, Burke, Georgia, USA
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=85
+1 FAMS @F12@
+0 @P86@ INDI 
+1 BIRT 
+2 DATE 8 Feb 1938
+2 SOUR @S-2133252854@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=uspublicrecords2&h=329235201&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Name:  Carmen C Aguiar Birth:  8 Feb 1938 Death:  
+3 _APID 1,1732::329235201
+2 SOUR @S-2133235764@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=uspublicrecords3&h=84292339&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  8 Feb 1938 Birth place:   Residence date:  1993 Residence place:  Hialeah, FL
+3 _APID 1,1788::84292339
+1 RESI 
+2 DATE 1993
+2 PLAC Hialeah, FL
+2 SOUR @S-2133235764@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=uspublicrecords3&h=84292339&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  8 Feb 1938 Birth place:   Residence date:  1993 Residence place:  Hialeah, FL
+3 _APID 1,1788::84292339
+1 NAME Carmen C /Aguiar/
+2 SOUR @S-2133252854@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=uspublicrecords2&h=329235201&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Name:  Carmen C Aguiar Birth:  8 Feb 1938 Death:  
+3 _APID 1,1732::329235201
+2 SOUR @S-2133235764@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=uspublicrecords3&h=84292339&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Birth date:  8 Feb 1938 Birth place:   Residence date:  1993 Residence place:  Hialeah, FL
+3 _APID 1,1788::84292339
+1 SEX F
+2 SOUR @S-2133252854@
+3 NOTE http://trees.ancestry.com/rd?f=sse&db=uspublicrecords2&h=329235201&ti=0&indiv=try&gss=pt
+3 NOTE 
+3 DATA
+4 TEXT Name:  Carmen C Aguiar Birth:  8 Feb 1938 Death:  
+3 _APID 1,1732::329235201
+1 FAMC @F17@
+0 @P87@ INDI 
+1 SEX F
+1 BIRT 
+2 DATE February
+2 PLAC Cuba
+1 NAME Carmen Aguiar /Augustina/
+1 FAMC @F17@
+0 @P88@ INDI 
+1 NAME Robert /Ellis/
+1 DEAT 
+2 DATE 4 Feb 1840
+2 PLAC North street, Bradford, Florida, United States
+1 BIRT 
+2 DATE 1836
+2 PLAC Bradford, Florida, United States
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=88
+1 FAMC @F13@
+0 @P89@ INDI 
+1 NAME John /Ellis/
+1 BIRT 
+2 DATE 1833
+1 SEX M
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=89
+1 FAMC @F13@
+0 @P90@ INDI 
+1 BIRT 
+2 DATE 1826
+1 NAME Jane /Ellis/
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=90
+1 FAMC @F13@
+0 @P91@ INDI 
+1 NAME Mary /Ellis/
+1 BIRT 
+2 DATE 1824
+2 PLAC Otley, Marion, Iowa, United States
+1 SEX F
+1 SOUR @S-2133255868@
+2 PAGE Ancestry Family Trees
+2 DATA
+3 TEXT http://trees.ancestry.com/pt/AMTCitationRedir.aspx?tid=6044476&pid=91
+1 FAMC @F13@
+0 @P92@ INDI 
+1 NAME Derek /Ziarkowski/
+1 SEX M
+1 FAMC @F15@
+0 @P93@ INDI 
+1 SEX F
+1 NAME Adrianne Alexis /Ziarkowski/
+1 FAMC @F15@
+0 @P94@ INDI 
+1 NAME Destiny Rose /Ziarkowski/
+1 SEX F
+1 FAMC @F15@
+0 @P95@ INDI 
+1 DEAT 
+2 DATE 8 March 2008
+2 PLAC Tennessee, USA
+2 SOUR @S1202248514@
+3 _APID 1,60525::118035125
+1 BIRT 
+2 DATE 6 September 1958
+2 PLAC New York, USA
+2 SOUR @S1202248514@
+3 _APID 1,60525::118035125
+1 NAME Steve /Ziarkowski/
+2 SOUR @S1202248514@
+3 _APID 1,60525::118035125
+1 SEX M
+1 FAMS @F15@
+0 @P96@ INDI 
+1 NAME Dirk
+1 SEX M
+1 FAMC @F24@
+0 @P97@ INDI 
+1 NAME Colby
+1 SEX M
+1 FAMC @F24@
+0 @P98@ INDI 
+1 SEX M
+1 NAME Levi /Rollison/
+1 FAMC @F25@
+0 @P99@ INDI 
+1 NAME Lilyanna /Wagner/
+1 SEX F
+1 FAMC @F16@
+0 @P100@ INDI 
+1 NAME Gracie /Wagner/
+1 SEX F
+1 FAMC @F16@
+0 @P101@ INDI 
+1 BIRT 
+2 DATE 4 Mar 1961
+1 NAME John R /Wagner/
+1 SEX M
+1 FAMS @F16@
+0 @F1@ FAM 
+1 HUSB @P3@
+1 WIFE @P2@
+1 CHIL @P1@
+2 _FREL Natural
+2 _MREL Natural
+0 @F2@ FAM 
+1 HUSB @P6@
+1 WIFE @P7@
+1 CHIL @P2@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P8@
+2 _FREL Natural
+2 _MREL Natural
+0 @F3@ FAM 
+1 HUSB @P5@
+1 WIFE @P12@
+1 CHIL @P10@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P11@
+2 _FREL Natural
+2 _MREL Natural
+0 @F4@ FAM 
+1 HUSB @P5@
+1 WIFE @P4@
+1 CHIL @P3@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P13@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P14@
+2 _FREL Natural
+2 _MREL Natural
+0 @F5@ FAM 
+1 HUSB @P16@
+1 WIFE @P15@
+1 CHIL @P5@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P22@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P21@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P20@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P19@
+2 _FREL Natural
+2 _MREL Natural
+0 @F6@ FAM 
+1 HUSB @P18@
+1 WIFE @P17@
+1 CHIL @P16@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P29@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P28@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P27@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P26@
+2 _FREL Natural
+2 _MREL Natural
+1 MARR 
+2 DATE 4 apr 1884
+2 PLAC mayo,lafayette,fl,usa
+0 @F7@ FAM 
+1 HUSB @P30@
+1 WIFE @P25@
+1 CHIL @P36@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P18@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P35@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P34@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P33@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P32@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P31@
+2 _FREL Natural
+2 _MREL Natural
+1 MARR 
+2 DATE 8 OCT 1848
+2 PLAC Charlton County, Georgia, USA
+0 @F8@ FAM 
+1 HUSB @P41@
+1 WIFE @P40@
+1 CHIL @P49@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P48@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P47@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P17@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P46@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P45@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P44@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P43@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P42@
+2 _FREL Natural
+2 _MREL Natural
+1 MARR 
+2 DATE 20 Nov 1853
+2 PLAC Columbia, Columbia, Florida, United States
+0 @F9@ FAM 
+1 HUSB @P68@
+1 WIFE @P67@
+1 CHIL @P37@
+2 _FREL Natural
+2 _MREL Natural
+0 @F10@ FAM 
+1 HUSB @P71@
+1 WIFE @P72@
+0 @F11@ FAM 
+1 HUSB @P39@
+1 WIFE @P38@
+1 CHIL @P82@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P81@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P80@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P79@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P78@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P77@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P76@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P75@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P74@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P25@
+2 _FREL Natural
+2 _MREL Natural
+1 MARR 
+2 DATE abt 1798
+2 PLAC McIntosh County, Georgia, USA
+0 @F12@ FAM 
+1 HUSB @P85@
+1 WIFE @P84@
+1 CHIL @P38@
+2 _FREL Natural
+2 _MREL Natural
+0 @F13@ FAM 
+1 HUSB @P51@
+1 WIFE @P50@
+1 CHIL @P91@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P90@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P89@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P88@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P40@
+2 _FREL Natural
+2 _MREL Natural
+0 @F14@ FAM 
+1 HUSB @P23@
+1 WIFE @P24@
+1 CHIL @P15@
+2 _FREL Natural
+2 _MREL Natural
+0 @F15@ FAM 
+1 HUSB @P95@
+1 WIFE @P8@
+1 CHIL @P92@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P93@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P94@
+2 _FREL Natural
+2 _MREL Natural
+0 @F16@ FAM 
+1 HUSB @P101@
+1 WIFE @P11@
+1 CHIL @P99@
+2 _FREL Natural
+2 _MREL Natural
+1 CHIL @P100@
+2 _FREL Natural
+2 _MREL Natural
+0 @F17@ FAM 
+1 WIFE @P9@
+1 CHIL @P7@
+2 _MREL Natural
+1 CHIL @P86@
+2 _MREL Natural
+1 CHIL @P87@
+2 _MREL Natural
+0 @F18@ FAM 
+1 HUSB @P37@
+1 CHIL @P66@
+2 _FREL Natural
+1 CHIL @P65@
+2 _FREL Natural
+1 CHIL @P64@
+2 _FREL Natural
+1 CHIL @P30@
+2 _FREL Natural
+1 CHIL @P63@
+2 _FREL Natural
+1 CHIL @P62@
+2 _FREL Natural
+1 CHIL @P61@
+2 _FREL Natural
+1 CHIL @P60@
+2 _FREL Natural
+1 CHIL @P59@
+2 _FREL Natural
+1 CHIL @P58@
+2 _FREL Natural
+1 CHIL @P57@
+2 _FREL Natural
+1 CHIL @P56@
+2 _FREL Natural
+1 CHIL @P55@
+2 _FREL Natural
+1 CHIL @P54@
+2 _FREL Natural
+1 CHIL @P53@
+2 _FREL Natural
+1 CHIL @P52@
+2 _FREL Natural
+0 @F19@ FAM 
+1 HUSB @P83@
+1 CHIL @P39@
+2 _FREL Natural
+0 @F20@ FAM 
+1 WIFE @P70@
+1 CHIL @P69@
+2 _MREL Natural
+0 @F21@ FAM 
+1 WIFE @P71@
+1 CHIL @P70@
+2 _MREL Natural
+0 @F22@ FAM 
+1 WIFE @P72@
+1 CHIL @P70@
+2 _MREL Natural
+0 @F23@ FAM 
+1 HUSB @P71@
+1 CHIL @P73@
+2 _FREL Natural
+0 @F24@ FAM 
+1 WIFE @P14@
+1 CHIL @P96@
+2 _MREL Natural
+1 CHIL @P97@
+2 _MREL Natural
+0 @F25@ FAM 
+1 HUSB @P13@
+1 CHIL @P98@
+2 _FREL Natural
+0 @R-2144325123@ REPO
+1 NAME Ancestry.com
+1 ADDR http://www.Ancestry.com
+1 NOTE 
+0 @S-2133256845@ SOUR
+1 REPO @R-2144325123@
+1 TITL Florida State Census, 1867-1945
+1 AUTH Ancestry.com
+1 PUBL Online publication - Provo, UT, USA: Ancestry.com Operations Inc, 2008.Original data - Schedules of the Florida State Census of 1885; (National Archives Microfilm Publication M845, 13 Rolls); Record
+2 CONC s of the Bureau of the Census, Record Group 29; National A
+1 NOTE 
+1 _APID 1,1506::0
+0 @S-2133255868@ SOUR
+1 REPO @R-2144325123@
+1 TITL Ancestry Family Trees
+1 PUBL Online publication - Provo, UT, USA: Ancestry.com.  Original data:  Family Tree files submitted by Ancestry members.
+1 NOTE This information comes from 1 or more individual Ancestry Family Tree files. This source citation points you to a current version of those files.  Note:  The owners of these tree files may have remove
+2 CONC d or changed information since this source citation was created.
+0 @S-2133252854@ SOUR
+1 REPO @R-2144325123@
+1 TITL U.S. Public Records Index, Volume 2
+1 AUTH Ancestry.com
+1 PUBL Online publication - Provo, UT, USA: Ancestry.com Operations, Inc., 2010.Original data - Merlin Data Publishing Corporation, comp. Voter Registration Lists, Public Record Filings, Historical Residenti
+2 CONC al Records, and Other Household Database Listings. Merli
+1 NOTE 
+1 _APID 1,1732::0
+0 @S-2133252569@ SOUR
+1 REPO @R-2144325123@
+1 TITL 1930 United States Federal Census
+1 AUTH Ancestry.com
+1 PUBL Online publication - Provo, UT, USA: Ancestry.com Operations Inc, 2002. .Original data - United States of America, Bureau of the Census. Fifteenth Census of the United States, 1930. Washington, D.C.
+2 CONC : National Archives and Records Administration, 1930. T626
+1 NOTE 
+1 _APID 1,6224::0
+0 @S-2133240761@ SOUR
+1 REPO @R-2144325123@
+1 TITL Vermont Marriage Records, 1909-2008
+1 AUTH Ancestry.com
+1 PUBL Online publication - Provo, UT, USA: Ancestry.com Operations, Inc., 2010.Original data - Vermont. Vermont Marriage Records, 1909-2003. Vermont State Archives and Records Administration, Montpelier, Ve
+2 CONC rmont. Vermont. Vermont Marriage Records, 2004-2008. Vit
+1 NOTE 
+1 _APID 1,1606::0
+0 @S-2133236806@ SOUR
+1 REPO @R-2144325123@
+1 TITL Florida Death Index, 1877-1998
+1 AUTH Ancestry.com
+1 PUBL Online publication - Provo, UT, USA: Ancestry.com Operations Inc, 2004.Original data - State of Florida. Florida Death Index, 1877-1998. Florida: Florida Department of Health, Office of Vital Records
+2 CONC , 1998.Original data: State of Florida. Florida Death Ind
+1 NOTE 
+1 _APID 1,7338::0
+0 @S-2133235858@ SOUR
+1 REPO @R-2144325123@
+1 TITL Social Security Death Index
+1 AUTH Ancestry.com
+1 PUBL Online publication - Provo, UT, USA: Ancestry.com Operations Inc, 2010.Original data - Social Security Administration. Social Security Death Index, Master File. Social Security Administration.Origina
+2 CONC l data: Social Security Administration. Social Security D
+1 NOTE 
+1 _APID 1,3693::0
+0 @S-2133235764@ SOUR
+1 REPO @R-2144325123@
+1 TITL U.S. Public Records Index, Volume 1
+1 AUTH Ancestry.com
+1 PUBL Online publication - Provo, UT, USA: Ancestry.com Operations, Inc., 2010.Original data - Merlin Data Publishing Corporation, comp. Voter Registration Lists, Public Record Filings, Historical Residenti
+2 CONC al Records, and Other Household Database Listings. Merli
+1 NOTE 
+1 _APID 1,1788::0
+0 @S-2133228496@ SOUR
+1 REPO @R-2144325123@
+1 TITL World War I Draft Registration Cards, 1917-1918
+1 AUTH Ancestry.com
+1 PUBL Online publication - Provo, UT, USA: Ancestry.com Operations Inc, 2005. .Original data - United States, Selective Service System. World War I Selective Service System Draft Registration Cards, 1917-19
+2 CONC 18. Washington, D.C.: National Archives and Records Admi
+1 NOTE 
+1 _APID 1,6482::0
+0 @S-2133227992@ SOUR
+1 REPO @R-2144325123@
+1 TITL American Civil War Soldiers
+1 AUTH Historical Data Systems, comp.
+1 PUBL Online publication - Provo, UT, USA: Ancestry.com Operations Inc, 1999.Original data - Data compiled by Historical Data Systems of Kingston, MA form the following list of works.    Copyright 1997-200
+2 CONC 0  Historical Data Systems, Inc.  PO Box 35  Duxbury.Orig
+1 NOTE 
+1 _APID 1,3737::0
+0 @S-2132995759@ SOUR
+1 REPO @R-2144325123@
+1 TITL U.S. Civil War Soldier Records and Profiles
+1 AUTH Historical Data Systems, comp.
+1 PUBL Online publication - Provo, UT, USA: Ancestry.com Operations Inc, 2009.Original data - Data compiled by Historical Data Systems of Kingston, MA from the following list of works.Copyright 1997-2009Hist
+2 CONC orical Data Systems, Inc. PO Box 35Duxbury, MA 02331.Ori
+1 NOTE 
+1 _APID 1,1555::0
+0 @S1202248514@ SOUR
+1 REPO @R-2144325123@
+1 TITL U.S., Find A Grave Index, 1600s-Current
+1 AUTH Ancestry.com
+1 PUBL Ancestry.com Operations, Inc.
+1 _APID 1,60525::0
+0 TRLR

@@ -77,7 +77,7 @@ class TestUploadTreeLoggedIn(unittest.TestCase):
 
         self.driver.find_element_by_css_selector("form").submit()
 
-    def test_upload_tree_logged_in_chrome(self):
+    def test_get_upload_tree_logged_in_chrome(self):
         self.login()
         self.driver.get("http://127.0.0.1:8000/get_tree_instructions/")
         self.driver.find_element_by_id("instructions-button").click()
@@ -88,6 +88,77 @@ class TestUploadTreeLoggedIn(unittest.TestCase):
         self.driver.close()
 
 
+class TestAccountLoggedIn(unittest.TestCase):
+    def setUp(self):
+        self.driver = webdriver.Chrome('babynamebook/chromedriver')
+
+    def login(self, username="test", password="xueimel1", next_url=None):
+
+        self.driver.get("http://127.0.0.1:8000/accounts/login/")
+
+        username_el = self.driver.find_element_by_id("id_username")
+        username_el.send_keys(username)
+        password_el = self.driver.find_element_by_id("id_password")
+        password_el.send_keys(password)
+
+        if next_url:
+            el = self.driver.find_element_by_name("next")
+            self.set_element_attribute(el, "value", next_url)
+
+        self.driver.find_element_by_css_selector("form").submit()
+
+    def test_account_logged_in_chrome(self):
+        self.login()
+        self.driver.get("http://127.0.0.1:8000/")
+        self.driver.find_element_by_id("account-button").click()
+        url = self.driver.current_url
+        self.assertEqual(url, 'http://127.0.0.1:8000/account/')
+
+    def tearDown(self):
+        self.driver.close()
+
+class TestUploadTreeLoggedIn(unittest.TestCase):
+    def setUp(self):
+        self.driver = webdriver.Chrome('babynamebook/chromedriver')
+        self.driver.implicitly_wait(500)
+
+
+
+    def login(self, username="test", password="xueimel1", next_url=None):
+
+        self.driver.get("http://127.0.0.1:8000/accounts/login/")
+        username_el = self.driver.find_element_by_id("id_username")
+        username_el.send_keys(username)
+        password_el = self.driver.find_element_by_id("id_password")
+        password_el.send_keys(password)
+
+        if next_url:
+            el = self.driver.find_element_by_name("next")
+            self.set_element_attribute(el, "value", next_url)
+
+        self.driver.find_element_by_css_selector("form").submit()
+
+    def test_upload_tree_logged_in_chrome(self):
+        self.login()
+        self.driver.get("http://127.0.0.1:8000/upload_tree/")
+
+        book_title_el = self.driver.find_element_by_id("id_title")
+        book_title_el.send_keys("test_title")
+        file_name_el = self.driver.find_element_by_id("id_tree_upload")
+
+        dir = os.path.dirname(__file__)
+        tree_upload_path = dir + "./small-tree.ged"
+
+        file_name_el.send_keys(tree_upload_path)
+        self.driver.find_element_by_css_selector("form").submit()
+        self.driver.implicitly_wait(500)
+
+        url = self.driver.current_url
+        self.assertEqual(url, 'http://127.0.0.1:8000/progress/')
+
+
+    def tearDown(self):
+        self.driver.close()
 # class TestProgress(unittest.TestCase):
 #
 #
