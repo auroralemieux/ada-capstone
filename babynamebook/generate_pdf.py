@@ -82,25 +82,25 @@ def go(book_data):
     pop_male = stats_chunk["pop_male"]
 
     Story.append(Paragraph("Most Common Girl Names", header2_style))
-    Story.append(Spacer(1,0.2*inch))
+    # Story.append(Spacer(1,0.2*inch))
     for p in top_female:
         Story.append(Paragraph(p, reg_style))
     Story.append(Spacer(1,0.2*inch))
 
     Story.append(Paragraph("Most Common Boy Names", header2_style))
-    Story.append(Spacer(1,0.2*inch))
+    # Story.append(Spacer(1,0.2*inch))
     for p in top_male:
         Story.append(Paragraph(p, reg_style))
     Story.append(Spacer(1,0.2*inch))
 
     Story.append(Paragraph("Most Common Name Origins", header2_style))
-    Story.append(Spacer(1,0.2*inch))
+    # Story.append(Spacer(1,0.2*inch))
     for p in top_origin:
         Story.append(Paragraph(p, reg_style))
     Story.append(Spacer(1,0.2*inch))
 
     Story.append(Paragraph("Most Common Last Names", header2_style))
-    Story.append(Spacer(1,0.2*inch))
+    # Story.append(Spacer(1,0.2*inch))
     for p in top_last:
         Story.append(Paragraph(p, reg_style))
     Story.append(Spacer(1,0.2*inch))
@@ -108,7 +108,7 @@ def go(book_data):
     Story.append(Paragraph("Popular Girl Names In Your Tree", header2_style))
     Story.append(Paragraph("(Based on SSA 2016 most popular names)", reg_style))
 
-    Story.append(Spacer(1,0.2*inch))
+    # Story.append(Spacer(1,0.2*inch))
     for p in pop_female:
         Story.append(Paragraph(p, reg_style))
     Story.append(Spacer(1,0.2*inch))
@@ -116,7 +116,7 @@ def go(book_data):
     Story.append(Paragraph("Popular Boy Names In Your Tree", header2_style))
     Story.append(Paragraph("(Based on SSA 2016 most popular names)", reg_style))
 
-    Story.append(Spacer(1,0.2*inch))
+    # Story.append(Spacer(1,0.2*inch))
     for p in pop_male:
         Story.append(Paragraph(p, reg_style))
     Story.append(Spacer(1,0.2*inch))
