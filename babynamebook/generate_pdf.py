@@ -6,70 +6,6 @@ import operator
 import collections
 import os
 
-# book_data = {
-#     "title": "Aurora's tree",
-#     "stats": {
-#         "top_female": ["one", "two", "three"],
-#         "top_male": ["four", "five", "six"],
-#         "top_origin": ["english", "french", "latin"],
-#         "pop_female": ["one", "two", "three"],
-#         "pop_male": ["one", "two", "three"],
-#
-#     },
-#     "boys": {
-#         "A": [
-#             {
-#                 "first_name": "Abel",
-#                 "origin": "Hebrew",
-#                 "meaning": "somethingorother",
-#             },
-#             {
-#                 "first_name": "Andrew",
-#                 "origin": "French",
-#                 "meaning": "no idea",
-#             },
-#         ],
-#         "B": [
-#             {
-#                 "first_name": "Bart",
-#                 "origin": "Hebrew",
-#                 "meaning": "doesn't matter",
-#             },
-#             {
-#                 "first_name": "Benjamin",
-#                 "origin": "Hebrew",
-#                 "meaning": "ben jammin'",
-#             },
-#         ],
-#     },
-#     "girls": {
-#         "A": [
-#             {
-#                 "first_name": "Alice",
-#                 "origin": "Hebrew",
-#                 "meaning": "somethingorother",
-#             },
-#             {
-#                 "first_name": "Aurora",
-#                 "origin": "French",
-#                 "meaning": "no idea",
-#             },
-#         ],
-#         "B": [
-#             {
-#                 "first_name": "Beatrice",
-#                 "origin": "Hebrew",
-#                 "meaning": "doesn't matter",
-#             },
-#             {
-#                 "first_name": "Belinda",
-#                 "origin": "Hebrew",
-#                 "meaning": "ben jammin'",
-#             },
-#         ],
-#     },
-# }
-
 PAGE_HEIGHT=defaultPageSize[1]
 PAGE_WIDTH=defaultPageSize[0]
 styles = getSampleStyleSheet()
@@ -112,7 +48,7 @@ def go(book_data):
     for letter in girls_list:
         # print(letter)
         Story.append(Paragraph(letter, header1_style))
-        Story.append(Spacer(1,0.2*inch))
+        # Story.append(Spacer(1,0.2*inch))
         for name_dict in girls_list[letter]:
 
             whole_line = "<b>%s</b>  <i>(%s)</i>  %s" % (name_dict["first_name"], name_dict["origin"], name_dict["meaning"])
@@ -128,7 +64,7 @@ def go(book_data):
     for letter in boys_list:
         # print(letter)
         Story.append(Paragraph(letter, header1_style))
-        Story.append(Spacer(1,0.2*inch))
+        # Story.append(Spacer(1,0.2*inch))
         for name_dict in boys_list[letter]:
             whole_line = "<b>%s</b>  <i>(%s)</i>  %s" % (name_dict["first_name"], name_dict["origin"], name_dict["meaning"])
             # print(whole_line)
