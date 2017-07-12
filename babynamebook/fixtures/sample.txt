@@ -22714,3 +22714,1681 @@ F,Thuan,unknown,unknown
 F,Gicela,unknown,unknown
 F,Hiral,Bright, Full of Luster,Indian (Sanskrit)
 F,Muntaha,unknown,unknown
+M,Hiroto,unknown,Japanese
+F,Anecia,unknown,unknown
+F,Kalli,Beautiful,American
+F,Shanyn,unknown,unknown
+M,Brayn,unknown,unknown
+M,Ryann,Great Queen,American
+F,Zane,God is Gracious,American
+F,Tatayana,unknown,unknown
+M,Marshall,Horse Keeper,French
+M,Davis,Son of David,English
+M,Galileo,From Galilee,Italian
+M,Fuad,unknown,unknown
+M,Travaris,unknown,unknown
+F,Yaeko,unknown,unknown
+M,Orvin,Brave friend,Anglo-Saxon
+F,Shakeeka,unknown,unknown
+F,Kehaulani,unknown,unknown
+M,Tadarius,unknown,unknown
+M,Sadrac,unknown,unknown
+F,Toy,unknown,unknown
+F,Kewanna,unknown,unknown
+F,Vincenzia,unknown,unknown
+F,Alezay,unknown,unknown
+F,Adrieanna,unknown,unknown
+M,Aarnav,unknown,unknown
+F,Yanina,unknown,unknown
+M,Davaughn,unknown,unknown
+F,Nayeliz,unknown,unknown
+F,Williemae,unknown,unknown
+F,Shakisha,unknown,unknown
+M,Nicholos,unknown,unknown
+F,Silva,unknown,unknown
+M,Ayuub,unknown,unknown
+F,Kaaren,unknown,unknown
+F,Girl,unknown,unknown
+F,Azeneth,unknown,unknown
+F,Orquidea,Orchid,Spanish
+F,Amora,Love,Spanish
+F,Daycee,unknown,unknown
+F,Dorma,unknown,unknown
+F,Dorri,unknown,unknown
+M,Aisea,unknown,unknown
+M,Henery,unknown,unknown
+M,Jackey,unknown,unknown
+M,Favio,unknown,English
+F,July,Born in July,English
+M,Maribel,unknown,Spanish
+F,Kenna,Beautiful,American
+M,Athony,unknown,unknown
+F,Haruye,unknown,unknown
+M,Kali,A maiden, a bud,Indian (Sanskrit)
+F,Evelin,Form of Evelyn. Life,English
+F,Jesselle,unknown,unknown
+F,Hildegard,unknown,German
+F,Preslie,unknown,unknown
+F,Jeniece,unknown,English
+F,Courney,unknown,unknown
+M,Teddie,Abbreviation of Theodore,English
+M,Virat,unknown,unknown
+F,Ave,Hail (all bow to),Latin
+M,Minh,Bright and clever,Vietnamese
+F,Eliora,My God is My Light,Hebrew
+F,Walida,unknown,unknown
+M,Braedyn,Broad Hill,English
+M,Cedric,unknown,unknown
+M,Shaunak,unknown,unknown
+F,Jaala,unknown,unknown
+M,Jaquarius,unknown,unknown
+M,Tait,Cheerful,English
+F,Lariah,unknown,unknown
+F,Carmelita,Little Poem,Spanish
+F,Iracema,unknown,unknown
+F,Maisey,unknown,unknown
+F,Tomasa,unknown,unknown
+F,Chaniqua,unknown,unknown
+F,Deetta,unknown,unknown
+F,Nathasha,unknown,unknown
+M,Arnulfo,unknown,unknown
+F,Brienne,unknown,Celtic
+F,Lekeshia,unknown,unknown
+F,Naoma,unknown,unknown
+M,Samad,unknown,unknown
+F,Jovani,unknown,unknown
+M,Vignesh,unknown,unknown
+M,Rueben,unknown,unknown
+F,Emari,unknown,unknown
+F,Jamika,unknown,unknown
+F,Breely,unknown,unknown
+F,Tinamarie,unknown,unknown
+M,Akshay,unknown,unknown
+F,Sophear,unknown,unknown
+M,Zymari,unknown,unknown
+F,Reina,Queen,Spanish
+F,Danah,unknown,English
+F,Taaliyah,unknown,unknown
+M,Edwing,unknown,unknown
+F,Romina,From the Christian land,Arabian
+F,Marwa,Flint stone,Arabic
+M,Decarlos,unknown,unknown
+F,Casey,Vigilant in War,Irish
+F,Jatara,unknown,unknown
+F,Jazmyne,unknown,unknown
+F,Owen,Desire Born,Welsh
+M,Tequan,unknown,unknown
+F,Sydell,unknown,unknown
+F,Cerissa,unknown,unknown
+F,Adalhi,unknown,unknown
+F,Cashmere,unknown,unknown
+M,Shigeru,unknown,unknown
+F,Deshone,unknown,unknown
+F,Jameika,unknown,unknown
+F,Orelia,Golden,English
+M,Stephon,unknown,English
+F,Ellina,unknown,unknown
+F,Honor,Dignity, Reputation,English
+M,Lizandro,unknown,unknown
+F,Felisita,unknown,unknown
+M,Lonell,Young lion,English
+M,Ebrahim,unknown,unknown
+F,Dovie,unknown,unknown
+M,Kolston,unknown,unknown
+F,Maeve,Intoxicating,Irish
+F,Brennen,unknown,Irish
+M,Jabbar,Mighty,Arabic
+M,Geovanny,unknown,unknown
+M,Lourdes,French Place Name,French
+M,Dadrian,unknown,unknown
+F,Elenora,unknown,unknown
+F,Shawna,God is gracious,American
+M,Aarion,unknown,unknown
+F,Shaiann,unknown,unknown
+F,Pablo,Small,Spanish
+M,Yoshiro,unknown,unknown
+F,Jacques,Supplanter,French
+F,Jamaria,unknown,unknown
+F,Yan,unknown,Chinese
+F,Cieara,unknown,unknown
+F,Kathiria,unknown,unknown
+F,Shalini,unknown,unknown
+M,Klinton,unknown,unknown
+M,Eliodoro,unknown,unknown
+F,Donie,unknown,unknown
+F,Chaniece,unknown,unknown
+F,Anyla,unknown,unknown
+F,Jennilee,unknown,English
+F,Zaiya,unknown,unknown
+F,Merary,unknown,unknown
+F,Deluvina,unknown,unknown
+M,Stryker,unknown,unknown
+M,Jakhi,unknown,unknown
+F,Carleigh,Feminine form of Charles,English
+F,Salima,unknown,unknown
+F,Nura,Light,Arabic
+M,Jahquez,unknown,unknown
+F,Aldah,unknown,unknown
+M,Cove,unknown,unknown
+F,Kenedi,unknown,unknown
+M,Phillipe,Loves horses,French
+F,Xandria,unknown,unknown
+M,Sabbir,unknown,unknown
+F,Miyah,unknown,unknown
+F,Tkai,unknown,unknown
+M,Jiraiya,unknown,unknown
+F,Ceaira,unknown,unknown
+M,Refugio,unknown,unknown
+F,Amyiah,unknown,unknown
+F,Ellen,Light,Greek
+M,Jacobey,unknown,unknown
+F,Colby,From Koli's farm,English
+M,Jishnu,unknown,unknown
+F,Zaidy,unknown,unknown
+F,Bernetha,unknown,unknown
+F,Leidi,unknown,unknown
+M,Odes,unknown,unknown
+F,Lynnlee,unknown,unknown
+F,Scarlett,Red,English
+F,Majel,unknown,unknown
+M,Keenan,unknown,Irish
+F,Billiejo,unknown,unknown
+F,Shalyn,unknown,unknown
+F,Sumeya,unknown,unknown
+F,Angelinah,unknown,unknown
+M,Zollie,unknown,unknown
+F,Teja,Radiant,Indian (Sanskrit)
+M,Julen,unknown,unknown
+F,Falynn,unknown,unknown
+M,Merik,unknown,unknown
+F,Nohely,unknown,unknown
+F,Riyah,unknown,unknown
+F,Zen,unknown,unknown
+M,Romaine,From Rome,French
+F,Alissa,Of Noble Kin,English
+M,Anil,unknown,unknown
+F,Evanjelina,unknown,unknown
+F,Britlyn,unknown,unknown
+F,Kimla,unknown,unknown
+F,Reggie,unknown,English
+M,Aayush,unknown,unknown
+F,Dezaray,unknown,unknown
+F,Shirin,Sweet,Persian
+M,Mathews,Gift from God,Hebrew
+M,Coalton,unknown,unknown
+F,Ailish,Of a noble kin,Scottish
+F,Sol,Sun,Spanish
+M,Verlan,unknown,unknown
+M,Christpher,unknown,unknown
+M,Ozie,unknown,unknown
+M,Aceyn,unknown,unknown
+F,Paisley,Church,Scottish
+F,Mckinsey,unknown,unknown
+M,Armany,unknown,unknown
+F,Marytheresa,unknown,unknown
+M,Caldwell,From the cold stream,English
+F,Ronique,unknown,unknown
+F,Shakela,unknown,unknown
+M,Ashten,Town of ash trees,English
+F,Villa,unknown,unknown
+M,Zymir,unknown,unknown
+F,Tyja,unknown,unknown
+F,Arushi,unknown,unknown
+M,Tyrion,unknown,unknown
+F,Saisha,unknown,unknown
+F,Terasa,unknown,unknown
+F,Mileah,unknown,unknown
+M,Akeel,unknown,unknown
+F,Kamani,unknown,unknown
+F,Anayah,unknown,unknown
+M,Hersch,unknown,unknown
+M,Jonathan,God has Given,Hebrew
+M,Lucas,From Lucania,Greek
+M,Padraig,Noble,Irish
+F,Masako,Justice,Japanese
+M,Kani,unknown,unknown
+M,Keithan,unknown,unknown
+F,Harleyquinn,unknown,unknown
+F,Lilyan,unknown,unknown
+F,Albina,Fair,Latin
+F,Tacara,unknown,unknown
+F,Danyella,unknown,unknown
+F,Ahlana,unknown,unknown
+F,Winfred,Peace friend,English
+F,Topaz,Golden gem,Latin
+F,Mildred,Mild Strength,English
+M,Albino,unknown,unknown
+F,Kimmarie,unknown,unknown
+F,Neveen,unknown,unknown
+F,Sharmila,Blissful one,Sanskrit
+F,Lumen,Measure of Light,Latin
+M,Oluwaferanmi,unknown,unknown
+M,Tilman,Virile,English
+M,Ronen,unknown,unknown
+F,Shericka,unknown,unknown
+F,Ayse,unknown,unknown
+F,Priscella,unknown,unknown
+F,Jenavee,unknown,unknown
+F,Millette,unknown,unknown
+F,Petula,unknown,English
+F,Aliesha,unknown,unknown
+M,Zach,God has Remembered,English
+M,Tilden,From Tila's valley,English
+F,Hiilei,unknown,unknown
+F,Basil,King,English
+F,Seryna,unknown,unknown
+F,Rona,Song,Hebrew
+M,Rober,unknown,unknown
+F,Ayde,unknown,unknown
+F,Gwenevere,unknown,Arthurian Legend
+M,Kassem,unknown,unknown
+M,Alford,From the old ford,English
+M,Chadley,unknown,unknown
+M,Lathan,unknown,unknown
+M,Edi,unknown,unknown
+F,Emanuella,unknown,unknown
+M,Irving,From Irving, Scotland,English
+F,Lanea,unknown,unknown
+F,Hailie,Hero,English
+F,Teal,Greenish Blue Color,American
+M,Malachai,unknown,unknown
+M,Telvin,unknown,unknown
+F,Tillie,Battle Strength,English
+M,Jayleen,Beautiful Jay Bird,American
+F,Ariyonna,unknown,unknown
+F,Janeah,unknown,unknown
+F,Zaya,unknown,unknown
+F,Noely,unknown,unknown
+F,Shawnie,unknown,unknown
+F,Harvey,Battle Warrior,French
+F,Mccall,unknown,unknown
+F,Nuria,Luminous, bright,Arabic
+F,Carlota,Feminine form of Charles,Spanish
+F,Matina,Strong, Sound, and Solid,Muslim
+F,Malin,Woman of Magdela,Scandinavian
+F,Sherra,unknown,unknown
+F,Jamilia,unknown,Arabic
+M,Stavro,unknown,unknown
+F,Janny,Diminutive form of Janna,American
+M,Maurion,unknown,unknown
+F,Mariza,unknown,unknown
+M,Demontae,unknown,unknown
+F,Keslyn,unknown,unknown
+F,Yarely,unknown,unknown
+M,Broderick,Son of Rhydderch,Welsh
+M,Jospeh,unknown,unknown
+M,Isac,unknown,unknown
+F,Elliotte,unknown,unknown
+F,Shadestiny,unknown,unknown
+F,Ruperta,unknown,unknown
+F,Latrelle,unknown,unknown
+M,Martino,Warring,Spanish
+F,Genine,unknown,unknown
+F,Lona,Light,Hungarian
+M,Laurent,Crowned with Laurel,French
+F,Elka,Oath to God,Hebrew
+F,Malik,King,Arabic
+F,Elizaveta,God is My Oath,Russian
+F,Jaydeen,unknown,unknown
+M,Cordero,Little Lamb,Spanish
+F,Lilli,Lily,English
+F,Murl,unknown,unknown
+M,Jabier,unknown,unknown
+F,Avanell,unknown,unknown
+M,Pal,unknown,unknown
+M,Yissochor,unknown,unknown
+F,Charnesha,unknown,unknown
+M,Keyton,unknown,unknown
+M,Romolo,unknown,unknown
+F,Thyra,Goddess,Scandinavian
+M,Antonios,unknown,unknown
+M,Mathis,Gift of God,French
+F,Saanvi,unknown,unknown
+F,Tyna,River,English
+F,Anwita,unknown,unknown
+F,Delzora,unknown,unknown
+F,Alysia,Possesive,Greek
+F,Anahit,unknown,unknown
+F,Maggi,unknown,English
+F,Winna,unknown,unknown
+M,Levi,Joined in Harmony,Hebrew
+F,Camila,Perfect,Italian
+M,Vincente,Victor,Spanish
+M,Uchenna,God's thoughts,African
+F,Trine,unknown,unknown
+M,Jarvis,Spear man,English
+F,Conni,unknown,unknown
+M,Riki,Power, Strength,Japanese
+M,Alexandros,unknown,unknown
+M,Rodolphe,unknown,unknown
+M,Olegario,unknown,unknown
+F,Sereen,unknown,unknown
+F,Lynnsey,unknown,unknown
+F,Rasheena,unknown,unknown
+M,Catarino,unknown,unknown
+M,Sollie,unknown,unknown
+M,Ethaniel,unknown,Hebrew
+F,Laqueta,Invented name,American
+F,Farida,unknown,unknown
+F,Latifah,Elegant, Kind, Gentle,Arabic
+M,Nomar,unknown,unknown
+F,Latonia,unknown,unknown
+M,Aneesh,unknown,unknown
+M,Clardie,unknown,unknown
+F,Breelyn,unknown,unknown
+F,Keiosha,unknown,unknown
+M,Zymire,unknown,unknown
+M,Vladislav,unknown,unknown
+F,Judeen,unknown,unknown
+M,Danyell,unknown,unknown
+M,Fionn,Fair-haired,Irish
+M,Quantavius,unknown,unknown
+M,Keahi,Flames, Fire,Polynesian/Hawaiian
+F,Ciarah,unknown,unknown
+F,Alicja,unknown,unknown
+F,Heidie,unknown,unknown
+M,Trevell,unknown,unknown
+M,Darlene,Dear, loved one,American
+M,Jese,unknown,unknown
+M,Cayde,unknown,unknown
+F,Gordon,From Gordon, Scotland,English
+F,Kendel,unknown,English
+F,Lundyn,unknown,unknown
+F,Yuritzi,unknown,unknown
+F,Veridiana,unknown,unknown
+M,Robb,unknown,German
+F,Milli,unknown,unknown
+F,Leontine,Lion-like,French
+M,Zacary,unknown,unknown
+F,Emilyn,unknown,unknown
+F,Clarine,Mother of Lancelot,Arthurian Legend
+F,Shawntel,Singer,French
+M,Lafayette,unknown,French
+F,Analleli,unknown,unknown
+M,Leodis,unknown,unknown
+M,Gehrig,unknown,unknown
+M,Elia,Form of Elijah,Italian
+F,Lynanne,unknown,unknown
+F,Jennelle,unknown,English
+M,Khaleef,unknown,unknown
+F,Angelique,Messenger of God,French
+F,Kailah,unknown,unknown
+M,Naetochukwu,unknown,unknown
+F,Eliset,unknown,unknown
+M,Demarea,unknown,unknown
+F,Bawi,unknown,unknown
+F,Yachet,unknown,unknown
+F,Regenia,unknown,unknown
+F,Ely,Height,English
+M,Mergim,unknown,unknown
+F,Kerstyn,unknown,unknown
+M,Catherine,Pure,Greek
+F,Parissa,unknown,unknown
+F,Asmi,unknown,unknown
+M,Porfirio,Purple,Italian
+F,Haleema,unknown,unknown
+M,Grason,unknown,unknown
+F,Miri,Of the Sea or Bitter,Hebrew
+M,Lashawn,unknown,unknown
+F,Keitha,unknown,unknown
+M,Nikolas,unknown,Greek
+M,Maeson,unknown,unknown
+F,Aziza,Highly esteemed,Arabic
+F,Maleiah,unknown,unknown
+F,Kandra,unknown,unknown
+F,Jaylani,unknown,unknown
+M,Tahmir,unknown,unknown
+F,Venora,unknown,unknown
+M,Montrell,unknown,Spanish
+M,Bauer,unknown,unknown
+F,Elnor,unknown,unknown
+F,Kaedance,unknown,unknown
+M,Edson,unknown,English
+F,Michela,unknown,French
+F,Krislyn,unknown,unknown
+F,Acie,unknown,unknown
+F,Valery,unknown,unknown
+F,Mertice,Lord,American
+M,Jonibek,unknown,unknown
+F,Shera,unknown,unknown
+F,Hser,unknown,unknown
+F,Otha,Little wealthy one,Anglo-Saxon
+M,Bailey,Bailiff, Steward,English
+F,Renie,unknown,unknown
+F,Teneka,unknown,unknown
+M,Rami,Loving,Arabic
+M,Nikia,unknown,unknown
+F,Crista,unknown,Spanish
+F,Shaylyn,unknown,unknown
+M,Justinmichael,unknown,unknown
+F,Carrieann,unknown,American
+F,Bree,Form of Brie,American
+F,Esty,unknown,unknown
+F,Allisa,unknown,unknown
+F,Charlea,unknown,unknown
+M,Yosef,God will add,Hebrew
+F,Bonifacia,unknown,unknown
+M,Mac,Son,Scottish
+F,Shawntrell,unknown,unknown
+M,Jerin,unknown,unknown
+F,Tinleigh,unknown,unknown
+M,Kreed,unknown,unknown
+F,Ieva,unknown,unknown
+M,Jrake,unknown,unknown
+M,Raziel,unknown,unknown
+F,Estanislada,unknown,unknown
+F,Myrna,High-spirited,Irish
+M,Tra,unknown,unknown
+F,Basilia,unknown,unknown
+F,Gisel,unknown,unknown
+M,Jamale,unknown,unknown
+F,Adesuwa,unknown,unknown
+M,Jonathon,God has given,Hebrew
+M,Jaleel,GREATNESS: GODLIKE,Arabic,African
+F,Julene,unknown,unknown
+F,Kaidance,unknown,unknown
+F,Evalin,unknown,unknown
+F,Constanza,Constant,Spanish
+M,Johnattan,unknown,unknown
+F,Tambria,unknown,unknown
+F,Shannyn,unknown,unknown
+F,Rohini,unknown,unknown
+M,Othniel,Strength of god,Hebrew
+F,Venicia,unknown,unknown
+F,Regan,Royal, Regal,Celtic/Gaelic
+F,Mayerli,unknown,unknown
+F,Immaculate,unknown,unknown
+M,Abran,unknown,Spanish
+M,Cruzito,Cross of Christ,Spanish
+F,Tatevik,unknown,unknown
+M,Yoshikatsu,unknown,unknown
+M,Trong,unknown,unknown
+M,Ronell,unknown,English
+M,Osa,unknown,unknown
+M,Jondarius,unknown,unknown
+F,Avalina,unknown,unknown
+M,Tysir,unknown,unknown
+F,Itzelle,unknown,unknown
+M,Serjio,unknown,unknown
+F,Landra,unknown,Spanish
+M,Emilie,unknown,French
+M,Wing,Glory,Chinese
+M,Toure,unknown,African
+F,Sully,From the south field,English
+M,Shlome,unknown,unknown
+F,Falan,Fruitful,Indian (Sanskrit)
+F,Shizue,unknown,unknown
+F,Amaranta,Flower that Never Fades,Latin
+F,Sheyanne,unknown,unknown
+F,Adrielle,unknown,unknown
+F,Ninoska,unknown,unknown
+F,Aviya,God is My Father,Hebrew
+M,Eusevio,unknown,unknown
+F,Cesaria,unknown,unknown
+M,Tovia,unknown,unknown
+F,Aggie,Virtuous, good,English
+M,Mitch,Who is like God?,American
+F,Ilona,Light,Hungarian
+M,Juanito,unknown,Spanish
+M,Masato,unknown,unknown
+F,Marshay,unknown,unknown
+F,Rosicela,unknown,unknown
+F,Tamasha,unknown,American
+M,Mir,unknown,unknown
+F,Claudina,unknown,unknown
+F,Kotryna,unknown,unknown
+F,Carsyn,unknown,American
+F,Shara,Flat Clearing,American
+F,Jaquetta,Supplanter,Hebrew
+F,Chasmine,unknown,unknown
+M,Saw,unknown,unknown
+F,Ikesha,unknown,unknown
+M,Antonino,unknown,unknown
+F,Doretha,unknown,unknown
+M,Theodor,unknown,unknown
+F,Caera,unknown,unknown
+F,Peg,Pearl,English
+F,Lamerle,unknown,unknown
+F,Anevay,Superior,Native American
+M,Benjamen,unknown,unknown
+M,Rontavious,unknown,unknown
+F,Rosetta,Little Rose,Italian
+F,Vonzella,unknown,unknown
+F,Xia,Glow of the Sunrise,Chinese
+M,Kahari,unknown,unknown
+F,Priscill,unknown,unknown
+M,Nason,unknown,unknown
+M,Ryman,Rye merchant,English
+M,Mamady,unknown,unknown
+M,Zachery,unknown,unknown
+F,Emily,unknown,English
+F,Climmie,unknown,unknown
+F,Casandra,unknown,Spanish
+F,Santresa,unknown,unknown
+F,Blondell,unknown,English
+F,Jackelyn,unknown,unknown
+F,Hollee,unknown,English
+F,Kareen,unknown,unknown
+M,Secundino,unknown,unknown
+F,Eleonor,unknown,unknown
+F,Sumiye,unknown,unknown
+F,Maygen,unknown,unknown
+M,Landan,unknown,unknown
+M,Feynman,unknown,unknown
+F,Mahathi,unknown,unknown
+F,Awilda,unknown,unknown
+M,Kemar,unknown,unknown
+M,Burwell,unknown,unknown
+F,Ivanelle,unknown,unknown
+M,Arik,Sacred ruler,English
+F,Amethyst,Purple Quartz Gemstone,Greek
+F,Layleen,unknown,unknown
+F,Rhiannon,Great queen,Welsh
+M,Taylin,unknown,American
+F,Jesika,unknown,unknown
+M,Maynard,Brave Strength,English
+F,Heidi,Of Noble Kin,German
+F,Cameo,Shadow Portrait,Greek
+M,Avant,unknown,unknown
+F,Tierney,Lord,Irish
+M,Tayvin,unknown,unknown
+M,Tokuichi,unknown,unknown
+F,Janean,unknown,unknown
+F,Fortuna,Good Fortune,Spanish
+F,Khiabet,unknown,unknown
+F,Zoejane,unknown,unknown
+M,Warnie,unknown,unknown
+M,Clarnce,unknown,unknown
+M,Garin,unknown,Armenian
+M,Mamadi,unknown,unknown
+F,Isabel,God is my Oath,Spanish
+F,Kali,A maiden, a bud,Indian (Sanskrit)
+F,Jessalyn,unknown,unknown
+F,Nayomi,Pleasant,French
+F,Laniya,unknown,unknown
+F,Sierah,unknown,unknown
+M,Gracie,Grace of God,English
+F,Mayar,unknown,unknown
+M,Quron,unknown,unknown
+M,Vastine,unknown,unknown
+F,Cortnie,unknown,unknown
+F,Gladis,unknown,unknown
+F,Aixa,unknown,unknown
+F,Gurjot,unknown,unknown
+M,Alekxander,unknown,unknown
+F,Marcille,unknown,unknown
+F,Marquette,Land Owner,French
+F,Hyun,unknown,unknown
+F,Keaundra,unknown,unknown
+F,Chloris,Greenish,Greek
+F,Greisy,unknown,unknown
+M,Edsel,Noble One,German
+M,Ayinde,unknown,unknown
+F,Abbigayle,unknown,unknown
+F,Antigone,unknown,unknown
+M,Tashiem,unknown,unknown
+F,Kalifa,unknown,unknown
+M,Gabrian,unknown,Hebrew
+M,Rashaud,unknown,unknown
+M,Vannak,unknown,unknown
+F,Natasia,unknown,unknown
+F,Yurico,unknown,unknown
+F,Zaylee,unknown,unknown
+M,Heber,unknown,Hebrew
+F,Eriel,unknown,unknown
+M,Elijahjames,unknown,unknown
+F,Shianna,unknown,unknown
+M,Adam,Man, Of the Earth,Hebrew
+F,Karely,unknown,unknown
+F,Julyanna,unknown,unknown
+M,Herby,unknown,unknown
+M,Evann,unknown,unknown
+M,Elias,The Lord is My God,English
+M,Schneider,unknown,unknown
+F,Ayelene,unknown,unknown
+M,Desmond,Man from Desmond,Irish
+M,Ericson,unknown,unknown
+M,Garn,unknown,unknown
+F,Vernia,unknown,unknown
+F,Mattie,unknown,English
+F,Amrita,Nectar,Indian (Sanskrit)
+F,Vira,unknown,unknown
+M,Alexy,unknown,unknown
+F,Giovana,unknown,unknown
+M,Ned,unknown,English
+M,Avik,unknown,unknown
+F,Percilla,unknown,unknown
+F,Fransheska,unknown,unknown
+M,Lucero,Light, star, horse blaze,Spanish
+F,Drina,unknown,English
+M,Endi,unknown,unknown
+F,Nixaliz,unknown,unknown
+F,Shakenya,unknown,unknown
+F,Loria,unknown,English
+M,Kamakani,unknown,unknown
+F,Ayelet,unknown,unknown
+M,Bosco,unknown,unknown
+M,Francesc,unknown,unknown
+M,Wilfrido,unknown,unknown
+M,Michaelangelo,unknown,unknown
+F,Jaime,Supplanter,Spanish
+M,Javar,unknown,unknown
+M,Aleck,unknown,Scottish
+F,Jamyrie,unknown,unknown
+M,Doak,unknown,unknown
+F,Eavan,Fair Radiance,Irish
+M,Kyree,unknown,unknown
+M,Matix,unknown,unknown
+F,Keia,unknown,unknown
+M,Guerin,unknown,unknown
+M,Filemon,unknown,unknown
+M,Riccardo,Powerful ruler,German
+F,Kemiyah,unknown,unknown
+F,Dorenda,unknown,unknown
+F,Janell,unknown,English
+M,Johnny,Diminutive form of John,Hebrew
+F,Yehudis,unknown,unknown
+F,Fernanda,Journey ready,Spanish
+F,Sakina,unknown,Arabic
+M,Shamell,unknown,unknown
+M,Ossie,unknown,English
+F,Shantrel,unknown,unknown
+M,Tiernan,Little lord,Irish
+M,Genesis,Beginning, Birth,Greek
+F,Rhyleigh,unknown,unknown
+M,Kou,unknown,unknown
+F,Kynlie,unknown,unknown
+F,Evonne,Yew,American
+F,Vashon,unknown,American
+M,Antawan,unknown,unknown
+F,Dashia,unknown,unknown
+M,Blane,Slender,Celtic
+M,Taiquan,unknown,unknown
+F,Syncere,unknown,unknown
+F,Djuana,unknown,unknown
+F,Mirabel,Wondrous,English
+M,Jaskirat,unknown,unknown
+M,Seiji,unknown,unknown
+M,Dashan,unknown,unknown
+M,Reyli,unknown,unknown
+M,Zamarion,unknown,unknown
+F,Jennette,unknown,unknown
+M,Lukah,unknown,unknown
+F,Aissata,unknown,unknown
+M,Gearld,unknown,unknown
+F,Yazleemar,unknown,unknown
+M,Tomas,Form of Thomas,Scandinavian
+M,Katsuji,unknown,unknown
+F,Dominica,Belonging to God,Latin
+M,Altarik,unknown,unknown
+F,Stacia,Resurrection,English
+F,Cree,Tribe Name,Native American
+F,Lashun,unknown,unknown
+F,Eliah,unknown,unknown
+F,Caliyah,unknown,unknown
+M,Knowledge,unknown,unknown
+M,Chritopher,unknown,unknown
+F,Melenie,unknown,unknown
+F,Marry,unknown,unknown
+F,Shaheen,unknown,unknown
+F,Sparkle,Glisten in Light,American
+F,Mariaangelica,unknown,unknown
+F,Haidyn,unknown,unknown
+M,Sylis,unknown,unknown
+F,Emersen,unknown,unknown
+F,Leola,Lioness,American
+F,Blanca,White,Spanish
+M,King,Ruler,American
+M,Tighe,unknown,Irish
+M,Kayzen,unknown,unknown
+F,Odilia,Little wealthy one,Anglo-Saxon
+F,Lorelle,Laurel,American
+F,Feiga,unknown,unknown
+M,Donovin,unknown,unknown
+F,Tonika,unknown,unknown
+F,Hermina,unknown,unknown
+F,Georganne,unknown,unknown
+M,Leopoldo,Prince of the people,German
+M,Lean,Serves John,Scottish
+M,Imad,unknown,unknown
+M,Calder,From the Wild Water,Scottish
+F,Aracelia,Altar of heaven,Spanish
+F,Ryli,unknown,unknown
+M,Creighton,Town near rocks,English
+F,Sacoria,unknown,unknown
+F,Christabelle,unknown,unknown
+M,Kejuan,unknown,unknown
+M,Abayomi,unknown,unknown
+F,Alexie,unknown,unknown
+M,Minnis,unknown,unknown
+F,Ismenia,unknown,unknown
+F,Trinetta,Little innocent,French
+M,Glennon,unknown,unknown
+F,Tayeko,unknown,unknown
+F,Natesha,unknown,unknown
+F,Logyn,unknown,unknown
+F,Carron,unknown,unknown
+F,Reola,unknown,unknown
+F,Astraea,unknown,unknown
+M,Delon,unknown,unknown
+F,Gaylon,unknown,unknown
+F,Josanne,unknown,unknown
+F,Elois,unknown,unknown
+F,Lilu,unknown,unknown
+F,Conchita,unknown,unknown
+M,Belisario,unknown,unknown
+M,Todrick,unknown,unknown
+M,Gaudencio,unknown,unknown
+M,Ewell,unknown,unknown
+M,Nickie,unknown,English
+M,Gill,French form of Julius,French
+M,Servando,unknown,unknown
+F,Ladean,unknown,unknown
+M,Belal,unknown,unknown
+F,Audell,unknown,unknown
+M,Brigham,unknown,English
+M,Oleksandr,unknown,unknown
+F,Shelley,From the sloping field,English
+F,Beaulah,unknown,unknown
+F,Brianne,High, noble,American
+F,Otila,unknown,unknown
+F,Kikuyo,unknown,unknown
+F,Cassand,unknown,unknown
+F,Nadiah,unknown,unknown
+M,Adain,unknown,unknown
+M,Arley,unknown,English
+F,Ari,Lion,Hebrew
+M,Maxie,Greatest,American
+F,Mariaguadalupe,unknown,unknown
+F,Kamillah,unknown,unknown
+F,Jerome,Holy Name,Latin
+F,Paityn,unknown,unknown
+F,Precious,Precious one,American
+M,Roderic,Famous ruler,English
+M,Abdishakur,unknown,unknown
+M,Gerrad,unknown,unknown
+M,Little,unknown,unknown
+F,Jillyn,unknown,unknown
+F,Modesta,Modest,Latin
+M,Johandry,unknown,unknown
+F,Phylis,unknown,unknown
+M,Natanael,Gift from God,Hebrew
+M,Javious,unknown,unknown
+M,Yohannes,unknown,unknown
+M,Shrey,unknown,unknown
+F,Azara,unknown,unknown
+M,Weslee,Feminine of Wesley,English
+M,Alister,unknown,Scottish
+F,Jericha,unknown,unknown
+F,Argie,unknown,unknown
+F,Lashanta,unknown,unknown
+M,Robin,Bright fame,English
+F,Varnika,unknown,unknown
+M,Gage,Measurer,English
+F,Arina,unknown,unknown
+M,Marlon,Little warlike one,American
+F,Shannell,unknown,unknown
+M,Hermenegildo,unknown,unknown
+F,Manisha,unknown,unknown
+F,Italia,Italy,Italian
+M,Conlan,Hero,Irish
+F,Zora,Dawn,Slavic
+F,Atheena,unknown,unknown
+F,Katrin,unknown,unknown
+F,Laurey,unknown,unknown
+F,Emerald,Green Gem Stone,English
+F,Kailynn,unknown,unknown
+M,Wyland,unknown,unknown
+M,Orlin,unknown,Spanish
+M,Jashun,unknown,unknown
+F,Hendrix,Son of Hendrick,English
+F,Conner,Wolf lover,Irish
+F,Tammatha,unknown,unknown
+F,Brian,High, noble,Irish
+M,Abu,Nobility,African
+M,Emet,unknown,unknown
+M,Jarod,Descending,Hebrew
+F,Sheyna,unknown,unknown
+M,Ramone,unknown,Spanish
+M,Daris,unknown,unknown
+F,Jamiyah,unknown,unknown
+F,Catherin,unknown,unknown
+F,Shakyla,unknown,unknown
+F,Bayler,unknown,unknown
+F,Aleyah,unknown,unknown
+F,Jocely,unknown,unknown
+F,Hilde,Battle,French
+F,Myasia,unknown,unknown
+F,Leondra,unknown,French
+M,Kona,unknown,unknown
+F,Juleen,unknown,French
+F,Malinda,unknown,American
+F,Chia,unknown,unknown
+M,Sagar,Wise one. Surname,English
+F,Latavia,unknown,unknown
+F,Arly,unknown,unknown
+F,Nadene,unknown,unknown
+F,Ngun,unknown,unknown
+F,Bernadet,unknown,unknown
+F,Adhara,unknown,unknown
+M,Gregario,unknown,unknown
+F,Vedika,unknown,Sanskrit
+F,Sanai,unknown,unknown
+M,Rishit,unknown,unknown
+M,Alma,Nourishing,Latin
+F,Dorothey,unknown,unknown
+M,Leovardo,unknown,unknown
+F,Kari,Pure,Scandinavian
+M,Lamonte,unknown,unknown
+M,Donnis,unknown,unknown
+M,Cutler,Knife Maker,English
+F,Shavona,unknown,unknown
+M,Hamzah,unknown,unknown
+F,Shaylen,unknown,unknown
+M,Johnell,unknown,unknown
+M,Ashwin,Seventh Hindu month,Indian (Sanskrit)
+F,Deloria,unknown,unknown
+F,Rubye,unknown,unknown
+M,Ely,Height,English
+M,Braysen,unknown,unknown
+M,Bram,Father of a multitude,English
+M,Romualdo,unknown,unknown
+M,Kary,unknown,unknown
+F,Milana,Precious one,English
+F,Cigi,unknown,unknown
+F,Rocsi,unknown,unknown
+M,Hudsen,unknown,unknown
+F,Ortencia,unknown,unknown
+M,Jonel,unknown,unknown
+M,Tynan,Dark,Irish
+F,Cedar,Type of Tree,American
+F,Geri,Rules with Spear,English
+F,Wing,Glory,Chinese
+F,Danaya,unknown,unknown
+F,Oliviarose,unknown,unknown
+M,Hilmer,unknown,unknown
+M,Nirav,Quiet,Indian (Sanskrit)
+F,Erynn,unknown,unknown
+M,Brannan,Variant of Brandon,Irish
+M,Buster,Tough Guy,American
+F,Derrica,unknown,English
+F,Geraldy,unknown,unknown
+M,Kelechi,unknown,unknown
+M,Tad,Praise,American
+F,Sheba,Kingdom in Arabia,Arabic
+F,Jeriyah,unknown,unknown
+F,Gordana,Heroic,Scottish
+F,Alfred,Counselor,English
+F,Lyndsy,unknown,unknown
+F,Nyellie,unknown,unknown
+M,Ralphy,unknown,unknown
+F,Jacquelyne,unknown,French
+F,Cyndle,unknown,unknown
+F,Tenlee,unknown,unknown
+F,Juanda,unknown,unknown
+F,Leslea,unknown,unknown
+F,Herminia,unknown,unknown
+M,Amilcar,unknown,unknown
+F,Danae,She who judges,Greek
+F,Shalamar,unknown,unknown
+F,Lucca,Bringer of light,Italian
+F,Marjona,unknown,unknown
+M,Britten,unknown,unknown
+F,Jaunita,unknown,unknown
+M,Son,unknown,unknown
+F,Jamirah,unknown,unknown
+M,Rowland,unknown,German
+M,Revan,unknown,unknown
+M,Melvyn,Gentle lord,English
+F,Rosalea,unknown,unknown
+M,Carlie,unknown,unknown
+F,Kaelly,unknown,unknown
+M,Renzo,unknown,unknown
+F,Liberty,Freedom,American
+M,Marinus,unknown,unknown
+F,Samina,unknown,unknown
+M,Riot,unknown,unknown
+F,Haileigh,unknown,unknown
+F,Chaselyn,unknown,unknown
+F,Zehra,unknown,unknown
+M,Talyn,unknown,unknown
+F,Harman,Variant of Herman,French
+F,Merlina,unknown,unknown
+F,Lynley,From the flax meadow,English
+F,Airabella,unknown,unknown
+F,Royalti,unknown,unknown
+F,Osa,unknown,unknown
+F,Kaedynce,unknown,unknown
+M,Dyllon,unknown,unknown
+M,Govanni,unknown,unknown
+F,Yeng,unknown,unknown
+M,Stepan,Exalts,Anglo-Saxon
+M,Amonte,unknown,unknown
+M,Matteo,Gift of God,Italian
+F,Kazzandra,unknown,unknown
+M,Brendon,Prince,Irish
+M,Hoa,unknown,unknown
+M,Carey,From the fort,Welsh
+F,Terriana,unknown,unknown
+M,Yaxiel,unknown,unknown
+F,Azariya,unknown,unknown
+M,Kaidon,unknown,unknown
+M,Frank,Free or Truthful,English
+M,Opal,Precious gem,Indian (Sanskrit)
+F,Katelyn,Pure,American
+M,Aric,unknown,Hebrew
+F,Makailah,unknown,unknown
+M,Tierra,Land,Spanish
+M,Pearlie,Pearl,English
+F,Chelle,unknown,French
+M,Kaimipono,unknown,unknown
+M,Jubal,Ram,Hebrew
+M,Caleb,Whole Hearted,Hebrew
+M,Randy,unknown,English
+F,Tenesha,unknown,unknown
+F,Reeya,unknown,Indian (Sanskrit)
+F,Sheina,unknown,unknown
+F,Sandie,unknown,unknown
+F,Shavone,unknown,unknown
+F,Cassandra,She who entangles men,Greek
+M,Kashton,unknown,unknown
+F,Ajane,unknown,unknown
+F,Kinslee,unknown,unknown
+F,Lesvia,unknown,unknown
+M,Kaelin,Pure,American
+F,Nikole,unknown,unknown
+M,Shai,unknown,Irish
+M,Alison,Son of the Noble One,English
+F,Jayonna,unknown,unknown
+F,Kedra,unknown,unknown
+M,Tyrrell,unknown,unknown
+F,Adelyne,unknown,unknown
+F,Valerie,Strength,French
+M,Colen,unknown,unknown
+M,Milton,From the Mill Town,English
+F,Chiana,unknown,French
+M,Armani,From the house of Armand,African
+F,Ahniyah,unknown,unknown
+F,Aaniyah,unknown,unknown
+M,Kaiyan,unknown,unknown
+F,Lenita,unknown,unknown
+F,Shanna,Form of Shannon or Shana,American
+F,Layan,Soft, Gentle,Arabic
+F,Elayne,Mother of Lancelot,Arthurian Legend
+F,Ajena,unknown,unknown
+F,Shanece,unknown,unknown
+F,Rhonda,Noisy,English
+M,Hersh,unknown,unknown
+M,Jaryn,unknown,English
+F,Kinsley,From Cyne's field,English
+F,Amiyah,unknown,American
+M,Simone,To be Heard,French
+F,Theia,unknown,unknown
+M,Levert,unknown,unknown
+M,Adi,unknown,unknown
+M,Avroham,unknown,unknown
+M,Shriyans,unknown,unknown
+F,Conferina,unknown,unknown
+F,Stephanee,unknown,unknown
+M,Reegan,Little king,American
+M,Arlie,From the hare's meadow,English
+F,Andreina,Womanly Queen,American
+M,Hansell,unknown,unknown
+F,Matsue,unknown,unknown
+F,Natarsha,unknown,unknown
+M,Sabin,Sabine man,French
+M,Jameis,unknown,unknown
+M,Damontae,unknown,unknown
+F,Haizel,unknown,unknown
+F,Oakleigh,unknown,unknown
+F,Zaelynn,unknown,unknown
+M,Tee,unknown,unknown
+F,Scherrie,unknown,unknown
+M,Bubber,unknown,unknown
+M,Tysen,unknown,unknown
+F,Ammi,My people,Hebrew
+F,Mei,Plum,Chinese
+F,Caitlin,Pure,Irish
+M,Yifan,unknown,unknown
+M,Balthazar,unknown,unknown
+F,Oneda,unknown,unknown
+F,Lauri,unknown,unknown
+F,Joanna,God is Gracious,English
+M,Swanson,unknown,unknown
+F,Verenice,unknown,unknown
+F,Orpha,unknown,unknown
+M,Bubba,Brother,American
+F,Sherisse,unknown,unknown
+F,Carianne,unknown,unknown
+F,Raaina,unknown,unknown
+F,Florrie,unknown,English
+M,Memphis,unknown,Greek
+M,Emari,unknown,unknown
+F,Nelly,Light,English
+F,Denise,Devotee of Dionysos,French
+M,Scout,First Explorer,American
+F,Latondra,unknown,unknown
+F,Rupa,unknown,unknown
+M,Jeremie,unknown,English
+F,May,Goddess Maia,English
+F,Yarixa,unknown,unknown
+F,Tifanny,unknown,unknown
+F,Marie,Of the Sea or Bitter,French
+F,Anamaria,unknown,unknown
+F,Debera,unknown,unknown
+F,Che,God will multiply,Hebrew
+F,Latresa,unknown,unknown
+F,Lavaughn,unknown,unknown
+F,Kendalyn,unknown,unknown
+M,Ismail,God will Hear,Arabic
+M,Brance,unknown,unknown
+M,Javante,unknown,unknown
+F,Dolorez,unknown,unknown
+F,Clio,Proclaimer,Greek
+M,Rand,unknown,English
+F,Sotheary,unknown,unknown
+F,Shantel,unknown,unknown
+F,Kathern,unknown,unknown
+F,Haruka,Faraway, Distant,Japanese
+F,Mariel,Of the Sea or Bitter,English
+M,Lorne,Fox,English
+F,Leandra,Lion man,Italian
+F,Milee,unknown,unknown
+F,Janielle,unknown,unknown
+F,Perle,unknown,unknown
+F,Danyale,God is my Judge,American
+F,Lurleen,Temptress,German
+F,Esly,unknown,unknown
+F,Darryl,Form of Darrell,English
+F,Jermani,unknown,unknown
+M,Gifford,Gift of bravery,English
+M,Marjorie,Pearl,English
+M,Gualberto,unknown,unknown
+F,Lular,unknown,unknown
+M,Akhil,unknown,unknown
+M,Ramsen,unknown,unknown
+F,Aiman,unknown,unknown
+F,Ziara,unknown,unknown
+F,Lyann,unknown,unknown
+F,Edwena,unknown,unknown
+F,Shavontae,unknown,unknown
+F,Destiney,unknown,unknown
+F,Quanasia,unknown,unknown
+F,Caryle,unknown,unknown
+F,Ciella,unknown,unknown
+M,Ikaia,unknown,unknown
+F,Anai,unknown,unknown
+F,Nancie,unknown,French
+F,Tejal,unknown,unknown
+F,Raynette,unknown,unknown
+F,Abbigail,unknown,unknown
+F,Omunique,unknown,unknown
+F,Jood,unknown,unknown
+M,Barton,From Barton,English
+F,Jaleigh,unknown,unknown
+F,Addy,Noble,American
+M,Timonthy,unknown,unknown
+F,Geannie,unknown,unknown
+F,Jaileen,unknown,unknown
+F,Benetta,unknown,unknown
+F,Dardanella,unknown,unknown
+M,Kalab,unknown,unknown
+F,Costella,unknown,unknown
+M,Josh,Short form of Joshua,English
+M,Phenix,unknown,unknown
+M,Jessica,God beholds,Hebrew
+F,Female,unknown,unknown
+F,Brittyn,unknown,unknown
+F,Braleigh,unknown,unknown
+F,Glennda,unknown,unknown
+F,Jaiden,unknown,American
+M,Kamal,Perfection,Arabic
+F,Tanaisha,unknown,unknown
+F,Jnaya,unknown,unknown
+M,Osvaldo,God Rule,Spanish
+F,Madalene,unknown,French
+F,Lizmary,unknown,unknown
+F,Tahani,unknown,unknown
+F,Nazanin,unknown,unknown
+F,Hollyann,unknown,unknown
+M,Kinta,Laughter,Aboriginal
+M,Everado,unknown,unknown
+F,Lectoria,unknown,unknown
+M,Cord,Bold Counsel,German
+F,Aslean,unknown,unknown
+F,India,Person from India,English
+M,Denard,unknown,unknown
+F,Reynalda,unknown,unknown
+F,Rivky,unknown,unknown
+F,Novalee,New Field,American
+F,Siobhain,unknown,unknown
+F,Christiana,Follower of Christ,English
+F,Collen,Hazel,Welsh
+F,Auriel,unknown,unknown
+F,Jamiracle,unknown,unknown
+F,Emelia,unknown,unknown
+F,Nalina,unknown,unknown
+F,Shelagh,Heaven,Irish
+M,Kenshin,Modest, Truth,Japanese
+F,Caludia,unknown,unknown
+M,Aadvik,unknown,unknown
+M,Roy,Red,Scottish
+M,Gareth,Spear Rule,Welsh
+F,Dhara,unknown,unknown
+M,Chirstopher,unknown,unknown
+F,Miaya,unknown,unknown
+F,Lylah,unknown,unknown
+F,Indya,unknown,unknown
+F,Lashavia,unknown,unknown
+F,Elayna,unknown,French
+M,Harrell,Mountain of God,Hebrew
+M,Shivaan,unknown,unknown
+M,Fidel,Faithful,Latin
+F,Beula,To marry,Hebrew
+F,Camielle,unknown,unknown
+M,Ashur,unknown,unknown
+M,Mase,unknown,unknown
+F,Sanah,unknown,unknown
+F,Destynee,unknown,unknown
+F,Kimyetta,unknown,unknown
+F,Dody,unknown,unknown
+F,Prisma,unknown,unknown
+F,Rosabel,unknown,unknown
+F,Priscille,unknown,unknown
+F,Alan,Little rock,English
+F,Breslin,Surname,Irish
+F,Irish,From Ireland,American
+M,Noach,Peace, Rest,Hebrew
+F,Krissie,unknown,unknown
+M,Artice,unknown,unknown
+M,Zaylen,unknown,unknown
+F,Kohana,Little Flower,Japanese
+F,Tashara,unknown,unknown
+M,Acen,unknown,unknown
+F,Taia,unknown,unknown
+F,Sherell,unknown,unknown
+F,Kynadee,unknown,unknown
+F,Janiylah,unknown,unknown
+M,Shakim,unknown,unknown
+F,Acadia,unknown,unknown
+F,Fajr,unknown,unknown
+M,Gaylan,unknown,unknown
+F,Jackeline,unknown,unknown
+F,Brandilyn,unknown,English
+M,Nirvan,unknown,unknown
+F,Micah,Who is like God?,Hebrew
+F,Sophia,Wisdom,Greek
+F,Brileigh,unknown,unknown
+F,Dawnell,unknown,unknown
+F,Ortensia,unknown,unknown
+M,Terance,unknown,unknown
+F,Elektra,unknown,unknown
+F,Zurisadai,unknown,unknown
+M,Stewart,unknown,Scottish
+F,Jatziri,unknown,unknown
+F,Amala,Bird: Beloved,Arabic
+F,Lori,Laurel,American
+F,Ryanna,unknown,unknown
+F,Sherrell,unknown,unknown
+F,Harmonie,unknown,English
+M,Rahsaan,unknown,unknown
+M,Graeme,From the Gray Homestead,English
+F,Deeanne,unknown,unknown
+F,Timara,unknown,unknown
+M,Esaw,unknown,unknown
+M,Telford,Works in iron,French
+F,Hadja,unknown,unknown
+F,Lakeysha,unknown,unknown
+F,Jeidy,unknown,unknown
+M,Payden,From the fighter's farm,English
+M,Niklaus,Victory of the People,Slavic
+F,Annalea,unknown,unknown
+F,Marni,unknown,unknown
+M,Xaden,unknown,unknown
+M,Reynol,unknown,unknown
+F,Roxie,Dawn,American
+M,Raven,Blackbird,English
+M,Laureano,unknown,English
+F,Anureet,unknown,unknown
+F,Oreatha,unknown,unknown
+M,Nachmen,unknown,unknown
+M,Mesiah,unknown,unknown
+M,Rajvir,unknown,unknown
+F,Alie,unknown,unknown
+F,Brynleigh,unknown,unknown
+M,Syair,unknown,unknown
+F,Peggyann,unknown,unknown
+M,Asbury,unknown,unknown
+F,Shantai,unknown,unknown
+M,Maximiliano,unknown,unknown
+M,Jmarion,unknown,unknown
+F,Noora,unknown,unknown
+M,Montez,unknown,Spanish
+F,Alanda,unknown,unknown
+M,Doyle,Dark Foreigner,Irish
+M,Parris,unknown,unknown
+F,Silveria,unknown,unknown
+M,Skip,Skipper, Sea Captain,American
+M,Sahas,unknown,unknown
+M,Constantine,Constant,Latin
+F,Janiyah,God is Gracious,American
+F,Averyrose,unknown,unknown
+F,Jennife,unknown,unknown
+F,Osie,unknown,unknown
+F,Yannely,unknown,unknown
+M,Tennessee,Gathering Place,Native American
+M,Kamakana,unknown,unknown
+F,Travia,unknown,unknown
+M,Omeed,unknown,unknown
+F,Cherita,unknown,French
+F,Udell,From the yew valley,English
+F,Liya,unknown,unknown
+M,Hugo,unknown,German
+M,Javonne,unknown,unknown
+F,Jennifier,unknown,unknown
+F,Bianca,White,Italian
+M,Kelii,Chief,Polynesian/Hawaiian
+M,Ariv,unknown,unknown
+F,Jahnae,unknown,unknown
+F,Johnye,unknown,unknown
+F,Larrie,unknown,unknown
+F,Shamel,unknown,unknown
+M,Keyshun,unknown,unknown
+F,Vania,God's gift,Hebrew
+F,Shantasia,unknown,unknown
+F,Briauna,unknown,unknown
+M,Luke,From Lucania,Greek
+M,Jacinto,Hyacinth,Spanish
+F,Rosaelena,unknown,unknown
+F,Emmamarie,unknown,unknown
+F,Mirielle,Sea bright,French
+F,Maebelle,unknown,unknown
+M,Mathieu,Gift of God,French
+F,Dyanara,unknown,unknown
+F,Lalena,unknown,unknown
+M,Dick,unknown,unknown
+M,Evertt,unknown,unknown
+M,Keoni,God is gracious,Polynesian/Hawaiian
+M,Sharon,Flat Clearing,Hebrew
+M,Jude,From Judaea,English
+F,Kadidia,unknown,unknown
+M,Wash,unknown,unknown
+M,Harlee,unknown,unknown
+F,Lakeria,unknown,unknown
+M,Travonne,unknown,unknown
+M,Sanders,Son of Alexander,English
+M,Sergio,Servant,Italian
+M,Kincaid,unknown,unknown
+F,Bre,unknown,unknown
+F,Nixon,Son of Nicholas,English
+M,Rodriguez,unknown,unknown
+M,Tivis,unknown,unknown
+M,Cosmo,Order,English
+M,Wayne,Wagon driver,English
+M,Yandel,unknown,unknown
+F,Alexx,unknown,unknown
+F,Minnie,Of the Sea or Bitter,English
+M,Vardell,unknown,unknown
+M,Jacion,unknown,unknown
+F,Stephnie,unknown,unknown
+F,Surya,The Sun,Indonesian
+F,Monda,unknown,unknown
+M,Cedar,Type of Tree,American
+F,Mauricia,unknown,unknown
+F,Antoine,Form of Antony,French
+F,Altie,unknown,unknown
+M,Saamir,unknown,unknown
+F,Kinue,unknown,unknown
+F,Arloa,unknown,unknown
+F,Carmelina,Vinyard of God,Latin
+M,Margarito,unknown,unknown
+F,Taniesha,unknown,unknown
+F,Bayleigh,unknown,unknown
+M,Edrees,unknown,unknown
+F,Sinthia,unknown,unknown
+M,Zack,unknown,Hebrew
+M,Norvin,Friend of the north,English
+F,Katherin,unknown,unknown
+M,Desmund,unknown,unknown
+M,Isami,unknown,unknown
+F,Beyonce,From the Surname Beyince,American
+F,Vallerie,Strength,English
+F,Sharnice,unknown,unknown
+M,Salah,unknown,unknown
+M,Keiondre,unknown,unknown
+M,Delontay,unknown,unknown
+F,Evita,Diminutive form of Eva,Spanish
+F,Ranijah,unknown,unknown
+F,Belva,unknown,American
+M,Billey,unknown,unknown
+M,Marcoantonio,unknown,unknown
+F,Rovena,unknown,unknown
+M,Rithik,unknown,unknown
+F,Theodore,Divine Gift,Greek
+F,Annemarie,Bitter grace,German
+M,Ishaq,unknown,unknown
+F,Devoiry,unknown,unknown
+F,Fayth,Faithful,English
+M,Esaias,unknown,unknown
+F,Clelia,unknown,unknown
+F,Wiktoria,unknown,unknown
+M,Daimian,unknown,unknown
+M,Keithen,unknown,unknown
+M,Savino,unknown,unknown
+M,Deen,God will judge,Hebrew
+F,Lynnex,unknown,unknown
+F,Nashla,unknown,unknown
+F,Shruti,unknown,unknown
+F,Riley,Descendant of Roghallach,Irish
+M,Resean,unknown,unknown
+M,Naguan,unknown,unknown
+F,Kaylanie,unknown,unknown
+F,Antonisha,unknown,unknown
+F,Aalliyah,unknown,unknown
+F,Lorrain,unknown,unknown
+F,Merilee,unknown,unknown
+M,Cleason,unknown,unknown
+F,Nneka,unknown,unknown
+M,Shelly,From the Sloping Field,English
+F,Zailey,unknown,unknown
+F,Nobue,unknown,unknown
+M,Tauno,unknown,unknown
+F,Tayzlee,unknown,unknown
+F,Jacie,unknown,unknown
+F,Aline,unknown,Celtic
+F,Hassie,unknown,unknown
+M,Jometh,unknown,unknown
+M,Haskell,unknown,unknown
+M,Jaiver,unknown,unknown
+F,Eliannah,unknown,unknown
+M,Maddox,Son of Madog,English
+M,Jasun,unknown,unknown
+M,Waylin,unknown,English
+M,Keilon,unknown,unknown
+F,Adryanna,unknown,unknown
+F,Charley,Free Man,English
+M,Lonnie,Noble, Ready,American
+M,Isiah,God's helper,Hebrew
+F,Citlalli,unknown,unknown
+F,Mahlia,unknown,unknown
+M,Elgie,unknown,unknown
+M,Itay,unknown,unknown
+F,Kiele,Fragrant Blossom,Polynesian/Hawaiian
+M,Cortland,unknown,English
+F,Samella,unknown,unknown
+F,Fumiko,Little Friend,Japanese
+F,Chavi,Life,Hebrew
+M,Daven,unknown,unknown
+M,Braedan,unknown,unknown
+F,Azuri,unknown,unknown
+F,Nyelli,unknown,unknown
+F,Shadi,Singer,Arabic
+M,Kyron,unknown,unknown
+M,Rejino,unknown,unknown
+F,Masiya,unknown,unknown
+F,Latricia,unknown,unknown
+M,Miliano,unknown,unknown
+M,Jonatan,Gift from God,Hebrew
+F,Ayram,unknown,unknown
+M,Jedidiah,Friend of God,Hebrew
+M,Om,unknown,unknown
+F,Sofi,unknown,unknown
+F,Nakiya,unknown,unknown
+F,Zanaya,unknown,unknown
+M,Quasir,unknown,unknown
+F,Jenan,unknown,unknown
+F,Neely,unknown,Irish
+F,Neha,Love, affection,Indian (Sanskrit)
+M,Lindsey,unknown,English
+F,Lessly,unknown,unknown
+F,Kianga,Sunshine,African
+M,Mikal,unknown,unknown
+F,Graciana,Grace,Spanish
+M,Satvik,unknown,unknown
+F,Monalisa,unknown,unknown
+F,Keria,unknown,unknown
+M,Argenis,unknown,unknown
+M,Josten,unknown,unknown
+F,Antanasia,unknown,unknown
+F,Nyesha,unknown,unknown
+M,Erroll,Earl: nobleman,German
+F,Jaylea,unknown,unknown
+F,Ekaterini,unknown,unknown
+M,Jaheim,unknown,American
+F,Daisey,Day's eye. A flower name,English
+M,Nicholis,unknown,unknown
+M,Slayton,From the valley farm,English
+M,Kohei,Navigation,Japanese
+F,Alexus,unknown,unknown
+F,Izabelle,Beautiful,Indian (Sanskrit)
+F,Tywanna,unknown,unknown
+M,Avi,Father,Hebrew
+F,Filippa,unknown,unknown
+F,Bettie,unknown,unknown
+M,Alphonse,Noble and ready,French
+M,Dhilan,unknown,unknown
+M,Chrishun,unknown,unknown
+M,Leveon,unknown,unknown
+M,Kasai,unknown,unknown
+F,Taneil,unknown,unknown
+M,Janae,God Is Gracious,American
+F,Briceyda,unknown,unknown
+F,Jayana,unknown,unknown
+F,Sophya,unknown,unknown
+M,Gabor,God is my strength,Hebrew
+F,Serita,unknown,unknown
+F,Adore,unknown,unknown
+F,Jezelle,unknown,unknown
+M,Nevin,Saint,Irish
+M,Mukhtar,Chosen,Arabic
+F,Jettie,unknown,unknown
+M,Latisha,Joy,American
+M,Rick,Brave ruler,English
+M,Ayad,unknown,unknown
+F,Cymone,unknown,unknown
+F,Daphane,unknown,unknown
+M,Mantas,unknown,unknown
+F,Senna,The Senna Plant,English
+M,Benito,unknown,Italian
+F,Sai,unknown,unknown
+F,Brittnee,unknown,English
+F,Nadolyn,unknown,unknown
+M,Hrach,unknown,unknown
+F,Britania,unknown,unknown
+F,Vera,Faith,Russian
+M,Ashlyn,unknown,English
+F,Nilka,unknown,unknown
+M,Billy,unknown,English
+F,Flory,unknown,unknown
+F,Ramiyah,unknown,unknown
+M,Jodi,unknown,English
+F,Rayhona,unknown,unknown
+F,Jaquasha,unknown,unknown
+F,Nishi,Night,Indian (Sanskrit)
+M,Eulises,unknown,unknown
+M,Linus,Flax colored,Greek
+F,Alexah,unknown,unknown
+F,Essance,unknown,unknown
+M,Browder,unknown,unknown
+F,Jadynn,unknown,unknown
+F,Xochil,unknown,unknown
+F,Elga,Elfs spear,Anglo-Saxon
+M,Lawsen,unknown,unknown
+F,Sage,Herb or Prophet,English
+M,Amauri,unknown,unknown
+F,Alwilda,unknown,unknown
+M,Fayette,Little fairy,French
+M,Joah,unknown,unknown
+F,Shaquaya,unknown,unknown
+F,Faithe,Faithful,English
+M,Quin,Descendent of Conn,Irish
+M,Noey,unknown,unknown
+F,Jonda,unknown,unknown
+F,Lindsee,unknown,unknown
+M,Young,unknown,unknown
+M,Cashmere,unknown,unknown
+M,Rylin,unknown,unknown
+F,Mabry,unknown,unknown
+M,Amir,Prince/Rich/Cultivated,Arabic
+F,Marvyl,unknown,unknown
+F,Shamara,Fennel,Arabic
+F,Debanhi,unknown,unknown
+F,Kamron,unknown,English
+F,Charlotta,unknown,French
+F,Margrette,unknown,unknown
+M,Willmer,unknown,unknown
+M,Sigismund,unknown,unknown
+M,Jearld,unknown,unknown
+F,Imagine,To think, believe,American
+F,Nathalia,unknown,French
+F,Camella,unknown,English
+F,Laelani,unknown,unknown
+F,Jennefer,unknown,unknown
+F,Yumeka,unknown,unknown
+M,Capers,unknown,unknown
+F,Jakiah,unknown,unknown
+F,Pricila,unknown,unknown
+M,Mateen,unknown,unknown
+F,Aigner,unknown,unknown
+F,Panayiota,unknown,unknown
+F,Jailyn,unknown,unknown
+F,Addisen,unknown,unknown
+F,Marvine,unknown,unknown
+M,Salih,unknown,unknown
+M,Talmadge,unknown,English
+F,Jia,Family, Kin,Chinese
+M,Geoff,God Peace,English
+F,Tsion,unknown,unknown
+F,Yareli,unknown,unknown
+F,Rachele,Ewe,Hebrew
+F,Kennedee,unknown,unknown
+F,Liset,unknown,unknown
+M,Keyondre,unknown,unknown
+F,Yalissa,A beautifull flower,Hebrew
+F,Mansirat,unknown,unknown
+M,Ladislaus,unknown,unknown
+F,Siena,unknown,unknown
+F,Cathe,unknown,unknown
+F,Cori,unknown,English
+M,Sufyaan,unknown,unknown
+F,Jewell,unknown,unknown
+F,Marcia,Warlike,Latin
+M,Aundre,unknown,English
+F,Congetta,unknown,unknown
+F,Trystan,unknown,Celtic
+M,Abbott,Abbot,English
+F,Fatmata,unknown,unknown
+M,Gaven,White hawk,Scottish
+M,Jeovany,unknown,unknown
+F,Jesalyn,unknown,unknown
+M,Corliss,Happy, Free from Care,English
+F,Ya,unknown,unknown
+F,Koryna,unknown,unknown
+F,Jermeka,unknown,unknown
+F,Cheyenna,unknown,unknown
+M,Dezmon,unknown,unknown
+M,Koa,Brave, bold, fearless,Hawaiian
+F,Corielle,unknown,unknown
+F,Maye,unknown,unknown
+F,Marinell,unknown,unknown
+F,Carole,unknown,French
+F,Leesa,unknown,Hebrew
+F,Rheannon,unknown,unknown
+M,Nathanuel,unknown,unknown
+M,Geremy,unknown,unknown
+M,Koda,unknown,unknown
+M,Colbert,Seaman,English
+M,Aydyn,unknown,unknown
+F,Monta,unknown,unknown
+M,Waleed,unknown,unknown
+F,Ayline,unknown,unknown
+F,Santiago,Of St. James,Spanish
+F,Ollie,Elf army,English
+F,Arturo,Bear,Italian
+F,Chantale,unknown,unknown
+M,Kaena,unknown,unknown
+M,Tarrence,Roman clan name,English
+F,Serrina,unknown,unknown
+F,Dierra,unknown,unknown
+M,Vedanth,unknown,unknown
+F,Jehan,unknown,unknown
+F,Miaa,unknown,unknown
+M,Shon,unknown,unknown
+M,Miguelangel,unknown,unknown
+F,Adrionna,unknown,unknown
+M,Adan,Of the Earth,Spanish
+F,Alexssa,unknown,unknown
+F,Ianna,God Is Gracious,American
+F,Shaleen,unknown,unknown
+F,Takeya,unknown,unknown
+M,Chuck,unknown,American
+F,Jodine,unknown,unknown
+F,Yoselin,Little Goth,Spanish
+F,Jacqualyn,unknown,unknown
+M,Hari,unknown,unknown
+F,Jadine,Jade-like,American
+F,Mikenna,unknown,unknown
+F,Lakindra,unknown,unknown
+M,Luan,unknown,unknown
+F,Jearlean,unknown,unknown
+M,Lennis,unknown,unknown
+F,Cherie,Dear,French
+F,Kherington,unknown,unknown
+M,Zafir,Victorious,Arabic
+M,Allyn,Handsome,Celtic
+M,Nazar,unknown,unknown
+M,Easton,From the East town,English
+F,Tempie,unknown,unknown
+M,Mainor,unknown,unknown
+M,Mell,unknown,unknown
+M,Demone,unknown,unknown
+F,Florestela,unknown,unknown
+F,Sheela,Modesty, good character,Indian (Sanskrit)
+M,Christianpaul,unknown,unknown
+M,Ismaila,unknown,unknown
+F,Nance,unknown,unknown
+M,Hillary,Cheerful,Greek
+F,Xymena,unknown,unknown
+F,Chianne,unknown,unknown
+F,Maytal,unknown,unknown
+M,Lino,unknown,unknown
+M,Kauan,unknown,unknown
+M,Ovey,unknown,unknown
+M,Leif,Heir,Scandinavian
+F,Aspasia,Welcome,Greek
+F,Emberleigh,unknown,unknown
+F,Laurel,Laurel,English
+M,Bryer,Gentle and sweet,Canadian
+F,Roizy,unknown,unknown
+F,Kelani,unknown,unknown
+M,Sharmarke,unknown,unknown
+F,Davionna,unknown,unknown
+F,Adah,Adornment,Hebrew
+M,Sierra,Mountain,Spanish
+F,Anmol,unknown,unknown
+F,Denisa,unknown,Spanish
+F,Krystan,unknown,unknown
+F,Vi,Violet,American
+M,Savalas,unknown,unknown
+F,Melanye,unknown,unknown
+F,Taeler,unknown,unknown
+M,Jaclyn,Supplanter,American
+F,Elmo,Protector,English
+F,Aleecia,unknown,unknown
+M,Bill,unknown,English
+M,Viggo,Battle, War-like,Scandinavian
+M,Britain,From Great Britain,English
+F,Katima,Powerful Daughter,American
+F,Monserrat,Jagged Mountain,Spanish
+F,Niylah,unknown,unknown
+F,Bill,unknown,English
+F,Valene,Strong,Latin
+F,Geselle,unknown,unknown
+F,Mariadel,unknown,unknown
+M,Jadakiss,unknown,unknown
+M,Enmanuel,unknown,unknown
+M,Eliam,People of God,Hebrew
+F,Joelle,God will be willing,French
+F,Maimuna,unknown,unknown
+M,Soul,unknown,unknown
+M,Yancey,unknown,unknown
