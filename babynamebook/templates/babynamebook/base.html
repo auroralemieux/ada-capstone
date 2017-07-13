@@ -17,7 +17,7 @@
       <section class="collapse navbar-collapse" id="navbarSupportedContent">
         <section class="navbar-nav mr-auto">
           {% if user.is_authenticated %}
-          <a id="account-button" class="nav-item nav-link" href={% url 'account' %}>account</a>
+          <a id="account-button" class="nav-item nav-link" href={% url 'account' %}>my books</a>
           <a class="nav-item nav-link" href={% url 'logout' %}>log out {{ user.username }}</a>
           {% else %}
           <a class="nav-item nav-link" href={% url 'login' %}>log in</a>
