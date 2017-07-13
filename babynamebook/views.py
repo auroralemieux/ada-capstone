@@ -26,9 +26,32 @@ def signup(request):
 
 @login_required
 def account(request):
+    bookinfo = []
     books = Book.objects.filter(author=request.user)
+    for book in books:
+        bookstuff = {}
+        bookstuff["book"] = book
+        bookstuff["personlength"] = len(Person.objects.filter(book=book))
+        bookstuff["namelength"] = len(Name.objects.filter(book=book))
+        top_girl_all = __top_ten_first_names(Person.objects.filter(book=book, gender="F"), book)
+        girl_list = ""
+        for pair in top_girl_all:
+            girl_list += pair[0]
+            girl_list += ", "
+        girl_list = girl_list[0:-2]
+        bookstuff["topgirl"] = girl_list
+        top_boy_all = __top_ten_first_names(Person.objects.filter(book=book, gender="M"), book)
+        boy_list = ""
+        for pair in top_boy_all:
+            boy_list += pair[0]
+            boy_list += ", "
+        boy_list = boy_list[0:-2]
+        bookstuff["topboy"] = boy_list
+        # bookstuff["topgirl"] = __top_ten_first_names(Person.objects.filter(book=book, gender="F"), book)
+        bookinfo.append(bookstuff)
+    print(bookinfo)
     user = request.user
-    return render(request, 'babynamebook/account.html', {'books': books, 'user': user})
+    return render(request, 'babynamebook/account.html', {'bookinfo': bookinfo, 'user': user})
 
 
 @login_required
