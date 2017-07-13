@@ -41,7 +41,7 @@ def book(request, pk):
     all_names = sorted(all_names.items())
     all_girls = __get_all_names_for_book_by_gender(book, "F")
     all_girls = sorted(all_girls.items())
-    all_boys = __get_all_names_for_book_by_gender(book, "F")
+    all_boys = __get_all_names_for_book_by_gender(book, "M")
     all_boys = sorted(all_boys.items())
 
     # querysets
