@@ -36,7 +36,6 @@ def account(request):
         bookstuff["topgirl"] = __make_top_ten_text(book, "F")
         bookstuff["topboy"] = __make_top_ten_text(book, "M")
         bookinfo.append(bookstuff)
-    print(bookinfo)
     user = request.user
     return render(request, 'babynamebook/account.html', {'bookinfo': bookinfo, 'user': user})
 
