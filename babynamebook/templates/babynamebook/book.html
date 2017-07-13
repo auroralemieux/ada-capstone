@@ -147,7 +147,37 @@
     </div>
   </div>
 </article>
-<article class="align-self-top col-md-5 col-lg-5 col-sm-12" id="girl-data">
+<article class="align-self-top col-md-10 col-lg-10 col-sm-12" id="letters">
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    {% for letter, boysngirls in all_names %}
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="heading{{letter}}">
+        <h4 class="text-center panel-title">
+          <button class="btn btn-outline-success btn-block" data-toggle="collapse" data-parent="#accordion" href="#collapse{{letter}}" aria-expanded="true" aria-controls="collapse{{letter}}">
+            {{letter}}
+          </button>
+        </h4>
+      </div>
+      <div id="collapse{{letter}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{letter}}">
+        <div class="panel-body container">
+          <div class="row">
+            {% for gender in boysngirls %}
+            <section class="col-md-6">
+              {% for person in gender %}
+              <p><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
+              {% endfor %}
+            </section>
+            {% endfor %}
+          </div>
+        </div>
+    </div>
+    </div>
+    {% endfor %}
+  </div>
+</article>
+
+
+<!-- <article class="align-self-top col-md-5 col-lg-5 col-sm-12" id="girl-data">
   <h3 class="text-center">Girls</h3>
   {% for letter, names in all_girls %}
   <section class="card mb-3 card-outline-warning">
@@ -172,7 +202,7 @@
     </section>
   </section>
   {% endfor %}
-</article>
+</article> -->
 
 
 {% endblock %}

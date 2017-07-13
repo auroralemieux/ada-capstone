@@ -37,10 +37,12 @@ def book(request, pk):
     persons = Person.objects.filter(book=book)
 
     # querysets
-    all_boys = __get_all_names_for_book_by_gender(book, "M")
+    all_names = __get_all_names_for_book(book)
+    all_names = sorted(all_names.items())
     all_girls = __get_all_names_for_book_by_gender(book, "F")
-    all_boys = sorted(all_boys.items())
     all_girls = sorted(all_girls.items())
+    all_boys = __get_all_names_for_book_by_gender(book, "F")
+    all_boys = sorted(all_boys.items())
 
     # querysets
     male = Person.objects.filter(book=book, gender="M")
@@ -69,7 +71,7 @@ def book(request, pk):
             return HttpResponseNotFound('The requested pdf was not found in our server.')
 
 
-    return render(request, 'babynamebook/book.html', {'book': book, 'persons': persons, 'all_girls': all_girls, 'all_boys': all_boys, 'top_female': top_female, 'top_male': top_male, 'top_last': top_last, 'top_origin': top_origin, 'pop_girl_names': pop_girl_names,'pop_boy_names': pop_boy_names, 'book_data': book_data })
+    return render(request, 'babynamebook/book.html', {'book': book, 'persons': persons, 'all_names': all_names, 'top_female': top_female, 'top_male': top_male, 'top_last': top_last, 'top_origin': top_origin, 'pop_girl_names': pop_girl_names,'pop_boy_names': pop_boy_names, 'book_data': book_data })
 
 
 def home(request):
@@ -195,6 +197,19 @@ def __top_five_origins(book):
                 freq[n.origin] = 1
     return sorted(freq.items(), key=operator.itemgetter(1), reverse=True)[0:5]
 
+
+def __get_all_names_for_book(book):
+    all_names = {}
+    letter = "A"
+    for p in range(26):
+        all_names[letter] = []
+        letter_chunk = all_names[letter]
+        boys = book.names.all().filter(gender="M", first_name__startswith=letter).order_by('first_name')
+        letter_chunk.append(boys)
+        girls = book.names.all().filter(gender="F", first_name__startswith=letter).order_by('first_name')
+        letter_chunk.append(girls)
+        letter = chr(ord(letter) + 1)
+    return all_names
 
 def __get_all_names_for_book_by_gender(book, gender):
     all_names = {}
