@@ -3,36 +3,28 @@
 {% block content %}
 
 <article class="align-self-top col-md-12" id="my-books">
-  <h2 class="mb-3">My Books</h2>
+  <h2 class="mb-3 text-center">My Books</h2>
   <div class="container">
     <div class="row">
-    {% for bookchunk in bookinfo %}
-      <div class="col-md-6 col-lg-4 panel mb-3 panel-default">
-        <!-- Default panel contents -->
-        <div class="panel-heading">
-          <h3 class="text-center panel-title">
-            <a href={% url 'book' pk=bookchunk.book.pk %}>{{ bookchunk.book.title }}</a>
-          </h3>
+      {% for bookchunk in bookinfo %}
+        <div class="card mb-3 col-md-6 col-lg-4">
+          <div class="card-block">
+            <h4 class="card-title">{{ bookchunk.book.title }}</h4>
+            <p class="card-text">This book contains {{ bookchunk.namelength }} names from the original tree of {{ bookchunk.personlength }} people.</p>
+            <p class="card-text">
+              <small><strong>Top Girl Names:</strong>  {{ bookchunk.topgirl }}</small>
+            </p>
+            <p class="card-text">
+              <small><strong>Top Boy Names:</strong>  {{ bookchunk.topboy }}</small>
+            </p>
+            <a href="{% url 'book' pk=bookchunk.book.pk %}" class="btn btn-outline-info">See book</a>
+          </div>
         </div>
-        <div class="panel-body">
-          <p>This book contains {{ bookchunk.namelength }} names from the original tree of {{ bookchunk.personlength }} people.</p>
-          <!-- <p>This book has in the original tree, and names in the book itself.</p> -->
-          <p>
-            <small><strong>Top Girl Names:</strong>  {{ bookchunk.topgirl }}</small>
-          </p>
-          <p>
-            <small><strong>Top Boy Names:</strong>  {{ bookchunk.topboy }}</small>
-          </p>
-
-        </div>
-
-      </div>
-    {% endfor %}
-  </div>
+      {% endfor %}
+    </div>
   </div>
 
-    <!-- <section>
-    </section> -->
+
 </article>
 
 

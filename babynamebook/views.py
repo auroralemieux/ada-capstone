@@ -33,21 +33,8 @@ def account(request):
         bookstuff["book"] = book
         bookstuff["personlength"] = len(Person.objects.filter(book=book))
         bookstuff["namelength"] = len(Name.objects.filter(book=book))
-        top_girl_all = __top_ten_first_names(Person.objects.filter(book=book, gender="F"), book)
-        girl_list = ""
-        for pair in top_girl_all:
-            girl_list += pair[0]
-            girl_list += ", "
-        girl_list = girl_list[0:-2]
-        bookstuff["topgirl"] = girl_list
-        top_boy_all = __top_ten_first_names(Person.objects.filter(book=book, gender="M"), book)
-        boy_list = ""
-        for pair in top_boy_all:
-            boy_list += pair[0]
-            boy_list += ", "
-        boy_list = boy_list[0:-2]
-        bookstuff["topboy"] = boy_list
-        # bookstuff["topgirl"] = __top_ten_first_names(Person.objects.filter(book=book, gender="F"), book)
+        bookstuff["topgirl"] = __make_top_ten_text(book, "F")
+        bookstuff["topboy"] = __make_top_ten_text(book, "M")
         bookinfo.append(bookstuff)
     print(bookinfo)
     user = request.user
@@ -324,3 +311,12 @@ def __create_book_data(datablob):
             }
             book_girls[letter].append(new_name)
     return book_data
+
+def __make_top_ten_text(book, gender):
+    top_gender_all = __top_ten_first_names(Person.objects.filter(book=book, gender=gender), book)
+    text = ""
+    for pair in top_gender_all:
+        text += pair[0]
+        text += ", "
+    text = text[0:-2]
+    return text
