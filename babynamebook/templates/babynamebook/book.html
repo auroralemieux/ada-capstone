@@ -5,10 +5,10 @@
 <section class="container">
   <section class="align-self-top col-sm-12">
     <form id="download_form" action="/book/{{book.pk}}/" method="POST">
-        {% csrf_token %}
-        <button type="submit" role="button" class="mb-3 btn btn-info" name="export_pdf">Export book as pdf</button>
+      {% csrf_token %}
+      <button type="submit" role="button" class="mb-3 btn btn-info" name="export_pdf">Export book as pdf</button>
     </form>
-    <h2 class="text-left mb-3">{{ book.title }}</h2>
+    <h2 class="text-center mb-3">{{ book.title }}</h2>
   </section>
 </section>
 <article class="align-self-top col-md-2 col-lg-2 col-sm-12" id="extra-data">
@@ -38,15 +38,17 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="girlModalLabel">Top 10 girl names from your tree</h5>
+          <h5 class="modal-title" id="girlModalLabel">Top 10 girl names from your tree <small>by frequency</small></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          {% for key, value in top_female %}
-              <p>{{ key }} ({{ value }})</p>
-          {% endfor %}
+          <ol>
+            {% for key, value in top_female %}
+            <li>{{ key }} ({{ value }})</li>
+            {% endfor %}
+          </ol>
         </div>
       </div>
     </div>
@@ -55,15 +57,17 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="boyModalLabel">Top 10 boy names from your tree</h5>
+          <h5 class="modal-title" id="boyModalLabel">Top 10 boy names from your tree <small>by frequency</small></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          {% for key, value in top_male %}
-              <p>{{ key }} ({{ value }})</p>
-          {% endfor %}
+          <ol>
+            {% for key, value in top_male %}
+            <li>{{ key }} ({{ value }})</li>
+            {% endfor %}
+          </ol>
         </div>
       </div>
     </div>
@@ -72,15 +76,17 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="lastModalLabel">Top last names in tree</h5>
+          <h5 class="modal-title" id="lastModalLabel">Top last names in tree <small>by frequency</small></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          {% for key, value in top_last %}
-              <p>{{ key }} ({{ value }})</p>
-          {% endfor %}
+          <ol>
+            {% for key, value in top_last %}
+            <li>{{ key }} ({{ value }})</li>
+            {% endfor %}
+          </ol>
         </div>
       </div>
     </div>
@@ -89,15 +95,17 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="originModalLabel">Top 3 origins of names in tree</h5>
+          <h5 class="modal-title" id="originModalLabel">Top 3 origins of names in tree <small>by frequency</small></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          {% for key, value in top_origin %}
-              <p>{{ key }} ({{ value }})</p>
-          {% endfor %}
+          <ol>
+            {% for key, value in top_origin %}
+            <li>{{ key }} ({{ value }})</li>
+            {% endfor %}
+          </ol>
         </div>
       </div>
     </div>
@@ -112,9 +120,9 @@
           </button>
         </div>
         <div class="modal-body">
-          <p>Names from your tree that were on the 2016 SSA list of most popular names.</p>
+          <small>Names from your tree that were on the 2016 SSA list of most popular names.</small>
           {% for name in pop_girl_names %}
-              <p>{{ name }}</p>
+          <p class="text-center">{{ name }}</p>
           {% endfor %}
         </div>
       </div>
@@ -130,9 +138,9 @@
           </button>
         </div>
         <div class="modal-body">
-          <p>Names from your tree that were on the 2016 SSA list of most popular names.</p>
+          <small>Names from your tree that were on the 2016 SSA list of most popular names.</small>
           {% for name in pop_boy_names %}
-              <p>{{ name }}</p>
+          <p class="text-center">{{ name }}</p>
           {% endfor %}
         </div>
       </div>
@@ -142,27 +150,27 @@
 <article class="align-self-top col-md-5 col-lg-5 col-sm-12" id="girl-data">
   <h3 class="text-center">Girls</h3>
   {% for letter, names in all_girls %}
-    <section class="card mb-3 card-outline-warning">
-      <section class="card-block">
-        <h3 class="card-title text-center">{{ letter }}</h3>
-        {% for girl in names %}
-        <p><strong>{{ girl.first_name }}</strong> <em>({{ girl.origin }})</em> {{ girl.meaning }}</p>
-        {% endfor %}
-      </section>
+  <section class="card mb-3 card-outline-warning">
+    <section class="card-block">
+      <h3 class="card-title text-center">{{ letter }}</h3>
+      {% for girl in names %}
+      <p><strong>{{ girl.first_name }}</strong> <em>({{ girl.origin }})</em> {{ girl.meaning }}</p>
+      {% endfor %}
     </section>
+  </section>
   {% endfor %}
 </article>
 <article class="align-self-top col-md-5 col-lg-5 col-sm-12" id="boy-data">
   <h3 class="text-center">Boys</h3>
   {% for letter, names in all_boys %}
-    <section class="card mb-3 card-outline-info">
-      <section class="card-block">
-        <h3 class="card-title text-center">{{ letter }}</h3>
-        {% for boy in names %}
-          <p><strong>{{ boy.first_name }}</strong> <em>({{ boy.origin }})</em> {{ boy.meaning }}</p>
-        {% endfor %}
-      </section>
+  <section class="card mb-3 card-outline-info">
+    <section class="card-block">
+      <h3 class="card-title text-center">{{ letter }}</h3>
+      {% for boy in names %}
+      <p><strong>{{ boy.first_name }}</strong> <em>({{ boy.origin }})</em> {{ boy.meaning }}</p>
+      {% endfor %}
     </section>
+  </section>
   {% endfor %}
 </article>
 
