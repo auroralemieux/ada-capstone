@@ -3,27 +3,27 @@
 {% block content %}
 
 <article class="align-self-top container" id="extra-data">
-  <h2 class="text-center mb-3">{{ book.title }}</h2>
-  <section class="row mb-3">
-    <button type="button" class="mr-1 btn btn-secondary" data-toggle="modal" data-target="#girlModal">
-      top 10 girl names
-    </button>
-    <button type="button" class="mx-1 btn btn-secondary" data-toggle="modal" data-target="#boyModal">
-      top 10 boy names
-    </button>
-    <button type="button" class="mx-1 btn btn-secondary" data-toggle="modal" data-target="#lastModal">
-      top 10 last names
-    </button>
-    <button type="button" class="mx-1 btn btn-secondary" data-toggle="modal" data-target="#originModal">
-      top 5 name origins
-    </button>
-    <button type="button" class="mx-1 btn btn-secondary" data-toggle="modal" data-target="#popModal">
-      popular names
-    </button>
+  <h2 class="text-center mb-4">{{ book.title }}</h2>
+  <nav class="mr-auto nav justify-content-center row">
+    <a role="button" class="nav-item nav-link" data-toggle="modal" data-target="#girlModal">
+      Top Girl Names
+    </a>
+    <a role="button" class="nav-item nav-link" data-toggle="modal" data-target="#boyModal">
+      Top Boy Names
+    </a>
+    <a role="button" class="nav-item nav-link" data-toggle="modal" data-target="#lastModal">
+      Top Last Names
+    </a>
+    <a role="button" class="nav-item nav-link" data-toggle="modal" data-target="#originModal">
+      Top Name Origins
+    </a>
+    <a role="button" class="nav-item nav-link" data-toggle="modal" data-target="#popModal">
+      Popular Names
+    </a>
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="nav-item nav-link dropdown-toggle" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Book Actions
-      </button>
+      </a>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a id="collapse-all" class="dropdown-item" href="#">Collapse all</a>
         <a id="expand-all" class="dropdown-item" href="#">Expand all</a>
@@ -36,7 +36,7 @@
     </div>
 
 
-  </section>
+  </nav>
   <!-- modals -->
   <div class="modal fade" id="girlModal" tabindex="-1" role="dialog" aria-labelledby="girlModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -154,10 +154,10 @@
     {% for letter, boysngirls in all_names %}
     <div class="panel panel-default">
       <div class="panel-heading" role="tab" id="heading{{letter}}">
-        <h4 class="text-center panel-title">
+        <h4 class="panel-title text-left">
           <button class="btn btn-outline-success btn-block" data-toggle="collapse" data-parent="#accordion" href="#collapse{{letter}}" aria-expanded="true" aria-controls="collapse{{letter}}">
             <strong>{{letter}}</strong>
-            <p><small>{% with boysngirls|first as boys %}{{ boys|length }}{% endwith %} boys and  {% with boysngirls|last as girls %}{{ girls|length }}{% endwith %} girls</small></p>
+            <small class="text-right">{% with boysngirls|first as boys %}{{ boys|length }}{% endwith %} boys and  {% with boysngirls|last as girls %}{{ girls|length }}{% endwith %} girls</small>
           </button>
         </h4>
       </div>
@@ -165,7 +165,7 @@
         <div class="panel-body container">
           <div class="row">
             <div class="col-md-6 col-sm-12 mb-3">
-              <h4 class="text-center">Boys</h4>
+              <h4 class="my-3 text-center">Boys</h4>
               {% with boysngirls|first as boys %}
                 {% for person in boys %}
                 <p><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
@@ -175,7 +175,7 @@
               {% endwith %}
             </div>
             <div class="col-md-6 col-sm-12 mb-3">
-              <h4 class="text-center">Girls</h4>
+              <h4 class="my-3 text-center">Girls</h4>
               {% with boysngirls|last as girls %}
                 {% for person in girls %}
                 <p><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
