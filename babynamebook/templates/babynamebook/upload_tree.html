@@ -9,15 +9,14 @@
 </article>
 <article class="align-self-top right-main-content col-md-6 col-lg-6 col-sm-12" id="upload">
   <h2>Create Book</h2>
-  <form enctype="multipart/form-data" method="POST" id="new-book-form">{% csrf_token %}
+  <form class="form" enctype="multipart/form-data" method="POST" id="new-book-form">{% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="btn save btn-success" id="upload-submit-button" data-loading-text="<i class='icon-spinner icon-spin icon-large'></i>Uploading">
-      <i class="icon-upload icon-large"></i>
-      <span>Upload</span>
-    </button>
-    <!-- <button type="submit" class="btn save btn-success" id="upload-submit-button">Next</button> -->
+    <button type="submit" class="btn save btn-success" id="upload-submit-button">Next</button>
   </form>
   <p>Please be patient as this may take a little bit...</p>
-
+  <div class="progress">
+    <div id="progressbar" class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span id="percent"></span></div>
+  </div>
+  <!-- <progress id="progressbar" value="0" max="1000">0%</progress> -->
 </article>
 {% endblock %}
