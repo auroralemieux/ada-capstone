@@ -11,16 +11,15 @@ $(document).ready(function() {
 
 
   $('#upload-submit-button').on('click', function() {
-    console.log("clicked submit");
     $('#percent').html('0%');
     var progressbar = $('#progressbar');
     var max = progressbar.attr('aria-valuemax');
-    var time = (1000/max*5);
+    var time = (5000/max*5);
     var value = progressbar.attr('aria-valuenow');
-    console.log(max);
-    console.log(time);
-    console.log(value);
+
     var loading = function() {
+      console.log();
+
       console.log("inside loading function");
       // newValue = value + 1;
       // console.log(newValue);

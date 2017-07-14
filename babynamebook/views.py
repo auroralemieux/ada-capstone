@@ -98,6 +98,7 @@ def get_tree_instructions(request):
 def upload_tree(request):
     if request.method == "POST":
         form = BookForm(request.POST, request.FILES)
+        print("filesize: ", request.FILES["tree_upload"]._size)
         if form.is_valid():
             book = Book(tree_upload=request.FILES['tree_upload'], title=request.POST['title'])
             # add stuff about user
