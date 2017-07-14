@@ -11,7 +11,11 @@
   <h2>Create Book</h2>
   <form enctype="multipart/form-data" method="POST" id="new-book-form">{% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="btn save btn-success" id="upload-submit-button">Next</button>
+    <button type="submit" class="btn save btn-success" id="upload-submit-button" data-loading-text="<i class='icon-spinner icon-spin icon-large'></i>Uploading">
+      <i class="icon-upload icon-large"></i>
+      <span>Upload</span>
+    </button>
+    <!-- <button type="submit" class="btn save btn-success" id="upload-submit-button">Next</button> -->
   </form>
   <p>Please be patient as this may take a little bit...</p>
 

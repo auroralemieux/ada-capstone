@@ -143,3 +143,5 @@ TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 LIVE_SERVER_PORT = 8000
 
 LOGIN_REDIRECT_URL = '/'
+
+TASK_UPLOAD_FILE_TYPES = ['octet-stream']
