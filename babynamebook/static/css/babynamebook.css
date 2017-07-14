@@ -26,5 +26,5 @@ progress::-webkit-progress-value {
 }
 
 .filesize {
-  /*display: none;*/
+  display: none;
 }

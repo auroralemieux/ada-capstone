@@ -9,6 +9,8 @@ $(document).ready(function() {
   });
 
   var getSize = $('#id_tree_upload').change(function() {
+    $(".filesize").hide();
+
     var file = this.files[0];
     var size = file.size;
     $(".filesize").html(size);
