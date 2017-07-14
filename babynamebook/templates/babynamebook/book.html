@@ -27,6 +27,7 @@
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a id="collapse-all" class="dropdown-item" href="#">Collapse all</a>
         <a id="expand-all" class="dropdown-item" href="#">Expand all</a>
+        <div class="dropdown-divider"></div>
         <form id="download_form" action="/book/{{book.pk}}/" method="POST">
           {% csrf_token %}
           <button type="submit" class="mb-3 btn btn-info dropdown-item" name="export_pdf">Export as pdf</button>
@@ -36,11 +37,7 @@
 
 
   </section>
-  <!-- <h3 class="text-center">Stats</h3> -->
-  <!-- Button trigger modal -->
-
-
-  <!-- Modal -->
+  <!-- modals -->
   <div class="modal fade" id="girlModal" tabindex="-1" role="dialog" aria-labelledby="girlModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
