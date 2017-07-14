@@ -163,14 +163,28 @@
       <div id="collapse{{letter}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading{{letter}}">
         <div class="panel-body container">
           <div class="row">
-            {% for gender in boysngirls %}
-            <section class="col-md-6">
-              {% for person in gender %}
-              <p><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
-              {% endfor %}
-            </section>
-            {% endfor %}
+            <div class="col-md-6 col-sm-12 mb-3">
+              <h4 class="text-center">Boys</h4>
+              {% with boysngirls|first as boys %}
+                {% for person in boys %}
+                <p><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
+                {% empty %}
+                <p class="text-center">none found</p>
+                {% endfor %}
+              {% endwith %}
+            </div>
+            <div class="col-md-6 col-sm-12 mb-3">
+              <h4 class="text-center">Girls</h4>
+              {% with boysngirls|last as girls %}
+                {% for person in girls %}
+                <p><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
+                {% empty %}
+                <p class="text-center">none found</p>
+                {% endfor %}
+              {% endwith %}
+            </div>
           </div>
+
         </div>
     </div>
     </div>
