@@ -8,37 +8,35 @@ $(document).ready(function() {
     $('#accordion .panel-collapse').collapse('hide');
   });
 
-
+  var getSize = $('#id_tree_upload').change(function() {
+    var file = this.files[0];
+    var size = file.size;
+    $(".filesize").html(size);
+  });
 
   $('#upload-submit-button').on('click', function() {
+    var size = $(".filesize").html();
     $('#percent').html('0%');
     var progressbar = $('#progressbar');
     var max = progressbar.attr('aria-valuemax');
-    var time = (5000/max*5);
+    var time = size/10400;
     var value = progressbar.attr('aria-valuenow');
 
     var loading = function() {
-      console.log();
-
-      console.log("inside loading function");
-      // newValue = value + 1;
-      // console.log(newValue);
       value = Number(value) + 1;
-      // addValue = progressbar.val(value);
       progressbar.attr('aria-valuenow', value);
       newWidth = "width: " + value + "%";
       progressbar.attr('style', newWidth);
       $('#percent').html(value + '%');
 
       if (value == max) {
-        console.log("reached max");
         clearInterval(animateProgress);
+        $('#percent').html("finishing your book");
         $(".progress-bar").addClass("progress-bar-animated");
       }
 
     };
     var animateProgress = setInterval(function() {
-      console.log("inside animate Progress function");
       loading();
     }, time);
 

@@ -24,3 +24,7 @@ progress::-webkit-progress-value {
   height: 18px;
   border-radius: 9px;
 }
+
+.filesize {
+  /*display: none;*/
+}
