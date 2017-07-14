@@ -2,36 +2,43 @@
 
 {% block content %}
 
-<section class="container">
-  <section class="align-self-top col-sm-12">
-    <form id="download_form" action="/book/{{book.pk}}/" method="POST">
-      {% csrf_token %}
-      <button type="submit" role="button" class="mb-3 btn btn-info" name="export_pdf">Export book as pdf</button>
-    </form>
-    <h2 class="text-center mb-3">{{ book.title }}</h2>
+<article class="align-self-top container" id="extra-data">
+  <h2 class="text-center mb-3">{{ book.title }}</h2>
+  <section class="row mb-3">
+    <button type="button" class="mr-1 btn btn-secondary" data-toggle="modal" data-target="#girlModal">
+      top 10 girl names
+    </button>
+    <button type="button" class="mx-1 btn btn-secondary" data-toggle="modal" data-target="#boyModal">
+      top 10 boy names
+    </button>
+    <button type="button" class="mx-1 btn btn-secondary" data-toggle="modal" data-target="#lastModal">
+      top 10 last names
+    </button>
+    <button type="button" class="mx-1 btn btn-secondary" data-toggle="modal" data-target="#originModal">
+      top 5 name origins
+    </button>
+    <button type="button" class="mx-1 btn btn-secondary" data-toggle="modal" data-target="#popModal">
+      popular names
+    </button>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Book Actions
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a id="collapse-all" class="dropdown-item" href="#">Collapse all</a>
+        <a id="expand-all" class="dropdown-item" href="#">Expand all</a>
+        <form id="download_form" action="/book/{{book.pk}}/" method="POST">
+          {% csrf_token %}
+          <button type="submit" class="mb-3 btn btn-info dropdown-item" name="export_pdf">Export as pdf</button>
+        </form>
+      </div>
+    </div>
+
+
   </section>
-</section>
-<article class="align-self-top col-md-2 col-lg-2 col-sm-12" id="extra-data">
-  <h3 class="text-center">Stats</h3>
+  <!-- <h3 class="text-center">Stats</h3> -->
   <!-- Button trigger modal -->
-  <button type="button" class="mb-3 btn btn-secondary" data-toggle="modal" data-target="#girlModal">
-    top 10 girl names
-  </button>
-  <button type="button" class="mb-3 btn btn-secondary" data-toggle="modal" data-target="#boyModal">
-    top 10 boy names
-  </button>
-  <button type="button" class="mb-3 btn btn-secondary" data-toggle="modal" data-target="#lastModal">
-    top 10 last names
-  </button>
-  <button type="button" class="mb-3 btn btn-secondary" data-toggle="modal" data-target="#originModal">
-    top 5 name origins
-  </button>
-  <button type="button" class="mb-3 btn btn-secondary" data-toggle="modal" data-target="#popGirlModal">
-    popular girl names
-  </button>
-  <button type="button" class="mb-3 btn btn-secondary" data-toggle="modal" data-target="#popBoyModal">
-    popular boy names
-  </button>
+
 
   <!-- Modal -->
   <div class="modal fade" id="girlModal" tabindex="-1" role="dialog" aria-labelledby="girlModalLabel" aria-hidden="true">
@@ -110,38 +117,36 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="popGirlModal" tabindex="-1" role="dialog" aria-labelledby="popGirlModalLabel" aria-hidden="true">
+  <div class="modal fade" id="popModal" tabindex="-1" role="dialog" aria-labelledby="popModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="popGirlModalLabel">Popular girl names</h5>
+          <h5 class="modal-title" id="popModalLabel">Popular names</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body container">
           <small>Names from your tree that were on the 2016 SSA list of most popular names.</small>
-          {% for name in pop_girl_names %}
-          <p class="text-center">{{ name }}</p>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="popBoyModal" tabindex="-1" role="dialog" aria-labelledby="popBoyModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="popBoyModalLabel">Popular boy names</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <small>Names from your tree that were on the 2016 SSA list of most popular names.</small>
-          {% for name in pop_boy_names %}
-          <p class="text-center">{{ name }}</p>
-          {% endfor %}
+          <section class="row">
+            <section class="col-md-6">
+              <p class="mt-3 text-center">
+                <strong>Girls</strong>
+              </p>
+              {% for name in pop_girl_names %}
+              <p class="text-center">{{ name }}</p>
+              {% endfor %}
+            </section>
+            <section class="col-md-6">
+              <p class="mt-3 text-center">
+                <strong>Boys</strong>
+              </p>
+              {% for name in pop_boy_names %}
+              <p class="text-center">{{ name }}</p>
+              {% endfor %}
+            </section>
+          </section>
+
         </div>
       </div>
     </div>
