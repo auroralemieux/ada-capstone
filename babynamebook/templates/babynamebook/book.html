@@ -156,7 +156,8 @@
       <div class="panel-heading" role="tab" id="heading{{letter}}">
         <h4 class="text-center panel-title">
           <button class="btn btn-outline-success btn-block" data-toggle="collapse" data-parent="#accordion" href="#collapse{{letter}}" aria-expanded="true" aria-controls="collapse{{letter}}">
-            {{letter}}
+            <strong>{{letter}}</strong>
+            <p><small>{% with boysngirls|first as boys %}{{ boys|length }}{% endwith %} boys and  {% with boysngirls|last as girls %}{{ girls|length }}{% endwith %} girls</small></p>
           </button>
         </h4>
       </div>
