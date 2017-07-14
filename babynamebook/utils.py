@@ -109,10 +109,10 @@ def parse_xml(xml_filename):
             if first_name is not None:
                 if " " in first_name:
                     name_split = str.split(first_name)
-                    new_person["first_name"] = name_split[0]
-                    new_person["middle_name"] = name_split[1]
+                    new_person["first_name"] = name_split[0].capitalize()
+                    new_person["middle_name"] = name_split[1].capitalize()
                 else:
-                    new_person["first_name"] = first_name
+                    new_person["first_name"] = first_name.capitalize()
             else:
                 new_person["first_name"] = "unknown"
         else:
