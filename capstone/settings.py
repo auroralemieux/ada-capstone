@@ -29,7 +29,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'auroraanderson.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'test-babynamebook.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
