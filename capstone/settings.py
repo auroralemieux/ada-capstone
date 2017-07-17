@@ -40,7 +40,7 @@ AWS_HEADERS = {
 AWS_STORAGE_BUCKET_NAME = 'babynamebooktestbucket'
 AWS_ACCESS_KEY_ID = 'AKIAJEVVUBAVF3XYNJQQ'
 AWS_SECRET_ACCESS_KEY = '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'
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % babynamebooktestbucket
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
 
