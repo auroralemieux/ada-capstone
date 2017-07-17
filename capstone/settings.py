@@ -32,6 +32,21 @@ DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'test-babynamebook.us-west-2.elasticbeanstalk.com']
 
 
+AWS_HEADERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'Cache-Control': 'max-age=94608000',
+    }
+
+AWS_STORAGE_BUCKET_NAME = 'babynamebook-test-bucket'
+AWS_ACCESS_KEY_ID = 'AKIAJEVVUBAVF3XYNJQQ'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % babynamebook-test-bucket
+
+STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
+
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -45,6 +60,7 @@ INSTALLED_APPS = [
     'coverage',
     'django_nose',
     'social_django',
+    'storages',
 ]
 
 MIDDLEWARE = [
