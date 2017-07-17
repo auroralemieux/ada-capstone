@@ -12,4 +12,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('babynamebook.urls')),
     url(r'^signup/$', book_views.signup, name='signup'),
+    url(r'^oauth/', include('social_django.urls', namespace='social')),
 ]
