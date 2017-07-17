@@ -39,6 +39,16 @@ def account(request):
     user = request.user
     return render(request, 'babynamebook/account.html', {'bookinfo': bookinfo, 'user': user})
 
+def search(request):
+
+    print(request.POST.get('query'))
+    search_term = request.POST.get('query')
+    results = Name.objects.filter(first_name__icontains=search_term)
+
+
+
+    return render(request, 'babynamebook/search.html', {'search_term':search_term, 'results':results })
+
 
 @login_required
 def book(request, pk):

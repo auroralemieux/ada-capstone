@@ -1,0 +1,17 @@
+{% extends 'babynamebook/base.html' %}
+
+{% block content %}
+
+<article class="align-self-top col-sm-12" id="search-results">
+  <h2>{{results|length}} search results for '{{search_term}}'</h2>
+  <ol>
+
+  {% for result in results %}
+    <li>{{result.first_name}} ({{result.gender}}). From {{result.origin}}. Meaning: {{result.meaning}}</li>
+  {% endfor %}
+
+  </ol>
+
+</article>
+
+{% endblock %}

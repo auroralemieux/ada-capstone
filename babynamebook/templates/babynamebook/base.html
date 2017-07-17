@@ -44,7 +44,7 @@
           </section>
         </section>
         <section class="navbar-right">
-          <form class="inline-form" action="" method="get">{% csrf_token %}
+          <form class="inline-form" action={% url 'search' %} method="POST">{% csrf_token %}
             <div class="input-group">
               <label class="sr-only" for="query">Search terms</label>
               <input class="form-control" id="search_term" type="text" name="query" >
