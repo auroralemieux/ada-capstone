@@ -37,10 +37,10 @@ AWS_HEADERS = {
         'Cache-Control': 'max-age=94608000',
     }
 
-AWS_STORAGE_BUCKET_NAME = 'babynamebook-test-bucket'
+AWS_STORAGE_BUCKET_NAME = 'babynamebooktestbucket'
 AWS_ACCESS_KEY_ID = 'AKIAJEVVUBAVF3XYNJQQ'
 AWS_SECRET_ACCESS_KEY = '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'
-AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % babynamebook-test-bucket
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % babynamebooktestbucket
 
 STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
 
