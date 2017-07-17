@@ -10,3 +10,4 @@ parsed_ged
 htmlcov
 .coverage
 chromedriver
+.env
