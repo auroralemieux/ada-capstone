@@ -2,16 +2,39 @@
 
 {% block content %}
 
-<article class="align-self-top col-sm-12" id="search-results">
-  <h2>{{results|length}} search results for '{{search_term}}'</h2>
-  <ol>
+<article class="align-self-top" id="search-results">
+  {% with total=results|length %}
+  <h2 class="text-center ">{{ total }} search result{{ total|pluralize }} for '{{search_term}}'</h2>
+  {% endwith %}
+  <p class="text-center mb-4"><small>All names and genders are taken from the SSA database of historical names. Any errors are my own.</small></p>
+  <div class="">
+    <div class="">
+      <div class="col-md-12 col-sm-12 mb-3">
+        {% if girls %}
+          <h4 class="my-3 text-center">Girls</h4>
 
-  {% for result in results %}
-    <li>{{result.first_name}} ({{result.gender}}). From {{result.origin}}. Meaning: {{result.meaning}}</li>
-  {% endfor %}
+          {% for result in girls %}
+          <p><strong>{{ result.first_name }}</strong> <em>({{ result.origin }})</em> {{ result.meaning }}</p>
+          {% endfor %}
 
-  </ol>
+        {% endif %}
+      </div>
+    </div>
 
+    <div class="">
+      <div class="col-md-12 col-sm-12 mb-3">
+      {% if boys %}
+
+        <h4 class="my-3 text-center">Boys</h4>
+
+        {% for result in boys %}
+        <p><strong>{{ result.first_name }}</strong> <em>({{ result.origin }})</em> {{ result.meaning }}</p>
+        {% endfor %}
+
+      {% endif %}
+      </div>
+    </div>
+  </div>
 </article>
 
 {% endblock %}

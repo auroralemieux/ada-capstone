@@ -7,7 +7,7 @@
   <div class="container">
     <div class="row ">
       {% for bookchunk in bookinfo %}
-        <div class="card col col-lg-4 px-3 col-sm-12">
+        <div class="card col col-md-6 col-lg-4 px-3 col-sm-12">
           <div class="card-block">
             <h4 class="card-title">{{ bookchunk.book.title }}</h4>
             <p class="card-text">This book contains {{ bookchunk.namelength }} names from the original tree of {{ bookchunk.personlength }} people.</p>

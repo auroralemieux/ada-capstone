@@ -40,14 +40,12 @@ def account(request):
     return render(request, 'babynamebook/account.html', {'bookinfo': bookinfo, 'user': user})
 
 def search(request):
-
-    print(request.POST.get('query'))
     search_term = request.POST.get('query')
     results = Name.objects.filter(first_name__icontains=search_term)
+    boy_results = Name.objects.filter(first_name__icontains=search_term, gender="M")
+    girl_results = Name.objects.filter(first_name__icontains=search_term, gender="F")
 
-
-
-    return render(request, 'babynamebook/search.html', {'search_term':search_term, 'results':results })
+    return render(request, 'babynamebook/search.html', {'search_term':search_term, 'boys':boy_results, 'girls':girl_results, 'results':results })
 
 
 @login_required
