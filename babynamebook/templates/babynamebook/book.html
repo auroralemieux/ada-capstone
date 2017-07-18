@@ -7,19 +7,22 @@
   <p class="text-center mb-4"><small>find again on your <em>my books</em> page</small></p>
   <nav class="navbar justify-content-center navbar-light navbar-toggleable-md">
     <a role="button" class="nav-item nav-link" data-toggle="modal" data-target="#girlModal">
-      Top Girl Names
+      Girl Names
     </a>
     <a role="button" class="nav-item nav-link" data-toggle="modal" data-target="#boyModal">
-      Top Boy Names
+      Boy Names
     </a>
     <a role="button" class="nav-item nav-link" data-toggle="modal" data-target="#lastModal">
-      Top Last Names
+      Last Names
     </a>
     <a role="button" class="nav-item nav-link" data-toggle="modal" data-target="#originModal">
-      Top Name Origins
+      Name Origins
     </a>
     <a role="button" class="nav-item nav-link" data-toggle="modal" data-target="#popModal">
       Popular Names
+    </a>
+    <a role="button" class="nav-item nav-link" data-toggle="modal" data-target="#birthModal">
+      Birth Year
     </a>
 
     <div class="dropdown">
@@ -143,6 +146,36 @@
               {% for name in pop_boy_names %}
               <p class="text-center">{{ name }}</p>
               {% endfor %}
+            </section>
+          </section>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="birthModal" tabindex="-1" role="dialog" aria-labelledby="birthModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="birthModalLabel">Birth Year Frequency of Top Names <small>by century</small></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body container">
+          <small>Top five boy and girl names from your tree by century of birth.</small>
+          <section class="row">
+            <section class="col-md-6">
+              <p class="mt-3 text-center">
+                <strong>Girls</strong>
+              </p>
+            </section>
+            <section class="col-md-6">
+              <p class="mt-3 text-center">
+                <strong>Boys</strong>
+              </p>
+              
             </section>
           </section>
 

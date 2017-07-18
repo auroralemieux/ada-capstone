@@ -72,6 +72,12 @@ def book(request, pk):
     # these are lists of strings
     pop_boy_names = __get_popular_names_2016("M", book)
     pop_girl_names = __get_popular_names_2016("F", book)
+
+    # create data files for chart to use
+    __get_birth_year_stats(book, "F")
+    __get_birth_year_stats(book, "M")
+
+
     datablob = [top_female, top_male, top_last, top_origin, pop_boy_names, pop_girl_names, book, all_boys, all_girls]
     book_data = __create_book_data(datablob)
 
@@ -328,3 +334,30 @@ def __make_top_ten_text(book, gender):
         text += ", "
     text = text[0:-2]
     return text
+
+def __get_birth_year_stats(book, gender):
+    peeps = Person.objects.filter(book=book, gender=gender)
+
+    # name is key and frequency is value
+    top_five = __top_ten_first_names(peeps, book)[0:5]
+    print(top_five)
+    fifteens = __name_freq_sorted_by_century(peeps, 1500, 1600)
+    sixteens = __name_freq_sorted_by_century(peeps, 1600, 1700)
+    seventeens = __name_freq_sorted_by_century(peeps, 1700, 1800)
+    eighteens = __name_freq_sorted_by_century(peeps, 1800, 1900)
+    nineteens = __name_freq_sorted_by_century(peeps, 1900, 2000)
+    print(fifteens)
+    print(sixteens)
+    print(seventeens)
+    print(eighteens)
+    print(nineteens)
+
+def __name_freq_sorted_by_century(peeps, begin_year, end_year):
+    result = {}
+    for peep in peeps:
+        if peep.birth_year < end_year and peep.birth_year >= begin_year and peep.first_name.lower() != "unknown":
+            if peep.first_name in result.keys():
+                result[peep.first_name] += 1
+            else:
+                result[peep.first_name] = 1
+    return sorted(result.items(), key=operator.itemgetter(1), reverse=True)[0:5]
