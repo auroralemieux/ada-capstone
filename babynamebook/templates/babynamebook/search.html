@@ -3,6 +3,9 @@
 {% block content %}
 
 <article class="align-self-top" id="search-results">
+
+  <div id="chart"></div>
+
   {% with total=results|length %}
   <h2 class="text-center ">{{ total }} search result{{ total|pluralize }} for '{{search_term}}'</h2>
   {% endwith %}

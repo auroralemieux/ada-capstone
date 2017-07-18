@@ -10,6 +10,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from .generate_pdf import go
+from bokeh.plotting import figure, output_file, show
 
 
 # maybe put this in a separate accounts project views file???
@@ -44,6 +45,8 @@ def search(request):
     results = Name.objects.filter(first_name__icontains=search_term)
     boy_results = Name.objects.filter(first_name__icontains=search_term, gender="M")
     girl_results = Name.objects.filter(first_name__icontains=search_term, gender="F")
+
+    __stats_chart()
 
     return render(request, 'babynamebook/search.html', {'search_term':search_term, 'boys':boy_results, 'girls':girl_results, 'results':results })
 
@@ -361,3 +364,10 @@ def __name_freq_sorted_by_century(peeps, begin_year, end_year):
             else:
                 result[peep.first_name] = 1
     return sorted(result.items(), key=operator.itemgetter(1), reverse=True)[0:5]
+
+def __stats_chart():
+
+    fem_peeps_with_birthyears = Person.objects.filter(birth_year__gt=0000, gender="F")
+    masc_peeps_with_birthyears = Person.objects.filter(birth_year__gt=0000, gender="M")
+
+    
