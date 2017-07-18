@@ -8,44 +8,53 @@
   <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
 </head>
 <body>
-  <header>
-
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a href="{% url 'home' %}" class="navbar-brand mb-0">babynamebook</a>
-      <section class="collapse navbar-collapse" id="navbarSupportedContent">
-        <section class="navbar-nav mr-auto">
-          {% if user.is_authenticated %}
-          <a id="account-button" class="nav-item nav-link" href={% url 'account' %}>my books</a>
-          <a class="nav-item nav-link" href={% url 'logout' %}>log out {{ user.username }}</a>
-          {% else %}
-          <a class="nav-item nav-link" href={% url 'login' %}>log in</a>
-          {% endif %}
-          <a class="nav-item nav-link" role="button" data-toggle="modal" data-target="#contactModal">
-            contact
-          </a>
-          <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="ancestryModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="contactModalLabel">Aurora Anderson</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>I made this website for my capstone project while at Ada Developers Academy (cohort 7).</p>
-                  <p>Check out my <a href="http://www.github.com/auroralemieux">github</a> here.</p>
+  <header class="">
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="{% url 'home' %}" class="navbar-brand mb-0">mybabynamebook</a>
+        <section class="collapse navbar-collapse navbar-left" id="navbarSupportedContent">
+          <section class="navbar-nav mr-auto">
+            {% if user.is_authenticated %}
+            <a id="account-button" class="nav-item nav-link" href={% url 'account' %}>my books</a>
+            <a class="nav-item nav-link" href={% url 'logout' %}>log out {{ user.username }}</a>
+            {% else %}
+            <a class="nav-item nav-link" href={% url 'login' %}>log in</a>
+            {% endif %}
+            <a class="nav-item nav-link" role="button" data-toggle="modal" data-target="#contactModal">
+              contact
+            </a>
+            <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="ancestryModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Aurora Anderson</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>I made this website for my capstone project while at Ada Developers Academy (cohort 7).</p>
+                    <p>Check out my <a href="http://www.github.com/auroralemieux">github</a> here.</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </section>
-      </section>
-    </nav>
-
+        <section class="navbar-right">
+          <form class="inline-form" action={% url 'search' %} method="POST">{% csrf_token %}
+            <div class="input-group">
+              <label class="sr-only" for="query">Search terms</label>
+              <input class="form-control" id="search_term" type="text" name="query" >
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-outline-info" id="search-button">Search Names</button>
+              </span>
+            </div>
+          </form>
+        </section>
+      </nav>
   </header>
 
   <section id="content" class="content container">
