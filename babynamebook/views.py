@@ -45,9 +45,8 @@ def account(request):
 def search(request):
     search_term = request.POST.get('query')
     results = Name.objects.filter(first_name__icontains=search_term)
-    boy_results = Name.objects.filter(first_name__icontains=search_term, gender="M")
-    girl_results = Name.objects.filter(first_name__icontains=search_term, gender="F")
-
+    boy_results = Name.objects.filter(first_name__icontains=search_term, gender="M").extra(order_by = ['first_name'])
+    girl_results = Name.objects.filter(first_name__icontains=search_term, gender="F").extra(order_by = ['first_name'])
     __stats_chart(search_term)
 
     return render(request, 'babynamebook/search.html', {'search_term':search_term, 'boys':boy_results, 'girls':girl_results, 'results':results })
@@ -400,9 +399,8 @@ def __stats_chart(name):
     print(years_by_century)
 
     drawing = Drawing(400, 200)
-    data = [
-     years_by_century,
-    ]
+    data = [years_by_century,]
+
     lc = HorizontalLineChart()
     lc.x = 50
     lc.y = 50
@@ -414,8 +412,12 @@ def __stats_chart(name):
     lc.categoryAxis.categoryNames = catNames
     lc.categoryAxis.labels.boxAnchor = 'n'
     lc.valueAxis.valueMin = 0
-    lc.valueAxis.valueMax = max(years_by_century) * 1.1
-    lc.valueAxis.valueStep = round(lc.valueAxis.valueMax, -1) / 10
+    if max(years_by_century) > 0:
+        lc.valueAxis.valueMax = max(years_by_century) * 1.1
+        lc.valueAxis.valueStep = round(lc.valueAxis.valueMax, -1) / 10
+    else:
+        lc.valueAxis.valueMax = 10
+        lc.valueAxis.valueStep = 1
     lc.lines[0].strokeWidth = 2
     lc.lines[1].strokeWidth = 1.5
     drawing.add(lc)
