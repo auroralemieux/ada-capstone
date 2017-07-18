@@ -4,39 +4,37 @@
 
 <article class="align-self-top" id="search-results">
 
-  <div id="chart"></div>
+  <div id="chart">
+    <img src="../static/chart.png" alt="chart-of-name-by-birth-year">
+    <p><small>Frequency of '{{search_term}}' in names across centuries by birth year within the mybabynamebook database.</small></p>
+  </div>
 
   {% with total=results|length %}
   <h2 class="text-center ">{{ total }} search result{{ total|pluralize }} for '{{search_term}}'</h2>
   {% endwith %}
   <p class="text-center mb-4"><small>All names and genders are taken from the SSA database of historical names. Any errors are my own.</small></p>
-  <div class="">
-    <div class="">
-      <div class="col-md-12 col-sm-12 mb-3">
-        {% if girls %}
-          <h4 class="my-3 text-center">Girls</h4>
 
-          {% for result in girls %}
-          <p><strong>{{ result.first_name }}</strong> <em>({{ result.origin }})</em> {{ result.meaning }}</p>
-          {% endfor %}
+  <div class="col-md-12 col-sm-12 mb-3">
+    {% if girls %}
+    <h4 class="my-3 text-center">Girls</h4>
 
-        {% endif %}
-      </div>
-    </div>
+    {% for result in girls %}
+    <p><strong>{{ result.first_name }}</strong> <em>({{ result.origin }})</em> {{ result.meaning }}</p>
+    {% endfor %}
 
-    <div class="">
-      <div class="col-md-12 col-sm-12 mb-3">
-      {% if boys %}
+    {% endif %}
+  </div>
 
-        <h4 class="my-3 text-center">Boys</h4>
+  <div class="col-md-12 col-sm-12 mb-3">
+    {% if boys %}
 
-        {% for result in boys %}
-        <p><strong>{{ result.first_name }}</strong> <em>({{ result.origin }})</em> {{ result.meaning }}</p>
-        {% endfor %}
+    <h4 class="my-3 text-center">Boys</h4>
 
-      {% endif %}
-      </div>
-    </div>
+    {% for result in boys %}
+    <p><strong>{{ result.first_name }}</strong> <em>({{ result.origin }})</em> {{ result.meaning }}</p>
+    {% endfor %}
+
+    {% endif %}
   </div>
 </article>
 
