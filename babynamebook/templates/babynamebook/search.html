@@ -2,39 +2,41 @@
 
 {% block content %}
 
-<article class="align-self-top" id="search-results">
-  {% with total=results|length %}
-  <h2 class="text-center ">{{ total }} search result{{ total|pluralize }} for '{{search_term}}'</h2>
-  {% endwith %}
-  <p class="text-center mb-4"><small>All names and genders are taken from the SSA database of historical names. Any errors are my own.</small></p>
-  <div class="">
-    <div class="">
-      <div class="col-md-12 col-sm-12 mb-3">
-        {% if girls %}
-          <h4 class="my-3 text-center">Girls</h4>
+<!-- <article class="align-self-top" id="search-results"> -->
+  <section class="align-self-top col-md-4 col-lg-4 col-sm-12">
+    <img src="../static/chart.png" alt="chart-of-name-by-birth-year">
+    <p class="text-center"><small>Frequency of '{{search_term}}' in names across centuries by birth year within the mybabynamebook database.</small></p>
+  </section>
+  <section class="align-self-top col-md-6 col-lg-6 col-sm-12">
 
-          {% for result in girls %}
-          <p><strong>{{ result.first_name }}</strong> <em>({{ result.origin }})</em> {{ result.meaning }}</p>
-          {% endfor %}
+    {% with total=results|length %}
+    <h2 class="text-center ">{{ total }} name{{ total|pluralize }} matching '{{search_term}}'</h2>
+    {% endwith %}
+    <p class="text-center mb-4"><small>All names and genders are taken from the SSA database of historical names. Any errors are my own.</small></p>
 
-        {% endif %}
-      </div>
-    </div>
+    <div class="mb-3">
+      {% if girls %}
+      <h4 class="my-3 text-center">Girls</h4>
 
-    <div class="">
-      <div class="col-md-12 col-sm-12 mb-3">
-      {% if boys %}
-
-        <h4 class="my-3 text-center">Boys</h4>
-
-        {% for result in boys %}
-        <p><strong>{{ result.first_name }}</strong> <em>({{ result.origin }})</em> {{ result.meaning }}</p>
-        {% endfor %}
+      {% for result in girls %}
+      <p><strong>{{ result.first_name }}</strong> <em>({{ result.origin }})</em> {{ result.meaning }}</p>
+      {% endfor %}
 
       {% endif %}
-      </div>
     </div>
-  </div>
-</article>
+
+    <div class="mb-3">
+      {% if boys %}
+
+      <h4 class="my-3 text-center">Boys</h4>
+
+      {% for result in boys %}
+      <p><strong>{{ result.first_name }}</strong> <em>({{ result.origin }})</em> {{ result.meaning }}</p>
+      {% endfor %}
+
+      {% endif %}
+    </div>
+  </section>
+<!-- </article> -->
 
 {% endblock %}

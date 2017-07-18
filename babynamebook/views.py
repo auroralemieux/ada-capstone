@@ -10,7 +10,10 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from .generate_pdf import go
-
+from reportlab.graphics.charts.linecharts import HorizontalLineChart
+from reportlab.graphics import renderPM
+from reportlab.graphics.shapes import Drawing
+import math
 
 # maybe put this in a separate accounts project views file???
 def signup(request):
@@ -42,8 +45,9 @@ def account(request):
 def search(request):
     search_term = request.POST.get('query')
     results = Name.objects.filter(first_name__icontains=search_term)
-    boy_results = Name.objects.filter(first_name__icontains=search_term, gender="M")
-    girl_results = Name.objects.filter(first_name__icontains=search_term, gender="F")
+    boy_results = Name.objects.filter(first_name__icontains=search_term, gender="M").extra(order_by = ['first_name'])
+    girl_results = Name.objects.filter(first_name__icontains=search_term, gender="F").extra(order_by = ['first_name'])
+    __stats_chart(search_term)
 
     return render(request, 'babynamebook/search.html', {'search_term':search_term, 'boys':boy_results, 'girls':girl_results, 'results':results })
 
@@ -74,9 +78,8 @@ def book(request, pk):
     pop_girl_names = __get_popular_names_2016("F", book)
 
     # create data files for chart to use
-    __get_birth_year_stats(book, "F")
-    __get_birth_year_stats(book, "M")
-
+    # __get_birth_year_stats(book, "F")
+    # __get_birth_year_stats(book, "M")
 
     datablob = [top_female, top_male, top_last, top_origin, pop_boy_names, pop_girl_names, book, all_boys, all_girls]
     book_data = __create_book_data(datablob)
@@ -361,3 +364,62 @@ def __name_freq_sorted_by_century(peeps, begin_year, end_year):
             else:
                 result[peep.first_name] = 1
     return sorted(result.items(), key=operator.itemgetter(1), reverse=True)[0:5]
+
+def __stats_chart(name):
+    # try:
+    # peeps_with_birthyears = Person.objects.filter(birth_year__gt=0000, first_name=name)
+
+    peeps = Person.objects.filter(first_name__icontains=name)
+
+    fifteen = 0
+    sixteen = 0
+    seventeen = 0
+    eighteen = 0
+    nineteen = 0
+    twenty = 0
+    print(len(peeps))
+
+    for peep in peeps:
+        if peep.birth_year != 0:
+            if peep.birth_year >= 2000:
+                twenty += 1
+            elif peep.birth_year >= 1900:
+                nineteen += 1
+            elif peep.birth_year >= 1800:
+                eighteen += 1
+            elif peep.birth_year >= 1700:
+                seventeen += 1
+            elif peep.birth_year >= 1600:
+                sixteen += 1
+            elif peep.birth_year >= 1500:
+                fifteen += 1
+
+    years_by_century = [fifteen, sixteen, seventeen, eighteen, nineteen, twenty]
+
+    print(years_by_century)
+
+    drawing = Drawing(400, 200)
+    data = [years_by_century,]
+
+    lc = HorizontalLineChart()
+    lc.x = 50
+    lc.y = 50
+    lc.height = 125
+    lc.width = 300
+    lc.data = data
+    lc.joinedLines = 1
+    catNames = "1500s 1600s 1700s 1800s 1900s 2000s".split(" ")
+    lc.categoryAxis.categoryNames = catNames
+    lc.categoryAxis.labels.boxAnchor = 'n'
+    lc.valueAxis.valueMin = 0
+    if max(years_by_century) > 0:
+        lc.valueAxis.valueMax = max(years_by_century) * 1.1
+        lc.valueAxis.valueStep = round(lc.valueAxis.valueMax, -1) / 10
+    else:
+        lc.valueAxis.valueMax = 10
+        lc.valueAxis.valueStep = 1
+    lc.lines[0].strokeWidth = 2
+    lc.lines[1].strokeWidth = 1.5
+    drawing.add(lc)
+
+    renderPM.drawToFile(drawing, 'babynamebook/static/chart.png', 'PNG')

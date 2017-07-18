@@ -16,6 +16,10 @@ $(document).ready(function() {
     $(".filesize").html(size);
   });
 
+  $(function(){
+      $("#chart").load("media/chart.html");
+  });
+
   $('#upload-submit-button').on('click', function() {
     var size = $(".filesize").html();
     $('#percent').html('0%');
