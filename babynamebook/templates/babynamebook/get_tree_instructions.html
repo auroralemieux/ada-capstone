@@ -2,14 +2,15 @@
 
 {% block content %}
 
-<article class="align-self-top left-main-content col-md-6 col-lg-6 col-sm-12" id="upload-instructions">
+<article class="align-self-top col-md-6 col-lg-6 col-sm-12 mb-4" id="upload-instructions">
   <h2>For starters, we need your tree!</h2>
-  <p id="instructions-info-text">If you haven't already done so, you will need to get a .ged file to upload. Log in to your favorite genealogy site where you already have a family tree built. For instructions on how to do that, click one of the buttons below.</p>
+  <p id="instructions-info-text">The standard format for family trees is a file type with an extension of .ged. If you haven't already done so, you will need to get a .ged file to upload. </p>
+  <p>Log in to your favorite genealogy site where you already have a family tree built and export the tree you want. For instructions on how to do that, click one of the buttons below.</p>
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#ancestryModal">
+  <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#ancestryModal">
     ancestry.com
   </button>
-  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#heritageModal">
+  <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#heritageModal">
     myheritage.com
   </button>
 
@@ -46,11 +47,9 @@
   </div>
 
 </article>
-<article class="align-self-top right-main-content col-md-6 col-lg-6 col-sm-12">
-  <div class="container">
+<article class="align-self-top col-md-6 col-lg-6 col-sm-12">
     <p>You must be logged in to continue. Log in or create an account (from the log in page).</p>
     <a role="button" class="btn btn-success hollow" id="instructions-button" href="{% url 'upload_tree' %}">Continue</a>
-  </div>
 </article>
 
 {% endblock %}

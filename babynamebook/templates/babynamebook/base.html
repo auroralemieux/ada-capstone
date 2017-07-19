@@ -23,7 +23,7 @@
           <a class="nav-item nav-link" href={% url 'login' %}>log in</a>
           {% endif %}
           <a class="nav-item nav-link" role="button" data-toggle="modal" data-target="#contactModal">
-            contact
+            about
           </a>
           <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="ancestryModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -35,8 +35,9 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>I made this website for my capstone project while at Ada Developers Academy (cohort 7).</p>
-                  <p>Check out my <a href="http://www.github.com/auroralemieux">github</a> here.</p>
+                  <p>This website was created as my capstone project while at Ada Developers Academy (cohort 7).</p>
+                  <p>Tech stack is python/django/postgres with some reportlab/platypus for pdf/png generation.</p>
+                  <p>Check out my github <a href="http://www.github.com/auroralemieux">here</a> and the repo for this project <a href="https://github.com/auroralemieux/ada-capstone">here</a>.</p>
                 </div>
               </div>
             </div>
@@ -49,7 +50,7 @@
             <label class="sr-only" for="query">Search terms</label>
             <input class="form-control" id="search_term" type="text" name="query" >
             <span class="input-group-btn">
-              <button type="submit" class="btn btn-outline-info" id="search-button">Search Names</button>
+              <button type="submit" class="btn btn-info" id="search-button">Search Names</button>
             </span>
           </div>
         </form>

@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   $('#expand-all').on('click', function () {
     $('#accordion .panel-collapse').collapse('show');
   });
@@ -14,10 +13,6 @@ $(document).ready(function() {
     var file = this.files[0];
     var size = file.size;
     $(".filesize").html(size);
-  });
-
-  $(function(){
-      $("#chart").load("media/chart.html");
   });
 
   $('#upload-submit-button').on('click', function() {

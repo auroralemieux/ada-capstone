@@ -42,14 +42,18 @@ def account(request):
     user = request.user
     return render(request, 'babynamebook/account.html', {'bookinfo': bookinfo, 'user': user})
 
-def search(request):
-    search_term = request.POST.get('query')
-    results = Name.objects.filter(first_name__icontains=search_term)
-    boy_results = Name.objects.filter(first_name__icontains=search_term, gender="M").extra(order_by = ['first_name'])
-    girl_results = Name.objects.filter(first_name__icontains=search_term, gender="F").extra(order_by = ['first_name'])
-    __stats_chart(search_term)
 
-    return render(request, 'babynamebook/search.html', {'search_term':search_term, 'boys':boy_results, 'girls':girl_results, 'results':results })
+def search(request):
+    if request.POST.get('query'):
+        search_term = request.POST.get('query')
+        results = Name.objects.filter(first_name__icontains=search_term)
+        boy_results = Name.objects.filter(first_name__icontains=search_term, gender="M").extra(order_by = ['first_name'])
+        girl_results = Name.objects.filter(first_name__icontains=search_term, gender="F").extra(order_by = ['first_name'])
+        __stats_chart(search_term)
+
+        return render(request, 'babynamebook/search.html', {'search_term':search_term, 'boys':boy_results, 'girls':girl_results, 'results':results })
+    else:
+        return redirect('home')
 
 
 @login_required

@@ -1,8 +1,8 @@
 {% extends "babynamebook/base.html" %}
 
 {% block content %}
-    <section class="container mb-3">
-      <h2 class="mb-3">Log in to babynamebook</h2>
+    <section class="col-sm-12 mb-3">
+      <h2 class="mb-3">Log in to mybabynamebook</h2>
       {% if form.errors %}
       <p>Your username and password didn't match. Please try again.</p>
       {% endif %}
@@ -14,9 +14,9 @@
         <input type="hidden" name="next" value="{{next}}" />
       </form>
     </section>
-    <section class="container mb-3">
+    <section class="col-sm-12 mb-3">
       <p>Don't have an account yet?</p>
-      <a id="get-signup" role="button" class="btn btn-info" href={% url "signup" %}>Create account</a>
+      <a id="get-signup" role="button" class="btn btn-outline-success" href={% url "signup" %}>Create account</a>
       <!-- <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a> -->
     </section>
 {% endblock %}

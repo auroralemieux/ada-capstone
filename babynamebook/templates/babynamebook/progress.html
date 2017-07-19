@@ -9,9 +9,10 @@
     <li>{{ num_m }} male</li>
     <li>{{ num_f }} female</li>
   </ul>
+  <p>Your new book has been saved to your <em>my books</em> page (available above).</p>
 </article>
 <article class="align-self-top right-main-content col-md-5 col-lg-5 col-sm-12">
-  <a role="button" class="btn btn-success" id="correlate-button" href="{% url 'book' pk=book.pk %}">See my book</a>
+  <a role="button" class="btn btn-success btn-lg" id="correlate-button" href="{% url 'book' pk=book.pk %}">See my book</a>
 </article>
 
 {% endblock %}
