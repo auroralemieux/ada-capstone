@@ -4,7 +4,7 @@
 
 <article class="align-self-top container" id="extra-data">
   <h2 class="text-center">{{ book.title }}</h2>
-  <p class="text-center mb-4"><small>find again on your <em>my books</em> page</small></p>
+  <p class="text-center mb-4"><small>find again on <em>my books</em></small></p>
   <nav class="navbar justify-content-center navbar-light navbar-toggleable-md">
     <a role="button" class="nav-item nav-link" data-toggle="modal" data-target="#girlModal">
       Girl Names
@@ -21,7 +21,7 @@
     <a role="button" class="nav-item nav-link" data-toggle="modal" data-target="#popModal">
       Popular Names
     </a>
-    
+
 
     <div class="dropdown">
       <a class="nav-item nav-link dropdown-toggle" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -162,7 +162,7 @@
         <h4 class="panel-title text-left">
           <button class="btn btn-outline-success btn-block" data-toggle="collapse" data-parent="#accordion" href="#collapse{{letter}}" aria-expanded="true" aria-controls="collapse{{letter}}">
             <strong>{{letter}}</strong>
-            <small class="text-right">{% with boysngirls|first as boys %}{{ boys|length }}{% endwith %} boys and  {% with boysngirls|last as girls %}{{ girls|length }}{% endwith %} girls</small>
+            <small class="text-right">{% with boysngirls|first as boys %}{{ boys|length }} boy{{boys|pluralize}}{% endwith %} and  {% with boysngirls|last as girls %}{{ girls|length }} girl{{girls|pluralize}}{% endwith %}</small>
           </button>
         </h4>
       </div>

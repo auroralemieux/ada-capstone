@@ -2,11 +2,11 @@
 
 {% block content %}
 
-<article class="align-self-top left-main-content col-md-6 col-lg-6 col-sm-12" id="home-instructions">
-  <h2>What names are hidden in your tree?</h2>
-  <p id="home-info-text">mybabynamebook takes your family tree and combs through it for all the first names. Then it correlates all names with their meanings and origins. mybabynamebook has {{ len_names }} unique names ({{male}} boy and {{female}} girl) to choose from. The result is a beautifully formatted custom book to use in your own baby name hunt!</p>
+<article class="align-self-top  justify-content-center col-lg-8 col-sm-12" id="home-instructions">
+  <h2 class="">What names are hidden in your tree?</h2>
+  <img id="flow-pic" class="mt-5" src="../static/flowchart.svg" alt="flowchart-of-babynamebook-steps">
 </article>
-<article class="align-self-top right-main-content col-md-6 col-lg-6 col-sm-12">
+<article class="align-self-top right-main-content col-md-4 col-lg-4 col-sm-12">
   <a role="button" class="btn btn-success" id="start-button" href="{% url 'get_tree_instructions' %}">Start</a>
 </article>
 
