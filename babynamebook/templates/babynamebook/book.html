@@ -5,7 +5,9 @@
 <article class="align-self-top container" id="extra-data">
   <h2 class="text-center">{{ book.title }}</h2>
   <p class="text-center mb-4"><small>find again on <em>my books</em></small></p>
+
   <nav class="navbar justify-content-center navbar-light navbar-toggleable-md">
+
     <a role="button" class="nav-item nav-link" data-toggle="modal" data-target="#girlModal">
       Girl Names
     </a>
@@ -21,13 +23,11 @@
     <a role="button" class="nav-item nav-link" data-toggle="modal" data-target="#popModal">
       Popular Names
     </a>
-
-
     <div class="dropdown">
-      <a class="nav-item nav-link dropdown-toggle" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="nav-item nav-link dropdown-toggle" role="button" id="bookActions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Book Actions
       </a>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <div class="dropdown-menu" aria-labelledby="bookActions">
         <a id="collapse-all" class="dropdown-item" href="#">Collapse all</a>
         <a id="expand-all" class="dropdown-item" href="#">Expand all</a>
         <div class="dropdown-divider"></div>
@@ -37,8 +37,6 @@
         </form>
       </div>
     </div>
-
-
   </nav>
   <!-- modals -->
   <div class="modal fade" id="girlModal" tabindex="-1" role="dialog" aria-labelledby="girlModalLabel" aria-hidden="true">
@@ -102,7 +100,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="originModalLabel">Top 3 origins of names in tree <small>by frequency</small></h5>
+          <h5 class="modal-title" id="originModalLabel">Top 5 origins of names in tree <small>by frequency</small></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -172,27 +170,27 @@
             <div class="col-md-6 col-sm-12 mb-3">
               <h4 class="my-3 text-center">Boys</h4>
               {% with boysngirls|first as boys %}
-                {% for person in boys %}
-                <p><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
-                {% empty %}
-                <p class="text-center">none found</p>
-                {% endfor %}
+              {% for person in boys %}
+              <p><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
+              {% empty %}
+              <p class="text-center">none found</p>
+              {% endfor %}
               {% endwith %}
             </div>
             <div class="col-md-6 col-sm-12 mb-3">
               <h4 class="my-3 text-center">Girls</h4>
               {% with boysngirls|last as girls %}
-                {% for person in girls %}
-                <p><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
-                {% empty %}
-                <p class="text-center">none found</p>
-                {% endfor %}
+              {% for person in girls %}
+              <p><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
+              {% empty %}
+              <p class="text-center">none found</p>
+              {% endfor %}
               {% endwith %}
             </div>
           </div>
 
         </div>
-    </div>
+      </div>
     </div>
     {% endfor %}
   </div>
