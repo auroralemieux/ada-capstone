@@ -7,11 +7,24 @@ $(document).ready(function() {
     $('#accordion .panel-collapse').collapse('hide');
   });
 
-  $('.name-line').hover(function() {
-    $('.blue-heart').show();
-  },function() {
-    $('.blue-heart').hide();
+
+
+  $(".name-group").on('mouseover', function() {
+    console.log("hovering over a name");
+
+    nameId = $(this).attr("data-id");
+
+    // var nameId = this.data.id;
+    console.log(nameId);
+    whichHeart = ".blue-heart" + nameId;
+    whichNameLine = ".name-line" + nameId;
+    $(whichNameLine).on('click', function() {
+      $(whichHeart).toggle();
+    });
   });
+
+
+
 
   var getSize = $('#id_tree_upload').change(function() {
     $(".filesize").hide();
