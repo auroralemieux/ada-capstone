@@ -1,9 +1,8 @@
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
-from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, PageBreak
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.rl_config import defaultPageSize
 from reportlab.lib.units import inch
-from reportlab.platypus import PageBreak
-
+from reportlab.lib.enums import TA_CENTER
 import operator
 import collections
 import os
@@ -17,31 +16,39 @@ pageinfo = "mybabynamebook"
 def myFirstPage(canvas, doc):
     canvas.saveState()
     canvas.setFont('Helvetica',16)
-    canvas.drawCentredString(PAGE_WIDTH/2.0, PAGE_HEIGHT/2.0, "My Baby Name Book")
-    # canvas.setFont('Helvetica',9)
-    # canvas.drawString(inch, 0.75 * inch, "%d %s" % (doc.page, pageinfo))
     canvas.restoreState()
 
 def myLaterPages(canvas, doc):
     canvas.saveState()
     canvas.setFont('Helvetica',9)
-    canvas.drawString(inch, 0.75 * inch,"%d %s" % (doc.page, pageinfo))
+    canvas.drawString(inch, 0.75 * inch, "%d %s" % (doc.page, pageinfo))
 
     canvas.restoreState()
 
 def go(book_data):
-
-    doc = SimpleDocTemplate("media/babynamebook.pdf")
-    Story = [Spacer(1,2*inch)]
-    Story.append(PageBreak())
+    print(styles)
     reg_style = styles["Normal"]
     header1_style = styles["Heading1"]
     title_style = styles["Title"]
     header4_style = styles["Heading4"]
     header2_style = styles["Heading2"]
     italic_style = styles["Italic"]
+    styleCentered = ParagraphStyle(name="centeredStyle", alignment=TA_CENTER)
 
-    Story.append(Paragraph("Girl Names", title_style))
+    doc = SimpleDocTemplate("media/babynamebook.pdf")
+    Story = [Spacer(1,2*inch)]
+    # Story.append(Spacer(PAGE_WIDTH/2.0, PAGE_HEIGHT/2.0))
+    Story.append(Paragraph("%s" % (book_data["title"]), title_style))
+    Story.append(Spacer(2,0.2*inch))
+    Story.append(Paragraph("<link href='#girls'>Girl Names</link>", styleCentered))
+    Story.append(Paragraph("<link href='#boys'>Boy Names</link>", styleCentered))
+    Story.append(Paragraph("<link href='#stats'>Stats</link>", styleCentered))
+
+    Story.append(PageBreak())
+
+
+
+    Story.append(Paragraph("<a name='girls'/>Girl Names", title_style))
     Story.append(Spacer(1,0.2*inch))
 
     girls_list = book_data["girls"]
@@ -55,7 +62,7 @@ def go(book_data):
         Story.append(Spacer(1,0.2*inch))
 
     Story.append(PageBreak())
-    Story.append(Paragraph("Boy Names", title_style))
+    Story.append(Paragraph("<a name='boys'/>Boy Names", title_style))
     Story.append(Spacer(1,0.2*inch))
     boys_list = book_data["boys"]
     boys_list = collections.OrderedDict(sorted(boys_list.items()))
@@ -68,7 +75,7 @@ def go(book_data):
         Story.append(Spacer(1,0.2*inch))
 
     Story.append(PageBreak())
-    Story.append(Paragraph("Stats", title_style))
+    Story.append(Paragraph("<a name='stats'/>Stats", title_style))
     Story.append(Spacer(1,0.2*inch))
 
     stats_chunk = book_data["stats"]
