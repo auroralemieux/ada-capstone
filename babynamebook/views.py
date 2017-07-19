@@ -14,6 +14,7 @@ from reportlab.graphics.charts.linecharts import HorizontalLineChart
 from reportlab.graphics import renderPM
 from reportlab.graphics.shapes import Drawing
 import math
+from reportlab.lib import colors
 
 # maybe put this in a separate accounts project views file???
 def signup(request):
@@ -415,6 +416,7 @@ def __stats_chart(name):
     catNames = "1500s 1600s 1700s 1800s 1900s 2000s".split(" ")
     lc.categoryAxis.categoryNames = catNames
     lc.categoryAxis.labels.boxAnchor = 'n'
+    lc.lines[0].strokeColor = colors.green
     lc.valueAxis.valueMin = 0
     if max(years_by_century) > 0:
         lc.valueAxis.valueMax = max(years_by_century) * 1.1
@@ -423,7 +425,6 @@ def __stats_chart(name):
         lc.valueAxis.valueMax = 10
         lc.valueAxis.valueStep = 1
     lc.lines[0].strokeWidth = 2
-    lc.lines[1].strokeWidth = 1.5
     drawing.add(lc)
 
     renderPM.drawToFile(drawing, 'babynamebook/static/chart.png', 'PNG')
