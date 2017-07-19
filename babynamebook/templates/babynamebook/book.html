@@ -1,5 +1,5 @@
 {% extends 'babynamebook/base.html' %}
-
+{% load staticfiles %}
 {% block content %}
 
 <article class="align-self-top container" id="extra-data">
@@ -171,7 +171,14 @@
               <h4 class="my-3 text-center">Boys</h4>
               {% with boysngirls|first as boys %}
               {% for person in boys %}
-              <p><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
+              <div class="btn-group">
+                <a href="#">
+                  <img class="blue-heart img-fluid" style="display: none; width: 19px; padding-right: 2px; padding-top: 3px;" src="../../static/blue-heart-icon.png" alt="blue-heart-favorite-icon">
+
+                  <p class="name-line"><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
+                </a>
+              </div>
+              <br />
               {% empty %}
               <p class="text-center">none found</p>
               {% endfor %}

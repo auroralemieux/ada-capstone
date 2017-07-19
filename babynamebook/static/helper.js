@@ -7,6 +7,12 @@ $(document).ready(function() {
     $('#accordion .panel-collapse').collapse('hide');
   });
 
+  $('.name-line').hover(function() {
+    $('.blue-heart').show();
+  },function() {
+    $('.blue-heart').hide();
+  });
+
   var getSize = $('#id_tree_upload').change(function() {
     $(".filesize").hide();
 
