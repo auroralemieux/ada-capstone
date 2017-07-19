@@ -33,16 +33,25 @@ def go(book_data):
     header4_style = styles["Heading4"]
     header2_style = styles["Heading2"]
     italic_style = styles["Italic"]
-    styleCentered = ParagraphStyle(name="centeredStyle", alignment=TA_CENTER)
+    smallCentered = ParagraphStyle(name="centeredStyle", fontSize=12, alignment=TA_CENTER)
+    medCentered = ParagraphStyle(name="centeredStyle", fontSize=14, alignment=TA_CENTER)
 
     doc = SimpleDocTemplate("media/babynamebook.pdf")
     Story = [Spacer(1,2*inch)]
     # Story.append(Spacer(PAGE_WIDTH/2.0, PAGE_HEIGHT/2.0))
     Story.append(Paragraph("%s" % (book_data["title"]), title_style))
-    Story.append(Spacer(2,0.2*inch))
-    Story.append(Paragraph("<link href='#girls'>Girl Names</link>", styleCentered))
-    Story.append(Paragraph("<link href='#boys'>Boy Names</link>", styleCentered))
-    Story.append(Paragraph("<link href='#stats'>Stats</link>", styleCentered))
+
+    Story.append(Paragraph("a custom baby name book from <link href='http://www.mybabynamebook.com'>mybabynamebook</link>", smallCentered))
+
+    Story.append(Spacer(1,3*inch))
+
+    Story.append(Paragraph("<link href='#girls'>Girl Names</link>", medCentered))
+    Story.append(Spacer(1,0.2*inch))
+
+    Story.append(Paragraph("<link href='#boys'>Boy Names</link>", medCentered))
+    Story.append(Spacer(1,0.2*inch))
+
+    Story.append(Paragraph("<link href='#stats'>Stats</link>", medCentered))
 
     Story.append(PageBreak())
 
