@@ -11,3 +11,7 @@
 .incomplete {
   color: red;
 }
+
+.heart {
+  display: none;
+}

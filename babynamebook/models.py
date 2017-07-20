@@ -24,6 +24,7 @@ class Name(models.Model):
     origin = models.CharField(max_length=200)
     gender = models.CharField(max_length=200)
     meaning = models.CharField(max_length=500)
+    users = models.ManyToManyField(User)
 
     def __str__(self):
         return self.first_name

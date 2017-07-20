@@ -16,6 +16,30 @@ from reportlab.graphics.shapes import Drawing
 import math
 from reportlab.lib import colors
 
+@login_required
+def favorite(request):
+    name_id = request.POST.get('name')
+    print("name is: ", name_id)
+    book_id = request.POST.get('book_id')
+    print("book is: ", book_id)
+
+    name = get_object_or_404(Name, pk=name_id)
+    user = request.user
+    if user in name.users.all():
+        name.users.remove(user)
+    else:
+        name.users.add(user)
+
+    print(len(name.users.all()))
+    # get the name id from the ajax request
+    # get the name
+    # check to see if current user is in the name's list of users
+    # if it is, remove it (toggle off)
+    # if it isn't, add it (toggle on)
+    # rerender the current page???
+    return redirect('book', pk=book_id)
+
+
 # maybe put this in a separate accounts project views file???
 def signup(request):
     if request.method =='POST':
@@ -85,6 +109,8 @@ def book(request, pk):
     # create data files for chart to use
     # __get_birth_year_stats(book, "F")
     # __get_birth_year_stats(book, "M")
+    user = request.user
+    user_names = user.names.all()
 
     datablob = [top_female, top_male, top_last, top_origin, pop_boy_names, pop_girl_names, book, all_boys, all_girls]
     book_data = __create_book_data(datablob)
@@ -102,7 +128,7 @@ def book(request, pk):
             return HttpResponseNotFound('The requested pdf was not found in our server.')
 
 
-    return render(request, 'babynamebook/book.html', {'book': book, 'persons': persons, 'all_names': all_names, 'top_female': top_female, 'top_male': top_male, 'top_last': top_last, 'top_origin': top_origin, 'pop_girl_names': pop_girl_names,'pop_boy_names': pop_boy_names, 'book_data': book_data })
+    return render(request, 'babynamebook/book.html', {'book': book, 'persons': persons, 'all_names': all_names, 'top_female': top_female, 'top_male': top_male, 'top_last': top_last, 'top_origin': top_origin, 'pop_girl_names': pop_girl_names,'pop_boy_names': pop_boy_names, 'book_data': book_data, 'user_names': user_names })
 
 
 def home(request):

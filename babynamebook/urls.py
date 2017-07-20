@@ -10,5 +10,6 @@ urlpatterns = [
     url(r'^account/$', views.account, name='account'),
     url(r'^book/(?P<pk>\d+)/$', views.book, name='book'),
     url(r'^search/$', views.search, name='search'),
+    url(r'^favorite/$', views.favorite, name='name_favorite'),
 
 ]
