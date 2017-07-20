@@ -175,7 +175,7 @@
               <div data-book="{{book.pk}}" data-id="{{person.pk}}" class="btn-group name-group">
                 <p class="name-line{{person.pk}}"><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
                 <a>
-                  <img id="heart{{person.pk}}" class="heart img-fluid" style="width: 19px; padding-left: 3px; padding-top: 3px;" src={% if person in user.names %}"../../static/plain-heart.jpg"{% else %}"../../static/blue-heart-icon.png"{% endif %} alt="heart-favorite-icon">
+                  <img id="heart{{person.pk}}" class="heart img-fluid" style="width: 19px; padding-left: 3px; padding-top: 3px;" src="../../static/plain-heart.jpg" alt="heart-favorite-icon">
                 </a>
 
 

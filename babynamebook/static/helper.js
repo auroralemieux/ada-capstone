@@ -33,44 +33,59 @@ $(document).ready(function() {
       });
   });
 
-  function toFavorite(nameId, bookId) {
-    console.log(nameId);
-    var book = bookId;
-    var name = nameId;
+  $(".name-group").on('mouseover', function() {
+    var nameId = $(this).attr("data-id");
+    var bookId = $(this).attr("data-book");
 
-    $.ajax({
-      url: "/favorite/",
-      type: "POST",
-      data: { 'name': name, 'book_id': book },
-      success: function() {
-        console.log("success!");
+    var whichHeart = "#heart" + nameId;
+    $(whichHeart).show();
+    // var that = this;
+    function favoriteHandler(event) {
+      if (event.handled !== true) {
+        var toFavorite = function(nameId, bookId) {
+          console.log(nameId);
+          var book = bookId;
+          var name = nameId;
+
+          $.ajax({
+            url: "/favorite/",
+            type: "POST",
+            data: { 'name': name, 'book_id': book },
+            success: function() {
+              console.log("success!");
+              var toggleHeart = function() {
+                console.log("toggling heart");
+                if ($(whichHeart).attr('src') == "../../static/plain-heart.jpg") {
+                  $(whichHeart).attr("src", "../../static/blue-heart-icon.png");
+                } else {
+                  $(whichHeart).attr("src", "../../static/plain-heart.jpg");
+                }
+              };
+              toggleHeart();
+            }
+          });
+
+          return false;
+        };
+
+        toFavorite(nameId, bookId);
+        event.handled = true;
       }
-    });
-    return false;
-  }
-
-
-
-  function favoriteHandler(event, nameId, bookId) {
-    if (event.handled !== true) {
-      toFavorite(nameId, bookId);
-      event.handled = true;
+      return false;
     }
-    return false;
-  }
 
-  // function hoverName(nameId, bookId, userFav) {
-  //   var whichHeart = "#heart" + nameId;
-  //   $(whichHeart).show();
-  //   // $(whichHeart).on('click', favoriteHandler(nameId, bookId));
-  // }
+    $(whichHeart).on('click', favoriteHandler);
 
-  // $(".name-group").on('mouseover', function() {
-  //   var nameId = $(this).attr("data-id");
-  //   var bookId = $(this).attr("data-book");
-  //   var userFav = $(this).attr("data-favorite");
-  //   hoverName(nameId, bookId, userFav);
-  // });
+  });
+
+
+  $(".name-group").on('mouseout', function() {
+    var nameId = $(this).attr("data-id");
+    var whichHeart = "#heart" + nameId;
+    if ($(whichHeart).attr('src') == "../../static/plain-heart.jpg") {
+      $(whichHeart).hide();
+    }
+  });
 
 
   var getSize = $('#id_tree_upload').change(function() {
