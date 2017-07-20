@@ -174,8 +174,9 @@
 
               <div data-book="{{book.pk}}" data-id="{{person.pk}}" class="btn-group name-group">
                 <p class="name-line{{person.pk}}"><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
+
                 <a>
-                  <img id="heart{{person.pk}}" class="heart img-fluid" style="width: 19px; padding-left: 3px; padding-top: 3px;" src="../../static/plain-heart.jpg" alt="heart-favorite-icon">
+                  <img id="heart{{person.pk}}" class="heart img-fluid" style="display: none; width: 19px; padding-left: 3px; padding-top: 3px;" src="../../static/plain-heart.jpg" alt="heart-favorite-icon">
                 </a>
 
 
@@ -190,7 +191,16 @@
               <h4 class="my-3 text-center">Girls</h4>
               {% with boysngirls|last as girls %}
               {% for person in girls %}
-              <p><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
+              <div data-book="{{book.pk}}" data-id="{{person.pk}}" class="btn-group name-group">
+                <p class="name-line{{person.pk}}"><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
+
+                <a>
+                  <img id="heart{{person.pk}}" class="heart img-fluid" style="display: none; width: 19px; padding-left: 3px; padding-top: 3px;" src="../../static/plain-heart.jpg" alt="heart-favorite-icon">
+                </a>
+
+
+              </div>
+              <br />
               {% empty %}
               <p class="text-center">none found</p>
               {% endfor %}

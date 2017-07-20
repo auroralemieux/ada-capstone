@@ -21,18 +21,33 @@ def favorite(request):
     name_id = request.POST.get('name')
     print("name is: ", name_id)
     book_id = request.POST.get('book_id')
+
     print("book is: ", book_id)
 
     name = get_object_or_404(Name, pk=name_id)
     user = request.user
     if user in name.users.all():
         name.users.remove(user)
+
     else:
         name.users.add(user)
 
     print(len(name.users.all()))
-    
+    print(name.users.all())
+
     return redirect('book', pk=book_id)
+
+
+@login_required
+def garbage(request):
+    name_id = request.POST.get('name')
+    print("name is: ", name_id)
+
+    name = get_object_or_404(Name, pk=name_id)
+    user = request.user
+    name.users.remove(user)
+
+    return redirect('account')
 
 
 # maybe put this in a separate accounts project views file???
@@ -60,7 +75,9 @@ def account(request):
         bookstuff["topboy"] = __make_top_ten_text(book, "M")
         bookinfo.append(bookstuff)
     user = request.user
-    return render(request, 'babynamebook/account.html', {'bookinfo': bookinfo, 'user': user})
+    favorites = user.name_set.all().extra(order_by = ['first_name'])
+    print(favorites)
+    return render(request, 'babynamebook/account.html', {'bookinfo': bookinfo, 'favorites':favorites})
 
 
 def search(request):

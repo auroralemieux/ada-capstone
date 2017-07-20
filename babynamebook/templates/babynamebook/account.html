@@ -3,25 +3,45 @@
 {% block content %}
 
 <article class="align-self-top col-md-12" id="my-books">
-  <h2 class="mb-3 text-center">My Books</h2>
   <div class="container">
     <div class="row ">
-      {% for bookchunk in bookinfo %}
-        <div class="card col col-md-6 col-lg-4 px-3 col-sm-12">
-          <div class="card-block">
-            <h4 class="card-title">{{ bookchunk.book.title }}</h4>
-            <p class="card-text">This book contains {{ bookchunk.namelength }} names from the original tree of {{ bookchunk.personlength }} people.</p>
-            <p class="card-text">
-              <small><strong>Top Girl Names:</strong>  {{ bookchunk.topgirl }}</small>
-            </p>
-            <p class="card-text">
-              <small><strong>Top Boy Names:</strong>  {{ bookchunk.topboy }}</small>
-            </p>
-            <a href="{% url 'book' pk=bookchunk.book.pk %}" class="btn btn-outline-success">See book</a>
+      <section class="col-sm-12 col-md-6 col-lg-8">
+        <h2 class="mb-3 text-center">My Books</h2>
+
+        {% for bookchunk in bookinfo %}
+          <div class="card col px-3 col-sm-12">
+            <div class="card-block">
+              <h4 class="card-title">{{ bookchunk.book.title }}</h4>
+              <p class="card-text">This book contains {{ bookchunk.namelength }} names from the original tree of {{ bookchunk.personlength }} people.</p>
+              <p class="card-text">
+                <small><strong>Top Girl Names:</strong>  {{ bookchunk.topgirl }}</small>
+              </p>
+              <p class="card-text">
+                <small><strong>Top Boy Names:</strong>  {{ bookchunk.topboy }}</small>
+              </p>
+              <a href="{% url 'book' pk=bookchunk.book.pk %}" class="btn btn-outline-success">See book</a>
+            </div>
           </div>
+        {% endfor %}
+      </section>
+      <section class="col-sm-12 col-md-6 col-lg-3">
+        <h2 class="mb-3 text-center">My Favorite Names</h2>
+        {% for name in favorites %}
+        <div data-id="{{name.pk}}" class="text-center btn-group fav-name">
+          <p class="text-center name-line{{name.pk}}">{{ name.first_name }}</p>
+
+          <a>
+            <img id="delete{{name.pk}}" class="delete img-fluid" style="display: none; width: 19px; padding-left: 3px; padding-top: 3px;" src="../../static/trash.png" alt="delete-favorite-icon">
+          </a>
+
+
         </div>
-      {% endfor %}
+        <br />
+        {% endfor %}
+
+      </section>
     </div>
+
   </div>
 
 

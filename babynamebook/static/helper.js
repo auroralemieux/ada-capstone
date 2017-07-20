@@ -39,7 +39,6 @@ $(document).ready(function() {
 
     var whichHeart = "#heart" + nameId;
     $(whichHeart).show();
-    // var that = this;
     function favoriteHandler(event) {
       if (event.handled !== true) {
         var toFavorite = function(nameId, bookId) {
@@ -50,7 +49,7 @@ $(document).ready(function() {
           $.ajax({
             url: "/favorite/",
             type: "POST",
-            data: { 'name': name, 'book_id': book },
+            data: { 'name': name, 'book_id': book},
             success: function() {
               console.log("success!");
               var toggleHeart = function() {
@@ -76,6 +75,44 @@ $(document).ready(function() {
 
     $(whichHeart).on('click', favoriteHandler);
 
+  });
+
+  $(".fav-name").on('mouseover', function() {
+    var nameId = $(this).attr("data-id");
+    var whichGarbage = "#delete" + nameId;
+    $(whichGarbage).show();
+    function garbageHandler(event) {
+      if (event.handled !== true) {
+        var toGarbage = function(nameId) {
+          console.log(nameId);
+          var name = nameId;
+
+          $.ajax({
+            url: "/garbage/",
+            type: "POST",
+            data: { 'name': name},
+            success: function() {
+              console.log("deleted from favorites!");
+            }
+          });
+
+          return false;
+        };
+
+        toGarbage(nameId);
+        event.handled = true;
+      }
+      return false;
+    }
+
+    $(whichGarbage).on('click', garbageHandler);
+
+  });
+
+  $(".fav-name").on('mouseout', function() {
+    var nameId = $(this).attr("data-id");
+    var whichGarbage = "#delete" + nameId;
+    $(whichGarbage).hide();
   });
 
 
