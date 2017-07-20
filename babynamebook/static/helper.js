@@ -44,26 +44,14 @@ $(document).ready(function() {
       data: { 'name': name, 'book_id': book },
       success: function() {
         console.log("success!");
-        toggleHeart();
       }
     });
-
     return false;
-    // ajax the name id to the favorites view
   }
 
 
 
-  function toggleHeart() {
-    console.log("toggling heart");
-    if ($(whichHeart).attr('src') == "../../static/plain-heart.jpg") {
-      $(whichHeart).attr("src", "../../static/blue-heart-icon.png");
-    } else {
-      $(whichHeart).attr("src", "../../static/plain-heart.jpg");
-    }
-  }
-
-  function favoriteHandler(event) {
+  function favoriteHandler(event, nameId, bookId) {
     if (event.handled !== true) {
       toFavorite(nameId, bookId);
       event.handled = true;
@@ -71,25 +59,18 @@ $(document).ready(function() {
     return false;
   }
 
-  $(".name-group").on('mouseover', function() {
-    nameId = $(this).attr("data-id");
-    bookId = $(this).attr("data-book");
+  // function hoverName(nameId, bookId, userFav) {
+  //   var whichHeart = "#heart" + nameId;
+  //   $(whichHeart).show();
+  //   // $(whichHeart).on('click', favoriteHandler(nameId, bookId));
+  // }
 
-    whichHeart = "#heart" + nameId;
-    $(whichHeart).show();
-
-    $(whichHeart).on('click', favoriteHandler);
-
-  });
-
-
-  $(".name-group").on('mouseout', function() {
-    nameId = $(this).attr("data-id");
-    whichHeart = "#heart" + nameId;
-    if ($(whichHeart).attr('src') == "../../static/plain-heart.jpg") {
-      $(whichHeart).hide();
-    }
-  });
+  // $(".name-group").on('mouseover', function() {
+  //   var nameId = $(this).attr("data-id");
+  //   var bookId = $(this).attr("data-book");
+  //   var userFav = $(this).attr("data-favorite");
+  //   hoverName(nameId, bookId, userFav);
+  // });
 
 
   var getSize = $('#id_tree_upload').change(function() {
