@@ -31,24 +31,40 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'test-babynamebook.us-west-2.elasticbeanstalk.com']
 
+AWS_FILE_EXPIRE = 200
+AWS_PRELOAD_METADATA = True
+AWS_QUERYSTRING_AUTH = True
 
 AWS_HEADERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'Cache-Control': 'max-age=94608000',
     }
+# AWS_STORAGE_BUCKET_NAME = 'mybabynamebooktestbucket'
+# AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME', '')
 
-AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME', '')
-
+AWS_STORAGE_BUCKET_NAME = 'babynamebooktestbucket'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_HOST = "s3-us-west-2.amazonaws.com"
 
+DEFAULT_FILE_STORAGE = 'capstone.utils.MediaRootS3BotoStorage'
+STATICFILES_STORAGE = 'capstone.utils.StaticRootS3BotoStorage'
+S3DIRECT_REGION = 'us-west-2'
+S3_URL = '//%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
+MEDIA_URL = '//%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME
+MEDIA_ROOT = MEDIA_URL
+STATIC_URL = S3_URL + 'static/'
+ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
-STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
+# STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
+# STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+# STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, '..', 'www', 'static')
 
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+# MEDIA_URL = '/media/'
 
-
-# Application definition
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID', '')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY', '')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -194,10 +210,7 @@ LIVE_SERVER_PORT = 8000
 
 LOGIN_REDIRECT_URL = '/'
 
-TASK_UPLOAD_FILE_TYPES = ['octet-stream']
 
-AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID', '')
-AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY', '')
 
 # SOCIAL_AUTH_FACEBOOK_KEY = config('SOCIAL_AUTH_FACEBOOK_KEY')  # App ID
 # SOCIAL_AUTH_FACEBOOK_SECRET = config('SOCIAL_AUTH_FACEBOOK_SECRET')  # App Secret
