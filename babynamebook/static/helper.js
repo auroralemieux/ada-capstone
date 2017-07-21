@@ -33,6 +33,70 @@ $(document).ready(function() {
       });
   });
 
+
+  // I think this needs more specific which heart info - not working
+  // ----------------------
+  // $(".heart").on('click', {nameId: $(this).attr("data-id"), bookId: $(this).attr("data-book")}, function(event) {
+  //   var nameId = event.data.nameId;
+  //   var bookId = event.data.bookId;
+  //   // var whichHeart = "#heart" + nameId;
+  //   if (event.handled !== true) {
+  //     var toFavorite = function(nameId, bookId) {
+  //       console.log(nameId);
+  //       var book = bookId;
+  //       var name = nameId;
+  //
+  //       $.ajax({
+  //         url: "/favorite/",
+  //         type: "POST",
+  //         data: { 'name': name, 'book_id': book},
+  //         success: function() {
+  //           console.log("success in ajax!");
+  //         }
+  //       });
+  //       return false;
+  //     };
+  //     toFavorite(nameId, bookId);
+  //     event.handled = true;
+  //   }
+  //   return false;
+  // });
+
+
+  $(".name-group").on('mouseover', function() {
+    var nameId = $(this).attr("data-id");
+    var bookId = $(this).attr("data-book");
+
+    var whichHeart = "#heart" + nameId;
+    function favoriteHandler(event) {
+      if (event.handled !== true) {
+        var toFavorite = function(nameId, bookId) {
+          console.log(nameId);
+          var book = bookId;
+          var name = nameId;
+
+          $.ajax({
+            url: "/favorite/",
+            type: "POST",
+            data: { 'name': name, 'book_id': book},
+            success: function() {
+              console.log("success in ajaxland!");
+            }
+          });
+          return false;
+        };
+
+        toFavorite(nameId, bookId);
+        event.handled = true;
+      }
+      return false;
+    }
+    $(whichHeart).on('click', favoriteHandler);
+  });
+
+
+
+
   // $(".name-group").on('mouseover', function() {
   //   var nameId = $(this).attr("data-id");
   //   var bookId = $(this).attr("data-book");

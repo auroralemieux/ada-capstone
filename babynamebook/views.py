@@ -19,16 +19,16 @@ from reportlab.lib import colors
 @login_required
 def favorite(request):
     name_id = request.POST.get('name')
-    print("name is: ", name_id)
     book_id = request.POST.get('book_id')
 
     print("book is: ", book_id)
 
     name = get_object_or_404(Name, pk=name_id)
+    print("name is: ", name.first_name)
+
     user = request.user
     if user in name.users.all():
         name.users.remove(user)
-
     else:
         name.users.add(user)
 
