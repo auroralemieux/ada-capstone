@@ -22,7 +22,7 @@
     <h2 class="mb-3 text-center">My Books</h2>
     <article class="row">
       {% for bookchunk in bookinfo %}
-      <div class="card col mb-3 col-sm-12 col-lg-4 mx-auto">
+      <div class="card mb-3 col-xs-12 col-sm-12 col-md-6 col-lg-4">
         <div class="card-block">
           <h4 class="card-title text-center">{{ bookchunk.book.title }}</h4>
           <p class="card-text">This book contains {{ bookchunk.namelength }} names from the original tree of {{ bookchunk.personlength }} people.</p>
