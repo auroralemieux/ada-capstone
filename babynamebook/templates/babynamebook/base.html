@@ -50,7 +50,7 @@
         <form class="inline-form mt-3" action={% url 'search' %} method="POST">{% csrf_token %}
           <div class="input-group">
             <label class="sr-only" for="query">Search terms</label>
-            <input class="form-control" id="search_term" type="text" name="query" >
+            <input class="form-control" id="search_term" style="width: 150px" type="text" name="query" >
             <span class="input-group-btn">
               <button type="submit" class="btn btn-info" id="search-button">Search Names</button>
             </span>
