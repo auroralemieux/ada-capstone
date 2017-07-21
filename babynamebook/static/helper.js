@@ -33,43 +33,24 @@ $(document).ready(function() {
       });
   });
 
-
-  // I think this needs more specific which heart info - not working
-  // ----------------------
-  // $(".heart").on('click', {nameId: $(this).attr("data-id"), bookId: $(this).attr("data-book")}, function(event) {
-  //   var nameId = event.data.nameId;
-  //   var bookId = event.data.bookId;
-  //   // var whichHeart = "#heart" + nameId;
-  //   if (event.handled !== true) {
-  //     var toFavorite = function(nameId, bookId) {
-  //       console.log(nameId);
-  //       var book = bookId;
-  //       var name = nameId;
-  //
-  //       $.ajax({
-  //         url: "/favorite/",
-  //         type: "POST",
-  //         data: { 'name': name, 'book_id': book},
-  //         success: function() {
-  //           console.log("success in ajax!");
-  //         }
-  //       });
-  //       return false;
-  //     };
-  //     toFavorite(nameId, bookId);
-  //     event.handled = true;
-  //   }
-  //   return false;
-  // });
-
-
+  // THIS WORKS
   $(".name-group").on('mouseover', function() {
     var nameId = $(this).attr("data-id");
     var bookId = $(this).attr("data-book");
 
     var whichHeart = "#heart" + nameId;
+
     function favoriteHandler(event) {
       if (event.handled !== true) {
+        var toggleHeart = function() {
+          console.log("toggling heart");
+          if ($(whichHeart).attr('src') == "../../static/plain-heart.jpg") {
+            $(whichHeart).attr("src", "../../static/blue-heart-icon.png");
+          } else {
+            $(whichHeart).attr("src", "../../static/plain-heart.jpg");
+          }
+        };
+        toggleHeart();
         var toFavorite = function(nameId, bookId) {
           console.log(nameId);
           var book = bookId;
@@ -97,96 +78,52 @@ $(document).ready(function() {
 
 
 
-  // $(".name-group").on('mouseover', function() {
-  //   var nameId = $(this).attr("data-id");
-  //   var bookId = $(this).attr("data-book");
-  //
-  //   var whichHeart = "#heart" + nameId;
-  //   $(whichHeart).show();
-  //   function favoriteHandler(event) {
-  //     if (event.handled !== true) {
-  //       var toFavorite = function(nameId, bookId) {
-  //         console.log(nameId);
-  //         var book = bookId;
-  //         var name = nameId;
-  //
-  //         $.ajax({
-  //           url: "/favorite/",
-  //           type: "POST",
-  //           data: { 'name': name, 'book_id': book},
-  //           success: function() {
-  //             console.log("success!");
-  //             var toggleHeart = function() {
-  //               console.log("toggling heart");
-  //               if ($(whichHeart).attr('src') == "../../static/plain-heart.jpg") {
-  //                 $(whichHeart).attr("src", "../../static/blue-heart-icon.png");
-  //               } else {
-  //                 $(whichHeart).attr("src", "../../static/plain-heart.jpg");
-  //               }
-  //             };
-  //             toggleHeart();
-  //           }
-  //         });
-  //
-  //         return false;
-  //       };
-  //
-  //       toFavorite(nameId, bookId);
-  //       event.handled = true;
-  //     }
-  //     return false;
-  //   }
-  //
-  //   $(whichHeart).on('click', favoriteHandler);
-  //
-  // });
 
-  // $(".fav-name").on('mouseover', function() {
-  //   var nameId = $(this).attr("data-id");
-  //   var whichGarbage = "#delete" + nameId;
-  //   $(whichGarbage).show();
-  //   function garbageHandler(event) {
-  //     if (event.handled !== true) {
-  //       var toGarbage = function(nameId) {
-  //         console.log(nameId);
-  //         var name = nameId;
-  //
-  //         $.ajax({
-  //           url: "/garbage/",
-  //           type: "POST",
-  //           data: { 'name': name},
-  //           success: function() {
-  //             console.log("deleted from favorites!");
-  //           }
-  //         });
-  //
-  //         return false;
-  //       };
-  //
-  //       toGarbage(nameId);
-  //       event.handled = true;
-  //     }
-  //     return false;
-  //   }
-  //
-  //   $(whichGarbage).on('click', garbageHandler);
-  //
-  // });
-  //
-  // $(".fav-name").on('mouseout', function() {
-  //   var nameId = $(this).attr("data-id");
-  //   var whichGarbage = "#delete" + nameId;
-  //   $(whichGarbage).hide();
-  // });
 
-  //
-  // $(".name-group").on('mouseout', function() {
-  //   var nameId = $(this).attr("data-id");
-  //   var whichHeart = "#heart" + nameId;
-  //   if ($(whichHeart).attr('src') == "../../static/plain-heart.jpg") {
-  //     $(whichHeart).hide();
-  //   }
-  // });
+  $(".fav-name").on('mouseover', function() {
+    var nameId = $(this).attr("data-id");
+    var whichGarbage = "#delete" + nameId;
+    $(whichGarbage).show();
+    function garbageHandler(event) {
+      if (event.handled !== true) {
+
+        var toGarbage = function(nameId) {
+          console.log(nameId);
+          var name = nameId;
+
+          $.ajax({
+            url: "/garbage/",
+            type: "POST",
+            data: { 'name': name},
+            success: function() {
+              console.log("deleted from favorites!");
+              var favNamesContentEl = $("#fav-names-content");
+              // favNamesContent.empty();
+              var favNamesBackup = $("#update-favs-list").html();
+              favNamesContentEl.html(favNamesBackup);
+            }
+          });
+
+          return false;
+        };
+
+        toGarbage(nameId);
+        event.handled = true;
+      }
+      return false;
+    }
+
+    $(whichGarbage).on('click', garbageHandler);
+
+  });
+
+  $(".fav-name").on('mouseout', function() {
+    var nameId = $(this).attr("data-id");
+    var whichGarbage = "#delete" + nameId;
+    $(whichGarbage).hide();
+  });
+
+
 
 
   var getSize = $('#id_tree_upload').change(function() {

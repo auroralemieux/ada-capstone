@@ -26,18 +26,29 @@
       </section>
       <section class="col-sm-12 col-md-6 col-lg-3">
         <h2 class="mb-3 text-center">My Favorite Names</h2>
-        {% for name in favorites %}
-        <div data-id="{{name.pk}}" class="text-center btn-group fav-name">
-          <p class="text-center name-line{{name.pk}}">{{ name.first_name }}</p>
+        <section id="fav-names-content">
+          {% for name in favorites %}
+          <div data-id="{{name.pk}}" class="text-center btn-group fav-name">
+            <p class="text-center name-line{{name.pk}}">{{ name.first_name }}</p>
+            <a>
+              <img id="delete{{name.pk}}" class="delete img-fluid" style="display: none; width: 19px; padding-left: 3px; padding-top: 3px;" src="../../static/trash.png" alt="delete-favorite-icon">
+            </a>
+          </div>
+          <br />
+          {% endfor %}
+        </section>
+        <section id="update-favs-list" style="display: none">
+          {% for name in favorites %}
+          <div data-id="{{name.pk}}" class="text-center btn-group fav-name">
+            <p class="text-center name-line{{name.pk}}">{{ name.first_name }}</p>
+            <a>
+              <img id="delete{{name.pk}}" class="delete img-fluid" style="display: none; width: 19px; padding-left: 3px; padding-top: 3px;" src="../../static/trash.png" alt="delete-favorite-icon">
+            </a>
+          </div>
+          <br />
+          {% endfor %}
+        </section>
 
-          <a>
-            <img id="delete{{name.pk}}" class="delete img-fluid" style="display: none; width: 19px; padding-left: 3px; padding-top: 3px;" src="../../static/trash.png" alt="delete-favorite-icon">
-          </a>
-
-
-        </div>
-        <br />
-        {% endfor %}
 
       </section>
     </div>
