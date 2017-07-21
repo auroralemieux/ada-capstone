@@ -431,4 +431,4 @@ def __stats_chart(name):
     lc.lines[0].strokeWidth = 2
     drawing.add(lc)
 
-    renderPM.drawToFile(drawing, 'babynamebook/static/chart.png', 'PNG')
+    renderPM.drawToFile(drawing, '{% static 'chart.png'}', 'PNG')
