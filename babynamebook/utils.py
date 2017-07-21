@@ -7,8 +7,8 @@ def parse_ged(ged_file):
     # with open(ged_file, 'r') as ged:
     # ged = codecs.open("media/" + ged_file, encoding="cp437")
     # xml = codecs.open("media/" + ged_file + ".xml", "w", "utf8")
-    ged = codecs.open(ged_file, encoding="cp437")
-    xml = codecs.open(ged_file + ".xml", "w", "utf8")
+    ged = codecs.open("static/" + ged_file, encoding="cp437")
+    xml = codecs.open("static/" + ged_file + ".xml", "w", "utf8")
     xml.write("""<?xml version='1.0'?>\n""")
     xml.write("<gedcom>")
     sub = []
@@ -62,7 +62,7 @@ def parse_ged(ged_file):
     xml.write("</gedcom>\n")
     ged.close()
     xml.close()
-    xml_filename = ged_file + ".xml"
+    xml_filename = "static/" + ged_file + ".xml"
     return xml_filename
 
 
