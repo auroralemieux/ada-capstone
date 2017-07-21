@@ -29,7 +29,7 @@ DEBUG = False
 
 # ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'test-babynamebook.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'capstone-django-project-dev.us-west-2.elasticbeanstalk.com']
 
 AWS_FILE_EXPIRE = 200
 AWS_PRELOAD_METADATA = True
