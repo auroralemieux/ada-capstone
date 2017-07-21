@@ -92,29 +92,23 @@ $(document).ready(function() {
           var name = nameId;
 
           $.ajax({
-            url: "/garbage/",
+            url: "/account/",
             type: "POST",
             data: { 'name': name},
             success: function() {
               console.log("deleted from favorites!");
-              var favNamesContentEl = $("#fav-names-content");
-              // favNamesContent.empty();
-              var favNamesBackup = $("#update-favs-list").html();
-              favNamesContentEl.html(favNamesBackup);
             }
           });
-
           return false;
         };
-
+        var deletedNameEl = $("#acct-fav-" + nameId);
+        deletedNameEl.remove();
         toGarbage(nameId);
         event.handled = true;
       }
       return false;
     }
-
     $(whichGarbage).on('click', garbageHandler);
-
   });
 
   $(".fav-name").on('mouseout', function() {
@@ -124,8 +118,6 @@ $(document).ready(function() {
   });
 
 
-
-
   var getSize = $('#id_tree_upload').change(function() {
     $(".filesize").hide();
 
@@ -133,6 +125,7 @@ $(document).ready(function() {
     var size = file.size;
     $(".filesize").html(size);
   });
+
 
   $('#upload-submit-button').on('click', function() {
     var size = $(".filesize").html();
@@ -154,7 +147,6 @@ $(document).ready(function() {
         $('#percent').html("finishing your book");
         $(".progress-bar").addClass("progress-bar-animated");
       }
-
     };
     var animateProgress = setInterval(function() {
       loading();

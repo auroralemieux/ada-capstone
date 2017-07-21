@@ -20,34 +20,14 @@ from reportlab.lib import colors
 def favorite(request):
     name_id = request.POST.get('name')
     book_id = request.POST.get('book_id')
-
-    print("book is: ", book_id)
-
     name = get_object_or_404(Name, pk=name_id)
-    print("name is: ", name.first_name)
-
     user = request.user
     if user in name.users.all():
         name.users.remove(user)
     else:
         name.users.add(user)
 
-    print(len(name.users.all()))
-    print(name.users.all())
-
     return redirect('book', pk=book_id)
-
-
-@login_required
-def garbage(request):
-    name_id = request.POST.get('name')
-    print("name is: ", name_id)
-
-    name = get_object_or_404(Name, pk=name_id)
-    user = request.user
-    name.users.remove(user)
-
-    return redirect('account')
 
 
 # maybe put this in a separate accounts project views file???
@@ -64,6 +44,14 @@ def signup(request):
 
 @login_required
 def account(request):
+    if request.method == "POST":
+        name_id = request.POST.get('name')
+        print("name is: ", name_id)
+
+        name = get_object_or_404(Name, pk=name_id)
+        user = request.user
+        name.users.remove(user)
+
     bookinfo = []
     books = Book.objects.filter(author=request.user)
     for book in books:
@@ -90,6 +78,7 @@ def search(request):
 
         return render(request, 'babynamebook/search.html', {'search_term':search_term, 'boys':boy_results, 'girls':girl_results, 'results':results })
     else:
+        # if they tried to navigate to the search results page with no query made...
         return redirect('home')
 
 
@@ -118,9 +107,6 @@ def book(request, pk):
     pop_boy_names = __get_popular_names_2016("M", book)
     pop_girl_names = __get_popular_names_2016("F", book)
 
-    # create data files for chart to use
-    # __get_birth_year_stats(book, "F")
-    # __get_birth_year_stats(book, "M")
     user = request.user
 
     datablob = [top_female, top_male, top_last, top_origin, pop_boy_names, pop_girl_names, book, all_boys, all_girls]
