@@ -413,6 +413,9 @@ def __stats_chart(name):
     catNames = "1500s 1600s 1700s 1800s 1900s 2000s".split(" ")
     lc.categoryAxis.categoryNames = catNames
     lc.categoryAxis.labels.boxAnchor = 'n'
+    lc.categoryAxis.labels.fontName = 'Helvetica'
+
+    lc.valueAxis.labels.fontName = 'Helvetica'
     lc.lines[0].strokeColor = colors.green
     lc.valueAxis.valueMin = 0
     if max(years_by_century) > 0:
