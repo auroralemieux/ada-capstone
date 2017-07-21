@@ -416,8 +416,12 @@ def __stats_chart(name):
     lc.lines[0].strokeColor = colors.green
     lc.valueAxis.valueMin = 0
     if max(years_by_century) > 0:
-        lc.valueAxis.valueMax = max(years_by_century) * 1.1
-        lc.valueAxis.valueStep = round(lc.valueAxis.valueMax, -1) / 10
+        if sum(years_by_century) < 6:
+            lc.valueAxis.valueMax = 6
+            lc.valueAxis.valueStep = 1
+        else:
+            lc.valueAxis.valueMax = max(years_by_century) * 1.1
+            lc.valueAxis.valueStep = round(lc.valueAxis.valueMax, -1) / 10
     else:
         lc.valueAxis.valueMax = 10
         lc.valueAxis.valueStep = 1

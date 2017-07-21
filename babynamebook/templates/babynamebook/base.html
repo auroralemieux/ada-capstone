@@ -27,7 +27,10 @@
           <a class="nav-item nav-link" role="button" data-toggle="modal" data-target="#contactModal">
             about
           </a>
-          <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="ancestryModalLabel" aria-hidden="true">
+          <a class="nav-item nav-link" role="button" data-toggle="modal" data-target="#faqModal">
+            faq
+          </a>
+          <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -40,6 +43,51 @@
                   <p>This website was created as my capstone project while at Ada Developers Academy (cohort 7).</p>
                   <p>Tech stack is python/django/postgres with some reportlab/platypus for pdf/png generation.</p>
                   <p>Check out my github <a href="http://www.github.com/auroralemieux">here</a> and the repo for this project <a href="https://github.com/auroralemieux/ada-capstone">here</a>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="faqModal" tabindex="-1" role="dialog" aria-labelledby="faqModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="faqModalLabel">Frequently Asked Questions</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <dl>
+                    <dt role="button" class="mb-2 btn btn-block btn-outline-info" data-toggle="collapse" data-target="#question1" aria-expanded="false" aria-controls="question1">Where do all the names come from?
+                    </dt>
+                    <dd class="collapse" id="question1">
+                      <div class="text-justify card card-block">
+                        <p>The Social Security Administration makes publically available a list of historical names registered with the SSA since 1880.</p>
+                        <p>Meanings and origins for as many names as possible were sourced from baby name databases.</p>
+                      </div>
+                    </dd>
+                    <dt role="button" class="mb-2 btn btn-block btn-outline-info" data-toggle="collapse" data-target="#question2" aria-expanded="false" aria-controls="question2">What does the graph on the search page really show?
+                    </dt>
+                    <dd class="collapse" id="question2">
+                      <div class="text-justify card card-block">
+                        <p>To create the graph, mybabynamebook looks through all the people in all the trees uploaded to mybabynamebook and finds names that match the search term. </p>
+                        <p>Then it checks all those people's birth years and categorizes them by century as shown.</p>
+                        <p>The graph will be more representative as more people use mybabynamebook and add their trees.</p>
+                      </div>
+                    </dd>
+                    <dt role="button" class="mb-2 btn btn-block btn-outline-info" data-toggle="collapse" data-target="#question3" aria-expanded="false" aria-controls="question3">What actually happens when I upload my family tree?
+                    </dt>
+                    <dd class="collapse" id="question3">
+                      <div class="text-justify card card-block">
+                        <p>Your tree goes through a series of transformations to become the baby name book you see.</p>
+                        <p>First, it is transformed from .ged to .xml format. Then each person is  extracted and name and birth year is saved.</p>
+                        <p>Next, each person in your tree is checked against our names database for a match in first name or middle name (both will end up in your book).</p>
+                        <p>Finally, names are sorted and stats are crunched, and the book is saved to your user account on mybabynamebook. Don't forget to download a pdf copy!</p>
+                      </div>
+                    </dd>
+                  </dl>
+
+
                 </div>
               </div>
             </div>
