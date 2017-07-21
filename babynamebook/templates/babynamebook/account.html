@@ -9,8 +9,11 @@
       {% for name in favorites %}
       <div id="acct-fav-{{name.pk}}" data-id="{{name.pk}}" class="col-lg-2 col-md-3 col-sm-6 mx-auto btn-group fav-name justify-content-center">
         <p class=" text-xs-center text-center name-line{{name.pk}}">{{ name.first_name }}</p>
-        <a>
+        <!-- <a>
           <img id="delete{{name.pk}}" class="text-xs-center text-center delete img-fluid" style="display: none; width: 19px; padding-left: 3px; padding-top: 3px;" src="../../static/trash.png" alt="delete-favorite-icon">
+        </a> -->
+        <a>
+          <img id="delete{{name.pk}}" class="text-xs-center text-center delete img-fluid" style="display: none; width: 19px; padding-left: 3px; padding-top: 3px;" src="{% static 'trash.png' %}" alt="delete-favorite-icon">
         </a>
       </div>
       {% empty %}
