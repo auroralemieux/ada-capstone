@@ -5,14 +5,14 @@
 <article class="align-self-top" id="my-books">
   <section class="container mb-3">
     <h2 class="mb-4 text-center">My Favorite Names</h2>
-    <section id="fav-names-content" class="row ">
+    <section id="fav-names-content" class="row">
       {% for name in favorites %}
-      <span id="acct-fav-{{name.pk}}" data-id="{{name.pk}}" class="col-lg-2 col-md-3 col-sm-12 mx-auto btn-group fav-name ">
-        <p class="text-xs-center text-center name-line{{name.pk}}">{{ name.first_name }}</p>
+      <div id="acct-fav-{{name.pk}}" data-id="{{name.pk}}" class="col-lg-2 col-md-3 col-sm-6 mx-auto btn-group fav-name justify-content-center">
+        <p class=" text-xs-center text-center name-line{{name.pk}}">{{ name.first_name }}</p>
         <a>
           <img id="delete{{name.pk}}" class="text-xs-center text-center delete img-fluid" style="display: none; width: 19px; padding-left: 3px; padding-top: 3px;" src="../../static/trash.png" alt="delete-favorite-icon">
         </a>
-      </span>
+      </div>
       {% empty %}
       <p class="text-center col-sm-12"><small>No names favorited. To favorite a name, view a book and click on the blue heart next to your choice.</small></p>
       {% endfor %}

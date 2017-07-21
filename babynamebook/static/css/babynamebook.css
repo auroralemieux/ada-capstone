@@ -11,3 +11,7 @@
 .incomplete {
   color: red;
 }
+
+.fav-name:hover {
+  color: #31B0D5;
+}
