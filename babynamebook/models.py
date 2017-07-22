@@ -35,7 +35,7 @@ class Book(models.Model):
 
     author = models.ForeignKey(User)
     names = models.ManyToManyField(Name)
-    tree_upload = models.FileField(upload_to='uploads', max_length=200)
+    tree_upload = models.FileField(upload_to='media', max_length=200)
     title = models.CharField(max_length=200)
     created_date = models.DateTimeField(default=timezone.now)
 
