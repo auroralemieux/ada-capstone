@@ -145,12 +145,19 @@ def upload_tree(request):
         form = BookForm(request.POST, request.FILES)
         print("filesize: ", request.FILES["tree_upload"]._size)
         if form.is_valid():
+            # for key, file in request.FILES['tree_uplaod']:
+            #
+            #     data = file
+            # tree = open(data, "r")
+            # book = Book(title=request.POST['title'])
+
             book = Book(tree_upload=request.FILES['tree_upload'], title=request.POST['title'])
             # add stuff about user
             book.author = request.user
             book.save()
             filename = book.tree_upload.name
             xml_filename = parse_ged(filename)
+            # xml_filename = parse_ged(tree)
 
             # person_list is an array of dictionary objects
             person_list = parse_xml(xml_filename)
