@@ -10,8 +10,9 @@ def parse_ged(ged_file):
        ged = response.read()
     #    THIS WORKS!!!!
     print("BREADCRUMB # 4.1. READ THE GED OFF S3.")
-    print("GED FILE LENGTH: ",len(ged))
-    print(ged)
+    print("GED FILE type: ",type(ged))
+
+
     # THIS WAS THE LOCALHOST LINE
     # ged = codecs.open("media/" + ged_file, encoding="cp437")
 
