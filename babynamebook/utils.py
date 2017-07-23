@@ -43,8 +43,8 @@ def parse_ged(ged_file):
             errors.append("Error: unexpected level: " + s)
         sub += [tag]
         if id is not None:
-            xml.write("<%s id=\"%s\">" % (tag, id))
-            xml. += ("<%s id=\"%s\">" % (tag, id))
+            # xml.write("<%s id=\"%s\">" % (tag, id))
+            xml += ("<%s id=\"%s\">" % (tag, id))
 
         else:
             # xml.write("<%s>" % (tag))
