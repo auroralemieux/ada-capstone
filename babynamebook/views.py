@@ -123,11 +123,12 @@ def book(request, pk):
         # filename = 'babynamebook.pdf'
         # if fs.exists(filename):
         #     with fs.open(filename) as pdf:
-            response = HttpResponse(pdf, content_type='application/pdf')
-            response['Content-Disposition'] = 'attachment; filename="mybabynamebook.pdf"'
-            return response
-        else:
-            return HttpResponseNotFound('The requested pdf was not found in our server.')
+            if pdf:
+                response = HttpResponse(pdf, content_type='application/pdf')
+                response['Content-Disposition'] = 'attachment; filename="mybabynamebook.pdf"'
+                return response
+            else:
+                return HttpResponseNotFound('The requested pdf was not found in our server.')
 
 
     return render(request, 'babynamebook/book.html', {'book': book, 'persons': persons, 'all_names': all_names, 'top_female': top_female, 'top_male': top_male, 'top_last': top_last, 'top_origin': top_origin, 'pop_girl_names': pop_girl_names,'pop_boy_names': pop_boy_names, 'book_data': book_data, 'user': user })
