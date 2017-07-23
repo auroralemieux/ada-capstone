@@ -117,6 +117,7 @@ def book(request, pk):
     datablob = [top_female, top_male, top_last, top_origin, pop_boy_names, pop_girl_names, book, all_boys, all_girls]
     book_data = __create_book_data(datablob)
 
+    # this is the pdf download button
     if request.method == "POST":
         go(book_data)
         req = urllib.request.Request('https://s3-us-west-2.amazonaws.com/babynamebooktestbucket/media/media/babynamebook.pdf')

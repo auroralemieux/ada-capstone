@@ -35,6 +35,7 @@ def go(book_data):
     italic_style = styles["Italic"]
     smallCentered = ParagraphStyle(name="centeredStyle", fontSize=12, alignment=TA_CENTER)
     medCentered = ParagraphStyle(name="centeredStyle", fontSize=14, alignment=TA_CENTER)
+
     doc = SimpleDocTemplate("media/babynamebook.pdf")
 
     # doc = SimpleDocTemplate("babynamebook/static/babynamebook.pdf")
