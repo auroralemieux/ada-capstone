@@ -1,20 +1,24 @@
 import codecs, os, re, sys
 from xml.sax.saxutils import escape
 import xml.etree.ElementTree as ET
-import urllib
+import urllib.request
 
 
 def parse_ged(ged_file):
     # with open(ged_file, 'r') as ged:
     # ged = codecs.open("https://s3-us-west-2.amazonaws.com/babynamebooktestbucket/media/" + ged_file, encoding="cp437")
-    opener = urllib.URLopener()
-    myurl = "https://s3-us-west-2.amazonaws.com/babynamebooktestbucket/media/" + ged_file
-    ged = opener.open(myurl)
+    with urllib.request.urlopen("https://s3-us-west-2.amazonaws.com/babynamebooktestbucket/media/" + ged_file) as response:
+       ged = response.read()
+    print("BREADCRUMB # 4.1. READ THE GED OFF S3.")
+    # myurl = "https://s3-us-west-2.amazonaws.com/babynamebooktestbucket/media/" + ged_file
+    # ged = opener.open(myurl)
     # ged = codecs.open(ged_file, encoding="cp437")
 
     # ged = codecs.open("media/" + ged_file, encoding="cp437")
 
     xml = codecs.open("media/" + ged_file + ".xml", "w", "utf8")
+    print("BREADCRUMB # 4.2. READ THE XML OFF S3. ??")
+
     xml.write("""<?xml version='1.0'?>\n""")
     xml.write("<gedcom>")
     sub = []
