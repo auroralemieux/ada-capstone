@@ -5,7 +5,9 @@ import xml.etree.ElementTree as ET
 
 def parse_ged(ged_file):
     # with open(ged_file, 'r') as ged:
-    ged = codecs.open("media/" + ged_file, encoding="cp437")
+    ged = codecs.open(ged_file, encoding="cp437")
+    # ged = codecs.open("media/" + ged_file, encoding="cp437")
+
     xml = codecs.open("media/" + ged_file + ".xml", "w", "utf8")
     xml.write("""<?xml version='1.0'?>\n""")
     xml.write("<gedcom>")
