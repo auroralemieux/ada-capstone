@@ -9,6 +9,8 @@ def parse_ged(ged_file):
     with urllib.request.urlopen("https://s3-us-west-2.amazonaws.com/babynamebooktestbucket/media/" + ged_file) as response:
        ged = response.read()
     #    THIS WORKS!!!!
+
+    ged = ged.decode("utf-8")
     print("BREADCRUMB # 4.1. READ THE GED OFF S3.")
     print("GED FILE type: ",type(ged))
 
