@@ -28,6 +28,7 @@ def parse_ged(ged_file):
     xml += ("<gedcom>")
     sub = []
     errors = []
+    ged = ged.split("\n")
     for s in ged:
         s = s.strip()
         m = re.match(r"(\d+) (@(\w+)@ )?(\w+)( (.*))?", s)
