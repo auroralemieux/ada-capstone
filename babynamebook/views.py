@@ -16,6 +16,8 @@ from reportlab.graphics.shapes import Drawing
 import math
 from reportlab.lib import colors
 from django.core.management import call_command
+import urllib.request
+
 
 
 @login_required
