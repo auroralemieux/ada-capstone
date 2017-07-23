@@ -102,7 +102,7 @@ def parse_ged(ged_file):
     # xml.write("</gedcom>\n")
     xml += ("</gedcom>\n")
 
-    ged.close()
+    # ged.close()
     # xml.close()
     # xml_filename = "media/" + ged_file + ".xml"
     # return xml_filename
