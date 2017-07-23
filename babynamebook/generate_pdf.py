@@ -35,8 +35,9 @@ def go(book_data):
     italic_style = styles["Italic"]
     smallCentered = ParagraphStyle(name="centeredStyle", fontSize=12, alignment=TA_CENTER)
     medCentered = ParagraphStyle(name="centeredStyle", fontSize=14, alignment=TA_CENTER)
+    doc = SimpleDocTemplate("media/babynamebook.pdf")
 
-    doc = SimpleDocTemplate("babynamebook/static/babynamebook.pdf")
+    # doc = SimpleDocTemplate("babynamebook/static/babynamebook.pdf")
     Story = [Spacer(1,2*inch)]
     # Story.append(Spacer(PAGE_WIDTH/2.0, PAGE_HEIGHT/2.0))
     Story.append(Paragraph("%s" % (book_data["title"]), title_style))
@@ -130,6 +131,7 @@ def go(book_data):
     Story.append(Spacer(1,0.2*inch))
 
     doc.build(Story, onFirstPage=myFirstPage, onLaterPages=myLaterPages)
+    print("BREADCRUMB 5.1: ")
 
     return doc
 #

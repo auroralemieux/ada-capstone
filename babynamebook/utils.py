@@ -20,7 +20,6 @@ def parse_ged(ged_file):
 
     # xml = codecs.open("media/" + ged_file + ".xml", "w", "utf8")
     xml = ""
-    print("BREADCRUMB # 4.2. READ THE XML OFF S3. ??")
 
     # xml.write("""<?xml version='1.0'?>\n""")
     # xml.write("<gedcom>")

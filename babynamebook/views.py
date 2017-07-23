@@ -117,13 +117,15 @@ def book(request, pk):
 
     if request.method == "POST":
         go(book_data)
-        fs = FileSystemStorage()
-        filename = 'babynamebook.pdf'
-        if fs.exists(filename):
-            with fs.open(filename) as pdf:
-                response = HttpResponse(pdf, content_type='application/pdf')
-                response['Content-Disposition'] = 'attachment; filename="mybabynamebook.pdf"'
-                return response
+        req = urllib.request.Request('https://s3-us-west-2.amazonaws.com/babynamebooktestbucket/media/media/babynamebook.pdf')
+        with urllib.request.urlopen(req) as pdf:
+        # fs = FileSystemStorage()
+        # filename = 'babynamebook.pdf'
+        # if fs.exists(filename):
+        #     with fs.open(filename) as pdf:
+            response = HttpResponse(pdf, content_type='application/pdf')
+            response['Content-Disposition'] = 'attachment; filename="mybabynamebook.pdf"'
+            return response
         else:
             return HttpResponseNotFound('The requested pdf was not found in our server.')
 
