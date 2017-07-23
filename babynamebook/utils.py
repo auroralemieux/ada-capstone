@@ -5,22 +5,23 @@ import urllib.request
 
 
 def parse_ged(ged_file):
-    # with open(ged_file, 'r') as ged:
-    # ged = codecs.open("https://s3-us-west-2.amazonaws.com/babynamebooktestbucket/media/" + ged_file, encoding="cp437")
+
     with urllib.request.urlopen("https://s3-us-west-2.amazonaws.com/babynamebooktestbucket/media/" + ged_file) as response:
        ged = response.read()
+    #    THIS WORKS!!!!
     print("BREADCRUMB # 4.1. READ THE GED OFF S3.")
-    # myurl = "https://s3-us-west-2.amazonaws.com/babynamebooktestbucket/media/" + ged_file
-    # ged = opener.open(myurl)
-    # ged = codecs.open(ged_file, encoding="cp437")
 
+    # THIS WAS THE LOCALHOST LINE
     # ged = codecs.open("media/" + ged_file, encoding="cp437")
 
-    xml = codecs.open("media/" + ged_file + ".xml", "w", "utf8")
+    # xml = codecs.open("media/" + ged_file + ".xml", "w", "utf8")
+    xml = ""
     print("BREADCRUMB # 4.2. READ THE XML OFF S3. ??")
 
-    xml.write("""<?xml version='1.0'?>\n""")
-    xml.write("<gedcom>")
+    # xml.write("""<?xml version='1.0'?>\n""")
+    # xml.write("<gedcom>")
+    xml += ("""<?xml version='1.0'?>\n""")
+    xml += ("<gedcom>")
     sub = []
     errors = []
     for s in ged:
@@ -34,54 +35,82 @@ def parse_ged(ged_file):
             tag = m.group(4)
             data = m.group(6)
         while len(sub) > level:
-            xml.write("</%s>\n" % (sub[-1]))
+            # xml.write("</%s>\n" % (sub[-1]))
+            xml += ("</%s>\n" % (sub[-1]))
+
             sub.pop()
         if level != len(sub):
             errors.append("Error: unexpected level: " + s)
         sub += [tag]
         if id is not None:
             xml.write("<%s id=\"%s\">" % (tag, id))
+            xml. += ("<%s id=\"%s\">" % (tag, id))
+
         else:
-            xml.write("<%s>" % (tag))
+            # xml.write("<%s>" % (tag))
+            xml += ("<%s>" % (tag))
+
         if data is not None:
             m = re.match(r"@(\w+)@", data)
             if m:
-                xml.write(m.group(1))
+                # xml.write(m.group(1))
+                xml += (m.group(1))
+
             elif tag == "NAME":
                 m = re.match(r"(.*?)/(.*?)/$", data)
                 if m:
-                    xml.write("<forename>%s</forename><surname>%s</surname>" % (escape(m.group(1).strip()), escape(m.group(2))))
+                    # xml.write("<forename>%s</forename><surname>%s</surname>" % (escape(m.group(1).strip()), escape(m.group(2))))
+                    xml += ("<forename>%s</forename><surname>%s</surname>" % (escape(m.group(1).strip()), escape(m.group(2))))
+
                 else:
-                    xml.write(escape(data))
+                    # xml.write(escape(data))
+                    xml += (escape(data))
+
             elif tag == "DATE":
                 m = re.match(r"(((\d+)?\s+)?(\w+)?\s+)?(\d{3,})", data)
                 if m:
                     if m.group(3) is not None:
-                        xml.write("<day>%s</day><month>%s</month><year>%s</year>" % (m.group(3), m.group(4), m.group(5)))
+                        # xml.write("<day>%s</day><month>%s</month><year>%s</year>" % (m.group(3), m.group(4), m.group(5)))
+                        xml += ("<day>%s</day><month>%s</month><year>%s</year>" % (m.group(3), m.group(4), m.group(5)))
+
                     elif m.group(4) is not None:
-                        xml.write("<month>%s</month><year>%s</year>" % (m.group(4), m.group(5)))
+                        # xml.write("<month>%s</month><year>%s</year>" % (m.group(4), m.group(5)))
+                        xml += ("<month>%s</month><year>%s</year>" % (m.group(4), m.group(5)))
+
                     else:
-                        xml.write("<year>%s</year>" % m.group(5))
+                        # xml.write("<year>%s</year>" % m.group(5))
+                        xml += ("<year>%s</year>" % m.group(5))
+
                 else:
-                    xml.write(escape(data))
+                    # xml.write(escape(data))
+                    xml += (escape(data))
+
             else:
-                xml.write(escape(data))
+                # xml.write(escape(data))
+                xml += (escape(data))
+
     while len(sub) > 0:
-        xml.write("</%s>" % sub[-1])
+        # xml.write("</%s>" % sub[-1])
+        xml += ("</%s>" % sub[-1])
+
         sub.pop()
-    xml.write("</gedcom>\n")
+    # xml.write("</gedcom>\n")
+    xml += ("</gedcom>\n")
+
     ged.close()
-    xml.close()
-    xml_filename = "media/" + ged_file + ".xml"
-    return xml_filename
+    # xml.close()
+    # xml_filename = "media/" + ged_file + ".xml"
+    # return xml_filename
+    return xml
 
 
-def parse_xml(xml_filename):
-    # tree = open('parsed_ged', 'r+')
-    # tree.write(xml)
-    tree = ET.parse(xml_filename)
-    root = tree.getroot()
+def parse_xml(xml_string):
 
+    # tree = ET.parse(xml_filename)
+    # root = tree.getroot()
+
+    root = ET.fromstring(xml_string)
+    print("BREADCRUMB 4.3: created root in parse xml")
     new_book = []
 
     for indi in root.findall('INDI'):
