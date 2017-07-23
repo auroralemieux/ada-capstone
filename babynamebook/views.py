@@ -15,6 +15,8 @@ from reportlab.graphics import renderPM
 from reportlab.graphics.shapes import Drawing
 import math
 from reportlab.lib import colors
+from django.core.management import call_command
+
 
 @login_required
 def favorite(request):
@@ -41,6 +43,7 @@ def signup(request):
         form = UserCreationForm() # An unbound form
 
     return render(request, 'registration/signup.html', {'form': form,})
+
 
 @login_required
 def account(request):
@@ -143,26 +146,33 @@ def get_tree_instructions(request):
 def upload_tree(request):
     if request.method == "POST":
         form = BookForm(request.POST, request.FILES)
-        print("filesize: ", request.FILES["tree_upload"]._size)
+        print("BREADCRUMB 1. filesize: ", request.FILES["tree_upload"]._size)
         if form.is_valid():
             # for key, file in request.FILES['tree_uplaod']:
             #
             #     data = file
             # tree = open(data, "r")
             # book = Book(title=request.POST['title'])
-
+            print("BREADCRUMB 2. FORM IS VALID")
             book = Book(tree_upload=request.FILES['tree_upload'], title=request.POST['title'])
             # add stuff about user
             book.author = request.user
             book.save()
+            print("BREADCRUMB 3. SAVED BOOK")
             filename = book.tree_upload.name
+            print("BREADCRUMB 4. FILE NAME IS ", filename)
             xml_filename = parse_ged(filename)
+            print("BREADCRUMB 5. XML FILENAME IS ", xml_filename)
             # xml_filename = parse_ged(tree)
 
             # person_list is an array of dictionary objects
             person_list = parse_xml(xml_filename)
+            print("BREADCRUMB 6. PERSON LIST IS ", person_list)
+
             request.session["book_id"] = book.id
             __parse_person(request, person_list)
+            print("BREADCRUMB 7. FINISHED PARSE PERSON")
+
 
         return redirect('progress')
     else:

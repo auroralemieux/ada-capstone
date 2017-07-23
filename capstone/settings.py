@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1l%(htk-y93ak8-1muc0e_m67mfcwzlf$i_i-gs6z6$+68q+6@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
