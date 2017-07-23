@@ -1,12 +1,16 @@
 import codecs, os, re, sys
 from xml.sax.saxutils import escape
 import xml.etree.ElementTree as ET
+import urllib
 
 
 def parse_ged(ged_file):
     # with open(ged_file, 'r') as ged:
     # ged = codecs.open("https://s3-us-west-2.amazonaws.com/babynamebooktestbucket/media/" + ged_file, encoding="cp437")
-    ged = codecs.open(ged_file, encoding="cp437")
+    opener = urllib.URLopener()
+    myurl = "https://s3-us-west-2.amazonaws.com/babynamebooktestbucket/media/" + ged_file
+    ged = opener.open(myurl)
+    # ged = codecs.open(ged_file, encoding="cp437")
 
     # ged = codecs.open("media/" + ged_file, encoding="cp437")
 
