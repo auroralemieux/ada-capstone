@@ -13,4 +13,5 @@ urlpatterns = [
     url(r'', include('babynamebook.urls')),
     url(r'^signup/$', book_views.signup, name='signup'),
     url(r'^oauth/', include('social_django.urls', namespace='social')),
+    static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 ]
