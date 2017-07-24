@@ -120,7 +120,7 @@ def book(request, pk):
     # this is the pdf download button
     if request.method == "POST":
         go(book_data)
-        req = urllib.request.Request('https://s3-us-west-2.amazonaws.com/babynamebooktestbucket/media/media/babynamebook.pdf')
+        req = urllib.request.Request('static/babynamebook.pdf')
         with urllib.request.urlopen(req) as pdf:
         # fs = FileSystemStorage()
         # filename = 'babynamebook.pdf'

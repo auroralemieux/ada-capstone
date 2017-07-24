@@ -36,7 +36,7 @@ def go(book_data):
     smallCentered = ParagraphStyle(name="centeredStyle", fontSize=12, alignment=TA_CENTER)
     medCentered = ParagraphStyle(name="centeredStyle", fontSize=14, alignment=TA_CENTER)
 
-    doc = SimpleDocTemplate("media/babynamebook.pdf")
+    doc = SimpleDocTemplate("static/babynamebook.pdf")
 
     # doc = SimpleDocTemplate("babynamebook/static/babynamebook.pdf")
     Story = [Spacer(1,2*inch)]
