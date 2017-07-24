@@ -120,7 +120,7 @@ def book(request, pk):
     # this is the pdf download button
     if request.method == "POST":
         go(book_data)
-        req = urllib.request.Request('https://http://capstone-django-project-dev.us-west-2.elasticbeanstalk.com/static/babynamebook.pdf')
+        req = urllib.request.Request('https://capstone-django-project-dev.us-west-2.elasticbeanstalk.com/static/babynamebook.pdf')
         with urllib.request.urlopen(req) as pdf:
         # fs = FileSystemStorage()
         # filename = 'babynamebook.pdf'
