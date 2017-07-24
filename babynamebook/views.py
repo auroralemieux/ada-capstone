@@ -18,6 +18,7 @@ from reportlab.lib import colors
 from django.core.management import call_command
 import urllib.request
 from reportlab.pdfgen import canvas
+from reportlab.platypus import SimpleDocTemplate
 
 
 
