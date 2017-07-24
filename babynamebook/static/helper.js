@@ -44,10 +44,10 @@ $(document).ready(function() {
       if (event.handled !== true) {
         var toggleHeart = function() {
           console.log("toggling heart");
-          if ($(whichHeart).attr('src') == "blue-heart-icon.png") {
-            $(whichHeart).attr("src", "plain-heart.jpg");
+          if ($(whichHeart).attr('src') == "static/blue-heart-icon.png") {
+            $(whichHeart).attr("src", "static/plain-heart.jpg");
           } else {
-            $(whichHeart).attr("src", "blue-heart-icon.png");
+            $(whichHeart).attr("src", "static/blue-heart-icon.png");
           }
         };
         toggleHeart();
