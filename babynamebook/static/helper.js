@@ -38,28 +38,20 @@ $(document).ready(function() {
     var nameId = $(this).attr("data-id");
     var bookId = $(this).attr("data-book");
 
-    // var whichHeart = "#heart" + nameId;
-    var whichName = "strong#name" + nameId;
+    var whichHeart = "#heart" + nameId;
+    // var whichName = "strong#name" + nameId;
     function favoriteHandler(event) {
       if (event.handled !== true) {
         var toggleHeart = function() {
           console.log("toggling heart");
-          if (($(whichHeart).attr('src') == "../../static/blue-heart-icon.png") || ($(whichHeart).attr('src') == "blue-heart-icon.png")) {
+          if (($(whichHeart).attr('src') == "https://babynamebooktestbucket.s3.amazonaws.com/static/blue-heart-icon.png") || ($(whichHeart).attr('src') == "../../static/blue-heart-icon.png")) {
             $(whichHeart).attr("src", "../../static/plain-heart.jpg");
-          } else if (($(whichHeart).attr('src') == "../../static/plain-heart.jpg") || ($(whichHeart).attr('src') == "plain-heart.jpg")) {
+          } else if (($(whichHeart).attr('src') == "https://babynamebooktestbucket.s3.amazonaws.com/static/plain-heart.jpg") || ($(whichHeart).attr('src') == "../../static/plain-heart.jpg")) {
             $(whichHeart).attr("src", "../../static/blue-heart-icon.png");
           }
         };
         toggleHeart();
-        // var toggleColor = function() {
-        //   console.log("toggling color");
-        //   if ($(whichName).attr('style') == "color: blue") {
-        //     $(whichName).attr('style', "color: black");
-        //   } else {
-        //     $(whichName).attr('style', "color: blue");
-        //   }
-        // };
-        // toggleColor();
+
 
         var toFavorite = function(nameId, bookId) {
           console.log(nameId);
