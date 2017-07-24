@@ -82,9 +82,9 @@ def search(request):
         results = Name.objects.filter(first_name__icontains=search_term)
         boy_results = Name.objects.filter(first_name__icontains=search_term, gender="M").extra(order_by = ['first_name'])
         girl_results = Name.objects.filter(first_name__icontains=search_term, gender="F").extra(order_by = ['first_name'])
-        __stats_chart(search_term)
+        chart = __stats_chart(search_term)
 
-        return render(request, 'babynamebook/search.html', {'search_term':search_term, 'boys':boy_results, 'girls':girl_results, 'results':results })
+        return render(request, 'babynamebook/search.html', {'search_term':search_term, 'boys':boy_results, 'girls':girl_results, 'results':results, 'chart': chart })
     else:
         # if they tried to navigate to the search results page with no query made...
         return redirect('home')
@@ -130,15 +130,6 @@ def book(request, pk):
         # Create the PDF object, using the response object as its "file."
         Story = go(book_data)
         print("BREADCRUMB 6.1: got story from generate pdf")
-        # p = canvas.Canvas(response)
-
-        # Draw things on the PDF. Here's where the PDF generation happens.
-        # See the ReportLab documentation for the full list of functionality.
-
-        # Close the PDF object cleanly, and we're done.
-        # p.append(this_pdf)
-        # p.showPage()
-        # p.save()
 
         doc.build(Story, onFirstPage=myFirstPage, onLaterPages=myLaterPages)
         print("BREADCRUMB 6.2: built the pdf")
@@ -149,33 +140,6 @@ def book(request, pk):
             return response
         else:
             return HttpResponseNotFound('Unable to create your pdf at this time.')
-
-        # go(book_data)
-        # req = urllib.request.Request('https://capstone-django-project-dev.us-west-2.elasticbeanstalk.com/static/babynamebook.pdf')
-        # with urllib.request.urlopen(req) as pdf:
-        # # fs = FileSystemStorage()
-        # # filename = 'babynamebook.pdf'
-        # # if fs.exists(filename):
-        # #     with fs.open(filename) as pdf:
-        #     if pdf:
-        #         response = HttpResponse(pdf, content_type='application/pdf')
-        #         response['Content-Disposition'] = 'attachment; filename="mybabynamebook.pdf"'
-        #         return response
-        #     else:
-        #         return HttpResponseNotFound('The requested pdf was not found in our server.')
-        # go(book_data)
-        # req = urllib.request.Request('https://capstone-django-project-dev.us-west-2.elasticbeanstalk.com/static/babynamebook.pdf')
-        # with urllib.request.urlopen(req) as pdf:
-        # # fs = FileSystemStorage()
-        # # filename = 'babynamebook.pdf'
-        # # if fs.exists(filename):
-        # #     with fs.open(filename) as pdf:
-        #     if pdf:
-        #         response = HttpResponse(pdf, content_type='application/pdf')
-        #         response['Content-Disposition'] = 'attachment; filename="mybabynamebook.pdf"'
-        #         return response
-        #     else:
-        #         return HttpResponseNotFound('The requested pdf was not found in our server.')
 
 
     return render(request, 'babynamebook/book.html', {'book': book, 'persons': persons, 'all_names': all_names, 'top_female': top_female, 'top_male': top_male, 'top_last': top_last, 'top_origin': top_origin, 'pop_girl_names': pop_girl_names,'pop_boy_names': pop_boy_names, 'book_data': book_data, 'user': user })
@@ -198,11 +162,7 @@ def upload_tree(request):
         form = BookForm(request.POST, request.FILES)
         print("BREADCRUMB 1. filesize: ", request.FILES["tree_upload"]._size)
         if form.is_valid():
-            # for key, file in request.FILES['tree_uplaod']:
-            #
-            #     data = file
-            # tree = open(data, "r")
-            # book = Book(title=request.POST['title'])
+
             print("BREADCRUMB 2. FORM IS VALID")
             book = Book(tree_upload=request.FILES['tree_upload'], title=request.POST['title'])
             # add stuff about user
@@ -435,8 +395,6 @@ def __make_top_ten_text(book, gender):
 
 
 def __stats_chart(name):
-    # try:
-    # peeps_with_birthyears = Person.objects.filter(birth_year__gt=0000, first_name=name)
 
     peeps = Person.objects.filter(first_name__icontains=name)
 
@@ -497,5 +455,7 @@ def __stats_chart(name):
         lc.valueAxis.valueStep = 1
     lc.lines[0].strokeWidth = 2
     drawing.add(lc)
+    drawing = drawing.asString('png')
+    return drawing
 
-    renderPM.drawToFile(drawing, 'chart.png', 'PNG')
+    # renderPM.drawToFile(drawing, 'chart.png', 'PNG')
