@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['127.0.0.1', '54.68.70.235', 'localhost', 'capstone-django-proj
 
 AWS_FILE_EXPIRE = 200
 AWS_PRELOAD_METADATA = True
-AWS_QUERYSTRING_AUTH = True
+AWS_QUERYSTRING_AUTH = False
 
 AWS_HEADERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
