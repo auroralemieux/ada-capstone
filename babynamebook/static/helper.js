@@ -39,7 +39,6 @@ $(document).ready(function() {
     var bookId = $(this).attr("data-book");
 
     var whichHeart = "#heart" + nameId;
-    // var whichName = "strong#name" + nameId;
     function favoriteHandler(event) {
       if (event.handled !== true) {
         var toggleHeart = function() {
@@ -76,100 +75,6 @@ $(document).ready(function() {
     }
     $(whichHeart).on('click', favoriteHandler);
   });
-
-  // $(".name-line").on('mouseover', function() {
-  //   var nameId = $(this).attr("data-id");
-  //   var bookId = $(this).attr("data-book");
-  //   console.log();
-  //   var whichName = "#name" + nameId;
-  //   function favoriteHandler(event) {
-  //     if (event.handles !== true) {
-  //       var toggleColor = function() {
-  //         console.log("toggling color");
-  //         if ($(whichName).attr('style') == "color: blue") {
-  //           $(whichName).attr('style', "color: black");
-  //         } else {
-  //           $(whichName).attr('style', "color: blue");
-  //         }
-  //       };
-  //       toggleColor();
-  //       var toFavorite = function(nameId, bookId) {
-  //         console.log(nameId);
-  //         var book = bookId;
-  //         var name = nameId;
-  //
-  //         $.ajax({
-  //           url: "/favorite/",
-  //           type: "POST",
-  //           data: { 'name': name, 'book_id': book},
-  //           success: function() {
-  //             console.log("success in ajaxland!");
-  //           }
-  //         });
-  //         return false;
-  //       };
-  //
-  //       toFavorite(nameId, bookId);
-  //       event.handled = true;
-  //     }
-  //     return false;
-  //   }
-  //   $(whichName).on('click', favoriteHandler);
-  // });
-
-
-  // $(".name-group").on('mouseover', function() {
-  //   var nameId = $(this).attr("data-id");
-  //   var bookId = $(this).attr("data-book");
-  //
-  //   // var whichHeart = "#heart" + nameId;
-  //   var whichName = "strong#name" + nameId;
-  //   function favoriteHandler(event) {
-  //     if (event.handled !== true) {
-  //       // var toggleHeart = function() {
-  //       //   console.log("toggling heart");
-  //       //   if (($(whichHeart).attr('src') == "../../static/blue-heart-icon.png") || ($(whichHeart).attr('src') == "blue-heart-icon.png")) {
-  //       //     $(whichHeart).attr("src", "../../static/plain-heart.jpg");
-  //       //   } else if (($(whichHeart).attr('src') == "../../static/plain-heart.jpg") || ($(whichHeart).attr('src') == "plain-heart.jpg")) {
-  //       //     $(whichHeart).attr("src", "../../static/blue-heart-icon.png");
-  //       //   }
-  //       // };
-  //       // toggleHeart();
-  //       var toggleColor = function() {
-  //         console.log("toggling color");
-  //         if ($(whichName).attr('style') == "color: blue") {
-  //           $(whichName).attr('style', "color: black");
-  //         } else {
-  //           $(whichName).attr('style', "color: blue");
-  //         }
-  //       };
-  //       toggleColor();
-  //
-  //       var toFavorite = function(nameId, bookId) {
-  //         console.log(nameId);
-  //         var book = bookId;
-  //         var name = nameId;
-  //
-  //         $.ajax({
-  //           url: "/favorite/",
-  //           type: "POST",
-  //           data: { 'name': name, 'book_id': book},
-  //           success: function() {
-  //             console.log("success in ajaxland!");
-  //           }
-  //         });
-  //         return false;
-  //       };
-  //
-  //       toFavorite(nameId, bookId);
-  //       event.handled = true;
-  //     }
-  //     return false;
-  //   }
-  //   $(whichHeart).on('click', favoriteHandler);
-  // });
-
-
 
 
   $(".fav-name").on('mouseover', function() {
