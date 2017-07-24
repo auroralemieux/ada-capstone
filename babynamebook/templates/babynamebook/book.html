@@ -165,6 +165,7 @@
               {% for person in boys %}
 
               <div data-book="{{book.pk}}" data-id="{{person.pk}}" class="btn-group name-group">
+                <!-- <p class="name-line" data-book="{{book.pk}}" data-id="{{person.pk}}"><strong class="name-in-list" id="name{{person.pk}}" style="{% if user in person.users.all %}color: blue{% else %}color: black{% endif %}">{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p> -->
                 <p class="name-line{{person.pk}}"><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
 
                 <a>
@@ -209,5 +210,6 @@
     {% endfor %}
   </div>
 </article>
+
 
 {% endblock %}
