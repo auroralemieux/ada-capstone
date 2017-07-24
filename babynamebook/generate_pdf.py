@@ -36,7 +36,6 @@ def go(book_data):
     smallCentered = ParagraphStyle(name="centeredStyle", fontSize=12, alignment=TA_CENTER)
     medCentered = ParagraphStyle(name="centeredStyle", fontSize=14, alignment=TA_CENTER)
 
-    doc = SimpleDocTemplate("static/babynamebook.pdf")
 
     # doc = SimpleDocTemplate("babynamebook/static/babynamebook.pdf")
     Story = [Spacer(1,2*inch)]
@@ -131,10 +130,11 @@ def go(book_data):
         Story.append(Paragraph(p, reg_style))
     Story.append(Spacer(1,0.2*inch))
 
-    doc.build(Story, onFirstPage=myFirstPage, onLaterPages=myLaterPages)
+    # doc.build(Story, onFirstPage=myFirstPage, onLaterPages=myLaterPages)
     print("BREADCRUMB 5.1: ")
 
-    return doc
+    # return doc
+    return Story
 #
 #
 

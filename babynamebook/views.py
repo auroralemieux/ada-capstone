@@ -9,7 +9,7 @@ import operator
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-from .generate_pdf import go
+from .generate_pdf import go, myFirstPage, myLaterPages
 from reportlab.graphics.charts.linecharts import HorizontalLineChart
 from reportlab.graphics import renderPM
 from reportlab.graphics.shapes import Drawing
@@ -17,6 +17,8 @@ import math
 from reportlab.lib import colors
 from django.core.management import call_command
 import urllib.request
+from reportlab.pdfgen import canvas
+
 
 
 
@@ -119,19 +121,60 @@ def book(request, pk):
 
     # this is the pdf download button
     if request.method == "POST":
-        go(book_data)
-        req = urllib.request.Request('https://capstone-django-project-dev.us-west-2.elasticbeanstalk.com/static/babynamebook.pdf')
-        with urllib.request.urlopen(req) as pdf:
-        # fs = FileSystemStorage()
-        # filename = 'babynamebook.pdf'
-        # if fs.exists(filename):
-        #     with fs.open(filename) as pdf:
-            if pdf:
-                response = HttpResponse(pdf, content_type='application/pdf')
-                response['Content-Disposition'] = 'attachment; filename="mybabynamebook.pdf"'
-                return response
-            else:
-                return HttpResponseNotFound('The requested pdf was not found in our server.')
+        # Create the HttpResponse object with the appropriate PDF headers.
+        response = HttpResponse(mimetype='application/pdf')
+        response['Content-Disposition'] = 'attachment; filename=mybabynamebook.pdf'
+        doc = SimpleDocTemplate(response)
+
+        # Create the PDF object, using the response object as its "file."
+        Story = go(book_data)
+        print("BREADCRUMB 6.1: got story from generate pdf")
+        # p = canvas.Canvas(response)
+
+        # Draw things on the PDF. Here's where the PDF generation happens.
+        # See the ReportLab documentation for the full list of functionality.
+
+        # Close the PDF object cleanly, and we're done.
+        # p.append(this_pdf)
+        # p.showPage()
+        # p.save()
+
+        doc.build(Story, onFirstPage=myFirstPage, onLaterPages=myLaterPages)
+        print("BREADCRUMB 6.2: built the pdf")
+
+        if doc:
+            print("BREADCRUMB 6.3: pdf exists")
+
+            return response
+        else:
+            return HttpResponseNotFound('Unable to create your pdf at this time.')
+
+        # go(book_data)
+        # req = urllib.request.Request('https://capstone-django-project-dev.us-west-2.elasticbeanstalk.com/static/babynamebook.pdf')
+        # with urllib.request.urlopen(req) as pdf:
+        # # fs = FileSystemStorage()
+        # # filename = 'babynamebook.pdf'
+        # # if fs.exists(filename):
+        # #     with fs.open(filename) as pdf:
+        #     if pdf:
+        #         response = HttpResponse(pdf, content_type='application/pdf')
+        #         response['Content-Disposition'] = 'attachment; filename="mybabynamebook.pdf"'
+        #         return response
+        #     else:
+        #         return HttpResponseNotFound('The requested pdf was not found in our server.')
+        # go(book_data)
+        # req = urllib.request.Request('https://capstone-django-project-dev.us-west-2.elasticbeanstalk.com/static/babynamebook.pdf')
+        # with urllib.request.urlopen(req) as pdf:
+        # # fs = FileSystemStorage()
+        # # filename = 'babynamebook.pdf'
+        # # if fs.exists(filename):
+        # #     with fs.open(filename) as pdf:
+        #     if pdf:
+        #         response = HttpResponse(pdf, content_type='application/pdf')
+        #         response['Content-Disposition'] = 'attachment; filename="mybabynamebook.pdf"'
+        #         return response
+        #     else:
+        #         return HttpResponseNotFound('The requested pdf was not found in our server.')
 
 
     return render(request, 'babynamebook/book.html', {'book': book, 'persons': persons, 'all_names': all_names, 'top_female': top_female, 'top_male': top_male, 'top_last': top_last, 'top_origin': top_origin, 'pop_girl_names': pop_girl_names,'pop_boy_names': pop_boy_names, 'book_data': book_data, 'user': user })
