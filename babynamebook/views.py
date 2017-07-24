@@ -83,6 +83,7 @@ def search(request):
         boy_results = Name.objects.filter(first_name__icontains=search_term, gender="M").extra(order_by = ['first_name'])
         girl_results = Name.objects.filter(first_name__icontains=search_term, gender="F").extra(order_by = ['first_name'])
         chart = __stats_chart(search_term)
+        print("BREADCRUMB CHART 1: type is ", type(chart))
         # chart = chart.decode("png")
 
         return render(request, 'babynamebook/search.html', {'search_term':search_term, 'boys':boy_results, 'girls':girl_results, 'results':results, 'chart': chart })
@@ -456,7 +457,7 @@ def __stats_chart(name):
         lc.valueAxis.valueStep = 1
     lc.lines[0].strokeWidth = 2
     drawing.add(lc)
-    # drawing = drawing.asString('png')
+    drawing = drawing.asString('jpg')
     return drawing
 
     # renderPM.drawToFile(drawing, 'chart.png', 'PNG')
