@@ -49,9 +49,7 @@ AWS_S3_HOST = "s3-us-west-2.amazonaws.com"
 DEFAULT_FILE_STORAGE = 'capstone.utils.MediaRootS3BotoStorage'
 STATICFILES_STORAGE = 'capstone.utils.StaticRootS3BotoStorage'
 S3DIRECT_REGION = 'us-west-2'
-# S3_URL = '/%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
-S3_URL = 's3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
-
+S3_URL = '/%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
 MEDIA_URL = '/%s.s3.amazonaws.com/media/' % AWS_STORAGE_BUCKET_NAME
 MEDIA_ROOT = MEDIA_URL
 STATIC_URL = S3_URL + 'static/'
