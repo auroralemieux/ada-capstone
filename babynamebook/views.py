@@ -122,7 +122,7 @@ def book(request, pk):
     # this is the pdf download button
     if request.method == "POST":
         # Create the HttpResponse object with the appropriate PDF headers.
-        response = HttpResponse(mimetype='application/pdf')
+        response = HttpResponse(content_type='application/pdf')
         response['Content-Disposition'] = 'attachment; filename=mybabynamebook.pdf'
         doc = SimpleDocTemplate(response)
 
