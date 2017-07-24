@@ -458,7 +458,7 @@ def __stats_chart(name):
         lc.valueAxis.valueStep = 1
     lc.lines[0].strokeWidth = 2
     drawing.add(lc)
-    # drawing = drawing.asString('jpg')
+    drawing = drawing.asString('jpg')
     return drawing
 
     # renderPM.drawToFile(drawing, 'chart.png', 'PNG')
