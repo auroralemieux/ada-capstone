@@ -46,7 +46,7 @@ $(document).ready(function() {
           console.log("toggling heart");
           if (($(whichHeart).attr('src') == "../../static/blue-heart-icon.png") || ($(whichHeart).attr('src') == "blue-heart-icon.png")) {
             $(whichHeart).attr("src", "../../static/plain-heart.jpg");
-          } elsif (($(whichHeart).attr('src') == "../../static/plain-heart.jpg") || ($(whichHeart).attr('src') == "plain-heart.jpg")){
+          } else if (($(whichHeart).attr('src') == "../../static/plain-heart.jpg") || ($(whichHeart).attr('src') == "plain-heart.jpg")) {
             $(whichHeart).attr("src", "../../static/blue-heart-icon.png");
           }
         };
