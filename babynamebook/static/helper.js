@@ -44,7 +44,7 @@ $(document).ready(function() {
       if (event.handled !== true) {
         var toggleHeart = function() {
           console.log("toggling heart");
-          if (($(whichHeart).attr('src') == "../../static/blue-heart-icon.png") || ($(whichHeart).attr('src') == "https://babynamebooktestbucket.s3.amazonaws.com/static/blue-heart-icon.png")) {
+          if (($(whichHeart).attr('src') == "../../static/blue-heart-icon.png") || ($(whichHeart).attr('src') == "blue-heart-icon.png")) {
             $(whichHeart).attr("src", "../../static/plain-heart.jpg");
           } else {
             $(whichHeart).attr("src", "../../static/blue-heart-icon.png");
