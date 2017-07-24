@@ -83,6 +83,7 @@ def search(request):
         boy_results = Name.objects.filter(first_name__icontains=search_term, gender="M").extra(order_by = ['first_name'])
         girl_results = Name.objects.filter(first_name__icontains=search_term, gender="F").extra(order_by = ['first_name'])
         chart = __stats_chart(search_term)
+        chart = chart.decode("png")
 
         return render(request, 'babynamebook/search.html', {'search_term':search_term, 'boys':boy_results, 'girls':girl_results, 'results':results, 'chart': chart })
     else:
