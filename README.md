@@ -1,4 +1,4 @@
-# [mybabynamebook](www.mybabynamebook.com)
+# [mybabynamebook](https://www.mybabynamebook.com)
 A student capstone project by Aurora Anderson (Ada Developers Academy, Cohort 7)
 
 ## Setup and Installation on OSX
