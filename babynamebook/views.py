@@ -10,19 +10,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from .generate_pdf import go, myFirstPage, myLaterPages
-from reportlab.graphics.charts.linecharts import HorizontalLineChart
-from reportlab.graphics import renderPM
-from reportlab.graphics.shapes import Drawing
-import math
-from reportlab.lib import colors
-from django.core.management import call_command
 import urllib.request
 from reportlab.pdfgen import canvas
-from reportlab.platypus import SimpleDocTemplate, Image
-import io
-import binascii
-
-
+from reportlab.platypus import SimpleDocTemplate
 
 
 @login_required
@@ -35,11 +25,9 @@ def favorite(request):
         name.users.remove(user)
     else:
         name.users.add(user)
-
     return redirect('book', pk=book_id)
 
 
-# maybe put this in a separate accounts project views file???
 def signup(request):
     if request.method =='POST':
         form = UserCreationForm(request.POST)
@@ -48,7 +36,6 @@ def signup(request):
             return redirect('home') # Redirect after POST
     else:
         form = UserCreationForm() # An unbound form
-
     return render(request, 'registration/signup.html', {'form': form,})
 
 
@@ -56,8 +43,6 @@ def signup(request):
 def account(request):
     if request.method == "POST":
         name_id = request.POST.get('name')
-        print("name is: ", name_id)
-
         name = get_object_or_404(Name, pk=name_id)
         user = request.user
         name.users.remove(user)
@@ -74,7 +59,6 @@ def account(request):
         bookinfo.append(bookstuff)
     user = request.user
     favorites = user.name_set.all().extra(order_by = ['first_name'])
-    print(favorites)
     return render(request, 'babynamebook/account.html', {'bookinfo': bookinfo, 'favorites':favorites})
 
 
@@ -131,14 +115,9 @@ def book(request, pk):
 
         # Create the PDF object, using the response object as its "file."
         Story = go(book_data)
-        print("BREADCRUMB 6.1: got story from generate pdf")
-
         doc.build(Story, onFirstPage=myFirstPage, onLaterPages=myLaterPages)
-        print("BREADCRUMB 6.2: built the pdf")
 
         if doc:
-            print("BREADCRUMB 6.3: pdf exists")
-
             return response
         else:
             return HttpResponseNotFound('Unable to create your pdf at this time.')
@@ -158,32 +137,23 @@ def home(request):
 def get_tree_instructions(request):
     return render(request, 'babynamebook/get_tree_instructions.html', {})
 
+
 @login_required
 def upload_tree(request):
     if request.method == "POST":
         form = BookForm(request.POST, request.FILES)
-        print("BREADCRUMB 1. filesize: ", request.FILES["tree_upload"]._size)
         if form.is_valid():
-
-            print("BREADCRUMB 2. FORM IS VALID")
             book = Book(tree_upload=request.FILES['tree_upload'], title=request.POST['title'])
-            # add stuff about user
             book.author = request.user
             book.save()
-            print("BREADCRUMB 3. SAVED BOOK")
             filename = book.tree_upload.name
-            print("BREADCRUMB 4. FILE NAME IS ", filename)
             xml_filename = parse_ged(filename)
-            print("BREADCRUMB 5. XML FILENAME IS ", xml_filename)
-            # xml_filename = parse_ged(tree)
 
             # person_list is an array of dictionary objects
             person_list = parse_xml(xml_filename)
-            print("BREADCRUMB 6. PERSON LIST IS ", person_list)
 
             request.session["book_id"] = book.id
             __parse_person(request, person_list)
-            print("BREADCRUMB 7. FINISHED PARSE PERSON")
 
 
         return redirect('progress')

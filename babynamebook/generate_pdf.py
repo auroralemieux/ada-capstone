@@ -3,6 +3,7 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.rl_config import defaultPageSize
 from reportlab.lib.units import inch
 from reportlab.lib.enums import TA_CENTER
+from reportlab.platypus.tableofcontents import TableOfContents
 import operator
 import collections
 import os
@@ -36,15 +37,18 @@ def go(book_data):
     smallCentered = ParagraphStyle(name="centeredStyle", fontSize=12, alignment=TA_CENTER)
     medCentered = ParagraphStyle(name="centeredStyle", fontSize=14, alignment=TA_CENTER)
 
-
-    # doc = SimpleDocTemplate("babynamebook/static/babynamebook.pdf")
+    # COVER PAGE
     Story = [Spacer(1,2*inch)]
-    # Story.append(Spacer(PAGE_WIDTH/2.0, PAGE_HEIGHT/2.0))
     Story.append(Paragraph("%s" % (book_data["title"]), title_style))
 
-    Story.append(Paragraph("a custom baby name book from <link href='http://www.mybabynamebook.com'>mybabynamebook</link>", smallCentered))
+    Story.append(Paragraph("created by <link href='http://www.mybabynamebook.com'>mybabynamebook</link>", smallCentered))
+    Story.append(PageBreak())
 
+    # TABLE OF CONTENTS
     Story.append(Spacer(1,3*inch))
+    Story.append(Paragraph("Table of Contents", title_style))
+    Story.append(Spacer(1,2*inch))
+
 
     Story.append(Paragraph("<link href='#girls'>Girl Names</link>", medCentered))
     Story.append(Spacer(1,0.2*inch))
@@ -52,7 +56,7 @@ def go(book_data):
     Story.append(Paragraph("<link href='#boys'>Boy Names</link>", medCentered))
     Story.append(Spacer(1,0.2*inch))
 
-    Story.append(Paragraph("<link href='#stats'>Stats</link>", medCentered))
+    Story.append(Paragraph("<link href='#stats'>Statistics</link>", medCentered))
 
     Story.append(PageBreak())
 
@@ -130,15 +134,5 @@ def go(book_data):
         Story.append(Paragraph(p, reg_style))
     Story.append(Spacer(1,0.2*inch))
 
-    # doc.build(Story, onFirstPage=myFirstPage, onLaterPages=myLaterPages)
-    print("BREADCRUMB 5.1: ")
 
-    # return doc
     return Story
-#
-#
-
-# if __name__ == "__main__":
-#     go()
-
-# go(book_data)
