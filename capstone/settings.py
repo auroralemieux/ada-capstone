@@ -29,7 +29,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
-ALLOWED_HOSTS = ['127.0.0.1', '54.68.70.235', 'localhost', 'mybabynamebook.com', 'capstone-django-project-dev.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['127.0.0.1', '54.68.70.235', 'localhost', '.mybabynamebook.com', 'capstone-django-project-dev.us-west-2.elasticbeanstalk.com']
 
 AWS_FILE_EXPIRE = 200
 AWS_PRELOAD_METADATA = True
@@ -212,5 +212,5 @@ LOGIN_REDIRECT_URL = '/'
 
 
 
-# SOCIAL_AUTH_FACEBOOK_KEY = config('SOCIAL_AUTH_FACEBOOK_KEY')  # App ID
-# SOCIAL_AUTH_FACEBOOK_SECRET = config('SOCIAL_AUTH_FACEBOOK_SECRET')  # App Secret
+SOCIAL_AUTH_FACEBOOK_KEY = config('SOCIAL_AUTH_FACEBOOK_KEY')  # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = config('SOCIAL_AUTH_FACEBOOK_SECRET')  # App Secret
