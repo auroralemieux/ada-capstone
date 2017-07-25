@@ -39,7 +39,6 @@ $(document).ready(function() {
     var bookId = $(this).attr("data-book");
 
     var whichHeart = "#heart" + nameId;
-    $(whichHeart).show();
     function favoriteHandler(event) {
       if (event.handled !== true) {
         var toggleHeart = function() {
@@ -51,13 +50,10 @@ $(document).ready(function() {
           }
         };
         toggleHeart();
-
-
         var toFavorite = function(nameId, bookId) {
           console.log(nameId);
           var book = bookId;
           var name = nameId;
-
           $.ajax({
             url: "/favorite/",
             type: "POST",
@@ -75,12 +71,6 @@ $(document).ready(function() {
       return false;
     }
     $(whichHeart).on('click', favoriteHandler);
-  });
-
-  $(".name-group").on('mouseout', function() {
-    var nameId = $(this).attr("data-id");
-    var whichHeart = "#heart" + nameId;
-    $(whichHeart).hide();
   });
 
 
