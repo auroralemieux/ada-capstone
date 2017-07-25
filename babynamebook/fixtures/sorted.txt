@@ -950,7 +950,6 @@ M,Braylin,Combination Name,American
 F,Brazil,Type of wood,Spanish
 F,Brea,Beauty Beyond Sight,American
 F,Breahna,High, noble,American
-M,Breanna,Noble,American
 F,Breanna,Noble,American
 F,Breanne,Strong,Irish
 M,Breckin,Freckled,American
