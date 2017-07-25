@@ -39,6 +39,7 @@ $(document).ready(function() {
     var bookId = $(this).attr("data-book");
 
     var whichHeart = "#heart" + nameId;
+    $(whichHeart).show();
     function favoriteHandler(event) {
       if (event.handled !== true) {
         var toggleHeart = function() {
@@ -74,6 +75,12 @@ $(document).ready(function() {
       return false;
     }
     $(whichHeart).on('click', favoriteHandler);
+  });
+
+  $(".name-group").on('mouseout', function() {
+    var nameId = $(this).attr("data-id");
+    var whichHeart = "#heart" + nameId;
+    $(whichHeart).hide();
   });
 
 

@@ -165,7 +165,7 @@
               {% for person in boys %}
 
               <div data-book="{{book.pk}}" data-id="{{person.pk}}" class="btn-group name-group">
-                <p class="name-line{{person.pk}}"><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
+                <p id="name-line{{person.pk}}"><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
                 <a>
                   <img id="heart{{person.pk}}" class="heart img-fluid" style="width: 19px; padding-left: 3px; padding-top: 3px;" src={% if user in person.users.all %}"{% static 'blue-heart-icon.png' %}"{% else %}"{% static 'plain-heart.jpg' %}"{% endif %} alt="heart-favorite-icon">
                 </a>
@@ -181,9 +181,9 @@
               {% with boysngirls|last as girls %}
               {% for person in girls %}
               <div data-book="{{book.pk}}" data-id="{{person.pk}}" class="btn-group name-group">
-                <p class="name-line{{person.pk}}"><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
+                <p id="name-line{{person.pk}}"><strong>{{ person.first_name }}</strong> <em>({{ person.origin }})</em> {{ person.meaning }}</p>
                 <a>
-                  <img id="heart{{person.pk}}" class="heart img-fluid" style="width: 19px; padding-left: 3px; padding-top: 3px;" src={% if user in person.users.all %}"{% static 'blue-heart-icon.png' %}"{% else %}"{% static 'plain-heart.jpg' %}"{% endif %} alt="heart-favorite-icon">
+                  <img id="heart{{person.pk}}" class="heart img-fluid" style="width: 19px; padding-left: 3px; padding-top: 3px;" src={% if user in person.users.all %}"{% static 'blue-heart-icon.png' %}"{% else %}"{% static 'plain-heart.jpg' %}" style="display: none"{% endif %} alt="heart-favorite-icon">
                 </a>
               </div>
               <br />
