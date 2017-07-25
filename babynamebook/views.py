@@ -18,7 +18,9 @@ from reportlab.lib import colors
 from django.core.management import call_command
 import urllib.request
 from reportlab.pdfgen import canvas
-from reportlab.platypus import SimpleDocTemplate
+from reportlab.platypus import SimpleDocTemplate, Image
+import io
+import binascii
 
 
 
@@ -82,12 +84,9 @@ def search(request):
         results = Name.objects.filter(first_name__icontains=search_term)
         boy_results = Name.objects.filter(first_name__icontains=search_term, gender="M").extra(order_by = ['first_name'])
         girl_results = Name.objects.filter(first_name__icontains=search_term, gender="F").extra(order_by = ['first_name'])
-        chart = __stats_chart(search_term)
-        chart = chart.decode("utf8")
-        print("BREADCRUMB CHART 1: type is ", type(chart))
-        # chart = chart.decode("png")
+        stats_chart_data = __get_stats_chart_data(search_term)
 
-        return render(request, 'babynamebook/search.html', {'search_term':search_term, 'boys':boy_results, 'girls':girl_results, 'results':results, 'chart': chart })
+        return render(request, 'babynamebook/search.html', {'search_term':search_term, 'boys':boy_results, 'girls':girl_results, 'results':results, 'chart_data': stats_chart_data})
     else:
         # if they tried to navigate to the search results page with no query made...
         return redirect('home')
@@ -397,7 +396,7 @@ def __make_top_ten_text(book, gender):
     return text
 
 
-def __stats_chart(name):
+def __get_stats_chart_data(name):
 
     peeps = Person.objects.filter(first_name__icontains=name)
 
@@ -425,40 +424,4 @@ def __stats_chart(name):
                 fifteen += 1
 
     years_by_century = [fifteen, sixteen, seventeen, eighteen, nineteen, twenty]
-
-    print(years_by_century)
-
-    drawing = Drawing(400, 200)
-    data = [years_by_century,]
-
-    lc = HorizontalLineChart()
-    lc.x = 50
-    lc.y = 50
-    lc.height = 125
-    lc.width = 300
-    lc.data = data
-    lc.joinedLines = 1
-    catNames = "1500s 1600s 1700s 1800s 1900s 2000s".split(" ")
-    lc.categoryAxis.categoryNames = catNames
-    lc.categoryAxis.labels.boxAnchor = 'n'
-    lc.categoryAxis.labels.fontName = 'Helvetica'
-
-    lc.valueAxis.labels.fontName = 'Helvetica'
-    lc.lines[0].strokeColor = colors.green
-    lc.valueAxis.valueMin = 0
-    if max(years_by_century) > 0:
-        if sum(years_by_century) < 6:
-            lc.valueAxis.valueMax = 6
-            lc.valueAxis.valueStep = 1
-        else:
-            lc.valueAxis.valueMax = max(years_by_century) * 1.1
-            lc.valueAxis.valueStep = round(lc.valueAxis.valueMax, -1) / 10
-    else:
-        lc.valueAxis.valueMax = 10
-        lc.valueAxis.valueStep = 1
-    lc.lines[0].strokeWidth = 2
-    drawing.add(lc)
-    drawing = drawing.asString('jpg')
-    return drawing
-
-    # renderPM.drawToFile(drawing, 'chart.png', 'PNG')
+    return years_by_century
