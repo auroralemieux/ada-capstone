@@ -13,6 +13,7 @@ django-extensions==1.8.1
 django-nose==1.4.4
 django-nose-selenium==0.7.3
 django-storages==1.6.3
+google-auth==1.0.1
 httplib2==0.10.3
 idna==2.5
 ipython-genutils==0.2.0
@@ -29,6 +30,7 @@ oauthlib==2.0.2
 olefile==0.44
 pbr==3.1.1
 Pillow==4.2.1
+plotly==2.0.12
 portend==2.1.2
 psycopg2==2.7.1
 pyasn1==0.2.3
