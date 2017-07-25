@@ -129,7 +129,7 @@ $(document).ready(function() {
     $('#percent').html('0%');
     var progressbar = $('#progressbar');
     var max = progressbar.attr('aria-valuemax');
-    var time = size/10000;
+    var time = size/8000;
     var value = progressbar.attr('aria-valuenow');
 
     var loading = function() {
