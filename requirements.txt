@@ -8,7 +8,7 @@ cheroot==5.7.0
 coverage==3.6
 decorator==4.0.11
 defusedxml==0.5.0
-Django==1.10.7
+Django==1.11.28
 django-extensions==1.8.1
 django-nose==1.4.4
 django-nose-selenium==0.7.3
