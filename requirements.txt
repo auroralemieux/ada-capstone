@@ -14,7 +14,7 @@ django-nose==1.4.4
 django-nose-selenium==0.7.3
 django-storages==1.6.3
 google-auth==1.0.1
-httplib2==0.10.3
+httplib2==0.19.0
 idna==2.5
 ipython-genutils==0.2.0
 Jinja2==2.9.6
